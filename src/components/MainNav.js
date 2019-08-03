@@ -6,6 +6,8 @@ import LocalizedLink from "./LocalizedLink"
 import { useTranslation } from "react-i18next"
 
 import logo from "../images/logo.png"
+import logoGrey from "../images/logoGrey.png"
+import search from "../images/search.svg"
 
 function nextLangLink(lang, url) {
   if (lang === "uk") {
@@ -46,7 +48,7 @@ export default ({ isHome = false, location }) => {
         ${isHome && "position: fixed; background: rgba(56, 56, 56, 0.732);"}
         z-index: 5;
         width: 100%;
-        height: 76px;
+        height: 112px;
         top: 0;
         padding: 0 40px;
         display: flex;
@@ -55,9 +57,11 @@ export default ({ isHome = false, location }) => {
     >
       <Link
         css={css`
-          width: 189px;
-          height: 66px;
-          background: url(${logo}) center center no-repeat;
+          ${isHome
+            ? `background: url(${logo}) center center no-repeat;`
+            : `background: url(${logoGrey}) center center no-repeat;`}
+          width: 290px;
+          height: 100px;
           background-size: cover;
         `}
         to="/"
@@ -65,7 +69,7 @@ export default ({ isHome = false, location }) => {
 
       <div
         css={css`
-          padding-top: 33px;
+          padding-top: 46px;
         `}
       >
         <StyledLink isHome={isHome} to="/">
@@ -84,9 +88,27 @@ export default ({ isHome = false, location }) => {
       </div>
 
       <div>
-        <span>S</span>
+        <span>
+          <img
+            src={search}
+            alt="search"
+            css={css`
+              padding-top: 39px;
+              cursor: pointer;
+            `}
+          />
+        </span>
 
-        <Link css={css``} to={nextLang}>
+        <Link
+          css={css`
+            cursor: pointer;
+            color: white;
+            font-weight: normal;
+            text-decoration: none;
+            margin: 0 20px;
+          `}
+          to={nextLang}
+        >
           {t(`changeLang.${i18n.language}`)}
         </Link>
       </div>

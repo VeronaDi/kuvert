@@ -13,17 +13,21 @@ const resources = {
       changeLang: {
         uk: "Eng",
       },
+      request: "Створити запит",
+      viewProducts: "Каталог продукції",
     },
   },
   en: {
     translation: {
       home: "Home",
-      products: "Prodcuts",
+      products: "Products",
       about: "About us",
       contacts: "Contacts",
       changeLang: {
         en: "Укр",
       },
+      request: "Create request",
+      viewProducts: "View products",
     },
   },
 }
