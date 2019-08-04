@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -15,6 +15,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import video from "../images/video-kuvert.mp4"
+import backenvelopes from "../images/background-envelopes.svg"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -24,7 +25,7 @@ const VerstatImage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "verstat.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1055) {
+          fluid(maxWidth: 1055, maxHeight: 594) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -107,7 +108,7 @@ const IndexPage = props => {
         <video
           src={video}
           autoPlay
-          poster="posterimage.jpg"
+          poster="logoGrey.png"
           muted
           loop
           width="100%"
@@ -117,7 +118,50 @@ const IndexPage = props => {
           and watch it with your favorite video player!
         </video>
       </section>
-      <section>
+      <section css={css``}>
+        <div
+          css={css`
+            background: url(${backenvelopes}), #c5003e;
+            width: 708px;
+            height: 594px;
+            color: white;
+            padding: 50px 100px 167px 100px;
+          `}
+        >
+          <h1
+            css={css`
+              font-size: 48px;
+              padding-bottom: 30px;
+              border-bottom: 1px solid white;
+              transform: rotate(-0.29deg);
+              width: 201px;
+            `}
+          >
+            {t("about")}
+          </h1>
+          <p
+            css={css`
+              line-height: 27px;
+              padding: 50px 0;
+            `}
+          >
+            The Kuvert-Ukraine Envelope Factory is by far the most stable
+            national envelope manufacturer. We are a team that does not stop at
+            the achievement. We are constantly working to improve and expand our
+            business proposals. We are always ready to fulfill your orders!
+          </p>
+          <Link
+            to="/about"
+            css={css`
+              color: white;
+              cursor: pointer;
+              text-decoration-line: underline;
+              font-weight: bold;
+            `}
+          >
+            {t("learnMore")}
+          </Link>
+        </div>
         <VerstatImage />
       </section>
 

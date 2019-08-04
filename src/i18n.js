@@ -15,6 +15,7 @@ const resources = {
       },
       request: "Створити запит",
       viewProducts: "Каталог продукції",
+      learnMore: "Дізнатись більше",
     },
   },
   en: {
@@ -28,6 +29,7 @@ const resources = {
       },
       request: "Create request",
       viewProducts: "View products",
+      learnMore: "Learn more",
     },
   },
 }
