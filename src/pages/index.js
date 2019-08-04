@@ -9,6 +9,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
+import BtnRequestCall from "../components/BtnRequestCall"
 
 import { css } from "@emotion/core"
 
@@ -121,6 +122,7 @@ const IndexPage = props => {
           you can <a href="videofile.ogg">download it</a>
           and watch it with your favorite video player!
         </video>
+        <BtnRequestCall />
       </section>
       <section
         css={css`

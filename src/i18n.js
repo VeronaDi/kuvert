@@ -16,6 +16,7 @@ const resources = {
       request: "Створити запит",
       viewProducts: "Каталог продукції",
       learnMore: "Дізнатись більше",
+      requestCall: "Замовити дзвінок",
     },
   },
   en: {
@@ -30,6 +31,7 @@ const resources = {
       request: "Create request",
       viewProducts: "View products",
       learnMore: "Learn more",
+      requestCall: "Request call",
     },
   },
 }
