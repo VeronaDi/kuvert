@@ -47,7 +47,11 @@ const IndexPage = props => {
       <SEO title="Home" />
       <MainNav isHome {...props} />
 
-      <section>
+      <section
+        css={css`
+          height: 100vh;
+        `}
+      >
         <div
           css={css`
             width: 620px;
@@ -118,7 +122,14 @@ const IndexPage = props => {
           and watch it with your favorite video player!
         </video>
       </section>
-      <section css={css``}>
+      <section
+        css={css`
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        `}
+      >
         <div
           css={css`
             background: url(${backenvelopes}), #c5003e;
@@ -162,7 +173,14 @@ const IndexPage = props => {
             {t("learnMore")}
           </Link>
         </div>
-        <VerstatImage />
+        <div
+          css={css`
+            width: 1055px;
+            height: 594px;
+          `}
+        >
+          <VerstatImage />
+        </div>
       </section>
 
       <h1
