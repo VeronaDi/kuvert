@@ -18,25 +18,26 @@ import { useTranslation } from "react-i18next"
 import video from "../images/video-kuvert.mp4"
 import backenvelopes from "../images/background-envelopes.svg"
 import arrowdown from "../images/arrow-down.svg"
+import verstat from "../images/verstat.jpg"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
 
-const VerstatImage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "verstat.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1055, maxHeight: 594) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
+// const VerstatImage = () => {
+//   const data = useStaticQuery(graphql`
+//     query {
+//       placeholderImage: file(relativePath: { eq: "verstat.jpg" }) {
+//         childImageSharp {
+//           fluid(maxWidth: 1055, maxHeight: 594) {
+//             ...GatsbyImageSharpFluid_withWebp
+//           }
+//         }
+//       }
+//     }
+//   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-}
+//   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+// }
 
 const IndexPage = props => {
   const { t, i18n } = useTranslation()
@@ -197,10 +198,11 @@ const IndexPage = props => {
           css={css`
             width: 60%;
             height: 594px;
+            background: url(${verstat});
+            background-size: cover;
+            background-repeat: no-repeat;
           `}
-        >
-          <VerstatImage />
-        </div>
+        ></div>
       </section>
 
       <h1
