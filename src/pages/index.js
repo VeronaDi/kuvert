@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next"
 
 import video from "../images/video-kuvert.mp4"
 import backenvelopes from "../images/background-envelopes.svg"
+import arrowdown from "../images/arrow-down.svg"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -112,6 +113,20 @@ const IndexPage = props => {
             <BtnViewProducts />
           </div>
         </div>
+        <Link
+          to="/about"
+          css={css`
+            background: url(${arrowdown});
+            width: 62px;
+            height: 158px;
+            position: absolute;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translate(-50%, -2%);
+            transform: translate(-50%, -2%);
+          `}
+        ></Link>
         <video
           src={video}
           autoPlay
