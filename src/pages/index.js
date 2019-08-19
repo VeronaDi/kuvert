@@ -10,6 +10,7 @@ import MainNav from "../components/MainNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
 import BtnRequestCall from "../components/BtnRequestCall"
+import Footer from "../components/Footer"
 
 import { css } from "@emotion/core"
 
@@ -205,13 +206,7 @@ const IndexPage = props => {
         ></div>
       </section>
 
-      <h1
-        css={css`
-          color: red;
-        `}
-      >
-        {t("home")}
-      </h1>
+      <Footer />
     </Layout>
   )
 }

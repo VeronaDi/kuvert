@@ -17,6 +17,9 @@ const resources = {
       viewProducts: "Каталог продукції",
       learnMore: "Дізнатись більше",
       requestCall: "Замовити дзвінок",
+      addressFactory: "Адреса фабрики",
+      addressBranch: "Структурні підрозділи",
+      addressRepresentative: "Представництво",
     },
   },
   en: {
@@ -32,6 +35,9 @@ const resources = {
       viewProducts: "View products",
       learnMore: "Learn more",
       requestCall: "Request call",
+      addressFactory: "Address of factory",
+      addressBranch: "Offices",
+      addressRepresentative: "Representative",
     },
   },
 }
