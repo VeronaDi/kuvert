@@ -18,6 +18,14 @@ export default () => {
         height: 56px;
         color: white;
         cursor: pointer;
+
+        &:hover {
+          background: #b60039;
+        }
+
+        &:active {
+          background: #f4004d;
+        }
       `}
     >
       {t("request")}

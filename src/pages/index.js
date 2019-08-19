@@ -130,12 +130,13 @@ const IndexPage = props => {
           justify-content: center;
           align-items: center;
           height: 100vh;
+          margin: 0 5%;
         `}
       >
         <div
           css={css`
             background: url(${backenvelopes}), #c5003e;
-            width: 708px;
+            width: 40%;
             height: 594px;
             color: white;
             padding: 50px 100px 167px 100px;
@@ -177,7 +178,7 @@ const IndexPage = props => {
         </div>
         <div
           css={css`
-            width: 1055px;
+            width: 60%;
             height: 594px;
           `}
         >

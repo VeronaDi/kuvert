@@ -25,8 +25,8 @@ export default () => {
         cursor: pointer;
         z-index: 3;
         position: fixed;
-        left: 50px;
-        bottom: 76px;
+        left: 40px;
+        bottom: 45px;
         padding: 0 0 0 50px;
       `}
     >
