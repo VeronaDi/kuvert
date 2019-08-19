@@ -1,26 +1,10 @@
 import React from "react"
 // import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { Link } from "gatsby"
-import LocalizedLink from "./LocalizedLink"
 import { useTranslation } from "react-i18next"
-
-import logo from "../images/logo.png"
-import logoGrey from "../images/logoGrey.png"
-import search from "../images/search.svg"
-
-function nextLangLink(lang, url) {
-  if (lang === "uk") {
-    return `/en${url}`
-  } else {
-    return url.replace("/en/", "/")
-  }
-}
 
 export default ({ isHome = false, location }) => {
   const { t, i18n } = useTranslation()
-
-  //   const nextLang = nextLangLink(i18n.language, location.pathname)
 
   return (
     <section
@@ -44,16 +28,88 @@ export default ({ isHome = false, location }) => {
           color: white;
           display: flex;
           justify-content: space-between;
+          font-size: 18px;
         `}
       >
-        <div>
-          <h3>{t("addressFactory")}</h3>
+        <div
+          css={css`
+            max-width: 338px;
+            border-right: 3px solid #ffffff;
+            padding: 15px 70px 60px 50px;
+            line-height: 36px;
+          `}
+        >
+          <h4
+            css={css`
+              font-size: 24px;
+            `}
+          >
+            {t("addressFactory")}
+          </h4>
+          <p>
+            {t("contactFactory")}
+            {t("phone")}
+            <a
+              href="tel:+380503770801"
+              css={css`
+                text-decoration: none;
+                color: white;
+              `}
+            >
+              +38 050 377 08 01
+            </a>
+            <a
+              href="tel:+380673270801"
+              css={css`
+                text-decoration: none;
+                color: white;
+              `}
+            >
+              +38 067 327 08 01
+            </a>
+          </p>
         </div>
         <div>
-          <h3>{t("addressBranch")}</h3>
+          <h4
+            css={css`
+              font-size: 24px;
+            `}
+          >
+            {t("addressBranch")}
+          </h4>
+          <p>
+            {t("contactBranch")} {t("phone")}
+          </p>
         </div>
-        <div>
-          <h3>{t("addressRepresentative")}</h3>
+        <div
+          css={css`
+            max-width: 338px;
+            border-left: 3px solid #ffffff;
+            flex-direction: column;
+            padding: 15px 70px 60px 50px;
+            font-size: 18px;
+            line-height: 36px;
+          `}
+        >
+          <h4
+            css={css`
+              font-size: 24px;
+            `}
+          >
+            {t("addressRepresentative")}
+          </h4>
+          <p>
+            {t("contactRepresentative")} {t("phone")}
+            <a
+              href="tel:+380322709191"
+              css={css`
+                text-decoration: none;
+                color: white;
+              `}
+            >
+              +38 (0322) 70-91-91
+            </a>
+          </p>
         </div>
       </div>
     </section>

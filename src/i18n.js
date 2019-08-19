@@ -20,6 +20,9 @@ const resources = {
       addressFactory: "Адреса фабрики",
       addressBranch: "Структурні підрозділи",
       addressRepresentative: "Представництво",
+      contactFactory: "м.Івано-Франківськ вул.І.Макуха, 6",
+      contactRepresentative: "Укрiнвестприлад м.Львів вул. Зелена 251",
+      phone: "Тел.",
     },
   },
   en: {
@@ -38,6 +41,9 @@ const resources = {
       addressFactory: "Address of factory",
       addressBranch: "Offices",
       addressRepresentative: "Representative",
+      contactFactory: "Ivano-Frankivsk Makuha str. 6",
+      contactRepresentative: "Ukrinvestprylad Lviv Zelena str. 251",
+      phone: "Phone",
     },
   },
 }
