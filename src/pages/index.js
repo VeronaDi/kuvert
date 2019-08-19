@@ -78,11 +78,23 @@ const IndexPage = props => {
           >
             Envelope is the best saleman
           </h1>
+          <a
+            href="http://en.mayer-kuvert-network.com/mk-en"
+            css={css`
+              color: white;
+              text-decoration: none;
+              text-align: center;
+              font-weight: bold;
+              font-size: 20px;
+            `}
+          >
+            «Mayer-Kuvert-network GmbH»
+          </a>
           <p
             css={css`
               font-size: 16px;
               line-height: 24px;
-              margin: 0 80px;
+              margin: 17px 80px 40px 80px;
             `}
           >
             The Kuvert-Ukraine Envelope Factory is by far the most stable
@@ -99,16 +111,6 @@ const IndexPage = props => {
             <BtnRequest />
             <BtnViewProducts />
           </div>
-          <a
-            href="http://en.mayer-kuvert-network.com/mk-en"
-            css={css`
-              color: white;
-              text-decoration: none;
-              text-align: center;
-            `}
-          >
-            «Mayer-Kuvert-network GmbH»
-          </a>
         </div>
         <video
           src={video}

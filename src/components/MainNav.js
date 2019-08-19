@@ -50,7 +50,7 @@ export default ({ isHome = false, location }) => {
         width: 100%;
         height: 112px;
         top: 0;
-        padding: 0 40px;
+        padding: 0 50px;
         display: flex;
         justify-content: space-between;
       `}
@@ -60,9 +60,10 @@ export default ({ isHome = false, location }) => {
           ${isHome
             ? `background: url(${logo}) center center no-repeat;`
             : `background: url(${logoGrey}) center center no-repeat;`}
-          width: 290px;
-          height: 100px;
+          width: 190px;
+          height: 66px;
           background-size: cover;
+          margin-top: 20px;
         `}
         to="/"
       ></Link>
