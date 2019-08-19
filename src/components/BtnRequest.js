@@ -18,6 +18,7 @@ export default () => {
         height: 56px;
         color: white;
         cursor: pointer;
+        font-weight: bold;
 
         &:hover {
           background: #b60039;

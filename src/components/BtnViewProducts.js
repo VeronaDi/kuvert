@@ -9,25 +9,30 @@ export default () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <button
+    <Link
+      to="/products"
       css={css`
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
         border: 1px solid #ffffff;
         border-radius: 3px;
         background: transparent;
-        width: 205px;
-        height: 56px;
+        padding: 15px 45px;
         cursor: pointer;
+
+        &:hover {
+          color: #c4c4c4;
+          border: 1px solid #c4c4c4;
+        }
+
+        &:active {
+          color: #676767;
+          background: #ffffff;
+        }
       `}
     >
-      <Link
-        to="/products"
-        css={css`
-          color: white;
-          text-decoration: none;
-        `}
-      >
-        {t("viewProducts")}
-      </Link>
-    </button>
+      {t("viewProducts")}
+    </Link>
   )
 }
