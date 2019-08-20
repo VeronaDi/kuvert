@@ -83,6 +83,8 @@ const IndexPage = props => {
           </h1>
           <a
             href="http://en.mayer-kuvert-network.com/mk-en"
+            target="_blank"
+            rel="noopener noreferrer"
             css={css`
               color: white;
               text-decoration: none;
@@ -121,7 +123,6 @@ const IndexPage = props => {
             background: url(${arrowdown});
             width: 62px;
             height: 158px;
-            position: absolute;
             position: absolute;
             bottom: 0;
             left: 50%;
