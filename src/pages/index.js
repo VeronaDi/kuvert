@@ -10,6 +10,7 @@ import MainNav from "../components/MainNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
 import BtnRequestCall from "../components/BtnRequestCall"
+import WeightCalculator from "../components/WeightCalculator"
 import Footer from "../components/Footer"
 
 import { css } from "@emotion/core"
@@ -207,6 +208,8 @@ const IndexPage = props => {
           `}
         ></div>
       </section>
+
+      <WeightCalculator />
 
       <section
         css={css`

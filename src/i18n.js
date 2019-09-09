@@ -9,6 +9,7 @@ const resources = {
       home: "Головна",
       products: "Продукція",
       about: "Про нас",
+      calculate: "Прорахувати",
       contacts: "Контакти",
       contactUs: "Зв'яжіться з нами",
       changeLang: {
@@ -35,6 +36,7 @@ const resources = {
       home: "Home",
       products: "Products",
       about: "About us",
+      calculate: "Calculate",
       contacts: "Contacts",
       contactUs: "Contact us",
       changeLang: {

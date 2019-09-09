@@ -20,6 +20,7 @@ export default () => {
         background: transparent;
         padding: 15px 45px;
         cursor: pointer;
+        outline: none;
 
         &:hover {
           color: #c4c4c4;
