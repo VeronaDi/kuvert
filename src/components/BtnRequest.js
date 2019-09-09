@@ -19,6 +19,7 @@ export default () => {
         color: white;
         cursor: pointer;
         font-weight: bold;
+        outline: none;
 
         &:hover {
           background: #b60039;

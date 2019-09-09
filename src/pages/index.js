@@ -20,6 +20,7 @@ import video from "../images/video-kuvert.mp4"
 import backenvelopes from "../images/background-envelopes.svg"
 import arrowdown from "../images/arrow-down.svg"
 import verstat from "../images/verstat.jpg"
+import ukraine from "../images/ukraine.png"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -205,6 +206,50 @@ const IndexPage = props => {
             background-repeat: no-repeat;
           `}
         ></div>
+      </section>
+
+      <section
+        css={css`
+          height: 100vh;
+        `}
+      >
+        <div
+          css={css`
+            height: 600px;
+            width: 80%;
+            background: url(${ukraine});
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-end;
+          `}
+        >
+          <h2
+            css={css`
+              font-weight: bold;
+              font-size: 48px;
+              text-align: center;
+            `}
+          >
+            {t("contactUs")}
+          </h2>
+          <p
+            css={css`
+              font-size: 18px;
+              line-height: 27px;
+              width: 342px;
+              height: 152px;
+            `}
+          >
+            The production of the "Kuvert-Ukraine" factory is located in the
+            city of Ivano-Frankivsk. Trade branches operate in the following
+            cities: Kyiv, Kharkiv and Dnipro, Lviv.
+          </p>
+          <BtnRequest />
+        </div>
       </section>
 
       <Footer />

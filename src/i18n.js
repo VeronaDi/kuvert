@@ -10,6 +10,7 @@ const resources = {
       products: "Продукція",
       about: "Про нас",
       contacts: "Контакти",
+      contactUs: "Зв'яжіться з нами",
       changeLang: {
         uk: "Eng",
       },
@@ -35,6 +36,7 @@ const resources = {
       products: "Products",
       about: "About us",
       contacts: "Contacts",
+      contactUs: "Contact us",
       changeLang: {
         en: "Укр",
       },
