@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import facebook from "../images/facebook.svg"
 import linkedin from "../images/linkedin.svg"
 
-export default ({ isHome = false, location }) => {
+export default () => {
   const { t, i18n } = useTranslation()
 
   return (
