@@ -18,18 +18,18 @@ export default () => {
   const settings = {
     dots: true,
     infinite: true,
+    initialSlide: 0,
     slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToScroll: 4,
     swipeToSlide: true,
     speed: 500,
     cssEase: "linear",
-    centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
         },
       },
       {
@@ -37,7 +37,7 @@ export default () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 1,
+          initialSlide: 2,
         },
       },
       {
@@ -56,6 +56,7 @@ export default () => {
         height: 375px;
         background-color: white;
         overflow: hidden;
+        padding: 0 30px;
       `}
     >
       <h2
