@@ -16,12 +16,14 @@ export default () => {
   const { t, i18n } = useTranslation()
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
+    speed: 500,
+    cssEase: "linear",
+    centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -54,14 +56,13 @@ export default () => {
         height: 375px;
         background-color: white;
         overflow: hidden;
-        padding: 0 40px;
       `}
     >
       <h2
         css={css`
           font-size: 48px;
           text-align: center;
-          padding: 45px 0;
+          padding-bottom: 40px;
         `}
       >
         {t("ourClients")}
