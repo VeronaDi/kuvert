@@ -87,7 +87,7 @@ sup {
 }
 img {
   border-style: none;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 svg:not(:root) {

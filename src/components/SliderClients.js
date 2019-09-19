@@ -7,22 +7,30 @@ import "slick-carousel/slick/slick-theme.css"
 
 import { useTranslation } from "react-i18next"
 
-import uapost from "../images/uapost.png"
-import aska from "../images/aska.png"
-import vuso from "../images/vuso.png"
-import ukrsib from "../images/ukrsib.png"
+let clients = [
+  { img: "/clients/uapost.png", name: "uapost" },
+  { img: "/clients/aska.png", name: "aska" },
+  { img: "/clients/vuso.png", name: "vuso" },
+  { img: "/clients/ukrsib.png", name: "ukrsib" },
+  { img: "/clients/uapost.png", name: "uapost" },
+  { img: "/clients/aska.png", name: "aska" },
+  { img: "/clients/vuso.png", name: "vuso" },
+  { img: "/clients/ukrsib.png", name: "ukrsib" },
+]
 
 export default () => {
   const { t, i18n } = useTranslation()
 
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     initialSlide: 0,
     slidesToShow: 4,
     slidesToScroll: 4,
     swipeToSlide: true,
     speed: 500,
+    autoplay: true,
     cssEase: "linear",
     responsive: [
       {
@@ -53,10 +61,8 @@ export default () => {
   return (
     <div
       css={css`
-        height: 375px;
         background-color: white;
-        overflow: hidden;
-        padding: 0 30px;
+        padding: 40px 5% 100px;
       `}
     >
       <h2
@@ -69,24 +75,16 @@ export default () => {
         {t("ourClients")}
       </h2>
       <Slider {...settings}>
-        <div>
-          <img src={uapost} alt="uapost logo" />
-        </div>
-        <div>
-          <img src={aska} alt="aska logo" />
-        </div>
-        <div>
-          <img src={vuso} alt="vuso logo" />
-        </div>
-        <div>
-          <img src={ukrsib} alt="ukrsib logo" />
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        {clients.map(({ name, img }) => (
+          <div
+            css={css`
+              padding: 0 40px;
+              outline: none;
+            `}
+          >
+            <img src={img} alt={`${name} logo`} />
+          </div>
+        ))}
       </Slider>
     </div>
   )
