@@ -1,5 +1,4 @@
 import React from "react"
-// import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import LocalizedLink from "./LocalizedLink"
@@ -7,7 +6,6 @@ import { useTranslation } from "react-i18next"
 
 import logo from "../images/logo.png"
 import logoGrey from "../images/logoGrey.png"
-import search from "../images/search.svg"
 
 function nextLangLink(lang, url) {
   if (lang === "uk") {
@@ -88,31 +86,18 @@ export default ({ isHome = false, location }) => {
         {!isHome && <button> {t("create-request")}</button>}
       </div>
 
-      <div>
-        <span>
-          <img
-            src={search}
-            alt="search"
-            css={css`
-              padding-top: 39px;
-              cursor: pointer;
-            `}
-          />
-        </span>
-
-        <Link
-          css={css`
-            cursor: pointer;
-            color: white;
-            font-weight: normal;
-            text-decoration: none;
-            margin: 0 20px;
-          `}
-          to={nextLang}
-        >
-          {t(`changeLang.${i18n.language}`)}
-        </Link>
-      </div>
+      <Link
+        css={css`
+          cursor: pointer;
+          color: white;
+          font-weight: normal;
+          text-decoration: none;
+          padding-top: 46px;
+        `}
+        to={nextLang}
+      >
+        {t(`changeLang.${i18n.language}`)}
+      </Link>
     </nav>
   )
 }
