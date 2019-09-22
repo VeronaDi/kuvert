@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import LocalizedLink from "./LocalizedLink"
 import { useTranslation } from "react-i18next"
 
+import BtnRequest from "../components/BtnRequest"
+
 import logo from "../images/logo.png"
 import logoGrey from "../images/logoGrey.png"
 
@@ -83,7 +85,7 @@ export default ({ isHome = false, location }) => {
         <StyledLink isHome={isHome} to="/contacts">
           {t("contacts")}
         </StyledLink>
-        {!isHome && <button> {t("create-request")}</button>}
+        {!isHome && <BtnRequest />}
       </div>
 
       <Link

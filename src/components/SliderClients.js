@@ -12,7 +12,7 @@ let clients = [
   { img: "/clients/aska.png", name: "aska" },
   { img: "/clients/vuso.png", name: "vuso" },
   { img: "/clients/ukrsib.png", name: "ukrsib" },
-  { img: "/clients/uapost.png", name: "uapost" },
+  { img: "/clients/morshinska.png", name: "morshinska" },
   { img: "/clients/aska.png", name: "aska" },
   { img: "/clients/vuso.png", name: "vuso" },
   { img: "/clients/ukrsib.png", name: "ukrsib" },
