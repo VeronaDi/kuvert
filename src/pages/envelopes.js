@@ -11,15 +11,10 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-let products = [
-  { img: "/products/1.png", name: "envelopes", id: "envelopes" },
-  { img: "/products/2.png", name: "banderole", id: "banderole" },
-  { img: "/products/3.png", name: "ecobags", id: "ecobags" },
-  { img: "/products/4.png", name: "medical", id: "med" },
-  { img: "/products/5.png", name: "printed", id: "printed" },
-  { img: "/products/6.png", name: "individual", id: "individual" },
-  { img: "/products/7.png", name: "other", id: "other" },
-  { img: "/products/8.png", name: "sale", id: "sale" },
+let envelopes = [
+  { img: "/products/9.png", name: "standard", id: "standard" },
+  { img: "/products/10.png", name: "automatic", id: "automatic" },
+  { img: "/products/11.png", name: "triangular", id: "triangular" },
 ]
 
 export default props => {
@@ -30,7 +25,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Products" />
+      <SEO title="Envelopes" />
       <MainNav {...props} />
 
       <h1
@@ -41,10 +36,10 @@ export default props => {
           font-weight: bold;
         `}
       >
-        {t("products")}
+        {t("envelopes")}
       </h1>
       <LocalizedLink
-        to={`/${id}`}
+        // to={`${id}`}
         css={css`
           display: flex;
           justify-content: space-between;
@@ -52,10 +47,10 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {products.map(({ name, img }) => (
+        {envelopes.map(({ name, img }) => (
           <div
             css={css`
-              width: 49.5%;
+              width: 32%;
               padding-bottom: 15px;
               position: relative;
               text-align: center;

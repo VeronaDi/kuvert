@@ -15,6 +15,7 @@ const resources = {
       changeLang: {
         uk: "Eng",
       },
+      envelopes: "Конверти",
       request: "Створити запит",
       viewProducts: "Каталог продукції",
       learnMore: "Дізнатись більше",
@@ -43,6 +44,7 @@ const resources = {
       changeLang: {
         en: "Укр",
       },
+      envelopes: "envelopes",
       request: "Create request",
       viewProducts: "View products",
       learnMore: "Learn more",
