@@ -43,8 +43,7 @@ export default props => {
       >
         {t("products")}
       </h1>
-      <LocalizedLink
-        to={`/${id}`}
+      <div
         css={css`
           display: flex;
           justify-content: space-between;
@@ -52,8 +51,9 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {products.map(({ name, img }) => (
-          <div
+        {products.map(({ name, img, id }) => (
+          <LocalizedLink
+            to={`/${id}`}
             css={css`
               width: 49.5%;
               padding-bottom: 15px;
@@ -81,9 +81,9 @@ export default props => {
             >
               {name}
             </span>
-          </div>
+          </LocalizedLink>
         ))}
-      </LocalizedLink>
+      </div>
 
       <Footer />
     </Layout>
