@@ -91,7 +91,7 @@ export default ({ isHome = false, location }) => {
       <Link
         css={css`
           cursor: pointer;
-          color: white;
+          color: ${isHome ? "white" : "#040404"};
           font-weight: normal;
           text-decoration: none;
           padding-top: 46px;
