@@ -32,6 +32,7 @@ const resources = {
       contactRepresentative: "Укрiнвестприлад м.Львів вул. Зелена 251",
       ourClients: "Наші клієнти",
       phone: "Тел.",
+      statistic: "Важлива статистика",
     },
   },
   en: {
@@ -62,6 +63,7 @@ const resources = {
       contactRepresentative: "Ukrinvestprylad Lviv Zelena str. 251",
       ourClients: "Our clients",
       phone: "Phone",
+      statistic: "Important statistic",
     },
   },
 }

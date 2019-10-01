@@ -16,6 +16,7 @@ import factory3 from "../images/about/3.png"
 import factory4 from "../images/about/4.png"
 import factory5 from "../images/about/5.png"
 import factory6 from "../images/about/6.png"
+import statistic from "../images/about/statistic.png"
 
 export default props => {
   const { t, i18n } = useTranslation()
@@ -116,6 +117,28 @@ export default props => {
             background: url(${factory6});
           `}
         ></div>
+      </section>
+
+      <section
+        css={css`
+          width: 100vw;
+          height: 643px;
+          background: url(${statistic});
+          margin: 240px 0 140px 0;
+          text-align: center;
+          color: white;
+          padding: 110px 0 200px 0;
+        `}
+      >
+        <div
+          css={css`
+            font-size: 36px;
+            font-weight: bold;
+          `}
+        >
+          {t("statistic")}
+        </div>
+        some important info
       </section>
 
       <Footer />
