@@ -1,2 +1,2 @@
-import X from "./products"
+import X from "./about"
 export default X

@@ -6,6 +6,7 @@ import { initReactI18next } from "react-i18next"
 const resources = {
   uk: {
     translation: {
+      acquainted: "Давайте познайомимось",
       home: "Головна",
       products: "Продукція",
       about: "Про нас",
@@ -35,6 +36,7 @@ const resources = {
   },
   en: {
     translation: {
+      acquainted: "Let's get acquainted",
       home: "Home",
       products: "Products",
       about: "About us",

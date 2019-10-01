@@ -27,22 +27,15 @@ export default props => {
     <Layout>
       <SEO title="About" />
       <MainNav {...props} />
-      <h1
-        css={css`
-          color: #000000;
-          text-align: center;
-          font-size: 36px;
-          font-weight: bold;
-        `}
-      >
-        {t("about")}
-      </h1>
 
       <section
         css={css`
           width: 90vw;
           height: 581px;
-          margin: 0 auto 20px auto;
+          margin: 95px auto 20px auto;
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
         `}
       >
         <div
@@ -67,6 +60,62 @@ export default props => {
             10% of workers in our factory are people with hearing problems
           </h5>
         </div>
+        <div
+          css={css`
+            width: 21vw;
+            height: 50%;
+            background: url(${factory2});
+          `}
+        ></div>
+        <div
+          css={css`
+            width: 21vw;
+            height: 50%;
+            background: url(${factory3});
+          `}
+        ></div>
+        <div
+          css={css`
+            width: 21vw;
+            height: 50%;
+            background: url(${factory4});
+          `}
+        ></div>
+        <div
+          css={css`
+            width: 21vw;
+            height: 50%;
+            background: url(${factory5});
+          `}
+        ></div>
+        <div
+          css={css`
+            width: 21vw;
+            height: 50%;
+            background: #b40039;
+            display: table;
+            text-align: right;
+          `}
+        >
+          <h4
+            css={css`
+              display: table-cell;
+              vertical-align: middle;
+              font-size: 48px;
+              color: white;
+              padding: 0 15px;
+            `}
+          >
+            {t("acquainted")}
+          </h4>
+        </div>
+        <div
+          css={css`
+            width: 21vw;
+            height: 50%;
+            background: url(${factory6});
+          `}
+        ></div>
       </section>
 
       <Footer />
