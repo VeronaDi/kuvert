@@ -139,6 +139,64 @@ export default props => {
           {t("statistic")}
         </div>
         some important info
+        <div
+          css={css`
+            display: flex;
+            justify-content: space-between;
+            width: 83%;
+            margin: 0 auto;
+            padding-top: 120px;
+          `}
+        >
+          <div>
+            <h5
+              css={css`
+                font-weight: bold;
+                font-size: 72px;
+                margin: 0;
+              `}
+            >
+              10 mill
+            </h5>
+            envelopes are produced
+          </div>
+          <div>
+            <h5
+              css={css`
+                font-weight: bold;
+                font-size: 72px;
+                margin: 0;
+              `}
+            >
+              20 years
+            </h5>
+            of work in Ukraine
+          </div>
+          <div>
+            <h5
+              css={css`
+                font-weight: bold;
+                font-size: 72px;
+                margin: 0;
+              `}
+            >
+              1000+
+            </h5>
+            happy customers
+          </div>
+          <div>
+            <h5
+              css={css`
+                font-weight: bold;
+                font-size: 72px;
+                margin: 0;
+              `}
+            >
+              100+
+            </h5>
+            kinds of products
+          </div>
+        </div>
       </section>
 
       <Footer />
