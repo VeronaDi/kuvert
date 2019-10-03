@@ -17,6 +17,8 @@ import factory4 from "../images/about/4.png"
 import factory5 from "../images/about/5.png"
 import factory6 from "../images/about/6.png"
 import statistic from "../images/about/statistic.png"
+import mayerFactory from "../images/mayer-factory.png"
+import mayerLogo from "../images/mayer-logo.png"
 
 export default props => {
   const { t, i18n } = useTranslation()
@@ -196,6 +198,95 @@ export default props => {
             </h5>
             kinds of products
           </div>
+        </div>
+      </section>
+
+      <section
+        css={css`
+          background: url(${mayerFactory}), #444444;
+          background-position: right;
+          background-repeat: no-repeat;
+          background-size: 55% 100%;
+          width: 100vw;
+          height: 747px;
+          margin-bottom: 71px;
+          position: relative;
+        `}
+      >
+        <div
+          css={css`
+            background: url(${mayerLogo}), rgba(0, 0, 0, 0.488);
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 20%;
+            height: 25%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          `}
+        ></div>
+        <div
+          css={css`
+            padding: 59px 0 65px 106px;
+          `}
+        >
+          <h3
+            css={css`
+              font-size: 36px;
+              color: white;
+              font-weight: normal;
+            `}
+          >
+            Our history
+          </h3>
+          <p
+            css={css`
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 27px;
+              color: white;
+              width: 35%;
+            `}
+          >
+            The Kuvert-Ukraine Envelope Factory is by far the most stable
+            national envelope manufacturer. For one shift, we produce about 800
+            thousand envelopes. Much attention is paid to product quality. Our
+            enterprise is certified according to the international system ISO
+            9001: 2009. "Kuvert-Ukraine" is the Ukrainian branch of the largest
+            envelope manufacturing concern in Europe Mayer Kuvert Network.
+          </p>
+          <p
+            css={css`
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 27px;
+              color: white;
+              width: 35%;
+              padding-bottom: 20px;
+            `}
+          >
+            This fact gives our company a number of significant advantages: -
+            production capacity of more than 40 factories in Europe - 70 million
+            envelopes per day; - Centralized stable supply of raw materials that
+            meets the highest standards of quality; - experience accumulated
+            over decades, which we are always ready to share with our partners.
+            In cooperation with us, we will give you a stable partnership,
+            coherent work of staff and innovation in the field of advertising
+            envelope.
+          </p>
+          <a
+            href="http://en.mayer-kuvert-network.com/mk-en"
+            target="_blank"
+            rel="noopener noreferrer"
+            css={css`
+              color: white;
+              text-decoration: none;
+              font-weight: bold;
+              font-size: 14px;
+            `}
+          >
+            Visit “Mayer Kuvert” website
+          </a>
         </div>
       </section>
 
