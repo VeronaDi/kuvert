@@ -290,6 +290,49 @@ export default props => {
         </div>
       </section>
 
+      <section
+        css={css`
+          width: 90vw;
+          height: 332px;
+          margin: 0 auto 70px auto;
+          background: #b40039;
+        `}
+      >
+        <h3
+          css={css`
+            font-size: 36px;
+            color: white;
+            font-weight: normal;
+            padding: 40px 0 21px 0;
+            border-bottom: 1px solid #ffffff;
+            width: 223.11px;
+            margin: 0 auto;
+          `}
+        >
+          Our mission
+        </h3>
+        <p
+          css={css`
+            font-size: 18px;
+            line-height: 27px;
+            color: white;
+            font-weight: normal;
+            padding: 30px 0 48px 0;
+            width: 704.05px;
+            margin: 0 auto;
+            text-align: center;
+            font-weight: normal;
+          `}
+        >
+          The mission of our company - in accordance with the needs of consumers
+          to make decisions better than others, thanks to the introduction of
+          quality management system. We achieve the goals of the company due to
+          the impeccable quality of our products, timely deliveries, innovations
+          in the field of advertising envelope, and coordinated work of the
+          personnel.
+        </p>
+      </section>
+
       <Footer />
     </Layout>
   )
