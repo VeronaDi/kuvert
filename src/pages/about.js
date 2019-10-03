@@ -19,6 +19,9 @@ import factory6 from "../images/about/6.png"
 import statistic from "../images/about/statistic.png"
 import mayerFactory from "../images/mayer-factory.png"
 import mayerLogo from "../images/mayer-logo.png"
+import fepe from "../images/organizations/fepe.png"
+import ema from "../images/organizations/ema.png"
+import tpp from "../images/organizations/tpp.png"
 
 export default props => {
   const { t, i18n } = useTranslation()
@@ -333,6 +336,57 @@ export default props => {
         </p>
       </section>
 
+      <section
+        css={css`
+          width: 100vw;
+          height: 356px;
+          text-align: center;
+          background: #ffffff;
+        `}
+      >
+        <h3
+          css={css`
+            font-size: 36px;
+            color: black;
+            font-weight: normal;
+            padding-top: 40px;
+            font-weight: bold;
+          `}
+        >
+          We are the part of
+        </h3>
+        <div
+          css={css`
+            width: 64vw;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 20px auto;
+          `}
+        >
+          <div
+            css={css`
+              background: url(${fepe}) center center/contain no-repeat;
+              width: 220px;
+              height: 220px;
+            `}
+          />
+          <div
+            css={css`
+              background: url(${ema}) center center/contain no-repeat;
+              width: 220px;
+              height: 220px;
+            `}
+          />
+          <div
+            css={css`
+              background: url(${tpp}) center center/contain no-repeat;
+              width: 220px;
+              height: 220px;
+            `}
+          />
+        </div>
+      </section>
       <Footer />
     </Layout>
   )
