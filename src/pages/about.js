@@ -7,6 +7,7 @@ import { css } from "@emotion/core"
 
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
+import SliderCertification from "../components/SliderCertification"
 
 import { useTranslation } from "react-i18next"
 
@@ -334,6 +335,16 @@ export default props => {
           in the field of advertising envelope, and coordinated work of the
           personnel.
         </p>
+      </section>
+
+      <section
+        css={css`
+          width: 100vw;
+          height: 632px;
+          background: #c4c4c4;
+        `}
+      >
+        <SliderCertification />
       </section>
 
       <section
