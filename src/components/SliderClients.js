@@ -13,9 +13,10 @@ let clients = [
   { img: "/clients/vuso.png", name: "vuso" },
   { img: "/clients/ukrsib.png", name: "ukrsib" },
   { img: "/clients/morshinska.png", name: "morshinska" },
-  { img: "/clients/aska.png", name: "aska" },
-  { img: "/clients/vuso.png", name: "vuso" },
-  { img: "/clients/ukrsib.png", name: "ukrsib" },
+  { img: "/clients/cersanit.png", name: "cersanit" },
+  { img: "/clients/rixos.png", name: "rixos" },
+  { img: "/clients/ATL.png", name: "ATL" },
+  { img: "/clients/trans-LLC.png", name: "trans-LLC" },
 ]
 
 export default () => {
@@ -27,7 +28,7 @@ export default () => {
     infinite: true,
     initialSlide: 0,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     swipeToSlide: true,
     speed: 500,
     autoplay: true,
@@ -37,15 +38,14 @@ export default () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToScroll: 1,
         },
       },
       {
