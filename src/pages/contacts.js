@@ -61,6 +61,9 @@ export default props => {
             width: 1020px;
             height: 284px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
           `}
         >
           <div
@@ -82,16 +85,13 @@ export default props => {
               placeholder="Bob Green"
               css={css`
                 width: 460px;
-                height: 60px;
+                height: 65px;
                 background: #ffffff;
                 border: 1px solid #d6d6d6;
                 box-sizing: border-box;
-                padding-left: 20px;
+                padding: 20px;
                 outline: none;
-                ::-webkit-input-placeholder,
-                ::-moz-placeholder,
-                :-moz-placeholder,
-                :-ms-input-placeholder {
+                ::-webkit-input-placeholder {
                   font-size: 16px;
                   color: #ababab;
                 }
@@ -100,6 +100,152 @@ export default props => {
                 }
               `}
             ></input>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin-top: 16px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              placeholder="example@gmail.com"
+              css={css`
+                width: 460px;
+                height: 65px;
+                background: #ffffff;
+                border: 1px solid #d6d6d6;
+                box-sizing: border-box;
+                padding: 20px;
+                outline: none;
+                ::-webkit-input-placeholder {
+                  font-size: 16px;
+                  color: #ababab;
+                }
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            ></input>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin-top: 16px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              Phone
+            </label>
+            <input
+              type="phone"
+              placeholder="+380123456789"
+              css={css`
+                width: 460px;
+                height: 65px;
+                background: #ffffff;
+                border: 1px solid #d6d6d6;
+                box-sizing: border-box;
+                padding: 20px;
+                outline: none;
+                ::-webkit-input-placeholder {
+                  font-size: 16px;
+                  color: #ababab;
+                }
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            ></input>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              Department
+            </label>
+            <select
+              css={css`
+                width: 460px;
+                height: 65px;
+                background: #ffffff;
+                font-size: 16px;
+                border: 1px solid #d6d6d6;
+                box-sizing: border-box;
+                outline: none;
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            >
+              <option disabled selected>
+                Choose department
+              </option>
+              <option value="Sales department">Sales department</option>
+              <option value="Production department">
+                Production department
+              </option>
+              <option value="Director">Director</option>
+            </select>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin-top: 16px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              Message
+            </label>
+            <textarea
+              placeholder="Write your message"
+              css={css`
+                width: 460px;
+                height: 165px;
+                background: #ffffff;
+                border: 1px solid #d6d6d6;
+                box-sizing: border-box;
+                padding: 20px;
+                outline: none;
+                resize: none;
+                ::-webkit-input-placeholder {
+                  font-size: 16px;
+                  color: #ababab;
+                }
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            ></textarea>
           </div>
         </div>
       </section>
