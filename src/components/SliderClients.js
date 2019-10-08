@@ -12,11 +12,11 @@ let clients = [
   { img: "/clients/aska.png", name: "aska" },
   { img: "/clients/vuso.png", name: "vuso" },
   { img: "/clients/ukrsib.png", name: "ukrsib" },
-  { img: "/clients/morshinska.png", name: "morshinska" },
-  { img: "/clients/cersanit.png", name: "cersanit" },
-  { img: "/clients/rixos.png", name: "rixos" },
-  { img: "/clients/ATL.png", name: "ATL" },
-  { img: "/clients/trans-LLC.png", name: "trans-LLC" },
+  { img: "/clients/morshinska1.png", name: "morshinska" },
+  { img: "/clients/cersanit1.png", name: "cersanit" },
+  { img: "/clients/RIXOS1.png", name: "rixos" },
+  { img: "/clients/ATL1.png", name: "ATL" },
+  { img: "/clients/Trans-LLC1.png", name: "trans-LLC" },
 ]
 
 export default () => {
