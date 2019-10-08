@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
+import BtnSend from "../components/BtnSend"
 
 import { css } from "@emotion/core"
 
@@ -42,6 +43,7 @@ export default props => {
         css={css`
           width: 100vw;
           height: 680px;
+          background: #e5e5e5;
         `}
       >
         <h5
@@ -64,6 +66,7 @@ export default props => {
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
+            justify-content: space-between;
           `}
         >
           <div
@@ -91,6 +94,7 @@ export default props => {
                 box-sizing: border-box;
                 padding: 20px;
                 outline: none;
+                margin-right: 100px;
                 ::-webkit-input-placeholder {
                   font-size: 16px;
                   color: #ababab;
@@ -196,6 +200,7 @@ export default props => {
                 border: 1px solid #d6d6d6;
                 box-sizing: border-box;
                 outline: none;
+                color: #414141;
                 :focus {
                   border: 2px solid #c4c4c4;
                 }
@@ -247,6 +252,14 @@ export default props => {
               `}
             ></textarea>
           </div>
+        </div>
+        <div
+          css={css`
+            width: 460px;
+            margin: 60px auto 0 auto;
+          `}
+        >
+          <BtnSend />
         </div>
       </section>
       <Footer />

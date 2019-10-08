@@ -33,6 +33,7 @@ const resources = {
       ourClients: "Наші клієнти",
       phone: "Тел.",
       statistic: "Важлива статистика",
+      send: "Надіслати",
     },
   },
   en: {
@@ -64,6 +65,7 @@ const resources = {
       ourClients: "Our clients",
       phone: "Phone",
       statistic: "Important statistic",
+      send: "Send",
     },
   },
 }
