@@ -9,17 +9,18 @@ export default () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <button
+    <Link
+      to="/request"
       css={css`
         background: #c5003e;
         border-radius: 3px;
         border: none;
-        width: 205px;
-        height: 56px;
+        padding: 15px 20px;
         color: white;
         cursor: pointer;
         font-weight: bold;
         outline: none;
+        text-decoration: none;
 
         &:hover {
           background: #b60039;
@@ -31,6 +32,6 @@ export default () => {
       `}
     >
       {t("request")}
-    </button>
+    </Link>
   )
 }

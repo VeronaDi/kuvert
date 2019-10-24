@@ -9,8 +9,7 @@ export default () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <Link
-      to="/"
+    <button
       css={css`
         color: black;
         text-decoration: none;
@@ -34,6 +33,6 @@ export default () => {
       `}
     >
       {t("send")}
-    </Link>
+    </button>
   )
 }
