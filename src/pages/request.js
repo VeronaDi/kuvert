@@ -10,6 +10,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import logoGrey from "../images/logoGrey.png"
 import requestBasic from "../images/request-basic.png"
 import requestPrinted from "../images/request-printed.png"
 import requestCustom from "../images/request-custom.png"
@@ -38,6 +39,18 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Request" />
+      <Link
+        css={css`
+          background: url(${logoGrey}) center center no-repeat;
+          width: 190px;
+          height: 66px;
+          background-size: cover;
+          position: absolute;
+          top: 20px;
+          left: 30px;
+        `}
+        to="/"
+      ></Link>
       <h1
         css={css`
           font-size: 40px;
