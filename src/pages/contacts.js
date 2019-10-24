@@ -7,6 +7,8 @@ import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 import BtnSend from "../components/BtnSend"
 
+import plane from "../images/plane.png"
+
 import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
@@ -43,7 +45,9 @@ export default props => {
         css={css`
           width: 100vw;
           height: 680px;
-          background: #e5e5e5;
+          background: url(${plane}), #e5e5e5;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
         `}
       >
         <h5
@@ -51,7 +55,8 @@ export default props => {
             font-size: 36px;
             color: black;
             width: 640px;
-            margin: 55px auto 43px auto;
+            margin: 0 auto 43px auto;
+            padding-top: 55px;
             line-height: 54px;
             text-align: center;
           `}
