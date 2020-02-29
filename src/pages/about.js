@@ -11,14 +11,14 @@ import SliderCertification from "../components/SliderCertification"
 
 import { useTranslation } from "react-i18next"
 
-import factory1 from "../images/about/1.png"
-import factory2 from "../images/about/2.png"
-import factory3 from "../images/about/3.png"
-import factory4 from "../images/about/4.png"
-import factory5 from "../images/about/5.png"
-import factory6 from "../images/about/6.png"
+import factory1 from "../images/about/1.jpg"
+import factory2 from "../images/about/2.jpg"
+import factory3 from "../images/about/3.jpg"
+import factory4 from "../images/about/4.jpg"
+import factory5 from "../images/about/5.jpg"
+import factory6 from "../images/about/6.jpg"
 import statistic from "../images/about/statistic.png"
-import mayerFactory from "../images/mayer-factory.png"
+import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
 import fepe from "../images/organizations/fepe.png"
 import ema from "../images/organizations/ema.png"
@@ -50,9 +50,24 @@ export default props => {
             width: 27vw;
             height: 100%;
             background: url(${factory1});
+            background-size: cover;
             color: white;
             text-align: center;
             display: table;
+            position: relative;
+            vertical-align: middle;
+            font-size: 24px;
+            line-height: 36px;
+            margin: 0 auto;
+            :after {
+              content: "10% of workers in our factory are people with hearing problems";
+              width: 27vw;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.6);
+              opacity: 1;
+              position: absolute;
+              left: 0;
+            }
           `}
         >
           <h5
@@ -72,6 +87,7 @@ export default props => {
             width: 21vw;
             height: 50%;
             background: url(${factory2});
+            background-size: 100% 100%;
           `}
         ></div>
         <div
@@ -79,6 +95,7 @@ export default props => {
             width: 21vw;
             height: 50%;
             background: url(${factory3});
+            background-size: 100% 100%;
           `}
         ></div>
         <div
@@ -86,6 +103,7 @@ export default props => {
             width: 21vw;
             height: 50%;
             background: url(${factory4});
+            background-size: 100% 100%;
           `}
         ></div>
         <div
@@ -93,6 +111,7 @@ export default props => {
             width: 21vw;
             height: 50%;
             background: url(${factory5});
+            background-size: 100% 100%;
           `}
         ></div>
         <div
@@ -121,6 +140,7 @@ export default props => {
             width: 21vw;
             height: 50%;
             background: url(${factory6});
+            background-size: 100% 100%;
           `}
         ></div>
       </section>
@@ -207,7 +227,7 @@ export default props => {
 
       <section
         css={css`
-          background: url(${mayerFactory}), #444444;
+          background: url(${kuvertFactory}), #444444;
           background-position: right;
           background-repeat: no-repeat;
           background-size: 55% 100%;
