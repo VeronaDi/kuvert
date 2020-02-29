@@ -18,11 +18,11 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import video from "../images/video-kuvert.mp4"
 import backenvelopes from "../images/background-envelopes.svg"
 import arrowdown from "../images/arrow-down.svg"
-import verstat from "../images/verstat.jpg"
+import machine from "../images/machine.jpg"
 import ukraine from "../images/ukraine.png"
+import zeh from "../images/zeh.jpg"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -57,6 +57,8 @@ const IndexPage = props => {
       <section
         css={css`
           height: 100vh;
+          background: url(${zeh});
+          background-size: cover;
         `}
       >
         <div
@@ -133,18 +135,6 @@ const IndexPage = props => {
             transform: translate(-50%, -2%);
           `}
         ></Link>
-        <video
-          src={video}
-          autoPlay
-          poster="logoGrey.png"
-          muted
-          loop
-          width="100%"
-        >
-          Sorry, your browser doesn't support embedded videos, but don't worry,
-          you can <a href="videofile.ogg">download it</a>
-          and watch it with your favorite video player!
-        </video>
         <BtnRequestCall />
       </section>
       <section
@@ -203,7 +193,7 @@ const IndexPage = props => {
           css={css`
             width: 60%;
             height: 594px;
-            background: url(${verstat});
+            background: url(${machine});
             background-size: cover;
             background-repeat: no-repeat;
           `}

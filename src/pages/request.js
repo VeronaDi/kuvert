@@ -51,6 +51,45 @@ const IndexPage = props => {
         `}
         to="/"
       ></Link>
+      <section
+        css={css`
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          width: 40vw;
+          height: 44px;
+          font-size: 14px;
+          font-weight: bold;
+        `}
+      >
+        <div
+          css={css`
+            color: #b40039;
+            border-bottom: 3px solid #b40039;
+            width: 33%;
+          `}
+        >
+          Type of request
+        </div>
+        <div
+          css={css`
+            color: #b4b4b4;
+            border-bottom: 3px solid #b4b4b4;
+            width: 33%;
+          `}
+        >
+          Order creation
+        </div>
+        <div
+          css={css`
+            color: #b4b4b4;
+            border-bottom: 3px solid #b4b4b4;
+            width: 33%;
+          `}
+        >
+          Personal information
+        </div>
+      </section>
       <h1
         css={css`
           font-size: 40px;
