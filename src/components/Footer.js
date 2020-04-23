@@ -88,7 +88,11 @@ export default () => {
               display: flex;
             `}
           >
-            <p>
+            <p
+              css={css`
+                padding: 10px;
+              `}
+            >
               {t("contactBranchKyiv")}
               {t("phone")}
               <a
@@ -127,36 +131,20 @@ export default () => {
                 +38 (050) 433 25 66
               </a>
             </p>
+            <p>
+              {t("contactBranchLviv")}
+              {t("phone")}
+              <a
+                href="tel:+380322709191"
+                css={css`
+                  text-decoration: none;
+                  color: white;
+                `}
+              >
+                +38 (0322) 70-91-91
+              </a>
+            </p>
           </div>
-        </div>
-        <div
-          css={css`
-            border-left: 3px solid #ffffff;
-            flex-direction: column;
-            padding: 15px 30px;
-            font-size: 18px;
-            line-height: 36px;
-          `}
-        >
-          <h4
-            css={css`
-              font-size: 24px;
-            `}
-          >
-            {t("addressRepresentative")}
-          </h4>
-          <p>
-            {t("contactRepresentative")} {t("phone")}
-            <a
-              href="tel:+380322709191"
-              css={css`
-                text-decoration: none;
-                color: white;
-              `}
-            >
-              +38 (0322) 70-91-91
-            </a>
-          </p>
         </div>
       </div>
       <div
@@ -190,10 +178,10 @@ export default () => {
             font-size: 14px;
           `}
         >
-          Copyright © 2019 Kuvert-Ukraine. All rights reserved.
+          Copyright © 2020 Kuvert-Ukraine. All rights reserved.
         </p>
         <a
-          href="https://www.facebook.com/kuvert.ukr/"
+          href="https://www.facebook.com/kuvert.ua/"
           target="_blank"
           rel="noopener noreferrer"
           css={css`
