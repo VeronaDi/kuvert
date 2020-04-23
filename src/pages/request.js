@@ -145,20 +145,27 @@ const IndexPage = props => {
             bottom: 175px;
           `}
         ></div>
-        <div
+        <Link
+          to="/basicrequest"
           css={css`
-            width: 28%;
-            height: 60vh;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            z-index: 1;
-            background: url(${requestBasic}), #ffffff;
-            background-repeat: no-repeat;
-            background-position: top 15% left 50%;
-            text-align: center;
-            padding: 0 50px;
-            font-size: 18px;
-            line-height: 27px;
-          `}
+              text-decoration: none;
+              width: 28%;
+              height: 60vh;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              z-index: 1;
+              background: url(${requestBasic}), #ffffff;
+              background-repeat: no-repeat;
+              background-position: top 15% left 50%;
+              text-align: center;
+              padding: 0 50px;
+              font-size: 18px;
+              line-height: 27px;
+              color: black;
+              :visited {
+                color: black;
+              }
+            }
+        `}
         >
           <h4
             css={css`
@@ -172,8 +179,9 @@ const IndexPage = props => {
             {t("basicOrder")}
           </h4>
           <p>{t("basicOrderText")}</p>
-        </div>
-        <div
+        </Link>
+        <Link
+          to="/printrequest"
           css={css`
             width: 28%;
             height: 60vh;
@@ -186,6 +194,11 @@ const IndexPage = props => {
             padding: 0 70px;
             font-size: 18px;
             line-height: 27px;
+            text-decoration: none;
+            color: black;
+            :visited {
+              color: black;
+            }
           `}
         >
           <h4
@@ -199,8 +212,9 @@ const IndexPage = props => {
             {t("printedOrder")}
           </h4>
           <p>{t("printedOrderText")}</p>
-        </div>
-        <div
+        </Link>
+        <Link
+          to="/individualrequest"
           css={css`
             width: 28%;
             height: 60vh;
@@ -213,6 +227,11 @@ const IndexPage = props => {
             padding: 0 70px;
             font-size: 18px;
             line-height: 27px;
+            text-decoration: none;
+            color: black;
+            :visited {
+              color: black;
+            }
           `}
         >
           <h4
@@ -227,7 +246,7 @@ const IndexPage = props => {
             {t("individualOrder")}
           </h4>
           <p>{t("individualOrderText")}</p>
-        </div>
+        </Link>
       </section>
     </Layout>
   )
