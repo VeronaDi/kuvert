@@ -71,7 +71,7 @@ export default () => {
           font-weight: bold;
         `}
       >
-        Certificates and Awards
+        {t("certificate")}
       </h2>
       <Slider {...settings}>
         {certificate.map(({ name, img }) => (

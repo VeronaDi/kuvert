@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,6 +24,7 @@ import mayerLogo from "../images/mayer-logo.png"
 import fepe from "../images/organizations/fepe.png"
 import ema from "../images/organizations/ema.png"
 import tpp from "../images/organizations/tpp.png"
+import arrowdown from "../images/arrow-down.svg"
 
 export default props => {
   const { t, i18n } = useTranslation()
@@ -60,7 +62,7 @@ export default props => {
             line-height: 36px;
             margin: 0 auto;
             :after {
-              content: "10% of workers in our factory are people with hearing problems";
+              content: "";
               width: 27vw;
               height: 100%;
               background: rgba(0, 0, 0, 0.6);
@@ -77,9 +79,12 @@ export default props => {
               font-size: 24px;
               line-height: 36px;
               margin: 0 auto;
+              position: relative;
+              z-index: 1;
+              padding: 0 10px;
             `}
           >
-            10% of workers in our factory are people with hearing problems
+            {t("hearingLoss")}
           </h5>
         </div>
         <div
@@ -118,7 +123,6 @@ export default props => {
           css={css`
             width: 21vw;
             height: 50%;
-            background: #b40039;
             display: table;
             text-align: right;
           `}
@@ -127,9 +131,11 @@ export default props => {
             css={css`
               display: table-cell;
               vertical-align: middle;
-              font-size: 48px;
+              font-size: 2.26vw;
               color: white;
-              padding: 0 15px;
+              padding: 0 14px;
+              background: #b40039;
+              letter-spacing: 2px;
             `}
           >
             {t("acquainted")}
@@ -144,6 +150,18 @@ export default props => {
           `}
         ></div>
       </section>
+      <Link
+        to="/about"
+        css={css`
+          background: url(${arrowdown});
+          width: 62px;
+          height: 158px;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translate(-50%, -2%);
+          transform: translate(-50%, -2%);
+        `}
+      ></Link>
 
       <section
         css={css`
@@ -160,11 +178,12 @@ export default props => {
           css={css`
             font-size: 36px;
             font-weight: bold;
+            padding-bottom: 20px;
           `}
         >
           {t("statistic")}
         </div>
-        some important info
+        {t("statisticFact")}
         <div
           css={css`
             display: flex;
@@ -261,7 +280,7 @@ export default props => {
               font-weight: normal;
             `}
           >
-            Our history
+            {t("ourHistory")}
           </h3>
           <p
             css={css`
@@ -272,12 +291,7 @@ export default props => {
               width: 35%;
             `}
           >
-            The Kuvert-Ukraine Envelope Factory is by far the most stable
-            national envelope manufacturer. For one shift, we produce about 800
-            thousand envelopes. Much attention is paid to product quality. Our
-            enterprise is certified according to the international system ISO
-            9001: 2009. "Kuvert-Ukraine" is the Ukrainian branch of the largest
-            envelope manufacturing concern in Europe Mayer Kuvert Network.
+            {t("historyP1")}
           </p>
           <p
             css={css`
@@ -289,14 +303,7 @@ export default props => {
               padding-bottom: 20px;
             `}
           >
-            This fact gives our company a number of significant advantages: -
-            production capacity of more than 40 factories in Europe - 70 million
-            envelopes per day; - Centralized stable supply of raw materials that
-            meets the highest standards of quality; - experience accumulated
-            over decades, which we are always ready to share with our partners.
-            In cooperation with us, we will give you a stable partnership,
-            coherent work of staff and innovation in the field of advertising
-            envelope.
+            {t("historyP2")}
           </p>
           <a
             href="http://en.mayer-kuvert-network.com/mk-en"
@@ -309,7 +316,7 @@ export default props => {
               font-size: 14px;
             `}
           >
-            Visit “Mayer Kuvert” website
+            {t("visitMayer")}
           </a>
         </div>
       </section>
@@ -327,13 +334,13 @@ export default props => {
             font-size: 36px;
             color: white;
             font-weight: normal;
-            padding: 40px 0 21px 0;
+            padding: 40px 10px 21px 15px;
             border-bottom: 1px solid #ffffff;
             width: 223.11px;
             margin: 0 auto;
           `}
         >
-          Our mission
+          {t("missionTitle")}
         </h3>
         <p
           css={css`
@@ -348,12 +355,7 @@ export default props => {
             font-weight: normal;
           `}
         >
-          The mission of our company - in accordance with the needs of consumers
-          to make decisions better than others, thanks to the introduction of
-          quality management system. We achieve the goals of the company due to
-          the impeccable quality of our products, timely deliveries, innovations
-          in the field of advertising envelope, and coordinated work of the
-          personnel.
+          {t("mission")}
         </p>
       </section>
 
@@ -384,7 +386,7 @@ export default props => {
             font-weight: bold;
           `}
         >
-          We are the part of
+          {t("participants")}
         </h3>
         <div
           css={css`
