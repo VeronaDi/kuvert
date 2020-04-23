@@ -54,12 +54,16 @@ const IndexPage = props => {
       <section
         css={css`
           display: flex;
-          justify-content: center;
-          flex-direction: row;
+          flex-directon: row;
+          position: relative;
+          left: 50%;
+          -webkit-transform: translate(-50%, -2%);
+          transform: translate(-50%, -2%);
           width: 40vw;
           height: 44px;
           font-size: 14px;
           font-weight: bold;
+          margin: 80px 0 50px 0;
         `}
       >
         <div
@@ -69,6 +73,14 @@ const IndexPage = props => {
             width: 33%;
           `}
         >
+          <span
+            css={css`
+              font-size: 26px;
+              padding-right: 5px;
+            `}
+          >
+            1
+          </span>
           Type of request
         </div>
         <div
@@ -78,6 +90,14 @@ const IndexPage = props => {
             width: 33%;
           `}
         >
+          <span
+            css={css`
+              font-size: 26px;
+              padding-right: 5px;
+            `}
+          >
+            2
+          </span>{" "}
           Order creation
         </div>
         <div
@@ -87,6 +107,14 @@ const IndexPage = props => {
             width: 33%;
           `}
         >
+          <span
+            css={css`
+              font-size: 26px;
+              padding-right: 5px;
+            `}
+          >
+            3
+          </span>
           Personal information
         </div>
       </section>
@@ -94,7 +122,6 @@ const IndexPage = props => {
         css={css`
           font-size: 40px;
           font-weight: bold;
-          margin-top: 50px;
           margin-bottom: 50px;
           text-align: center;
         `}
