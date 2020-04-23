@@ -47,6 +47,19 @@ const resources = {
         "Ми лідери галузі та приймаємо будь-які виклики, щоб забезпечувати клієнтів відмінною якістю роботи і найкращим результатом, можливим завдяки потужному технічному і технологічному виробництву, професіоналізму і злагодженій роботі команди, турботою про навколишнє довкілля при виготовленні продукції і можливості її переробки.",
       certificate: "Сертифікати і нагороди",
       participants: "Ми є частиною",
+      requestType: "Тип запиту",
+      requestOrderCreate: "Створення замовлення",
+      requestPersonal: "Контактні дані",
+      chooseType: "Оберіть тип запиту",
+      basicOrder: "Стандартний запит",
+      printedOrder: "Запит друку",
+      individualOrder: "Індивідуальний запит",
+      basicOrderText:
+        "Якщо Ви бажаєте обмежитись нескладним запитом, обравши звичайний конверт, цей варіант саме для Вас.",
+      printedOrderText:
+        "Якщо бажаєте надрукувати конверт у корпоративному стилі, додавши логотип, адресу, елементи компанії тощо, цей варіант саме для Вас.",
+      individualOrderText:
+        "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
     },
   },
   en: {
@@ -93,7 +106,20 @@ const resources = {
         "We are industry leaders and take on any challenge to provide our customers with excellent workmanship and the best results possible thanks to the powerful technical and technological production, professionalism and well-coordinated work of the team, care for the environment in production and processing capabilities.",
       certificate: "Certificates and Awards",
       participants: "We are part of",
+      requestType: "Request Type",
+      requestOrderCreate: "Order creation",
+      requestPersonal: "Personal information",
+      chooseType: "Choose type of request",
+      basicOrder: "Basic order",
+      printedOrder: "Printed order",
+      individualOrder: "Individual order",
+      basicOrderText:
+        "If you want to limit yourself to a simple inquiry by choosing a regular envelope, this option is for you.",
+      printedOrderText:
+        "If you want to print a corporate-style envelope with the logo, address, company elements, etc., this option is for you.",
     },
+    individualOrderText:
+      "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
   },
 }
 

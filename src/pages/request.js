@@ -70,7 +70,7 @@ const IndexPage = props => {
           css={css`
             color: #b40039;
             border-bottom: 3px solid #b40039;
-            width: 33%;
+            width: 261px;
           `}
         >
           <span
@@ -81,13 +81,13 @@ const IndexPage = props => {
           >
             1
           </span>
-          Type of request
+          {t("requestType")}
         </div>
         <div
           css={css`
             color: #b4b4b4;
             border-bottom: 3px solid #b4b4b4;
-            width: 33%;
+            width: 300px;
           `}
         >
           <span
@@ -98,13 +98,13 @@ const IndexPage = props => {
           >
             2
           </span>{" "}
-          Order creation
+          {t("requestOrderCreate")}
         </div>
         <div
           css={css`
             color: #b4b4b4;
             border-bottom: 3px solid #b4b4b4;
-            width: 33%;
+            width: 261px;
           `}
         >
           <span
@@ -115,7 +115,7 @@ const IndexPage = props => {
           >
             3
           </span>
-          Personal information
+          {t("requestPersonal")}
         </div>
       </section>
       <h1
@@ -126,7 +126,7 @@ const IndexPage = props => {
           text-align: center;
         `}
       >
-        Choose type of request
+        {t("chooseType")}
       </h1>
       <section
         css={css`
@@ -155,7 +155,7 @@ const IndexPage = props => {
             background-repeat: no-repeat;
             background-position: top 15% left 50%;
             text-align: center;
-            padding: 0 70px;
+            padding: 0 50px;
             font-size: 18px;
             line-height: 27px;
           `}
@@ -166,15 +166,12 @@ const IndexPage = props => {
               padding-top: 190px;
               padding-bottom: 15px;
               margin: 0;
+              line-height: 1.1;
             `}
           >
-            Basic order
+            {t("basicOrder")}
           </h4>
-          <p>
-            Here is the short description of what is this type is about. Some
-            important information is also here. Here is the short description of
-            what is this type is about. Some important information is also here
-          </p>
+          <p>{t("basicOrderText")}</p>
         </div>
         <div
           css={css`
@@ -199,13 +196,9 @@ const IndexPage = props => {
               margin: 0;
             `}
           >
-            Printed order
+            {t("printedOrder")}
           </h4>
-          <p>
-            Here is the short description of what is this type is about. Some
-            important information is also here. Here is the short description of
-            what is this type is about. Some important information is also here
-          </p>
+          <p>{t("printedOrderText")}</p>
         </div>
         <div
           css={css`
@@ -228,15 +221,12 @@ const IndexPage = props => {
               padding-top: 190px;
               padding-bottom: 15px;
               margin: 0;
+              line-height: 1.1;
             `}
           >
-            Individual order
+            {t("individualOrder")}
           </h4>
-          <p>
-            Here is the short description of what is this type is about. Some
-            important information is also here. Here is the short description of
-            what is this type is about. Some important information is also here
-          </p>
+          <p>{t("individualOrderText")}</p>
         </div>
       </section>
     </Layout>
