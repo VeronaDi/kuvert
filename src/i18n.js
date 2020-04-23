@@ -48,7 +48,7 @@ const resources = {
       certificate: "Сертифікати і нагороди",
       participants: "Ми є частиною",
       requestType: "Тип запиту",
-      requestOrderCreate: "Створення замовлення",
+      requestOrderCreate: "Створення запиту",
       requestPersonal: "Контактні дані",
       chooseType: "Оберіть тип запиту",
       basicOrder: "Стандартний запит",
@@ -60,6 +60,7 @@ const resources = {
         "Якщо бажаєте надрукувати конверт у корпоративному стилі, додавши логотип, адресу, елементи компанії тощо, цей варіант саме для Вас.",
       individualOrderText:
         "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
+      next: "Далі",
     },
   },
   en: {
@@ -120,6 +121,7 @@ const resources = {
     },
     individualOrderText:
       "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+    next: "Next",
   },
 }
 

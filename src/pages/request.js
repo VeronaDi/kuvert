@@ -87,7 +87,7 @@ const IndexPage = props => {
           css={css`
             color: #b4b4b4;
             border-bottom: 3px solid #b4b4b4;
-            width: 300px;
+            width: 280px;
           `}
         >
           <span

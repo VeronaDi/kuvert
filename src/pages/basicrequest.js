@@ -10,6 +10,8 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import BtnNext from "../components/BtnNext"
+
 import logoGrey from "../images/logoGrey.png"
 
 // import i18n from "i18next"
@@ -65,8 +67,8 @@ const IndexPage = props => {
       >
         <div
           css={css`
-            color: #b40039;
-            border-bottom: 3px solid #b40039;
+            color: #383838;
+            border-bottom: 3px solid #383838;
             width: 261px;
           `}
         >
@@ -82,9 +84,9 @@ const IndexPage = props => {
         </div>
         <div
           css={css`
-            color: #b4b4b4;
-            border-bottom: 3px solid #b4b4b4;
-            width: 300px;
+            color: #b40039;
+            border-bottom: 3px solid #b40039;
+            width: 280px;
           `}
         >
           <span
@@ -125,7 +127,34 @@ const IndexPage = props => {
       >
         {t("basicOrder")}
       </h1>
-      <section></section>
+      <section
+        css={css`
+          width: 50%;
+          height: 350px;
+          background: #d6d6d6;
+          border-radius: 3px;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translate(-50%, -2%);
+          transform: translate(-50%, -2%);
+        `}
+      >
+        <div
+          css={css`
+            width: 100%;
+            background: #8a8a8a;
+            border-radius: 0px 0px 3px 3px;
+            height: 78px;
+            position: absolute;
+            bottom: 0;
+            text-align: right;
+            padding-right: 37px;
+            padding-top: 17px;
+          `}
+        >
+          <BtnNext />
+        </div>
+      </section>
     </Layout>
   )
 }
