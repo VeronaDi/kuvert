@@ -1,4 +1,5 @@
 import React from "react"
+
 // import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
@@ -9,7 +10,8 @@ export default () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <button
+    <Link
+      to="/personalinfo"
       css={css`
         background: #c5003e;
         border-radius: 3px;
@@ -35,6 +37,6 @@ export default () => {
       `}
     >
       {t("next")}
-    </button>
+    </Link>
   )
 }

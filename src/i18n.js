@@ -31,7 +31,7 @@ const resources = {
       contactFactory: "м.Івано-Франківськ вул.І.Макуха, 6",
       contactRepresentative: "Укрiнвестприлад м.Львів вул. Зелена 251",
       ourClients: "Наші клієнти",
-      phone: "Тел.",
+      phone: "Телефон",
       statistic: "Важлива статистика",
       statisticFact: "Корисні та значні дані про нашу фабрику",
       send: "Надіслати",
@@ -61,6 +61,19 @@ const resources = {
       individualOrderText:
         "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
       next: "Далі",
+      personalDetails: "Особисті дані",
+      contactDetails: "Контактні дані",
+      name: "Ім'я та прізвище",
+      department: "Відділ",
+      chooseDepartment: "Оберіть відділ",
+      salesDep: "Відділ збуту",
+      productionDep: "Виробничий відділ",
+      CEO: "Директор",
+      message: "Повідомлення",
+      messageText: "Напишіть тут своє повідомлення",
+      sendUsMessage: "Якщо у Вас виникли запитання, будь ласка, напишіть нам",
+      company: "Організація",
+      city: "Місто",
     },
   },
   en: {
@@ -118,10 +131,24 @@ const resources = {
         "If you want to limit yourself to a simple inquiry by choosing a regular envelope, this option is for you.",
       printedOrderText:
         "If you want to print a corporate-style envelope with the logo, address, company elements, etc., this option is for you.",
+      individualOrderText:
+        "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+      next: "Next",
+      personalDetails: "Personal details",
+      contactDetails: "Contact details",
+      name: "Name and Surname",
+      department: "Department",
+      chooseDepartment: "Choose department",
+      salesDep: "Sales department",
+      productionDep: "Production department",
+      CEO: "CEO",
+      message: "Message",
+      messageText: "Write your message here",
+      sendUsMessage:
+        "If you have any questions do not hesitate to send us a message",
+      company: "Company",
+      city: "City",
     },
-    individualOrderText:
-      "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
-    next: "Next",
   },
 }
 

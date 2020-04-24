@@ -61,7 +61,7 @@ export default props => {
             text-align: center;
           `}
         >
-          If you have any questions do not hesitate to send us a message
+          {t("sendUsMessage")}
         </h5>
         <div
           css={css`
@@ -86,7 +86,7 @@ export default props => {
                 padding-bottom: 5px;
               `}
             >
-              Name and Surname
+              {t("name")}
             </label>
             <input
               type="text"
@@ -159,7 +159,7 @@ export default props => {
                 padding-bottom: 5px;
               `}
             >
-              Phone
+              {t("phone")}
             </label>
             <input
               type="phone"
@@ -194,7 +194,7 @@ export default props => {
                 padding-bottom: 5px;
               `}
             >
-              Department
+              {t("department")}
             </label>
             <select
               css={css`
@@ -212,13 +212,13 @@ export default props => {
               `}
             >
               <option disabled selected>
-                Choose department
+                {t("chooseDepartment")}
               </option>
-              <option value="Sales department">Sales department</option>
+              <option value="Sales department">{t("salesDep")}</option>
               <option value="Production department">
-                Production department
+                {t("productionDep")}
               </option>
-              <option value="Director">Director</option>
+              <option value="CEO">{t("CEO")}</option>
             </select>
           </div>
           <div
@@ -234,7 +234,7 @@ export default props => {
                 padding-bottom: 5px;
               `}
             >
-              Message
+              {t("message")}
             </label>
             <textarea
               placeholder="Write your message"

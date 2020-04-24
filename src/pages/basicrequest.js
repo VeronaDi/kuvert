@@ -149,7 +149,7 @@ const IndexPage = props => {
             bottom: 0;
             text-align: right;
             padding-right: 37px;
-            padding-top: 17px;
+            padding-top: 28px;
           `}
         >
           <BtnNext />
