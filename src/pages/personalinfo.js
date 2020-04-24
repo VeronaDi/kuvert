@@ -10,7 +10,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import BtnSend from "../components/BtnSend"
+import BtnCreateRequest from "../components/BtnCreateRequest"
 
 import logoGrey from "../images/logoGrey.png"
 
@@ -121,7 +121,7 @@ const IndexPage = props => {
         css={css`
           font-size: 36px;
           font-weight: bold;
-          margin-bottom: 2rem;
+          margin-bottom: 1.8rem;
           text-align: center;
         `}
       >
@@ -351,14 +351,16 @@ const IndexPage = props => {
             ></input>
           </div>
         </div>
-      </div>
-      <div
-        css={css`
-          width: 460px;
-          margin: 60px auto 0 auto;
-        `}
-      >
-        <BtnSend />
+        <div
+          css={css`
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            max-width: 855px;
+          `}
+        >
+          <BtnCreateRequest />
+        </div>
       </div>
     </Layout>
   )
