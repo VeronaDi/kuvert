@@ -70,7 +70,7 @@ export default ({ isHome = false, location }) => {
 
       <div
         css={css`
-          padding: 46px 150px 0 0;
+          padding-top: 40px;
         `}
       >
         <StyledLink isHome={isHome} to="/">
@@ -85,7 +85,14 @@ export default ({ isHome = false, location }) => {
         <StyledLink isHome={isHome} to="/contacts">
           {t("contacts")}
         </StyledLink>
-        {!isHome && <BtnRequest />}
+        <div
+          css={css`
+            display: inline-block;
+            width: 180px;
+          `}
+        >
+          {!isHome && <BtnRequest />}
+        </div>
       </div>
 
       <Link

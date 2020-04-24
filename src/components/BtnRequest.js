@@ -15,8 +15,8 @@ export default () => {
         background: #c5003e;
         border-radius: 3px;
         border: none;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 16px;
+        padding-bottom: 16px;
         color: white;
         cursor: pointer;
         font-weight: bold;

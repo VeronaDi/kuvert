@@ -116,7 +116,13 @@ const IndexPage = props => {
               margin: 35px 80px 35px 80px;
             `}
           >
-            <BtnRequest />
+            <div
+              css={css`
+                width: 205px;
+              `}
+            >
+              <BtnRequest />
+            </div>
             <BtnViewProducts />
           </div>
         </div>
