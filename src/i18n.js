@@ -8,7 +8,7 @@ const resources = {
     translation: {
       acquainted: "Давайте познайомимось",
       about: "Про нас",
-      calculate: "Прорахувати",
+      calculate: "Розрахувати",
       contacts: "Контакти",
       contactUs: "Зв'яжіться з нами",
       home: "Головна",
@@ -81,6 +81,8 @@ const resources = {
         "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
       viewProducts: "Каталог продукції",
       visitMayer: "Відвідати вебсайт “Mayer-Kuvert-network GmbH”",
+      weight: "Потрібна допомога з розрахунком ваги конвертів?",
+      weightUse: "Скористайтесь нашим калькулятором",
     },
   },
   en: {
@@ -162,6 +164,8 @@ const resources = {
         "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",
       viewProducts: "View products",
       visitMayer: "Visit “Mayer-Kuvert-network GmbH” website",
+      weight: "Need help calculating envelope weight?",
+      weightUse: "Скористайтесь нашим калькулятором",
     },
   },
 }

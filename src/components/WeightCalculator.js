@@ -31,7 +31,7 @@ export default () => {
           margin: 0;
         `}
       >
-        Do you care about the weight of your envelope?
+        {t("weight")}
       </p>
       <p
         css={css`
@@ -40,7 +40,7 @@ export default () => {
           padding-bottom: 20px;
         `}
       >
-        Calculate it using our weight calculator
+        {t("weightUse")}
       </p>
       <button
         css={css`
