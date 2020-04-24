@@ -79,12 +79,12 @@ const IndexPage = props => {
         >
           <h1
             css={css`
-              font-size: 64px;
+              font-size: 58px;
               font-weight: bold;
               margin: 49px 70px 13px 70px;
             `}
           >
-            Envelope is the best saleman
+            {t("mainSlogan")}
           </h1>
           <a
             href="http://en.mayer-kuvert-network.com/mk-en"
@@ -107,9 +107,7 @@ const IndexPage = props => {
               margin: 17px 80px 40px 80px;
             `}
           >
-            The Kuvert-Ukraine Envelope Factory is by far the most stable
-            national envelope manufacturer.We are always willing to fulfill your
-            orders, because for us impossible is possible!
+            {t("titleText")}
           </p>
           <div
             css={css`
@@ -169,13 +167,10 @@ const IndexPage = props => {
           <p
             css={css`
               line-height: 27px;
-              padding: 50px 0;
+              padding: 40px 0;
             `}
           >
-            The Kuvert-Ukraine Envelope Factory is by far the most stable
-            national envelope manufacturer. We are a team that does not stop at
-            the achievement. We are constantly working to improve and expand our
-            business proposals. We are always ready to fulfill your orders!
+            {t("indexAbout")}
           </p>
           <Link
             to="/about"
@@ -205,44 +200,57 @@ const IndexPage = props => {
       <section
         css={css`
           height: 100vh;
+          margin: 0 auto;
+          padding-top: 60px;
+          padding-right: 60px;
         `}
       >
         <div
           css={css`
             height: 600px;
-            width: 80%;
+            width: 100%;
             background: url(${ukraine});
             background-repeat: no-repeat;
-            background-size: contain;
-            background-position: left;
             display: flex;
-            justify-content: center;
+            justify-content: start;
             flex-direction: column;
             align-items: flex-end;
           `}
         >
-          <h2
+          <div
             css={css`
-              font-weight: bold;
-              font-size: 48px;
-              text-align: center;
-            `}
-          >
-            {t("contactUs")}
-          </h2>
-          <p
-            css={css`
-              font-size: 18px;
-              line-height: 27px;
               width: 342px;
               height: 152px;
+              padding-top: 60px;
+              padding-right: 30px;
             `}
           >
-            The production of the "Kuvert-Ukraine" factory is located in the
-            city of Ivano-Frankivsk. Trade branches operate in the following
-            cities: Kyiv, Kharkiv and Dnipro, Lviv.
-          </p>
-          <BtnRequest />
+            <h2
+              css={css`
+                font-weight: bold;
+                font-size: 48px;
+              `}
+            >
+              {t("contactUs")}
+            </h2>
+            <p
+              css={css`
+                font-size: 18px;
+                line-height: 27px;
+                padding-top: 36px;
+                padding-bottom: 25px;
+              `}
+            >
+              {t("indexContactUs")}
+            </p>
+            <div
+              css={css`
+                width: 100%;
+              `}
+            >
+              <BtnRequest />
+            </div>
+          </div>
         </div>
       </section>
 

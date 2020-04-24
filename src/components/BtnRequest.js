@@ -15,12 +15,15 @@ export default () => {
         background: #c5003e;
         border-radius: 3px;
         border: none;
-        padding: 15px 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         color: white;
         cursor: pointer;
         font-weight: bold;
         outline: none;
         text-decoration: none;
+        display: block;
+        text-align: center;
 
         &:hover {
           background: #b60039;

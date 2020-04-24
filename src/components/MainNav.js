@@ -70,7 +70,7 @@ export default ({ isHome = false, location }) => {
 
       <div
         css={css`
-          padding-top: 46px;
+          padding: 46px 150px 0 0;
         `}
       >
         <StyledLink isHome={isHome} to="/">
