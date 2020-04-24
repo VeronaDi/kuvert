@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next"
 import BtnCreateRequest from "../components/BtnCreateRequest"
 
 import logoGrey from "../images/logoGrey.png"
+import arrowBack from "../images/arrow-back.png"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -47,6 +48,18 @@ const IndexPage = props => {
           position: absolute;
           top: 20px;
           left: 30px;
+        `}
+        to="/"
+      ></Link>
+      <Link
+        css={css`
+          background: url(${arrowBack}) center center no-repeat;
+          width: 42px;
+          height: 42px;
+          background-size: cover;
+          position: absolute;
+          top: 125px;
+          left: 46px;
         `}
         to="/"
       ></Link>

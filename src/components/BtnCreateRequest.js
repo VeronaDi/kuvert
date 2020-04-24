@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <Link
-      to="/index"
+      to="/"
       css={css`
         background: #c5003e;
         border-radius: 3px;
