@@ -20,7 +20,8 @@ export default () => {
     >
       <div
         css={css`
-          width: 76%;
+          max-width: 1475px;
+          width: 80%;
           height: 324px;
           border: 3px solid #ffffff;
           position: absolute;
@@ -30,27 +31,50 @@ export default () => {
           transform: translate(-50%, -50%);
           color: white;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           font-size: 18px;
         `}
       >
         <div
           css={css`
             border-right: 3px solid #ffffff;
-            padding: 15px 30px;
+            padding: 40px 30px;
             line-height: 36px;
+            max-width: 338px;
+            width: 25%;
           `}
         >
           <h4
             css={css`
               font-size: 24px;
+              padding-bottom: 20px;
+              margin: 0;
+            `}
+          >
+            {t("addressOfFactory")}
+          </h4>
+          <p
+            css={css`
+              margin: 0;
+            `}
+          >
+            {t("ivano")}
+          </p>
+          <p
+            css={css`
+              margin: 0;
             `}
           >
             {t("addressFactory")}
-          </h4>
-          <p>
-            {t("contactFactory")}
-            {t("phone")}
+          </p>
+          <p
+            css={css`
+              margin: 0;
+              display: flex;
+              flex-direction: column;
+            `}
+          >
+            {t("phone")}:
             <a
               href="tel:+380503770801"
               css={css`
@@ -73,12 +97,18 @@ export default () => {
         </div>
         <div
           css={css`
-            padding: 15px 30px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 30px;
+            padding-right: 10px;
+            line-height: 36px;
           `}
         >
           <h4
             css={css`
               font-size: 24px;
+              padding-bottom: 20px;
+              margin: 0;
             `}
           >
             {t("addressBranch")}
@@ -88,62 +118,195 @@ export default () => {
               display: flex;
             `}
           >
-            <p
+            <div
               css={css`
-                padding: 10px;
+                max-width: 285px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
               `}
             >
-              {t("contactBranchKyiv")}
-              {t("phone")}
-              <a
-                href="tel:+380670090801"
+              <p
                 css={css`
-                  text-decoration: none;
-                  color: white;
+                  margin: 0;
                 `}
               >
-                +38 (067) 009 08 01
-              </a>
-            </p>
-            <p>
-              {t("contactBranchDnipro")}
-              {t("phone")}
-              <a
-                href="tel:+380504332838"
+                {t("kyiv")}
+              </p>
+              <p
                 css={css`
-                  text-decoration: none;
-                  color: white;
+                  margin: 0;
                 `}
               >
-                +38 (050) 433 28 38;
-              </a>
-            </p>
-            <p>
-              {t("contactBranchKharkiv")}
-              {t("phone")}
-              <a
-                href="tel:+380504332566"
+                {t("addressBranchKyiv")}
+              </p>
+              <p
                 css={css`
-                  text-decoration: none;
-                  color: white;
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
                 `}
               >
-                +38 (050) 433 25 66
-              </a>
-            </p>
-            <p>
-              {t("contactBranchLviv")}
-              {t("phone")}
-              <a
-                href="tel:+380322709191"
+                {t("phone")}:
+                <a
+                  href="tel:+380670090801"
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  +38 (067) 009 08 01
+                </a>
+              </p>
+            </div>
+            <div
+              css={css`
+                display: flex;
+                flex-direction: column;
+                max-width: 285px;
+                width: 100%;
+              `}
+            >
+              <p
                 css={css`
-                  text-decoration: none;
-                  color: white;
+                  margin: 0;
                 `}
               >
-                +38 (0322) 70-91-91
-              </a>
-            </p>
+                {t("dnipro")}
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {t("addressBranchDnipro")}
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                `}
+              >
+                {t("phone")}:
+                <a
+                  href="tel:+380504332838"
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  +38 (050) 433 28 38
+                </a>
+              </p>
+            </div>
+            <div
+              css={css`
+                max-width: 285px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+              `}
+            >
+              <p
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {t("kharkiv")}
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {t("addressBranchKharkiv")}
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                `}
+              >
+                {t("phone")}:
+                <a
+                  href="tel:+380504332566"
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  +38 (050) 433 25 66
+                </a>
+              </p>
+            </div>
+            <div
+              css={css`
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+              `}
+            >
+              <p
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {t("lviv")}
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {" "}
+                <a
+                  href="https://druktorba.business.site"
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  {" "}
+                  "{t("ukrinvest")}"
+                </a>
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {t("addressBranchLviv")}
+              </p>
+              <p
+                css={css`
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                `}
+              >
+                {t("phone")}:
+                <a
+                  href="tel:+380322709191"
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  +38 (0322) 70-91-91
+                </a>
+                <a
+                  href="tel:+380503170387"
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  +38 (050) 317 03 87
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

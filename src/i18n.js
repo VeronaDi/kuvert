@@ -17,7 +17,12 @@ const resources = {
         uk: "Eng",
       },
       addressBranch: "Структурні підрозділи",
-      addressFactory: "Адреса фабрики",
+      addressBranchKyiv: "вул. Сім'ї Сосніних, 9 (Електротехнічний завод)",
+      addressBranchDnipro: "вул. Акінфієва, 18",
+      addressBranchKharkiv: "вул. Плеханівська, 117",
+      addressBranchLviv: "вул. Зелена, 251",
+      addressOfFactory: "Адреса фабрики",
+      addressFactory: "вул.І.Макуха, 6",
       basicOrder: "Стандартний запит",
       basicOrderText:
         "Якщо Ви бажаєте обмежитись нескладним запитом, обравши звичайний конверт, цей варіант саме для Вас.",
@@ -27,15 +32,9 @@ const resources = {
       certificate: "Сертифікати і нагороди",
       CEO: "Директор",
       company: "Організація",
-      contactBranchKyiv:
-        "м. Київ, вул. Сім'ї Сосніних, 9 (Електротехнічний завод)",
-      contactBranchDnipro: "м. Дніпро, вул. Акінфієва, 18",
-      contactBranchKharkiv: "м. Харків, вул. Плеханівська, 117",
-      contactBranchLviv: "м. Львів, вул. Зелена, 251",
-      contactFactory: "м.Івано-Франківськ вул.І.Макуха, 6",
-      contactRepresentative: "Укрiнвестприлад м.Львів вул. Зелена 251",
       contactDetails: "Контактні дані",
       department: "Відділ",
+      dnipro: "м. Дніпро",
       envelopes: "Конверти",
       hearingLoss: "10% працівників нашої фабрики —  це люди з вадами слуху",
       historyP1:
@@ -45,11 +44,15 @@ const resources = {
       indexAbout:
         "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer Kuvert Network» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики.",
       indexContactUs:
-        "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львові.",
+        "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львів.",
       individualOrder: "Індивідуальний запит",
       individualOrderText:
         "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
+      ivano: "м. Івано-Франківськ",
+      kyiv: "м. Київ",
+      kharkiv: "м. Харків",
       learnMore: "Дізнатись більше",
+      lviv: "м. Львів",
       mainSlogan: "Конверт створює перше враження",
       missionTitle: "Наша місія",
       mission:
@@ -79,6 +82,7 @@ const resources = {
       statisticFact: "Корисні та значні дані про нашу фабрику",
       titleText:
         "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
+      ukrinvest: "Укрінвестприлад",
       viewProducts: "Каталог продукції",
       visitMayer: "Відвідати вебсайт “Mayer-Kuvert-network GmbH”",
       weight: "Потрібна допомога з розрахунком ваги конвертів?",
@@ -98,7 +102,12 @@ const resources = {
         en: "Укр",
       },
       addressBranch: "Offices",
-      addressFactory: "Address of factory",
+      addressBranchKyiv: "Simji Sosninykh str. 9 (Electrotechnical factory)",
+      addressBranchDnipro: "Akinfeeva str. 18",
+      addressBranchKharkiv: "Plehanivska str. 117",
+      addressBranchLviv: "Zelena str. 251",
+      addressOfFactory: "Address of factory",
+      addressFactory: "Ivano-Frankivsk, Makuha str. 6",
       basicOrder: "Basic order",
       basicOrderText:
         "If you want to limit yourself to a simple inquiry by choosing a regular envelope, this option is for you.",
@@ -108,15 +117,9 @@ const resources = {
       certificate: "Certificates and Awards",
       CEO: "CEO",
       company: "Company",
-      contactBranchKyiv:
-        "Kyiv, Simji Sosninykh str. 9 (Electrotechnical factory)",
-      contactBranchDnipro: "Dnipro, Akinfeeva str. 18",
-      contactBranchKharkiv: "Kharkiv, Plehanivska str. 117",
-      contactBranchLviv: "Lviv, Zelena str. 251",
-      contactFactory: "Ivano-Frankivsk Makuha str. 6",
-      contactRepresentative: "Ukrinvestprylad Lviv Zelena str. 251",
       contactDetails: "Contact details",
       department: "Department",
+      dnipro: "Dnipro",
       envelopes: "envelopes",
       hearingLoss:
         "10% of workers in our factory are people with hearing problems",
@@ -131,7 +134,11 @@ const resources = {
       individualOrder: "Individual order",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+      ivano: "Ivano-Frankivsk",
+      kyiv: "Kyiv",
+      kharkiv: "Kharkiv",
       learnMore: "Learn more",
+      lviv: "Lviv",
       mainSlogan: "Envelope creates a first impression",
       missionTitle: "Our mission",
       mission:
@@ -162,6 +169,7 @@ const resources = {
       statisticFact: "Useful and important information about our factory",
       titleText:
         "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",
+      ukrinvest: "Ukrinvestprylad",
       viewProducts: "View products",
       visitMayer: "Visit “Mayer-Kuvert-network GmbH” website",
       weight: "Need help calculating envelope weight?",
