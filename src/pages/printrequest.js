@@ -125,7 +125,92 @@ const IndexPage = props => {
       >
         {t("printedOrder")}
       </h1>
-      <section></section>
+      <section>
+        <h3
+          css={css`
+            text-align: center;
+          `}
+        >
+          {t("envelopeDetails")}
+        </h3>
+        <div
+          css={css`
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translate(-50%, -2%);
+            transform: translate(-50%, -2%);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 780px;
+          `}
+        >
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("size")}
+            </label>
+            <select
+              css={css`
+                width: 380px;
+                height: 65px;
+                background: #ffffff;
+                font-size: 16px;
+                border: 1px solid #d6d6d6;
+                box-sizing: border-box;
+                outline: none;
+                color: #414141;
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            >
+              <option disabled selected>
+                {t("chooseSize")}
+              </option>
+              <option value="C6">C6 (114x162 {t("mm")})</option>
+              <option value="DL">DL (110x220 {t("mm")})</option>
+              <option value="C65">C65 (114x229 {t("mm")})</option>
+              <option value="C5">C5 (162x229 {t("mm")})</option>
+              <option value="C4">C4 (229x324 {t("mm")})</option>
+            </select>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("amount")}
+            </label>
+            <input
+              css={css`
+                width: 380px;
+                height: 65px;
+                background: #ffffff;
+                border: 1px solid #d6d6d6;
+                border-radius: 3px;
+              `}
+            ></input>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }
