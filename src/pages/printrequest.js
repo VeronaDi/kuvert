@@ -12,6 +12,8 @@ import { useTranslation } from "react-i18next"
 
 import InputAmount from "../components/InputAmount"
 import InputPrintColors from "../components/InputPrintColors"
+import InputDragDrop from "../components/InputDragDrop"
+import BtnNext from "../components/BtnNext"
 
 import logoGrey from "../images/logoGrey.png"
 
@@ -97,7 +99,7 @@ const IndexPage = props => {
             `}
           >
             2
-          </span>{" "}
+          </span>
           {t("requestOrderCreate")}
         </div>
         <div
@@ -246,6 +248,64 @@ const IndexPage = props => {
             </label>
             <InputPrintColors />
           </div>
+        </div>
+        <InputDragDrop />
+
+        <h3
+          css={css`
+            text-align: center;
+            margin: 40px 0;
+          `}
+        >
+          {t("additionalDetails")}
+        </h3>
+        <div
+          css={css`
+            width: 100%;
+            max-width: 780px;
+            display: flex;
+            flex-direction: column;
+          `}
+        >
+          <label
+            css={css`
+              font-size: 12px;
+              padding-bottom: 5px;
+            `}
+          >
+            {t("additionalInfo")}
+          </label>
+          <textarea
+            placeholder="Additional comments, questions, important information, etc."
+            css={css`
+              width: 100%;
+              height: 191px;
+              background: #ffffff;
+              border: 1px solid #d6d6d6;
+              color: #444444;
+              padding: 20px;
+              outline: none;
+              resize: none;
+              ::-webkit-input-placeholder {
+                font-size: 16px;
+                color: #9d9d9d;
+              }
+              :focus {
+                border: 2px solid #c4c4c4;
+              }
+            `}
+          ></textarea>
+        </div>
+        <div
+          css={css`
+            width: 100%;
+            max-width: 780px;
+            margin: 40px 0;
+            display: block;
+            text-align: center;
+          `}
+        >
+          <BtnNext />
         </div>
       </section>
     </Layout>

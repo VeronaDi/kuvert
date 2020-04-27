@@ -66,7 +66,7 @@ export default props => {
         <div
           css={css`
             width: 1020px;
-            height: 284px;
+            height: 290px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -96,7 +96,7 @@ export default props => {
                 height: 65px;
                 background: #ffffff;
                 border: 1px solid #d6d6d6;
-                box-sizing: border-box;
+                border-radius: 3px;
                 padding: 20px;
                 outline: none;
                 margin-right: 100px;
@@ -133,7 +133,7 @@ export default props => {
                 height: 65px;
                 background: #ffffff;
                 border: 1px solid #d6d6d6;
-                box-sizing: border-box;
+                border-radius: 3px;
                 padding: 20px;
                 outline: none;
                 ::-webkit-input-placeholder {
@@ -169,7 +169,7 @@ export default props => {
                 height: 65px;
                 background: #ffffff;
                 border: 1px solid #d6d6d6;
-                box-sizing: border-box;
+                border-radius: 3px;
                 padding: 20px;
                 outline: none;
                 ::-webkit-input-placeholder {
@@ -203,7 +203,7 @@ export default props => {
                 background: #ffffff;
                 font-size: 16px;
                 border: 1px solid #d6d6d6;
-                box-sizing: border-box;
+                border-radius: 3px;
                 outline: none;
                 color: #414141;
                 :focus {
@@ -225,7 +225,6 @@ export default props => {
             css={css`
               display: flex;
               flex-direction: column;
-              margin-top: 16px;
             `}
           >
             <label
@@ -243,7 +242,7 @@ export default props => {
                 height: 165px;
                 background: #ffffff;
                 border: 1px solid #d6d6d6;
-                box-sizing: border-box;
+                border-radius: 3px;
                 padding: 20px;
                 outline: none;
                 resize: none;

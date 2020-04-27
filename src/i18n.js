@@ -16,6 +16,8 @@ const resources = {
       changeLang: {
         uk: "Eng",
       },
+      additionalDetails: "Додаткові відомості",
+      additionalInfo: "Додаткова інформація (необов'язково)",
       addressBranch: "Структурні підрозділи",
       addressBranchKyiv: "вул. Сім'ї Сосніних, 9 (Електротехнічний завод)",
       addressBranchDnipro: "вул. Акінфієва, 18",
@@ -32,6 +34,7 @@ const resources = {
       chooseType: "Оберіть тип запиту",
       chooseSize: "Оберіть розмір конверта",
       chooseColor: "Оберіть колірність",
+      chooseFile: "Перетягніть файл(и) сюди або оберіть для завантаження",
       certificate: "Сертифікати і нагороди",
       CEO: "Директор",
       colorsFront: "Друк на передній стороні (кількість кольорів)",
@@ -77,6 +80,7 @@ const resources = {
       printedOrder: "Запит друку",
       printedOrderText:
         "Якщо бажаєте надрукувати конверт у корпоративному стилі, додавши логотип, адресу, елементи компанії тощо, цей варіант саме для Вас.",
+      printMockup: "Приклад друку (необов'язково)",
       productionDep: "Виробничий відділ",
       request: "Створити запит",
       requestCall: "Замовити дзвінок",
@@ -110,6 +114,8 @@ const resources = {
       changeLang: {
         en: "Укр",
       },
+      additionalDetails: "Additional details",
+      additionalInfo: "Additional information (not necessary)",
       addressBranch: "Offices",
       addressBranchKyiv: "Simji Sosninykh str. 9 (Electrotechnical factory)",
       addressBranchDnipro: "Akinfeeva str. 18",
@@ -125,6 +131,7 @@ const resources = {
       chooseDepartment: "Choose department",
       chooseType: "Choose type of request",
       chooseSize: "Choose envelope size",
+      chooseFile: "Drag file(s) here or browse for a file to upload",
       chooseColor: "Choose how many colors",
       certificate: "Certificates and Awards",
       CEO: "CEO",
@@ -172,6 +179,7 @@ const resources = {
       printedOrder: "Printed order",
       printedOrderText:
         "If you want to print a corporate-style envelope with the logo, address, company elements, etc., this option is for you.",
+      printMockup: "Print sample (not necessary)",
       productionDep: "Production department",
       request: "Create request",
       requestCall: "Request call",

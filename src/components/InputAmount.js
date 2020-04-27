@@ -32,6 +32,7 @@ export default () => {
         background: #ffffff;
         border: 1px solid #d6d6d6;
         border-radius: 3px;
+        padding: 23px 18px;
         outline: none;
         text-align: center;
         color: #444444;
