@@ -169,7 +169,7 @@ const IndexPage = props => {
                 border: 1px solid #d6d6d6;
                 box-sizing: border-box;
                 outline: none;
-                color: #414141;
+                color: #444444;;
                 :focus {
                   border: 2px solid #c4c4c4;
                 }
@@ -200,12 +200,20 @@ const IndexPage = props => {
               {t("amount")}
             </label>
             <input
+              type="number"
+              min="0"
+              step="250"
               css={css`
                 width: 380px;
                 height: 65px;
                 background: #ffffff;
                 border: 1px solid #d6d6d6;
                 border-radius: 3px;
+                outline: none;
+                text-align: center;
+                color: #444444;
+                :focus {
+                  border: 2px solid #c4c4c4;
               `}
             ></input>
           </div>
