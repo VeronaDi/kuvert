@@ -4,18 +4,25 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import arrowSelect from "../images/arrow-select.png"
+
 export default () => {
   const { t, i18n } = useTranslation()
 
   return (
     <select
       css={css`
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: url(${arrowSelect}), #ffffff;
+        background-position: 97%;
+        background-repeat: no-repeat;
         width: 380px;
         height: 65px;
-        background: #ffffff;
         font-size: 16px;
         border: 1px solid #d6d6d6;
-        box-sizing: border-box;
+        padding: 18px;
         outline: none;
         color: #444444;
         :focus {

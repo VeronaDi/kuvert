@@ -16,6 +16,7 @@ import InputDragDrop from "../components/InputDragDrop"
 import BtnNext from "../components/BtnNext"
 
 import logoGrey from "../images/logoGrey.png"
+import arrowSelect from "../images/arrow-select.png"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -172,12 +173,17 @@ const IndexPage = props => {
             </label>
             <select
               css={css`
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(${arrowSelect}), #ffffff;
+                background-position: 97%;
+                background-repeat: no-repeat;
                 width: 380px;
                 height: 65px;
-                background: #ffffff;
                 font-size: 16px;
                 border: 1px solid #d6d6d6;
-                box-sizing: border-box;
+                padding: 18px;
                 outline: none;
                 color: #444444;
                 :focus {
