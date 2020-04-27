@@ -262,7 +262,7 @@ export default props => {
             background-position: center;
             background-repeat: no-repeat;
             width: 20%;
-            height: 25%;
+            height: 26%;
             position: absolute;
             bottom: 0;
             right: 0;
