@@ -10,6 +10,9 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import InputAmount from "../components/InputAmount"
+import InputPrintColors from "../components/InputPrintColors"
+
 import logoGrey from "../images/logoGrey.png"
 
 // import i18n from "i18next"
@@ -125,20 +128,24 @@ const IndexPage = props => {
       >
         {t("printedOrder")}
       </h1>
-      <section>
+      <section
+        css={css`
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translate(-50%, -2%);
+          transform: translate(-50%, -2%);
+        `}
+      >
         <h3
           css={css`
             text-align: center;
+            margin-bottom: 40px;
           `}
         >
           {t("envelopeDetails")}
         </h3>
         <div
           css={css`
-            position: absolute;
-            left: 50%;
-            -webkit-transform: translate(-50%, -2%);
-            transform: translate(-50%, -2%);
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -150,6 +157,7 @@ const IndexPage = props => {
             css={css`
               display: flex;
               flex-direction: column;
+              padding-right: 19px;
             `}
           >
             <label
@@ -169,7 +177,7 @@ const IndexPage = props => {
                 border: 1px solid #d6d6d6;
                 box-sizing: border-box;
                 outline: none;
-                color: #444444;;
+                color: #444444;
                 :focus {
                   border: 2px solid #c4c4c4;
                 }
@@ -185,6 +193,43 @@ const IndexPage = props => {
               <option value="C4">C4 (229x324 {t("mm")})</option>
             </select>
           </div>
+          <InputAmount />
+        </div>
+
+        <h3
+          css={css`
+            text-align: center;
+            margin: 40px 0;
+          `}
+        >
+          {t("printDetails")}
+        </h3>
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 780px;
+          `}
+        >
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              padding-right: 19px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("colorsFront")}
+            </label>
+            <InputPrintColors />
+          </div>
           <div
             css={css`
               display: flex;
@@ -197,25 +242,9 @@ const IndexPage = props => {
                 padding-bottom: 5px;
               `}
             >
-              {t("amount")}
+              {t("colorsBack")}
             </label>
-            <input
-              type="number"
-              min="0"
-              step="250"
-              css={css`
-                width: 380px;
-                height: 65px;
-                background: #ffffff;
-                border: 1px solid #d6d6d6;
-                border-radius: 3px;
-                outline: none;
-                text-align: center;
-                color: #444444;
-                :focus {
-                  border: 2px solid #c4c4c4;
-              `}
-            ></input>
+            <InputPrintColors />
           </div>
         </div>
       </section>
