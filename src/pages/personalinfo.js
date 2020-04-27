@@ -75,7 +75,7 @@ const IndexPage = props => {
           height: 44px;
           font-size: 14px;
           font-weight: bold;
-          margin: 80px 0 50px 0;
+          margin: 80px 0;
         `}
       >
         <div

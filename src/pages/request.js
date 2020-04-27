@@ -138,7 +138,6 @@ const IndexPage = props => {
         <div
           css={css`
             width: 100%;
-            height: 100vh;
             height: 178px;
             background: #b40039;
             position: absolute;
@@ -155,7 +154,7 @@ const IndexPage = props => {
               z-index: 1;
               background: url(${requestBasic}), #ffffff;
               background-repeat: no-repeat;
-              background-position: top 15% left 50%;
+              background-position: top 15vh left 50%;
               text-align: center;
               padding: 0 50px;
               font-size: 18px;
@@ -170,8 +169,7 @@ const IndexPage = props => {
           <h4
             css={css`
               font-size: 36px;
-              padding-top: 190px;
-              padding-bottom: 15px;
+              padding-top: 30vh;
               margin: 0;
               line-height: 1.1;
             `}
@@ -189,7 +187,7 @@ const IndexPage = props => {
             z-index: 1;
             background: url(${requestPrinted}), #ffffff;
             background-repeat: no-repeat;
-            background-position: top 15% left 50%;
+            background-position: top 15vh left 50%;
             text-align: center;
             padding: 0 70px;
             font-size: 18px;
@@ -204,7 +202,7 @@ const IndexPage = props => {
           <h4
             css={css`
               font-size: 36px;
-              padding-top: 190px;
+              padding-top: 30vh;
               padding-bottom: 15px;
               margin: 0;
             `}
@@ -222,7 +220,7 @@ const IndexPage = props => {
             z-index: 1;
             background: url(${requestCustom}), #ffffff;
             background-repeat: no-repeat;
-            background-position: top 15% left 50%;
+            background-position: top 15vh left 50%;
             text-align: center;
             padding: 0 70px;
             font-size: 18px;
@@ -237,8 +235,7 @@ const IndexPage = props => {
           <h4
             css={css`
               font-size: 36px;
-              padding-top: 190px;
-              padding-bottom: 15px;
+              padding-top: 30vh;
               margin: 0;
               line-height: 1.1;
             `}

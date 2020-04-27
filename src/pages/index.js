@@ -217,6 +217,7 @@ const IndexPage = props => {
             width: 100%;
             background: url(${ukraine});
             background-repeat: no-repeat;
+            background-position: 20%;
             display: flex;
             justify-content: start;
             flex-direction: column;
