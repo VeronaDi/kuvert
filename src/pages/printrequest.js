@@ -131,7 +131,9 @@ const IndexPage = props => {
       >
         {t("printedOrder")}
       </h1>
-      <section
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSejJ5AVb5L0SeEnQzCxJO-HR_VXDXj5PTQmF09fDYN7qz8jwQ/formResponse"
+        method="POST"
         css={css`
           position: absolute;
           left: 50%;
@@ -172,6 +174,7 @@ const IndexPage = props => {
               {t("size")}
             </label>
             <select
+              name="entry.1177867946"
               css={css`
                 -webkit-appearance: none;
                 -moz-appearance: none;
@@ -313,7 +316,8 @@ const IndexPage = props => {
         >
           <BtnNext />
         </div>
-      </section>
+        <button type="submit">submit</button>
+      </form>
     </Layout>
   )
 }

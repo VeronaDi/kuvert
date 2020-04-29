@@ -39,6 +39,7 @@ export default () => {
         `}
       >
         <input
+          name="entry.2036495619"
           type="file"
           data-multiple-caption="{count} files selected"
           multiple
