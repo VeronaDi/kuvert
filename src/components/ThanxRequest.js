@@ -10,7 +10,7 @@ export default () => {
 
   return (
     <Link
-      to="/thanxrequest"
+      to="/"
       css={css`
         background: #c5003e;
         border-radius: 3px;

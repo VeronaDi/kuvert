@@ -51,6 +51,7 @@ const resources = {
         "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer-Kuvert-network GmbH» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики. Співпраця з провідними європейськими виробниками паперу дає змогу забезпечувати виробництво гарантовано досконалою сировиною. Ми наполегливо працюємо над удосконаленням усіх процесів для того, щоб залишити екологічний слід якомога менший, тому на фабриці діє технологія безвідходного виробництва.",
       historyP2:
         "«Куверт-Україна» пропонує споживачам найширший асортимент поштових конвертів та пакетів, унікальні запатентовані продукти та інновації в галузі рекламного конверта, постійні складські запаси та сертифікований контроль якості.",
+      homepage: "Повернутися на головну",
       indexAbout:
         "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer Kuvert Network» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики.",
       indexContactUs:
@@ -96,6 +97,9 @@ const resources = {
       statisticFact: "Корисні та значні дані про нашу фабрику",
       titleText:
         "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
+      thanx: "Дякуємо за Ваш запит!",
+      thanxText:
+        "Ваш запит надіслано. Наш менеджер зв'яжеться з Вами для уточнення та підтвердження запиту.",
       ukrinvest: "Укрінвестприлад",
       viewProducts: "Каталог продукції",
       visitUs: "Відвідайте нас",
@@ -153,6 +157,7 @@ const resources = {
         "The Kuvert-Ukraine envelope factory is the largest envelope manufacturer in Ukraine since 1999 and part of the Mayer-Kuvert-network GmbH - largest envelope manufacturing company in Europe. We produce over 250 million envelopes each year thanks to the factory's high quality machine range. Collaboration with leading European paper manufacturers makes it possible to ensure the production of guaranteed excellent raw materials. We are working hard to improve all processes to keep the environmental footprint as small as possible, so the factory has a waste-free technology.",
       historyP2:
         "Kuvert-Ukraine offers consumers the widest range of mail envelopes and packages, unique patented products and innovations in the field of advertising envelope, permanent warehouse stocks and certified quality control.",
+      homepage: "Back to homepage",
       indexAbout:
         "Kuvert-Ukraine is part of Europe's largest Mayer-Kuvert-network envelope manufacturing group and the largest envelope manufacturer in Ukraine since 1999. Every year we produce over 250 million envelopes thanks to the factory's high quality machine park.",
       indexContactUs:
@@ -199,6 +204,9 @@ const resources = {
       statisticFact: "Useful and important information about our factory",
       titleText:
         "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",
+      thanx: "Thank you for request!",
+      thanxText:
+        "Your request has been sent. Our manager will contact you to check and confirm the request.",
       ukrinvest: "Ukrinvestprylad",
       viewProducts: "View products",
       visitUs: "Visit us",
