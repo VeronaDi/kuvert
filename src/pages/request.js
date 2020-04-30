@@ -145,7 +145,7 @@ const IndexPage = props => {
           `}
         ></div>
         <Link
-          to="/basicrequest"
+          to="/basicform"
           css={css`
               text-decoration: none;
               width: 28%;
@@ -179,7 +179,7 @@ const IndexPage = props => {
           <p>{t("basicOrderText")}</p>
         </Link>
         <Link
-          to="/printrequest"
+          to="/printform"
           css={css`
             width: 28%;
             height: 60vh;
@@ -212,7 +212,7 @@ const IndexPage = props => {
           <p>{t("printedOrderText")}</p>
         </Link>
         <Link
-          to="/individualrequest"
+          to="/individualform"
           css={css`
             width: 28%;
             height: 60vh;

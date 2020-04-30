@@ -17,6 +17,8 @@ import BtnNext from "../components/BtnNext"
 
 import logoGrey from "../images/logoGrey.png"
 import arrowSelect from "../images/arrow-select.png"
+import ContactForm from "../components/ContactForm"
+import BtnSendForm from "../components/BtnSendForm"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -317,6 +319,8 @@ const IndexPage = props => {
           <BtnNext />
         </div>
         <button type="submit">submit</button>
+        <ContactForm />
+        <BtnSendForm />
       </form>
     </Layout>
   )

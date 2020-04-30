@@ -118,15 +118,22 @@ export default props => {
             position: relative;
           `}
         >
-          <div
+          <iframe
+            title="mapkuvert"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10935.391700386486!2d24.725399862651894!3d48.90620217278415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4db4ca10c71da75f!2z0JrRg9Cy0LXRgNGCLdCj0LrRgNCw0ZfQvdCwLCDQotCe0JI!5e0!3m2!1suk!2sua!4v1588173474444!5m2!1suk!2sua"
+            frameborder="0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
             css={css`
               width: 100%;
               height: 689px;
               position: relative;
               z-index: 1;
+              padding-bottom: 76px;
             `}
-          >
-            {typeof window !== "undefined" && (
+          ></iframe>
+          {/* {typeof window !== "undefined" && (
               <Map center={city.position} zoom={13}>
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -142,8 +149,7 @@ export default props => {
                   </Popup>
                 </Marker>
               </Map>
-            )}
-          </div>
+            )} */}
           <div
             css={css`
               width: 432px;

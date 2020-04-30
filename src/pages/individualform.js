@@ -11,6 +11,8 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import logoGrey from "../images/logoGrey.png"
+import ContactForm from "../components/ContactForm"
+import BtnSendForm from "../components/BtnSendForm"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -126,6 +128,8 @@ const IndexPage = props => {
         {t("individualOrder")}
       </h1>
       <section></section>
+      <ContactForm />
+      <BtnSendForm />
     </Layout>
   )
 }

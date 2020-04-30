@@ -11,7 +11,7 @@ export default () => {
 
   return (
     <Link
-      to="/personalinfo"
+      to="/personalinfoform"
       css={css`
         background: #c5003e;
         border-radius: 3px;

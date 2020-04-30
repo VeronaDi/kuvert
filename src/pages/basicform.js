@@ -11,6 +11,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import BtnNext from "../components/BtnNext"
+import ContactForm from "../components/ContactForm"
 
 import logoGrey from "../images/logoGrey.png"
 
@@ -155,6 +156,7 @@ const IndexPage = props => {
           <BtnNext />
         </div>
       </section>
+      <ContactForm />
     </Layout>
   )
 }
