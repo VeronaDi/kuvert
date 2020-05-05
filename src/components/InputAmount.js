@@ -4,6 +4,9 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import plus from "../images/plus.png"
+import minus from "../images/minus.png"
+
 export default () => {
   const { t, i18n } = useTranslation()
 
@@ -40,15 +43,12 @@ export default () => {
             top: 50%;
             transform: translate(0%, -50%);
             border: none;
-            background: transparent;
+            background: url(${minus}) no-repeat center;
+            outline: none;
             padding: 10px;
-            font-size: 30px;
-            line-height: 35px;
-            font-weight: 300;
+            cursor: pointer;
           `}
-        >
-          -
-        </button>
+        />
         <input
           disabled
           ref={quantityEnv}
@@ -86,15 +86,12 @@ export default () => {
             top: 50%;
             transform: translate(0, -50%);
             border: none;
-            background: transparent;
+            background: url(${plus}) no-repeat center;
+            outline: none;
             padding: 10px;
-            font-size: 30px;
-            line-height: 35px;
-            font-weight: 300;
+            cursor: pointer;
           `}
-        >
-          +
-        </button>
+        />
       </div>
     </form>
   )
