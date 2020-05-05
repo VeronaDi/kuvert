@@ -1,7 +1,9 @@
 import React from "react"
 // import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
+
+import calculator from "../images/calculator.png"
 
 import { useTranslation } from "react-i18next"
 
@@ -11,6 +13,10 @@ export default () => {
   return (
     <div
       css={css`
+        background: url(${calculator}), #65665c;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
         width: 90%;
         margin: 0 auto;
         text-align: center;
@@ -36,7 +42,8 @@ export default () => {
       >
         {t("weightUse")}
       </p>
-      <button
+      <Link
+        to="/weightcalc"
         css={css`
           color: white;
           text-decoration: none;
@@ -60,7 +67,7 @@ export default () => {
         `}
       >
         {t("calculate")}
-      </button>
+      </Link>
     </div>
   )
 }

@@ -29,6 +29,6 @@ export default () => {
           border: 2px solid #c4c4c4;
         }
       `}
-    ></input>
+    />
   )
 }

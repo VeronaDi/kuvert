@@ -10,7 +10,7 @@ import MainNav from "../components/MainNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
 import BtnRequestCall from "../components/BtnRequestCall"
-import WeightCalculator from "../components/WeightCalculator"
+import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import SliderClients from "../components/SliderClients"
 import Footer from "../components/Footer"
 
@@ -200,7 +200,7 @@ const IndexPage = props => {
         ></div>
       </section>
 
-      <WeightCalculator />
+      <WeightCalculatorSection />
 
       <section
         css={css`

@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 
-import MainNav from "../components/MainNav"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -48,7 +46,6 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Request" />
-      <MainNav isHome {...props} />
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;
