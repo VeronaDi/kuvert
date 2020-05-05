@@ -15,6 +15,8 @@ import { useTranslation } from "react-i18next"
 import InputAmount from "../components/InputAmount"
 import InputPrintColors from "../components/InputPrintColors"
 import InputDragDrop from "../components/InputDragDrop"
+import InputText from "../components/InputText"
+import InputNumber from "../components/InputNumber"
 import BtnNext from "../components/BtnNext"
 
 import logoGrey from "../images/logoGrey.png"
@@ -411,6 +413,24 @@ const IndexPage = props => {
             </select>
           </div>
         </div>
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            padding-right: 19px;
+            padding-top: 40px;
+          `}
+        >
+          <label
+            css={css`
+              font-size: 12px;
+              padding-bottom: 5px;
+            `}
+          >
+            {t("color")}/{t("paperBrand")}
+          </label>
+          <InputText />
+        </div>
 
         <h3
           css={css`
@@ -464,6 +484,89 @@ const IndexPage = props => {
           </select>
         </div>
 
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            padding-right: 19px;
+          `}
+        >
+          <label
+            css={css`
+              font-size: 12px;
+              padding-bottom: 5px;
+            `}
+          >
+            1) {t("width")}, {t("mm")}
+          </label>
+          <InputNumber />
+        </div>
+
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            padding-right: 19px;
+            padding-top: 38px;
+          `}
+        >
+          <label
+            css={css`
+              font-size: 12px;
+              padding-bottom: 5px;
+            `}
+          >
+            1) {t("height")}, {t("mm")}
+          </label>
+          <InputNumber />
+        </div>
+
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 780px;
+            padding-top: 40px;
+          `}
+        >
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              padding-right: 19px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("right")}, {t("mm")}
+            </label>
+            <InputNumber />
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              padding-right: 19px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("bottom")}, {t("mm")}
+            </label>
+            <InputNumber />
+          </div>
+        </div>
+
         <h3
           css={css`
             text-align: center;
@@ -494,9 +597,38 @@ const IndexPage = props => {
                 padding-bottom: 5px;
               `}
             >
-              {t("colorsFront")}
+              {t("typePrint")}
             </label>
-            <InputPrintColors />
+            <select
+              css={css`
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(${arrowSelect}), #ffffff;
+                background-position: 97%;
+                background-repeat: no-repeat;
+                width: 380px;
+                height: 65px;
+                font-size: 16px;
+                border: 1px solid #d6d6d6;
+                padding: 18px;
+                outline: none;
+                color: #444444;
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            >
+              <option disabled selected>
+                {t("choosePrintType")}
+              </option>
+              <option value="noPrint">{t("noPrint")}</option>
+              <option value="outerPrint">{t("outerPrint")}</option>
+              <option value="innerPrint">{t("innerPrint")}</option>
+              <option value="innerandouterPrint">
+                {t("innerandouterPrint")}
+              </option>
+            </select>
           </div>
           <div
             css={css`
@@ -510,7 +642,7 @@ const IndexPage = props => {
                 padding-bottom: 5px;
               `}
             >
-              {t("colorsBack")}
+              {t("colorsAmount")}
             </label>
             <InputPrintColors />
           </div>
