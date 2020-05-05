@@ -418,6 +418,58 @@ const IndexPage = props => {
             margin: 40px 0;
           `}
         >
+          {t("windowDetails")}
+        </h3>
+
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            padding-right: 19px;
+          `}
+        >
+          <label
+            css={css`
+              font-size: 12px;
+              padding-bottom: 5px;
+            `}
+          >
+            {t("window")}
+          </label>
+          <select
+            css={css`
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              background: url(${arrowSelect}), #ffffff;
+              background-position: 97%;
+              background-repeat: no-repeat;
+              width: 380px;
+              height: 65px;
+              font-size: 16px;
+              border: 1px solid #d6d6d6;
+              padding: 18px;
+              outline: none;
+              color: #444444;
+              :focus {
+                border: 2px solid #c4c4c4;
+              }
+            `}
+          >
+            <option disabled selected>
+              {t("chooseWindow")}
+            </option>
+            <option value="withWindow">{t("windowYes")}</option>
+            <option value="noWindow">{t("windowNo")}</option>
+          </select>
+        </div>
+
+        <h3
+          css={css`
+            text-align: center;
+            margin: 40px 0;
+          `}
+        >
           {t("printDetails")}
         </h3>
         <div
