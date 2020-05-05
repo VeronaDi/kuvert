@@ -238,7 +238,6 @@ const IndexPage = props => {
               {t("sealing")}
             </label>
             <select
-              name="entry.1177867946"
               css={css`
                 -webkit-appearance: none;
                 -moz-appearance: none;
@@ -265,6 +264,150 @@ const IndexPage = props => {
               <option value="sk">{t("sk")}</option>
               <option value="skl">{t("skl")}</option>
               <option value="bk">{t("bk")}</option>
+            </select>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              padding-right: 19px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("type")}
+            </label>
+            <select
+              css={css`
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(${arrowSelect}), #ffffff;
+                background-position: 97%;
+                background-repeat: no-repeat;
+                width: 380px;
+                height: 65px;
+                font-size: 16px;
+                border: 1px solid #d6d6d6;
+                padding: 18px;
+                outline: none;
+                color: #444444;
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            >
+              <option disabled selected>
+                {t("chooseEnvelopeType")}
+              </option>
+              <option value="envelope">{t("envelope")}</option>
+              <option value="pocket">{t("pocket")}</option>
+            </select>
+          </div>
+        </div>
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 780px;
+            padding-top: 40px;
+          `}
+        >
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              padding-right: 19px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("typePaper")}
+            </label>
+            <select
+              css={css`
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(${arrowSelect}), #ffffff;
+                background-position: 97%;
+                background-repeat: no-repeat;
+                width: 380px;
+                height: 65px;
+                font-size: 16px;
+                border: 1px solid #d6d6d6;
+                padding: 18px;
+                outline: none;
+                color: #444444;
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            >
+              <option disabled selected>
+                {t("choosePaperType")}
+              </option>
+              <option value="whiteOffest">{t("whiteOffset")}</option>
+              <option value="whiteCoated">{t("whiteCoated")}</option>
+              <option value="brown">{t("brown")}</option>
+              <option value="other">{t("other")}</option>
+            </select>
+          </div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              padding-right: 19px;
+            `}
+          >
+            <label
+              css={css`
+                font-size: 12px;
+                padding-bottom: 5px;
+              `}
+            >
+              {t("paperGSM")}
+            </label>
+            <select
+              css={css`
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background: url(${arrowSelect}), #ffffff;
+                background-position: 97%;
+                background-repeat: no-repeat;
+                width: 380px;
+                height: 65px;
+                font-size: 16px;
+                border: 1px solid #d6d6d6;
+                padding: 18px;
+                outline: none;
+                color: #444444;
+                :focus {
+                  border: 2px solid #c4c4c4;
+                }
+              `}
+            >
+              <option disabled selected>
+                {t("choosePaperGSM")}
+              </option>
+              <option value="75">75</option>
+              <option value="80">80</option>
+              <option value="90">90</option>
+              <option value="100">100</option>
+              <option value="115">115</option>
+              <option value="120">120</option>
+              <option value="130">130</option>
             </select>
           </div>
         </div>
