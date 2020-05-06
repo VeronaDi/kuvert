@@ -25,6 +25,7 @@ const resources = {
       addressBranchLviv: "вул. Зелена, 251",
       addressOfFactory: "Адреса фабрики",
       addressFactory: "вул.І.Макуха, 6",
+      addToRequest: "Додати до запиту",
       amount: "Кількість",
       basicOrder: "Стандартний запит",
       basicOrderText:
@@ -112,6 +113,8 @@ const resources = {
         "Якщо бажаєте надрукувати конверт у корпоративному стилі, додавши логотип, адресу, елементи компанії тощо, цей варіант саме для Вас.",
       printMockup: "Приклад друку (необов'язково)",
       productionDep: "Виробничий відділ",
+      pcs: " шт.",
+      quantityBox: "Кількість в коробці",
       right: "Відстань справа",
       request: "Створити запит",
       requestCall: "Замовити дзвінок",
@@ -180,6 +183,7 @@ const resources = {
       addressBranchLviv: "Zelena str. 251",
       addressOfFactory: "Address of factory",
       addressFactory: "Ivano-Frankivsk, Makuha str. 6",
+      addToRequest: "Add to request",
       amount: "Amount",
       basicOrder: "Basic order",
       basicOrderText:
@@ -269,6 +273,8 @@ const resources = {
         "If you want to print a corporate-style envelope with the logo, address, company elements, etc., this option is for you.",
       printMockup: "Print sample (not necessary)",
       productionDep: "Production department",
+      pcs: " pcs",
+      quantityBox: "Quantity in box",
       right: "Right distance",
       request: "Create request",
       requestCall: "Request call",

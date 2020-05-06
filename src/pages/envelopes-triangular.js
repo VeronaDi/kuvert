@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
+import BtnAddToRequest from "../components/BtnAddToRequest"
 
 import { css } from "@emotion/core"
 
@@ -14,28 +15,28 @@ import triangularEnv from "../images/triangular-envelope.png"
 
 let triangularEnvelope = [
   {
-    code: "C4",
-    size: "229x324",
+    code: "1111",
+    size: "C6 (114x162",
     color: "brown",
     type: "envelope",
-    gsm: "100",
-    pack: "200",
+    gsm: "80",
+    pack: "1000",
   },
   {
-    code: "C5",
-    size: "162x229",
+    code: "2222",
+    size: "C5 (162x229",
     color: "brown",
     type: "envelope",
     gsm: "80",
     pack: "500",
   },
   {
-    code: "C6",
-    size: "114x162",
+    code: "3333",
+    size: "C4 (229x324",
     color: "brown",
     type: "envelope",
-    gsm: "80",
-    pack: "1000",
+    gsm: "100",
+    pack: "200",
   },
 ]
 
@@ -295,7 +296,7 @@ export default props => {
             border-radius: 3px;
             width: 1188px;
             height: 93px;
-            margin: 20px auto;
+            margin: 20px auto 54px auto;
             padding: 22px 0;
             display: flex;
             flex-direction: row;
@@ -309,7 +310,9 @@ export default props => {
 
           <GeneralNames>
             {t("size")}
-            <EnvelopeParam>{size}</EnvelopeParam>
+            <EnvelopeParam>
+              {size} {t("mm")})
+            </EnvelopeParam>
           </GeneralNames>
 
           <GeneralNames>
@@ -328,9 +331,14 @@ export default props => {
           </GeneralNames>
 
           <GeneralNames>
-            {t("pack")}
-            <EnvelopeParam>{pack}</EnvelopeParam>
+            {t("quantityBox")}
+            <EnvelopeParam>
+              {pack}
+              {t("pcs")}
+            </EnvelopeParam>
           </GeneralNames>
+
+          <BtnAddToRequest />
         </div>
       ))}
 
