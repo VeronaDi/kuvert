@@ -11,15 +11,14 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-let products = [
-  { img: "/products/1.png", name: "Envelopes", id: "envelopes" },
-  { img: "/products/2.png", name: "banderole", id: "banderole" },
-  { img: "/products/3.png", name: "Paper bags", id: "ecobags" },
-  { img: "/products/4.png", name: "medical", id: "med" },
-  { img: "/products/5.png", name: "printed", id: "printed" },
-  { img: "/products/6.png", name: "individual", id: "individual" },
-  { img: "/products/7.png", name: "other", id: "other" },
-  { img: "/products/8.png", name: "sale", id: "sale" },
+let paperbags = [
+  { img: "/products/9.png", name: "White", id: "white-paperbags" },
+  { img: "/products/10.png", name: "Brown", id: "brown-paperbags" },
+  {
+    img: "/products/11.png",
+    name: "Color",
+    id: "color-paperbags",
+  },
 ]
 
 export default props => {
@@ -30,7 +29,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Products" />
+      <SEO title="Paper bags" />
       <MainNav {...props} />
 
       <h1
@@ -41,7 +40,7 @@ export default props => {
           font-weight: bold;
         `}
       >
-        {t("products")}
+        {t("paperbags")}
       </h1>
       <div
         css={css`
@@ -51,11 +50,11 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {products.map(({ name, img, id }) => (
+        {paperbags.map(({ name, img, id }) => (
           <LocalizedLink
-            to={`/${id}`}
+            to={`${id}`}
             css={css`
-              width: 49.5%;
+              width: 33%;
               padding-bottom: 15px;
               position: relative;
               text-align: center;
@@ -70,15 +69,14 @@ export default props => {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 80%;
-                max-width: 687px;
+                max-width: 460px;
                 height: 205px;
                 background: rgba(0, 0, 0, 0.3);
                 border-radius: 3px;
                 font-weight: bold;
                 font-size: 48px;
-                line-height: 56px;
-                padding: 75px 0;
                 color: #ffffff;
+                padding: 70px 0;
               `}
             >
               {name}
@@ -86,7 +84,6 @@ export default props => {
           </LocalizedLink>
         ))}
       </div>
-
       <Footer />
     </Layout>
   )
