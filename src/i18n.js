@@ -27,6 +27,7 @@ const resources = {
       addressFactory: "вул.І.Макуха, 6",
       addToRequest: "Додати до запиту",
       amount: "Кількість",
+      banderole: "Бандерольні пакети",
       basicOrder: "Стандартний запит",
       basicOrderText:
         "Якщо Ви бажаєте обмежитись нескладним запитом, обравши звичайний конверт, цей варіант саме для Вас.",
@@ -190,6 +191,7 @@ const resources = {
       addressFactory: "Ivano-Frankivsk, Makuha str. 6",
       addToRequest: "Add to request",
       amount: "Amount",
+      banderole: "Banderole bags",
       basicOrder: "Basic order",
       basicOrderText:
         "If you want to limit yourself to a simple inquiry by choosing a regular envelope, this option is for you.",
