@@ -35,6 +35,9 @@ const resources = {
       brown: "коричневий",
       bottom: "Відстань знизу",
       call: "Зателефонуйте нам",
+      cardboardEnv: "Пакети з картонною вставкою",
+      cardboardEnvText:
+        "Пакети з картонною вставкою чудово підійдуть для відправки декількох аркушів формату А4, впораються зі збереженням зовнішнього вигляду вмісту. Такий пакет вдвічі легший, ніж повністю картонний пакет, а також значно дешевший.",
       city: "Місто",
       chooseDepartment: "Оберіть відділ",
       chooseType: "Оберіть тип запиту",
@@ -204,6 +207,9 @@ const resources = {
       bk: "without glue",
       brown: "brown",
       call: "Call us",
+      cardboardEnv: "Envelopes with cardboard insert",
+      cardboardEnvText:
+        "Packages with a cardboard insert are perfect for sending several sheets of A4 format, will cope with the preservation of the appearance of the contents. This package is twice as light as a fully cardboard package and much cheaper.",
       city: "City",
       chooseDepartment: "Choose department",
       chooseType: "Choose type of request",
