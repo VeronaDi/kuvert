@@ -42,8 +42,7 @@ export default props => {
       >
         {t("envelopes")}
       </h1>
-      <LocalizedLink
-        // to={`${envelopes.id}`}
+      <div
         css={css`
           display: flex;
           justify-content: space-between;
@@ -51,10 +50,11 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {envelopes.map(({ name, img }) => (
-          <div
+        {envelopes.map(({ name, img, id }) => (
+          <LocalizedLink
+            to={`${id}`}
             css={css`
-              width: 32%;
+              width: 33%;
               padding-bottom: 15px;
               position: relative;
               text-align: center;
@@ -81,10 +81,9 @@ export default props => {
             >
               {name}
             </span>
-          </div>
+          </LocalizedLink>
         ))}
-      </LocalizedLink>
-
+      </div>
       <Footer />
     </Layout>
   )
