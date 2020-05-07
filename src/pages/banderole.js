@@ -59,7 +59,7 @@ export default props => {
           <LocalizedLink
             to={`${id}`}
             css={css`
-              width: 49%;
+              width: 24%;
               padding-bottom: 15px;
               position: relative;
               text-align: center;
