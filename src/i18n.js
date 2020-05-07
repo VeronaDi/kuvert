@@ -130,11 +130,16 @@ const resources = {
       skl: "з відривною стрічкою",
       statistic: "Важлива статистика",
       statisticFact: "Корисні та значні дані про нашу фабрику",
+      stationery: "Канцелярські магазини",
+      supermarket: "Супермаркети",
       titleText:
         "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
       thanx: "Дякуємо за Ваш запит!",
       thanxText:
         "Ваш запит надіслано. Наш менеджер зв'яжеться з Вами для уточнення та підтвердження запиту.",
+      thermopack: "Термоупаковка",
+      thermopackText:
+        "Упаковка, що містить по 10, 25, 50, 100… шт. конвертів. Термоупаковка захищає конверти від бруду, має нанесений штрих-код, що дозволяє реалізацію в сучасних торгових мережах, а також позбавляє від необхідності відраховувати потрібну кількість конвертів. Можлива брендова термоупаковка з Вашим логотипом, або ж стандартна —  з логотипом «Куверт-Україна».",
       type: "Тип",
       typePaper: "Вид паперу",
       typePrint: "Вид друку",
@@ -291,11 +296,16 @@ const resources = {
       skl: "peel and seal",
       statistic: "Important statistic",
       statisticFact: "Useful and important information about our factory",
+      stationery: "Stationery shops",
+      supermarket: "Supermarkets",
       titleText:
         "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",
       thanx: "Thank you for request!",
       thanxText:
         "Your request has been sent. Our manager will contact you to check and confirm the request.",
+      thermopack: "Thermopack",
+      thermopackText:
+        "Package containing 10, 25, 50, 100… pcs. envelopes. Thermal packaging protects envelopes from dirt, has a barcode, which allows implementation in modern retail chains, as well as eliminates the need to deduct the required number of envelopes. Branded thermal packaging with your logo is possible or standard - with the Kuvert-Ukraine logo.",
       type: "Type",
       typePaper: "Paper quality",
       typePrint: "Print type",
