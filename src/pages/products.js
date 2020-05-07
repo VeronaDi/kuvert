@@ -12,7 +12,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 let products = [
-  { img: "/products/1.png", name: "envelopes", id: "envelopes" },
+  { img: "/products/1.png", name: "Envelopes", id: "envelopes" },
   { img: "/products/2.png", name: "banderole", id: "banderole" },
   { img: "/products/3.png", name: "ecobags", id: "ecobags" },
   { img: "/products/4.png", name: "medical", id: "med" },
@@ -69,13 +69,15 @@ export default props => {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 72%;
-                height: 42%;
+                width: 80%;
+                max-width: 687px;
+                height: 205px;
                 background: rgba(0, 0, 0, 0.3);
                 border-radius: 3px;
                 font-weight: bold;
                 font-size: 48px;
-                padding-top: 45px;
+                line-height: 56px;
+                padding: 75px 0;
                 color: #ffffff;
               `}
             >
