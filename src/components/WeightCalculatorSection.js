@@ -18,7 +18,7 @@ export default () => {
         background-position: right;
         background-size: contain;
         width: 90%;
-        margin: 0 auto;
+        margin: 50px auto;
         text-align: center;
         color: white;
         padding: 25px 0;

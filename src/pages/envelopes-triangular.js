@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
+import WeightCalculatorSection from "../components/WeightCalculatorSection"
 
 import { css } from "@emotion/core"
 
@@ -74,7 +75,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="EnvelopesTriangular" />
+      <SEO title="Triangular valve" />
       <MainNav {...props} />
 
       <h3
@@ -341,7 +342,7 @@ export default props => {
           <BtnAddToRequest />
         </div>
       ))}
-
+      <WeightCalculatorSection />
       <Footer />
     </Layout>
   )
