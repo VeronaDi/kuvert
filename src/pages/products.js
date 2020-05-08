@@ -13,13 +13,13 @@ import { useTranslation } from "react-i18next"
 
 let products = [
   { img: "/products/1.png", name: "Envelopes", id: "envelopes" },
-  { img: "/products/1.png", name: "Banderole", id: "banderole" },
-  { img: "/products/1.png", name: "Paper bags", id: "ecobags" },
-  { img: "/products/1.png", name: "medical", id: "med" },
+  { img: "/products/2.png", name: "Banderole", id: "banderole" },
+  { img: "/products/3.png", name: "Paper bags", id: "ecobags" },
+  { img: "/products/4.png", name: "medical", id: "med" },
   { img: "/products/1.png", name: "printed", id: "printed" },
   { img: "/products/1.png", name: "individual", id: "individual" },
   { img: "/products/1.png", name: "other", id: "other" },
-  { img: "/products/1.png", name: "sale", id: "sale" },
+  { img: "/products/5.png", name: "sale", id: "sale" },
 ]
 
 export default props => {

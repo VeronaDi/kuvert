@@ -12,10 +12,14 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 let envelopes = [
-  { img: "/products/1.png", name: "Standard", id: "standard" },
-  { img: "/products/1.png", name: "Thermopack", id: "envelopes-thermopack" },
+  { img: "/products/standard.png", name: "Standard", id: "standard" },
   {
-    img: "/products/1.png",
+    img: "/products/thermopack.png",
+    name: "Thermopack",
+    id: "envelopes-thermopack",
+  },
+  {
+    img: "/products/triangular-envelope.png",
     name: "Triangular valve",
     id: "envelopes-triangular",
   },
