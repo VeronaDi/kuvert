@@ -12,15 +12,15 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 let banderole = [
-  { img: "/products/9.png", name: "Airpock", id: "airpock" },
-  { img: "/products/10.png", name: "DocuFix", id: "docufix" },
+  { img: "/products/1.png", name: "Airpock", id: "airpock" },
+  { img: "/products/1.png", name: "DocuFix", id: "docufix" },
   {
-    img: "/products/11.png",
+    img: "/products/1.png",
     name: "Envelopes with extension",
     id: "envelopes-extension",
   },
   {
-    img: "/products/11.png",
+    img: "/products/1.png",
     name: "Envelopes with cardboard insert",
     id: "envelopes-cardboard",
   },
@@ -60,6 +60,7 @@ export default props => {
             to={`${id}`}
             css={css`
               width: 24%;
+              height: 457px;
               padding-bottom: 15px;
               position: relative;
               text-align: center;
@@ -74,14 +75,13 @@ export default props => {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 80%;
-                max-width: 460px;
-                height: 205px;
+                max-width: 345px;
                 background: rgba(0, 0, 0, 0.3);
                 border-radius: 3px;
                 font-weight: bold;
-                font-size: 48px;
+                font-size: 40px;
                 color: #ffffff;
-                padding-top: 50px;
+                padding: 20px 0;
               `}
             >
               {name}
