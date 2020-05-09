@@ -3,7 +3,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 
-import calculator from "../images/calculator.png"
+import individualOrderBack from "../images/individual-order-back.png"
 
 import { useTranslation } from "react-i18next"
 
@@ -13,7 +13,7 @@ export default () => {
   return (
     <div
       css={css`
-        background: url(${calculator}), #65665c;
+        background: url(${individualOrderBack}), #c5003e;
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;
@@ -32,19 +32,21 @@ export default () => {
           margin: 0;
         `}
       >
-        {t("weight")}
+        {t("ownEnvIdea")}
       </p>
       <p
         css={css`
-          font-size: 16px;
+          font-size: 18px;
           font-weight: bold;
+          line-height: 50px;
           padding-bottom: 20px;
+          margin: 0;
         `}
       >
-        {t("weightUse")}
+        {t("creatIndEnv")}
       </p>
       <Link
-        to="/weightcalc"
+        to="/individualform"
         css={css`
           color: white;
           text-decoration: none;
@@ -67,7 +69,7 @@ export default () => {
           }
         `}
       >
-        {t("calculate")}
+        {t("createRequest")}
       </Link>
     </div>
   )

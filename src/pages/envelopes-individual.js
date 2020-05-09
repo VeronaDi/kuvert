@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
+import IndividualOrderSection from "../components/IndividualOrderSection"
 
 import { css } from "@emotion/core"
 
@@ -35,16 +36,13 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 55%;
-          max-width: 1380px;
+          width: 100%;
           height: 580px;
           background: url(${individual});
-          background-size: contain;
+          background-position: center;
           background-repeat: no-repeat;
-          margin: 22px auto 45px auto;
         `}
-      />
-
+      ></div>
       <p
         css={css`
           width: 845px;
@@ -52,14 +50,13 @@ export default props => {
           font-weight: 500;
           font-size: 18px;
           line-height: 27px;
+          margin: 45px auto;
           text-align: center;
-          color: #000000;
-          margin: 0 auto;
         `}
       >
         {t("individualEnvText")}
       </p>
-
+      <IndividualOrderSection />
       <Footer />
     </Layout>
   )
