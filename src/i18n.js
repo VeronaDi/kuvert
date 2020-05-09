@@ -115,6 +115,7 @@ const resources = {
       phone: "Телефон",
       personalDetails: "Особисті дані",
       pocket: "Пакет",
+      price: "Ціна",
       printDetails: "Параметри друку",
       printedOrder: "Запит друку",
       printedOrderText:
@@ -289,6 +290,7 @@ const resources = {
       phone: "Phone",
       personalDetails: "Personal details",
       pocket: "Pocket",
+      price: "Price",
       printDetails: "Print details",
       printedOrder: "Printed order",
       printedOrderText:

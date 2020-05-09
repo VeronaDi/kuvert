@@ -19,9 +19,11 @@ let cardboardEnvelope = [
     code: "381187",
     size: "C4 (229x324",
     color: "brown",
-    type: "envelope",
-    gsm: "80",
-    pack: "1000",
+    type: "pocket",
+    sealing: "Seel&Peel",
+    gsm: "100",
+    pack: "250",
+    price: "from 4 522 UAH",
   },
 ]
 
@@ -227,59 +229,71 @@ export default props => {
         {t("chooseEnvelopeParam")}
       </h4>
 
-      {cardboardEnvelope.map(({ code, size, color, type, gsm, pack }) => (
-        <div
-          css={css`
-            background: #ffffff;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 3px;
-            width: 1188px;
-            height: 93px;
-            margin: 20px auto 54px auto;
-            padding: 22px 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-          `}
-        >
-          <GeneralNames>
-            {t("code")}
-            <EnvelopeParam>{code}</EnvelopeParam>
-          </GeneralNames>
+      {cardboardEnvelope.map(
+        ({ code, size, color, type, gsm, sealing, pack, price }) => (
+          <div
+            css={css`
+              background: #ffffff;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 3px;
+              width: 1188px;
+              height: 93px;
+              margin: 20px auto 54px auto;
+              padding: 22px 0;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+            `}
+          >
+            <GeneralNames>
+              {t("code")}
+              <EnvelopeParam>{code}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("size")}
-            <EnvelopeParam>
-              {size} {t("mm")})
-            </EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("size")}
+              <EnvelopeParam>
+                {size} {t("mm")})
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("color")}
-            <EnvelopeParam>{color}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("color")}
+              <EnvelopeParam>{color}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("type")}
-            <EnvelopeParam>{type}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("type")}
+              <EnvelopeParam>{type}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("paperGSM")}
-            <EnvelopeParam>{gsm}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("paperGSM")}
+              <EnvelopeParam>{gsm}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("quantityBox")}
-            <EnvelopeParam>
-              {pack}
-              {t("pcs")}
-            </EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("sealing")}
+              <EnvelopeParam>{sealing}</EnvelopeParam>
+            </GeneralNames>
 
-          <BtnAddToRequest />
-        </div>
-      ))}
+            <GeneralNames>
+              {t("quantityBox")}
+              <EnvelopeParam>
+                {pack}
+                {t("pcs")}
+              </EnvelopeParam>
+            </GeneralNames>
+
+            <GeneralNames>
+              {t("price")}
+              <EnvelopeParam>{price}</EnvelopeParam>
+            </GeneralNames>
+            
+            <BtnAddToRequest />
+          </div>
+        )
+      )}
       <WeightCalculatorSection />
       <Footer />
     </Layout>
