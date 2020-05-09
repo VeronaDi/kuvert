@@ -81,6 +81,9 @@ const resources = {
         "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer Kuvert Network» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики.",
       indexContactUs:
         "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львів.",
+      individualEnv: "Конверти з індивідуальним дизайном",
+      individualEnvText:
+        "Пропонуємо максимальну гнучкість в оформленні Вашого особливого конверта. Відповідно, можливості дизайну практично необмежені.",
       individualOrder: "Індивідуальний запит",
       individualOrderText:
         "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
@@ -256,7 +259,10 @@ const resources = {
         "Kuvert-Ukraine is part of Europe's largest Mayer-Kuvert-network envelope manufacturing group and the largest envelope manufacturer in Ukraine since 1999. Every year we produce over 250 million envelopes thanks to the factory's high quality machine park.",
       indexContactUs:
         "The envelope factory Kuvert-Ukraine is located in the city of Ivano-Frankivsk. Our branches operate in the following cities: Kyiv, Kharkiv, Dnipro and Lviv.",
-      individualOrder: "Individual order",
+      individualEnv: "Envelopes with individual design",
+      individualEnvText:
+        "We offer maximum flexibility in the design of your special envelope. Accordingly, the design possibilities are almost unlimited.",
+      individualOrder: "Individual inquiry",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
       innerPrint: "Inner print",

@@ -17,7 +17,7 @@ let products = [
   { img: "/products/3.png", name: "Paper bags", id: "ecobags" },
   { img: "/products/4.png", name: "medical", id: "med" },
   { img: "/products/1.png", name: "printed", id: "printed" },
-  { img: "/products/1.png", name: "individual", id: "individual" },
+  { img: "/products/1.png", name: "Individual", id: "envelopes-individual" },
   { img: "/products/1.png", name: "other", id: "other" },
   { img: "/products/5.png", name: "sale", id: "sale" },
 ]

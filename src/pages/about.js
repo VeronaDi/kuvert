@@ -158,7 +158,6 @@ export default props => {
           height: 158px;
           position: absolute;
           left: 50%;
-          -webkit-transform: translate(-50%, -2%);
           transform: translate(-50%, -2%);
         `}
       ></Link>

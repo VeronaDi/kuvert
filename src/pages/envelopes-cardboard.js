@@ -289,7 +289,7 @@ export default props => {
               {t("price")}
               <EnvelopeParam>{price}</EnvelopeParam>
             </GeneralNames>
-            
+
             <BtnAddToRequest />
           </div>
         )
