@@ -4,12 +4,17 @@ import LocalizedLink from "../components/LocalizedLink"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import MainNav from "../components/MainNav"
-import Footer from "../components/Footer"
 
 import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
+
+import MainNav from "../components/MainNav"
+import Footer from "../components/Footer"
+
+import backenvelopesgrey from "../images/background-envelopes-grey.svg"
+import backenvelopesblack from "../images/background-envelopes-black.svg"
+import backenvelopeswhite from "../images/background-envelopes-white.svg"
 
 let products = [
   { img: "/products/1.png", name: "Envelopes", id: "envelopes" },
@@ -55,14 +60,18 @@ export default props => {
           <LocalizedLink
             to={`/${id}`}
             css={css`
-              width: 49.5%;
+              width: 48%;
+              height: 300px;
+              background: url(${backenvelopesgrey}), darkgrey;
               padding-bottom: 15px;
               position: relative;
               text-align: center;
               cursor: pointer;
+              opacity: 0.3;
+              margin: 10px;
             `}
           >
-            <img src={img} alt={`${name}`} />
+            {/* <img src={img} alt={`${name}`} /> */}
             <span
               css={css`
                 position: absolute;
