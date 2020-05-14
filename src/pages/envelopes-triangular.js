@@ -14,32 +14,8 @@ import { useTranslation } from "react-i18next"
 
 import triangularEnv from "../images/triangular-envelope.png"
 
-let triangularEnvelope = [
-  {
-    code: "1111",
-    size: "C6 (114x162",
-    color: "brown",
-    type: "envelope",
-    gsm: "80",
-    pack: "1000",
-  },
-  {
-    code: "2222",
-    size: "C5 (162x229",
-    color: "brown",
-    type: "envelope",
-    gsm: "80",
-    pack: "500",
-  },
-  {
-    code: "3333",
-    size: "C4 (229x324",
-    color: "brown",
-    type: "envelope",
-    gsm: "100",
-    pack: "200",
-  },
-]
+import triangularEnvelopes from "../data/triangularEnvelopes"
+import { string } from "prop-types"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -68,10 +44,12 @@ const EnvelopeParam = ({ children }) => (
 )
 
 export default props => {
-  const { t, i18n } = useTranslation()
-  if (i18n.language !== props.pageContext.langKey) {
-    i18n.changeLanguage(props.pageContext.langKey)
+  const T = useTranslation()
+  if (T.i18n.language !== props.pageContext.langKey) {
+    T.i18n.changeLanguage(props.pageContext.langKey)
   }
+
+  const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
   return (
     <Layout>
@@ -295,8 +273,9 @@ export default props => {
         {t("chooseEnvelopeParam")}
       </h4>
 
-      {triangularEnvelope.map(({ code, size, color, type, gsm, pack }) => (
+      {triangularEnvelopes.map(({ code, size, color, type, gsm, pack }) => (
         <div
+          key={code}
           css={css`
             background: #ffffff;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -324,7 +303,7 @@ export default props => {
 
           <GeneralNames>
             {t("color")}
-            <EnvelopeParam>{color}</EnvelopeParam>
+            <EnvelopeParam>{t(color)}</EnvelopeParam>
           </GeneralNames>
 
           <GeneralNames>

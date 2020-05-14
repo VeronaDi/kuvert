@@ -311,7 +311,7 @@ export default props => {
             </label>
             <input
               type="text"
-              placeholder="Bob Green"
+              placeholder={t("color")}
               css={css`
                 width: 460px;
                 height: 65px;
