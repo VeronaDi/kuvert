@@ -54,10 +54,12 @@ const EnvelopeParam = ({ children }) => (
 )
 
 export default props => {
-  const { t, i18n } = useTranslation()
-  if (i18n.language !== props.pageContext.langKey) {
-    i18n.changeLanguage(props.pageContext.langKey)
+  const T = useTranslation()
+  if (T.i18n.language !== props.pageContext.langKey) {
+    T.i18n.changeLanguage(props.pageContext.langKey)
   }
+
+  const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
   return (
     <Layout>

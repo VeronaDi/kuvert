@@ -15,6 +15,7 @@ import Footer from "../components/Footer"
 import backenvelopesgrey from "../images/background-envelopes-grey.svg"
 import backenvelopesblack from "../images/background-envelopes-black.svg"
 import backenvelopeswhite from "../images/background-envelopes-white.svg"
+import backenvelopes from "../images/background-envelopes.svg"
 
 let products = [
   { img: "/products/1.png", name: "Envelopes", id: "envelopes" },
@@ -28,10 +29,12 @@ let products = [
 ]
 
 export default props => {
-  const { t, i18n } = useTranslation()
-  if (i18n.language !== props.pageContext.langKey) {
-    i18n.changeLanguage(props.pageContext.langKey)
+  const T = useTranslation()
+  if (T.i18n.language !== props.pageContext.langKey) {
+    T.i18n.changeLanguage(props.pageContext.langKey)
   }
+
+  const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
   return (
     <Layout>
@@ -62,13 +65,13 @@ export default props => {
             css={css`
               width: 49%;
               height: 300px;
-              background: url(${backenvelopesgrey}), darkgrey;
+              background: url(${backenvelopes}), darkgrey;
               padding-bottom: 15px;
               position: relative;
               text-align: center;
               cursor: pointer;
-              opacity: 0.3;
-              margin-bottom: 10px;
+              opacity: 0.5;
+              margin-bottom: 20px;
             `}
           >
             {/* <img src={img} alt={`${name}`} /> */}
@@ -78,7 +81,7 @@ export default props => {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 65%;
+                width: 60%;
                 max-width: 687px;
                 height: 170px;
                 background: rgba(0, 0, 0, 0.3);
