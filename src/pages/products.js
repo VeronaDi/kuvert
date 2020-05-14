@@ -51,7 +51,7 @@ export default props => {
       <div
         css={css`
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           flex-flow: row wrap;
           padding-top: 46px;
         `}
@@ -60,7 +60,7 @@ export default props => {
           <LocalizedLink
             to={`/${id}`}
             css={css`
-              width: 48%;
+              width: 49%;
               height: 300px;
               background: url(${backenvelopesgrey}), darkgrey;
               padding-bottom: 15px;
@@ -68,7 +68,7 @@ export default props => {
               text-align: center;
               cursor: pointer;
               opacity: 0.3;
-              margin: 10px;
+              margin-bottom: 10px;
             `}
           >
             {/* <img src={img} alt={`${name}`} /> */}
@@ -78,15 +78,15 @@ export default props => {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 80%;
+                width: 65%;
                 max-width: 687px;
-                height: 205px;
+                height: 170px;
                 background: rgba(0, 0, 0, 0.3);
                 border-radius: 3px;
                 font-weight: bold;
                 font-size: 48px;
                 line-height: 56px;
-                padding: 75px 0;
+                padding: 55px 0;
                 color: #ffffff;
               `}
             >
