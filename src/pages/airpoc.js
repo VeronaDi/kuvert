@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
-import BtnAddToRequest from "../components/BtnAddToRequest"
+import BtnAddToRequest from "../components/BtnAddToRequestCard"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 
 import { css } from "@emotion/core"
@@ -259,60 +259,77 @@ export default props => {
       >
         {t("chooseDesiredProduct")}
       </h4>
+      <div
+        css={css`
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        `}
+      >
+        {airpoc.map(({ code, size, color, pack, sealing, price }) => (
+          <div
+            key={code}
+            css={css`
+              background: #ffffff;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 3px;
+              width: 380px;
+              height: 266px;
+              padding: 20px;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              margin: 20px 0;
+            `}
+          >
+            <GeneralNames>
+              {t("code")}
+              <EnvelopeParam>{code}</EnvelopeParam>
+            </GeneralNames>
 
-      {airpoc.map(({ code, size, color, pack, sealing, price }) => (
-        <div
-          key={code}
-          css={css`
-            background: #ffffff;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 3px;
-            width: 1188px;
-            height: 93px;
-            margin: 20px auto 54px auto;
-            padding: 22px 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-          `}
-        >
-          <GeneralNames>
-            {t("code")}
-            <EnvelopeParam>{code}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("size")}
+              <EnvelopeParam>
+                {size} {t("mm")}
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("size")}
-            <EnvelopeParam>
-              {size} {t("mm")}
-            </EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("sealing")}
+              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("sealing")}
-            <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("color")}
+              <EnvelopeParam>{t(color)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("color")}
-            <EnvelopeParam>{t(color)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("quantityBox")}
+              <EnvelopeParam>
+                {pack}
+                {t("pcs")}
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("quantityBox")}
-            <EnvelopeParam>
-              {pack}
-              {t("pcs")}
-            </EnvelopeParam>
-          </GeneralNames>
-
-          <GeneralNames>
-            {t("price")}
-            <EnvelopeParam>{t(price)}</EnvelopeParam>
-          </GeneralNames>
-          <BtnAddToRequest />
-        </div>
-      ))}
+            <GeneralNames>
+              {t("price")}
+              <EnvelopeParam>{t(price)}</EnvelopeParam>
+            </GeneralNames>
+            <div
+              css={css`
+                border-top: 0.2px solid #000000;
+                width: 100%;
+              `}
+            >
+              <BtnAddToRequest />
+            </div>
+          </div>
+        ))}
+      </div>
       <WeightCalculatorSection />
       <Footer />
     </Layout>
