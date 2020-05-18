@@ -14,18 +14,7 @@ import { useTranslation } from "react-i18next"
 
 import triangularEnv from "../images/triangular-envelope.png"
 
-let cardboardEnvelope = [
-  {
-    code: "381187",
-    size: "C4 (229x324",
-    color: "brown",
-    type: "pocket",
-    sealing: "Seel&Peel",
-    gsm: "100",
-    pack: "250",
-    price: "from 4 522 UAH",
-  },
-]
+import cardboardEnv from "../data/cardboardEnvelopes"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -231,7 +220,7 @@ export default props => {
         {t("chooseEnvelopeParam")}
       </h4>
 
-      {cardboardEnvelope.map(
+      {cardboardEnv.map(
         ({ code, size, color, type, gsm, sealing, pack, price }) => (
           <div
             css={css`
@@ -261,22 +250,17 @@ export default props => {
 
             <GeneralNames>
               {t("color")}
-              <EnvelopeParam>{color}</EnvelopeParam>
+              <EnvelopeParam>{t(color)}</EnvelopeParam>
             </GeneralNames>
 
             <GeneralNames>
               {t("type")}
-              <EnvelopeParam>{type}</EnvelopeParam>
+              <EnvelopeParam>{t(type)}</EnvelopeParam>
             </GeneralNames>
 
             <GeneralNames>
               {t("paperGSM")}
               <EnvelopeParam>{gsm}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("sealing")}
-              <EnvelopeParam>{sealing}</EnvelopeParam>
             </GeneralNames>
 
             <GeneralNames>
@@ -289,7 +273,7 @@ export default props => {
 
             <GeneralNames>
               {t("price")}
-              <EnvelopeParam>{price}</EnvelopeParam>
+              <EnvelopeParam>{t(price)}</EnvelopeParam>
             </GeneralNames>
 
             <BtnAddToRequest />
