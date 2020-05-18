@@ -183,6 +183,7 @@ const resources = {
       weightcalcText:
         "Вкажіть нижче необхідні параметри конверта і Ви дізнаєтесь вагу свого замовлення.",
       weightResult: "Вага замовлення становить ",
+      white: "білий",
       whiteOffset: "білий офсетний",
       whiteCoated: "білий крейдований",
       whereUse: "Сфера застосування",
@@ -371,6 +372,7 @@ const resources = {
       weightcalcText:
         "Specify the envelope parameters below and you will know order weight.",
       weightResult: "Order weight equals ",
+      white: "white",
       whiteOffset: "white offset",
       whiteCoated: "white coated",
       whereUse: "Where to use",

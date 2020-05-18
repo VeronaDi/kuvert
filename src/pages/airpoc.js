@@ -15,7 +15,6 @@ import { useTranslation } from "react-i18next"
 import triangularEnv from "../images/triangular-envelope.png"
 
 import airpoc from "../data/airpoc"
-import { string } from "prop-types"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -24,6 +23,7 @@ const GeneralNames = ({ children }) => (
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
+      padding-right: 30px;
     `}
   >
     {children}
@@ -70,7 +70,7 @@ export default props => {
         css={css`
           width: 80%;
           height: auto;
-          max-height: 586px;
+          max-height: 720px;
           background: url(${triangularEnv}), #ffffff;
           background-position: left;
           background-repeat: no-repeat;
@@ -94,66 +94,46 @@ export default props => {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            height: 200px;
-            padding-top: 43px;
+            padding-top: 20px;
           `}
         >
+          {
+            <ul
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 23px;
+                padding-left: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                height: 240px;
+              `}
+            >
+              {t("size")}
+              {airpoc.map(({ size }) => (
+                <li
+                  css={css`
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-top: 15px;
+                    :before {
+                      content: "-";
+                      padding-right: 5px;
+                    }
+                  `}
+                >
+                  {size} {t("mm")}
+                </li>
+              ))}
+            </ul>
+          }
           <ul
             css={css`
               font-weight: 500;
               font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("size")}
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              C4 (229x324) {t("mm")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              B4 (250x353) {t("mm")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              E4 (280x400) {t("mm")}
-            </li>
-          </ul>
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
+              line-height: 23px;
               padding-left: 0;
               list-style: none;
             `}
@@ -163,8 +143,8 @@ export default props => {
               css={css`
                 font-weight: 500;
                 font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
+                line-height: 20px;
+                padding-top: 15px;
                 :before {
                   content: "-";
                   padding-right: 5px;
@@ -173,12 +153,26 @@ export default props => {
             >
               {t("brown")}
             </li>
+            <li
+              css={css`
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                padding-top: 15px;
+                :before {
+                  content: "-";
+                  padding-right: 5px;
+                }
+              `}
+            >
+              {t("white")}
+            </li>
           </ul>
           <ul
             css={css`
               font-weight: 500;
               font-size: 24px;
-              line-height: 27px;
+              line-height: 23px;
               padding-left: 0;
               list-style: none;
             `}
@@ -188,8 +182,8 @@ export default props => {
               css={css`
                 font-weight: 500;
                 font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
+                line-height: 20px;
+                padding-top: 15px;
                 :before {
                   content: "-";
                   padding-right: 5px;
@@ -205,7 +199,7 @@ export default props => {
             font-weight: 500;
             font-size: 24px;
             line-height: 27px;
-            padding: 65px 0 0 0;
+            padding: 170px 0 0 0;
           `}
         >
           {t("whereUse")}
@@ -222,7 +216,7 @@ export default props => {
               css={css`
                 font-weight: 500;
                 font-size: 16px;
-                line-height: 36px;
+                line-height: 25px;
                 :before {
                   content: "-";
                   padding-right: 5px;
@@ -235,7 +229,7 @@ export default props => {
               css={css`
                 font-weight: 500;
                 font-size: 16px;
-                line-height: 36px;
+                line-height: 25px;
                 :before {
                   content: "-";
                   padding-right: 5px;
@@ -277,29 +271,18 @@ export default props => {
               border-radius: 3px;
               width: 380px;
               height: 266px;
-              padding: 20px;
+              padding: 28px 17px 0 17px;
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               flex-wrap: wrap;
-              justify-content: space-between;
-              margin: 20px 0;
+              justify-content: start;
+              position: relative;
+              margin: 30px 50px;
             `}
           >
             <GeneralNames>
               {t("code")}
               <EnvelopeParam>{code}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("size")}
-              <EnvelopeParam>
-                {size} {t("mm")}
-              </EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("sealing")}
-              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
             </GeneralNames>
 
             <GeneralNames>
@@ -316,13 +299,28 @@ export default props => {
             </GeneralNames>
 
             <GeneralNames>
+              {t("size")}
+              <EnvelopeParam>
+                {size} {t("mm")}
+              </EnvelopeParam>
+            </GeneralNames>
+
+            <GeneralNames>
+              {t("sealing")}
+              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+            </GeneralNames>
+
+            <GeneralNames>
               {t("price")}
               <EnvelopeParam>{t(price)}</EnvelopeParam>
             </GeneralNames>
             <div
               css={css`
                 border-top: 0.2px solid #000000;
-                width: 100%;
+                width: 90%;
+                margin-top: 0px auto;
+                position: absolute;
+                bottom: 0;
               `}
             >
               <BtnAddToRequest />
