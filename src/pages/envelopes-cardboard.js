@@ -249,13 +249,18 @@ export default props => {
             </GeneralNames>
 
             <GeneralNames>
-              {t("color")}
-              <EnvelopeParam>{t(color)}</EnvelopeParam>
+              {t("type")}
+              <EnvelopeParam>{t(type)}</EnvelopeParam>
             </GeneralNames>
 
             <GeneralNames>
-              {t("type")}
-              <EnvelopeParam>{t(type)}</EnvelopeParam>
+              {t("sealing")}
+              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+            </GeneralNames>
+
+            <GeneralNames>
+              {t("color")}
+              <EnvelopeParam>{t(color)}</EnvelopeParam>
             </GeneralNames>
 
             <GeneralNames>

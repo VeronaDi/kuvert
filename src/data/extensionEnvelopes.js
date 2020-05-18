@@ -6,7 +6,7 @@ export default [
     type: { en: "pocket", uk: "пакет" },
     gsm: "125",
     pack: "250",
-    sealing: { en: "Peel&Seal", uk: "відривна стрічка" },
+    sealing: { en: "Peel & Seal", uk: "відривна стрічка" },
     price: { en: "from 3 123 UAH", uk: "від 3 123 грн" },
   },
   {
@@ -16,7 +16,7 @@ export default [
     type: { en: "pocket", uk: "пакет" },
     gsm: "125",
     pack: "250",
-    sealing: { en: "Peel&Seal", uk: "відривна стрічка" },
+    sealing: { en: "Peel & Seal", uk: "відривна стрічка" },
     price: { en: "from 3 353 UAH", uk: "від 3 353 грн" },
   },
   {
@@ -26,7 +26,7 @@ export default [
     type: { en: "pocket", uk: "пакет" },
     gsm: "125",
     pack: "250",
-    sealing: { en: "Peel&Seal", uk: "відривна стрічка" },
+    sealing: { en: "Peel & Seal", uk: "відривна стрічка" },
     price: { en: "from 5 317 UAH", uk: "від 5 317 грн" },
   },
 ]
