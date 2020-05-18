@@ -12,7 +12,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 let banderole = [
-  { img: "/products/1.png", name: "Airpock", id: "airpock" },
+  { img: "/products/1.png", name: "Airpoc", id: "airpoc" },
   { img: "/products/1.png", name: "DocuFix", id: "docufix" },
   {
     img: "/products/1.png",

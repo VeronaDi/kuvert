@@ -26,6 +26,8 @@ const resources = {
       addressOfFactory: "Адреса фабрики",
       addressFactory: "вул.І.Макуха, 6",
       addToRequest: "Додати до запиту",
+      airpocText:
+        "Бандерольні пакети Airpoc з поліетиленовими повітряними вставками, що гарантує надійний захист для відправки крихких і цінних предметів.",
       amount: "Кількість",
       banderole: "Бандерольні пакети",
       basicOrder: "Стандартний запит",
@@ -209,6 +211,8 @@ const resources = {
       addressOfFactory: "Address of factory",
       addressFactory: "Ivano-Frankivsk, Makuha str. 6",
       addToRequest: "Add to request",
+      airpocText:
+        "Airpoc parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
       amount: "Amount",
       banderole: "Banderole bags",
       basicOrder: "Basic order",
