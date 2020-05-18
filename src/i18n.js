@@ -71,6 +71,9 @@ const resources = {
       docufixText:
         "Пакети Docufix — поліетиленові пакети з клейовим шаром на всю сторону. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти документи в конверт Docufix і приклеїти його на коробку або піддон.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
+      ecobagColor: "Кольорові пакети з паперовими ручками",
+      ecobagText:
+        "Пакети з паперовими ручками польської фабрики Eco Bags виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
       envelope: "Конверт",
       envelopes: "Конверти",
       envelopeDetails: "Параметри конверта",
@@ -78,6 +81,7 @@ const resources = {
       extensionEnvelopesText:
         "Пакети з розширенням виготовлені з міцного крафтового паперу, вони зручні для відправки об'ємних вкладень: книг, журналів, великої кількості документації. Розширення становить 40 мм.",
       greetingLetters: "Вітальні листи",
+      handleType: "Тип ручки",
       hearingLoss: "10% працівників нашої фабрики —  це люди з вадами слуху",
       height: "Висота",
       historyP1:
@@ -120,6 +124,8 @@ const resources = {
       ourHistory: "Наша історія",
       outerPrint: "Зовнішній друк",
       ownEnvIdea: "У Вас є ідея для власного дизайну конвертів?",
+      packPresent: "Пакування подарункової, рекламної та сувенірної продукції",
+      packBulkProd: "Пакування об'ємної продукції",
       participants: "Ми є частиною",
       paperGSM: "Щільність паперу, г/м²",
       paperBrand: "Марка паперу",
@@ -258,6 +264,9 @@ const resources = {
         "Docufix bags - plastic bags with adhesive on the whole side. No more mail to send additional documents for goods, enough to put documents in an envelope Docufix and stick it on the box or pallet.",
       distributionProducts:
         "Distribution of advertising or information products",
+      ecobagColor: "Colored paper bags with paper handles",
+      ecobagText:
+        "Paper bags with paper handles manufactured by Polish factory Ecobag Network are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
       envelope: "Envelope",
       envelopes: "envelopes",
       envelopeDetails: "Envelope details",
@@ -265,6 +274,7 @@ const resources = {
       extensionEnvelopesText:
         "Pockets with extension are made of durable kraft paper, they are convenient for sending bulky investments: books, magazines, a large amount of documentation. The extension is 40 mm.",
       greetingLetters: "Greeting letters",
+      handleType: "Handle type",
       hearingLoss:
         "10% of workers in our factory are people with hearing problems",
       height: "Height",
@@ -308,6 +318,8 @@ const resources = {
       ourHistory: "Our history",
       outerPrint: "Outer print",
       ownEnvIdea: "Do you have an idea for your own envelope design?",
+      packPresent: "Packaging of gift, advertising and souvenir products",
+      packBulkProd: "Packaging of bulk products",
       participants: "We are part of",
       paperGSM: "Paper GSM",
       paperBrand: "Paper brand",

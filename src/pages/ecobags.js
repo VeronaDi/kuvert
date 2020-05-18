@@ -17,7 +17,7 @@ let paperbags = [
   {
     img: "/products/1.png",
     name: "Color",
-    id: "color-paperbags",
+    id: "ecobags-color",
   },
 ]
 
