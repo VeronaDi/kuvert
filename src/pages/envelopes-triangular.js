@@ -308,7 +308,7 @@ export default props => {
 
           <GeneralNames>
             {t("type")}
-            <EnvelopeParam>{type}</EnvelopeParam>
+            <EnvelopeParam>{t(type)}</EnvelopeParam>
           </GeneralNames>
 
           <GeneralNames>
