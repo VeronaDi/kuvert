@@ -1,0 +1,32 @@
+export default [
+  {
+    code: "381227",
+    size: "C4 (229x324",
+    color: { en: "brown", uk: "коричневий" },
+    type: { en: "pocket", uk: "пакет" },
+    gsm: "125",
+    pack: "250",
+    sealing: { en: "Peel&Seal", uk: "відривна стрічка" },
+    price: { en: "from 3 123 UAH", uk: "від 3 123 грн" },
+  },
+  {
+    code: "391157",
+    size: "B4 (250x353",
+    color: { en: "brown", uk: "коричневий" },
+    type: { en: "pocket", uk: "пакет" },
+    gsm: "125",
+    pack: "250",
+    sealing: { en: "Peel&Seal", uk: "відривна стрічка" },
+    price: { en: "from 3 353 UAH", uk: "від 3 353 грн" },
+  },
+  {
+    code: "301127",
+    size: "E4 (280x400",
+    color: { en: "brown", uk: "коричневий" },
+    type: { en: "pocket", uk: "пакет" },
+    gsm: "125",
+    pack: "250",
+    sealing: { en: "Peel&Seal", uk: "відривна стрічка" },
+    price: { en: "from 5 317 UAH", uk: "від 5 317 грн" },
+  },
+]

@@ -34,6 +34,7 @@ const resources = {
       bk: "без клею",
       brown: "коричневий",
       bottom: "Відстань знизу",
+      bulkyTransportation: "Надсилання об'ємних вкладень",
       call: "Зателефонуйте нам",
       cardboardEnv: "Пакети з картонною вставкою",
       cardboardEnvText:
@@ -44,7 +45,7 @@ const resources = {
       chooseSize: "Оберіть розмір конверта",
       chooseGlue: "Оберіть тип заклеювання",
       chooseEnvelopeType: "Оберіть тип продукції",
-      chooseEnvelopeParam: "Оберіть параметри конверта",
+      chooseDesiredProduct: "Оберіть бажану продукцію",
       choosePaperGSM: "Оберіть щільність паперу",
       choosePaperType: "Оберіть тип паперу",
       choosePrintType: "Оберіть вид друку",
@@ -71,6 +72,9 @@ const resources = {
       envelope: "Конверт",
       envelopes: "Конверти",
       envelopeDetails: "Параметри конверта",
+      extensionEnvelopes: "Пакети з розширенням",
+      extensionEnvelopesText:
+        "Пакети з розширенням виготовлені з міцного крафтового паперу, вони зручні для відправки об'ємних вкладень: книг, журналів, великої кількості документації. Розширення становить 40 мм.",
       greetingLetters: "Вітальні листи",
       hearingLoss: "10% працівників нашої фабрики —  це люди з вадами слуху",
       height: "Висота",
@@ -213,6 +217,7 @@ const resources = {
       bottom: "Bottom distance",
       bk: "without glue",
       brown: "brown",
+      bulkyTransportation: "Sending bulk attachments",
       call: "Call us",
       cardboardEnv: "Envelopes with cardboard insert",
       cardboardEnvText:
@@ -223,7 +228,7 @@ const resources = {
       chooseSize: "Choose envelope size",
       chooseGlue: "Choose sealing type",
       chooseEnvelopeType: "Choose type",
-      chooseEnvelopeParam: "Choose envelope parameters",
+      chooseDesiredProduct: "Choose desired product",
       choosePaperGSM: "Choose paper GSM",
       choosePaperType: "Choose paper quality",
       choosePrintType: "Choose print type",
@@ -251,6 +256,9 @@ const resources = {
       envelope: "Envelope",
       envelopes: "envelopes",
       envelopeDetails: "Envelope details",
+      extensionEnvelopes: "Pockets with extension",
+      extensionEnvelopesText:
+        "Pockets with extension are made of durable kraft paper, they are convenient for sending bulky investments: books, magazines, a large amount of documentation. The extension is 40 mm.",
       greetingLetters: "Greeting letters",
       hearingLoss:
         "10% of workers in our factory are people with hearing problems",

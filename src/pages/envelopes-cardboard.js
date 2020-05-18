@@ -217,7 +217,7 @@ export default props => {
           margin: 54px 0 23px 0;
         `}
       >
-        {t("chooseEnvelopeParam")}
+        {t("chooseDesiredProduct")}
       </h4>
 
       {cardboardEnv.map(

@@ -5,7 +5,7 @@ export default [
     color: { en: "brown", uk: "коричневий" },
     type: { en: "pocket", uk: "пакет" },
     gsm: "100",
-    pack: "2500",
+    pack: "250",
     price: { en: "from 4 522 UAH", uk: "від 4 522 грн" },
   },
 ]
