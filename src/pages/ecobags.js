@@ -12,7 +12,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 let paperbags = [
-  { img: "/products/1.png", name: "White", id: "white-paperbags" },
+  { img: "/products/1.png", name: "White", id: "ecobags-white" },
   { img: "/products/1.png", name: "Brown", id: "brown-paperbags" },
   {
     img: "/products/1.png",

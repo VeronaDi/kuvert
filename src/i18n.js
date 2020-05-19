@@ -72,6 +72,7 @@ const resources = {
         "Пакети Docufix — поліетиленові пакети з клейовим шаром на всю сторону. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти документи в конверт Docufix і приклеїти його на коробку або піддон.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
       ecobagColor: "Кольорові пакети з паперовими ручками",
+      ecobagWhite: "Білі пакети з паперовими ручками",
       ecobagText:
         "Пакети з паперовими ручками польської фабрики Eco Bags виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
       envelope: "Конверт",
@@ -265,6 +266,7 @@ const resources = {
       distributionProducts:
         "Distribution of advertising or information products",
       ecobagColor: "Colored paper bags with paper handles",
+      ecobagWhite: "White paper bags with paper handles",
       ecobagText:
         "Paper bags with paper handles manufactured by Polish factory Ecobag Network are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
       envelope: "Envelope",
