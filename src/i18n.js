@@ -73,6 +73,7 @@ const resources = {
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
       ecobagColor: "Кольорові пакети з паперовими ручками",
       ecobagWhite: "Білі пакети з паперовими ручками",
+      ecobagBrown: "Коричневі пакети з паперовими ручками",
       ecobagText:
         "Пакети з паперовими ручками польської фабрики Eco Bags виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
       envelope: "Конверт",
@@ -131,6 +132,7 @@ const resources = {
       paperGSM: "Щільність паперу, г/м²",
       paperBrand: "Марка паперу",
       paperbags: "Пакети з паперовими ручками",
+      paperType: "Тип паперу",
       phone: "Телефон",
       personalDetails: "Особисті дані",
       pocket: "Пакет",
@@ -267,6 +269,7 @@ const resources = {
         "Distribution of advertising or information products",
       ecobagColor: "Colored paper bags with paper handles",
       ecobagWhite: "White paper bags with paper handles",
+      ecobagBrown: "Brown paper bags with paper handles",
       ecobagText:
         "Paper bags with paper handles manufactured by Polish factory Ecobag Network are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
       envelope: "Envelope",
@@ -326,6 +329,7 @@ const resources = {
       paperGSM: "Paper GSM",
       paperBrand: "Paper brand",
       paperbags: "Paper bags",
+      paperType: "Paper type",
       phone: "Phone",
       personalDetails: "Personal details",
       pocket: "Pocket",

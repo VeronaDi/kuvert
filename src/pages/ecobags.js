@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next"
 
 let paperbags = [
   { img: "/products/1.png", name: "White", id: "ecobags-white" },
-  { img: "/products/1.png", name: "Brown", id: "brown-paperbags" },
+  { img: "/products/1.png", name: "Brown", id: "ecobags-brown" },
   {
     img: "/products/1.png",
     name: "Color",
