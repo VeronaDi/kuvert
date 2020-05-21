@@ -78,6 +78,7 @@ const resources = {
         "Пакети з паперовими ручками польської фабрики Eco Bags виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
       envelope: "Конверт",
       envelopes: "Конверти",
+      envelopesStandard: "Стандартні конверти",
       envelopeDetails: "Параметри конверта",
       extensionEnvelopes: "Пакети з розширенням",
       extensionEnvelopesText:
@@ -274,6 +275,7 @@ const resources = {
         "Paper bags with paper handles manufactured by Polish factory Ecobag Network are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
       envelope: "Envelope",
       envelopes: "envelopes",
+      envelopesStandard: "Standard envelopes",
       envelopeDetails: "Envelope details",
       extensionEnvelopes: "Pockets with extension",
       extensionEnvelopesText:
