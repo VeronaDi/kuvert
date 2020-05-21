@@ -12,18 +12,17 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import triangularEnv from "../images/triangular-envelope.png"
-
 import envelopes from "../data/envelopes"
 
 const GeneralNames = ({ children }) => (
   <div
     css={css`
-      font-weight: 500;
+      font-weight: normal;
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
-      padding-right: 20px;
+      padding-right: 15px;
+      word-wrap: break-word;
     `}
   >
     {children}
@@ -33,7 +32,7 @@ const GeneralNames = ({ children }) => (
 const EnvelopeParam = ({ children }) => (
   <p
     css={css`
-      font-weight: 500;
+      font-weight: normal;
       font-size: 16px;
       line-height: 19px;
       color: #000000;
@@ -76,7 +75,18 @@ export default props => {
         `}
       >
         {envelopes.map(
-          ({ code, size, color, type, gsm, pack, sealing, window, price }) => (
+          ({
+            code,
+            size,
+            color,
+            type,
+            gsm,
+            pack,
+            sealing,
+            window,
+            price,
+            print,
+          }) => (
             <div
               key={code}
               css={css`
@@ -103,22 +113,36 @@ export default props => {
                 {t("color")}
                 <EnvelopeParam>{t(color)}</EnvelopeParam>
               </GeneralNames>
-
               <GeneralNames>
-                {t("window")}
-                <EnvelopeParam>{t(window)}</EnvelopeParam>
+                {t("print")}
+                <EnvelopeParam>{t(print)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("size")}
                 <EnvelopeParam>
-                  {size}) {t("mm")}
+                  {size} {t("mm")})
                 </EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("paperGSM")}
                 <EnvelopeParam>{gsm}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("type")}
+                <EnvelopeParam>{t(type)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("window")}
+                <EnvelopeParam>{t(window)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -130,26 +154,17 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("type")}
-                <EnvelopeParam>{t(type)}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("sealing")}
-                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
                 {t("price")}
                 <EnvelopeParam>{t(price)}</EnvelopeParam>
               </GeneralNames>
+
               <div
                 css={css`
                   border-top: 0.2px solid #000000;
                   width: 90%;
-                  margin-top: 0px auto;
                   position: absolute;
                   bottom: 0;
+                  margin-bottom: 5px;
                 `}
               >
                 <BtnAddToRequest />

@@ -138,6 +138,7 @@ const resources = {
       personalDetails: "Особисті дані",
       pocket: "Пакет",
       price: "Ціна",
+      print: "Друк",
       printDetails: "Параметри друку",
       printedOrder: "Запит друку",
       printedOrderText:
@@ -336,6 +337,7 @@ const resources = {
       personalDetails: "Personal details",
       pocket: "Pocket",
       price: "Price",
+      print: "Print",
       printDetails: "Print details",
       printedOrder: "Printed order",
       printedOrderText:

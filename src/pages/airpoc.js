@@ -19,7 +19,7 @@ import airpoc from "../data/airpoc"
 const GeneralNames = ({ children }) => (
   <div
     css={css`
-      font-weight: 500;
+      font-weight: normal;
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
@@ -33,7 +33,7 @@ const GeneralNames = ({ children }) => (
 const EnvelopeParam = ({ children }) => (
   <p
     css={css`
-      font-weight: 500;
+      font-weight: normal;
       font-size: 16px;
       line-height: 19px;
       color: #000000;
@@ -318,9 +318,9 @@ export default props => {
               css={css`
                 border-top: 0.2px solid #000000;
                 width: 90%;
-                margin-top: 0px auto;
                 position: absolute;
                 bottom: 0;
+                margin-bottom: 5px;
               `}
             >
               <BtnAddToRequest />
