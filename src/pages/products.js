@@ -65,36 +65,28 @@ export default props => {
             css={css`
               width: 49%;
               height: 300px;
-              background: url(${backenvelopes}), darkgrey;
-              padding-bottom: 15px;
+              background: url(${backenvelopeswhite}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;
               cursor: pointer;
-              opacity: 0.5;
               margin-bottom: 20px;
+              color: #b40039;
+              font-weight: bold;
+              font-size: 48px;
+              line-height: 56px;
+              text-decoration: none;
             `}
           >
-            {/* <img src={img} alt={`${name}`} /> */}
-            <span
+            <p
               css={css`
                 position: absolute;
-                top: 50%;
+                top: 35%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 60%;
-                max-width: 687px;
-                height: 170px;
-                background: rgba(0, 0, 0, 0.3);
-                border-radius: 3px;
-                font-weight: bold;
-                font-size: 48px;
-                line-height: 56px;
-                padding: 55px 0;
-                color: #ffffff;
               `}
             >
               {t(name)}
-            </span>
+            </p>
           </LocalizedLink>
         ))}
       </div>

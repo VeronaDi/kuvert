@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 import BtnSend from "../components/BtnSend"
+import ContactUs from "../components/ContactUsForm"
 
 import plane from "../images/plane.png"
 import call from "../images/call.png"
@@ -313,7 +314,7 @@ export default props => {
             </label>
             <input
               type="text"
-              placeholder={t("color")}
+              placeholder={t("name")}
               css={css`
                 width: 460px;
                 height: 65px;
@@ -490,6 +491,7 @@ export default props => {
         </div>
       </section>
       <Footer />
+      <ContactUs />
     </Layout>
   )
 }
