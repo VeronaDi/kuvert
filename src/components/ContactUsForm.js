@@ -12,8 +12,6 @@ import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
-import BtnSend from "../components/BtnSend"
-
 import plane from "../images/plane.png"
 
 const MyInput = ({ label, ...props }) => {
@@ -22,7 +20,18 @@ const MyInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   return (
     <>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label
+        htmlFor={props.id || props.name}
+        css={css`
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          color: #000000;
+          margin-top: 16px;
+        `}
+      >
+        {label}
+      </label>
       <input
         {...field}
         {...props}
@@ -35,8 +44,6 @@ const MyInput = ({ label, ...props }) => {
           padding: 20px;
           outline: none;
           margin-right: 100px;
-          margin-top: 5px;
-          position: relative;
           ::-webkit-input-placeholder {
             font-size: 16px;
             color: #ababab;
@@ -73,7 +80,18 @@ const MySelect = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   return (
     <>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label
+        htmlFor={props.id || props.name}
+        css={css`
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          color: #000000;
+          margin-top: 16px;
+        `}
+      >
+        {label}
+      </label>
       <select
         {...field}
         {...props}
@@ -115,7 +133,18 @@ const MyMessageInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   return (
     <>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label
+        htmlFor={props.id || props.name}
+        css={css`
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          color: #000000;
+          margin-top: 16px;
+        `}
+      >
+        {label}
+      </label>
       <input
         {...field}
         {...props}
@@ -165,7 +194,7 @@ export default () => {
     <div
       css={css`
         width: 100vw;
-        height: 680px;
+        height: 722px;
         background: url(${plane}), #e5e5e5;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -220,6 +249,7 @@ export default () => {
               flex-direction: column;
               flex-wrap: wrap;
               justify-content: space-between;
+              align-content: space-between;
             `}
           >
             <MyInput
@@ -253,8 +283,32 @@ export default () => {
               type="textarea"
               placeholder={t("writeUs")}
             />
-            <button type="submit" disabled={isSubmitting}>
-              <BtnSend />
+            <button
+              css={css`
+                color: black;
+                text-decoration: none;
+                border: 1px solid #000000;
+                box-sizing: border-box;
+                border-radius: 3px;
+                background: transparent;
+                padding: 18px 210px;
+                cursor: pointer;
+                outline: none;
+
+                &:hover {
+                  color: #c4c4c4;
+                  border: 1px solid #c4c4c4;
+                }
+
+                &:active {
+                  color: #676767;
+                  background: #ffffff;
+                }
+              `}
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {t("send")}
             </button>
           </Form>
         )}
