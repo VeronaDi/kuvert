@@ -1,12 +1,162 @@
 import React from "react"
-import { Formik, Form, Field, ErrorMessage } from "formik"
-
+import {
+  Field,
+  Form,
+  Formik,
+  FormikProps,
+  useField,
+  useFormikContext,
+  ErrorMessage,
+} from "formik"
+import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import BtnSend from "../components/BtnSend"
 
 import plane from "../images/plane.png"
+
+const MyInput = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props)
+  return (
+    <>
+      <label htmlFor={props.id || props.name}>{label}</label>
+      <input
+        {...field}
+        {...props}
+        css={css`
+          width: 460px;
+          height: 65px;
+          background: #ffffff;
+          border: 1px solid #d6d6d6;
+          border-radius: 3px;
+          padding: 20px;
+          outline: none;
+          margin-right: 100px;
+          margin-top: 5px;
+          position: relative;
+          ::-webkit-input-placeholder {
+            font-size: 16px;
+            color: #ababab;
+          }
+          :focus {
+            border: 2px solid #c4c4c4;
+          }
+        `}
+      />
+      {meta.touched && meta.error ? (
+        <div
+          css={css`
+            width: 141px;
+            height: 35px;
+            background: #a74444;
+            border-radius: 3px;
+            color: white;
+            color: #ffffff;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+          `}
+        >
+          {meta.error}
+        </div>
+      ) : null}
+    </>
+  )
+}
+
+const MySelect = ({ label, ...props }) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props)
+  return (
+    <>
+      <label htmlFor={props.id || props.name}>{label}</label>
+      <select
+        {...field}
+        {...props}
+        css={css`
+          width: 460px;
+          height: 65px;
+          background: #ffffff;
+          font-size: 16px;
+          border: 1px solid #d6d6d6;
+          border-radius: 3px;
+          outline: none;
+          color: #414141;
+          :focus {
+            border: 2px solid #c4c4c4;
+          }
+        `}
+      />
+      {meta.touched && meta.error ? (
+        <div
+          css={css`
+            width: 141px;
+            height: 35px;
+            background: #a74444;
+            border-radius: 3px;
+            color: #ffffff;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+          `}
+        >
+          {meta.error}
+        </div>
+      ) : null}
+    </>
+  )
+}
+
+const MyMessageInput = ({ label, ...props }) => {
+  const [field, meta] = useField(props)
+  return (
+    <>
+      <label htmlFor={props.id || props.name}>{label}</label>
+      <input
+        {...field}
+        {...props}
+        css={css`
+          width: 460px;
+          height: 165px;
+          background: #ffffff;
+          border: 1px solid #d6d6d6;
+          border-radius: 3px;
+          padding: 20px;
+          outline: none;
+          resize: none;
+          ::-webkit-input-placeholder {
+            font-size: 16px;
+            color: #ababab;
+          }
+          :focus {
+            border: 2px solid #c4c4c4;
+          }
+        `}
+      />
+      {meta.touched && meta.error ? (
+        <div
+          css={css`
+            width: 141px;
+            height: 35px;
+            background: #a74444;
+            border-radius: 3px;
+            color: white;
+            color: #ffffff;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+          `}
+        >
+          {meta.error}
+        </div>
+      ) : null}
+    </>
+  )
+}
 
 export default () => {
   const { t, i18n } = useTranslation()
@@ -32,7 +182,7 @@ export default () => {
           text-align: center;
         `}
       >
-        FORMIK {t("sendUsMessage")}
+        {t("sendUsMessage")}
       </h5>
       <Formik
         initialValues={{
@@ -61,17 +211,48 @@ export default () => {
         }}
       >
         {({ isSubmitting }) => (
-          <Form>
-            <Field type="name" name="name" />
-            <ErrorMessage name="name" component="div" />
-            <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" />
-            <Field type="phone" name="phone" />
-            <ErrorMessage name="phone" component="div" />
-            <Field type="department" name="department" />
-            <ErrorMessage name="department" component="div" />
-            <Field type="message" name="message" />
-            <ErrorMessage name="message" component="div" />
+          <Form
+            css={css`
+              width: 1020px;
+              height: 290px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              justify-content: space-between;
+            `}
+          >
+            <MyInput
+              label={t("name")}
+              name="name"
+              type="text"
+              placeholder={t("name")}
+            />
+            <MyInput
+              label="Email"
+              name="email"
+              type="email"
+              placeholder="hello@email.com"
+            />
+            <MyInput
+              label={t("phone")}
+              name="phone"
+              type="phone"
+              placeholder="+123456789"
+            />
+            <MySelect label={t("department")} name="department">
+              <option value="Sales department">{t("salesDep")}</option>
+              <option value="Production department">
+                {t("productionDep")}
+              </option>
+              <option value="CEO">{t("CEO")}</option>
+            </MySelect>
+            <MyMessageInput
+              label={t("writeUs")}
+              name="message"
+              type="textarea"
+              placeholder={t("writeUs")}
+            />
             <button type="submit" disabled={isSubmitting}>
               <BtnSend />
             </button>
