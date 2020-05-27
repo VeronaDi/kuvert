@@ -1,15 +1,13 @@
 import React from "react"
-import { Map, Marker, Popup, TileLayer } from "react-leaflet"
+// import { Map, Marker, Popup, TileLayer } from "react-leaflet"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
-import BtnSend from "../components/BtnSend"
 import ContactUs from "../components/ContactUsForm"
 
-import plane from "../images/plane.png"
 import call from "../images/call.png"
 import location from "../images/location.png"
 import write from "../images/write_us.png"

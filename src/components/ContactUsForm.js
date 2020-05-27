@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Field,
-  Form,
-  Formik,
-  FormikProps,
-  useField,
-  useFormikContext,
-  ErrorMessage,
-} from "formik"
+import { Form, Formik, useField } from "formik"
 import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
@@ -75,8 +67,6 @@ const MyInput = ({ label, ...props }) => {
 }
 
 const MySelect = ({ label, ...props }) => {
-  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-  // which we can spread on <input> and alse replace ErrorMessage entirely.
   const [field, meta] = useField(props)
   return (
     <>
@@ -187,6 +177,9 @@ const MyMessageInput = ({ label, ...props }) => {
   )
 }
 
+const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
 export default () => {
   const { t, i18n } = useTranslation()
 
@@ -221,17 +214,20 @@ export default () => {
           department: "",
           message: "",
         }}
-        validate={values => {
-          const errors = {}
-          if (!values.email) {
-            errors.email = "Required"
-          } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-          ) {
-            errors.email = "Invalid email address"
-          }
-          return errors
-        }}
+        validationSchema={Yup.object({
+          name: Yup.string()
+            .max(30, "Too long")
+            .required("Required"),
+          email: Yup.string()
+            .matches(emailRegExp, "Invalid email addresss")
+            .required("Required"),
+          phone: Yup.string()
+            .matches(phoneRegExp, "Phone number is not valid")
+            .required("Required"),
+          message: Yup.string()
+            .min(10, "Too short")
+            .required("Required"),
+        })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2))
@@ -268,7 +264,7 @@ export default () => {
               label={t("phone")}
               name="phone"
               type="phone"
-              placeholder="+123456789"
+              placeholder="123456789"
             />
             <MySelect label={t("department")} name="department">
               <option value="Sales department">{t("salesDep")}</option>
