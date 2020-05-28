@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import plus from "../images/plus.png"
 import minus from "../images/minus.png"
+import error from "../images/error.svg"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -18,6 +19,7 @@ const MyInput = ({ label, ...props }) => {
           display: flex;
           flex-direction: column;
           text-align: left;
+          position: relative;
         `}
       >
         <label
@@ -62,6 +64,9 @@ const MyInput = ({ label, ...props }) => {
         {meta.touched && meta.error ? (
           <div
             css={css`
+              position: absolute;
+              top: 20px;
+              left: 280px;
               width: 141px;
               height: 35px;
               background: #a74444;
@@ -71,6 +76,7 @@ const MyInput = ({ label, ...props }) => {
               font-size: 12px;
               line-height: 14px;
               text-align: center;
+              padding-top: 10px;
             `}
           >
             {meta.error}
@@ -177,6 +183,9 @@ const MyAmountInput = ({ label, ...props }) => {
         {meta.touched && meta.error ? (
           <div
             css={css`
+              position: absolute;
+              top: 20px;
+              left: 280px;
               width: 141px;
               height: 35px;
               background: #a74444;
@@ -186,6 +195,7 @@ const MyAmountInput = ({ label, ...props }) => {
               font-size: 12px;
               line-height: 14px;
               text-align: center;
+              padding-top: 10px;
             `}
           >
             {meta.error}
