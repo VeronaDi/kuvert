@@ -86,7 +86,7 @@ const resources = {
       greetingLetters: "Вітальні листи",
       handleType: "Тип ручки",
       hearingLoss: "10% працівників нашої фабрики —  це люди з вадами слуху",
-      height: "Висота",
+      height: "Висота, мм",
       historyP1:
         "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer-Kuvert-network GmbH» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики. Співпраця з провідними європейськими виробниками паперу дає змогу забезпечувати виробництво гарантовано досконалою сировиною. Ми наполегливо працюємо над удосконаленням усіх процесів для того, щоб залишити екологічний слід якомога менший, тому на фабриці діє технологія безвідходного виробництва.",
       historyP2:
@@ -187,12 +187,12 @@ const resources = {
       windowDetails: "Параметри вікна",
       windowYes: "з вікном",
       windowNo: "без вікна",
-      width: "Ширина",
+      width: "Ширина, мм",
       weight: "Потрібна допомога з розрахунком ваги конвертів?",
       weightUse: "Скористайтесь нашим калькулятором",
       weightcalc: "Калькулятор ваги",
       weightcalcText:
-        "Вкажіть нижче необхідні параметри конверта і Ви дізнаєтесь вагу свого замовлення.",
+        "Вкажіть нижче необхідні параметри конверта і Ви дізнаєтесь його вагу.",
       weightResult: "Вага замовлення становить ",
       white: "білий",
       whiteOffset: "білий офсетний",
@@ -285,7 +285,7 @@ const resources = {
       handleType: "Handle type",
       hearingLoss:
         "10% of workers in our factory are people with hearing problems",
-      height: "Height",
+      height: "Height, mm",
       historyP1:
         "The Kuvert-Ukraine envelope factory is the largest envelope manufacturer in Ukraine since 1999 and part of the Mayer-Kuvert-network GmbH - largest envelope manufacturing company in Europe. We produce over 250 million envelopes each year thanks to the factory's high quality machine range. Collaboration with leading European paper manufacturers makes it possible to ensure the production of guaranteed excellent raw materials. We are working hard to improve all processes to keep the environmental footprint as small as possible, so the factory has a waste-free technology.",
       historyP2:
@@ -387,12 +387,12 @@ const resources = {
       windowDetails: "Window details",
       windowYes: "with window",
       windowNo: "without window",
-      width: "Width",
+      width: "Width, mm",
       weight: "Need help calculating envelope weight?",
       weightUse: "Use our calculator",
       weightcalc: "Weight calculator",
       weightcalcText:
-        "Specify the envelope parameters below and you will know order weight.",
+        "Specify the envelope parameters below and you will know its weight.",
       weightResult: "Order weight equals ",
       white: "white",
       whiteOffset: "white offset",
