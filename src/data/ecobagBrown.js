@@ -1,6 +1,6 @@
 export default [
   {
-    code: "001",
+    code: "T26310010",
     size: "160x80x390",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -10,7 +10,7 @@ export default [
     price: { en: "from 3 993 UAH", uk: "від 3 993 грн" },
   },
   {
-    code: "002",
+    code: "T31020010",
     size: "180x80x225",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -20,7 +20,7 @@ export default [
     price: { en: "from 3 292 UAH", uk: "від 3 292 грн" },
   },
   {
-    code: "003",
+    code: "T21010010",
     size: "180x80x225",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -30,7 +30,7 @@ export default [
     price: { en: "from 3 535 UAH", uk: "від 3 535 грн" },
   },
   {
-    code: "004",
+    code: "220110280",
     size: "220x110x280",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "flat", uk: "плоска" },
@@ -40,7 +40,7 @@ export default [
     price: { en: "from 2 409 UAH", uk: "від 2 409 грн" },
   },
   {
-    code: "005",
+    code: "10432030000",
     size: "240x100x320",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -50,7 +50,7 @@ export default [
     price: { en: "from 3 777 UAH", uk: "від 3 777 грн" },
   },
   {
-    code: "006",
+    code: "E1001200",
     size: "240x100x320",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -60,7 +60,7 @@ export default [
     price: { en: "from 4 165 UAH", uk: "від 4 165 грн" },
   },
   {
-    code: "007",
+    code: "10632030000",
     size: "240x100x360",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -70,7 +70,7 @@ export default [
     price: { en: "from 4 068 UAH", uk: "від 4 068 грн" },
   },
   {
-    code: "008",
+    code: "E2001200",
     size: "240x100x360",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -80,7 +80,7 @@ export default [
     price: { en: "from 4 456 UAH", uk: "від 4 456 грн" },
   },
   {
-    code: "009",
+    code: "10832030000",
     size: "305x170x340",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -90,7 +90,7 @@ export default [
     price: { en: "from 5 436 UAH", uk: "від 5 436 грн" },
   },
   {
-    code: "0010",
+    code: "E3001200",
     size: "305x170x340",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -100,7 +100,7 @@ export default [
     price: { en: "from 5 824 UAH", uk: "від 5 824 грн" },
   },
   {
-    code: "0011",
+    code: "11032030000",
     size: "305x170x425",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -110,7 +110,7 @@ export default [
     price: { en: "from 6 003 UAH", uk: "від 6 003 грн" },
   },
   {
-    code: "0012",
+    code: "11022030000",
     size: "305x170x425",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -120,7 +120,7 @@ export default [
     price: { en: "from 6 439 UAH", uk: "від 6 439 грн" },
   },
   {
-    code: "0013",
+    code: "E9012220",
     size: "320x220x250",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "flat", uk: "плоска" },
@@ -130,7 +130,7 @@ export default [
     price: { en: "from 3 930 UAH", uk: "від 3 930 грн" },
   },
   {
-    code: "0014",
+    code: "E7001200",
     size: "400x180x390",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
@@ -140,7 +140,7 @@ export default [
     price: { en: "from 7 431 UAH", uk: "від 7 431 грн" },
   },
   {
-    code: "0015",
+    code: "E8001200",
     size: "500x180x390",
     color: { en: "brown", uk: "коричневий" },
     handle: { en: "twisted", uk: "кручена" },
