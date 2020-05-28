@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import plane from "../images/plane.png"
+import arrowSelect from "../images/arrow-select.png"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -86,6 +87,12 @@ const MySelect = ({ label, ...props }) => {
         {...field}
         {...props}
         css={css`
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background: url(${arrowSelect}), #ffffff;
+          background-position: 97%;
+          background-repeat: no-repeat;
           width: 460px;
           height: 65px;
           background: #ffffff;
@@ -177,7 +184,7 @@ const MyMessageInput = ({ label, ...props }) => {
   )
 }
 
-const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+const emailRegExp = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 export default () => {

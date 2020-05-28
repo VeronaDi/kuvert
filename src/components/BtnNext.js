@@ -22,6 +22,8 @@ export default () => {
         padding: 12px 60px;
         cursor: pointer;
         outline: none;
+        width: 100%;
+        margin-top: 50px;
 
         &:hover {
           background: #b60039;
@@ -36,7 +38,7 @@ export default () => {
         }
       `}
     >
-      {/* {t("next")} */}
+      {t("next")}
     </Link>
   )
 }

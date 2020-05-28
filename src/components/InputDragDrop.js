@@ -11,7 +11,7 @@ export default () => {
     <form
       css={css`
         width: 100%;
-        margin: 40px 0;
+        margin: 20px 0;
       `}
       method="post"
       action=""
