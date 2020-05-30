@@ -84,10 +84,12 @@ export default props => {
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
+            a {
+              text-decoration: none;
+            }
           `}
-        >
-          {t("ecobagText")}
-        </p>
+          dangerouslySetInnerHTML={{ __html: t("ecobagText") }}
+        ></p>
         <div>
           <ul
             css={css`

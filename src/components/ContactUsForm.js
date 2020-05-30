@@ -3,9 +3,21 @@ import { Form, Formik, useField } from "formik"
 import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
+import axios from "axios"
 
 import plane from "../images/plane.png"
 import arrowSelect from "../images/arrow-select.png"
+
+const FieldsMapping = {
+  name: "entry.821706310",
+  email: "entry.1618547010",
+  phone: "entry.747057626",
+  department: "entry.47509862",
+  message: "entry.935094477",
+}
+
+const FormURL =
+  "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeugBj2SWuZrPFIGtBYSIRrDPG4PyUEDaoU8uBhTHg6BhQPfA/formResponse"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -236,10 +248,17 @@ export default () => {
             .required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            setSubmitting(false)
-          }, 400)
+          // setTimeout(() => {
+          //   alert(JSON.stringify(values, null, 2))
+          //   setSubmitting(false)
+          // }, 400)
+          const data = Object.keys(values).reduce(function(acc, fieldName) {
+            const GoogleFieldName = FieldsMapping[fieldName]
+            acc[GoogleFieldName] = values[fieldName]
+            return acc
+          }, {})
+          axios.post(FormURL, data)
+          console.log(data)
         }}
       >
         {({ isSubmitting }) => (

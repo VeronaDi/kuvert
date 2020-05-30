@@ -16,6 +16,10 @@ import triangularEnv from "../images/triangular-envelope.png"
 
 import ecobagsBrown from "../data/ecobagBrown"
 
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index
+}
+
 const GeneralNames = ({ children }) => (
   <div
     css={css`
@@ -105,21 +109,24 @@ export default props => {
             `}
           >
             {t("size")}
-            {ecobagsBrown.map(({ size }) => (
-              <li
-                css={css`
-                  font-weight: 500;
-                  font-size: 18px;
-                  line-height: 36px;
-                  :before {
-                    content: "-";
-                    padding-right: 5px;
-                  }
-                `}
-              >
-                {size} {t("mm")}
-              </li>
-            ))}
+            {ecobagsBrown
+              .map(({ size }) => size)
+              .filter(onlyUnique)
+              .map(size => (
+                <li
+                  css={css`
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 36px;
+                    :before {
+                      content: "-";
+                      padding-right: 5px;
+                    }
+                  `}
+                >
+                  {size} {t("mm")}
+                </li>
+              ))}
           </ul>
         </div>
         <div

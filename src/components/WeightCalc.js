@@ -87,9 +87,10 @@ const MyInput = ({ label, ...props }) => {
   )
 }
 
-const MyAmountInput = ({ label, ...props }) => {
+const MyAmountInput = ({ label, setFieldValue, ...props }) => {
   const [field, meta] = useField(props)
   const quantityEnv = React.useRef()
+  console.log(props)
   return (
     <>
       <div
@@ -119,7 +120,10 @@ const MyAmountInput = ({ label, ...props }) => {
         >
           <button
             onClick={() => {
-              quantityEnv.current.value = Number(quantityEnv.current.value) - 1
+              console.log(field)
+              let newValue = Number(field.value) - 1
+              if (newValue < 1) newValue = 1
+              setFieldValue(props.name, newValue)
             }}
             type="button"
             css={css`
@@ -137,8 +141,6 @@ const MyAmountInput = ({ label, ...props }) => {
           <input
             {...field}
             {...props}
-            disabled
-            ref={quantityEnv}
             type="number"
             min="0"
             step="1"
@@ -164,7 +166,8 @@ const MyAmountInput = ({ label, ...props }) => {
           />
           <button
             onClick={() => {
-              quantityEnv.current.value = Number(quantityEnv.current.value) + 1
+              console.log(field)
+              setFieldValue(props.name, Number(field.value) + 1)
             }}
             type="button"
             css={css`
@@ -206,8 +209,10 @@ const MyAmountInput = ({ label, ...props }) => {
   )
 }
 
-export default () => {
+export default ({ close }) => {
   const { t, i18n } = useTranslation()
+
+  const [envelopeWeight, setEnvelopeWeight] = React.useState(0)
 
   return (
     <div
@@ -233,6 +238,9 @@ export default () => {
       >
         {t("weightcalc")}
       </h3>
+      <button type="button" onClick={close}>
+        x
+      </button>
       <p
         css={css`
           width: 342px;
@@ -251,31 +259,38 @@ export default () => {
           paperGSM: "",
           amount: "",
         }}
-        validationSchema={Yup.object({
-          width: Yup.number()
-            .min(90, "Too small")
-            .max(458, "Too big")
-            .required("Required"),
-          height: Yup.number()
-            .min(100, "Too small")
-            .max(324, "Too big")
-            .required("Required"),
-          paperGSM: Yup.number()
-            .min(75, "Too light")
-            .max(120, "Too heavy")
-            .required("Required"),
-          amount: Yup.number()
-            .min(1, "Not enough")
-            .required("Required"),
-        })}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            setSubmitting(false)
-          }, 400)
+        // validationSchema={Yup.object({
+        //   width: Yup.number()
+        //     .min(90, "Too small")
+        //     .max(458, "Too big")
+        //     .required("Required"),
+        //   height: Yup.number()
+        //     .min(100, "Too small")
+        //     .max(324, "Too big")
+        //     .required("Required"),
+        //   paperGSM: Yup.number()
+        //     .min(75, "Too light")
+        //     .max(120, "Too heavy")
+        //     .required("Required"),
+        //   amount: Yup.number()
+        //     .min(1, "Not enough")
+        //     .required("Required"),
+        // })}
+        onSubmit={({ width, height, paperGSM, amount }) => {
+          // setTimeout(() => {
+          //   alert(JSON.stringify(values, null, 2))
+          //   setSubmitting(false)
+          // }, 400)
+          console.log(width, height, paperGSM, amount)
+          const weight =
+            ((Number(width) * Number(height) * Number(paperGSM) * 2.5) /
+              1000000) *
+            Number(amount)
+          setEnvelopeWeight(weight)
+          console.log(weight)
         }}
       >
-        {({ isSubmitting }) => (
+        {({ isSubmitting, setFieldValue }) => (
           <Form
             css={css`
               height: 290px;
@@ -309,6 +324,7 @@ export default () => {
               name="amount"
               type="number"
               placeholder="0"
+              setFieldValue={setFieldValue}
             />
             <button
               css={css`
@@ -333,7 +349,6 @@ export default () => {
                 }
               `}
               type="submit"
-              disabled={isSubmitting}
             >
               {t("calculate")}
             </button>
@@ -346,7 +361,8 @@ export default () => {
                 padding-top: 40px;
               `}
             >
-              {t("weightResult")}0 {t("kg")}
+              {t("weightResult")}
+              {envelopeWeight} g
             </p>
           </Form>
         )}

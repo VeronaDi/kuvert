@@ -54,7 +54,7 @@ export default props => {
       >
         {paperbags.map(({ name, img, id }) => (
           <LocalizedLink
-            to={`${id}`}
+            to={`/${id}`}
             css={css`
               width: 33%;
               padding-bottom: 15px;
