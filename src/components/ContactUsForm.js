@@ -95,10 +95,10 @@ const MySelect = ({ label, ...props }) => {
           background-repeat: no-repeat;
           width: 460px;
           height: 65px;
-          background: #ffffff;
           font-size: 16px;
           border: 1px solid #d6d6d6;
           border-radius: 3px;
+          padding: 18px;
           outline: none;
           color: #414141;
           :focus {
