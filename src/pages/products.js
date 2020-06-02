@@ -12,21 +12,9 @@ import { useTranslation } from "react-i18next"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 
-import backenvelopesgrey from "../images/background-envelopes-grey.svg"
-import backenvelopesblack from "../images/background-envelopes-black.svg"
 import backenvelopeswhite from "../images/background-envelopes-white.svg"
-import backenvelopes from "../images/background-envelopes.svg"
 
-let products = [
-  { img: "/products/1.png", name: "Envelopes", id: "envelopes" },
-  { img: "/products/2.png", name: "Banderole", id: "banderole" },
-  { img: "/products/3.png", name: "Paper bags", id: "ecobags" },
-  { img: "/products/4.png", name: "medical", id: "med" },
-  { img: "/products/1.png", name: "printed", id: "printed" },
-  { img: "/products/1.png", name: "Individual", id: "envelopes-individual" },
-  { img: "/products/1.png", name: "other", id: "other" },
-  { img: "/products/5.png", name: "sale", id: "sale" },
-]
+import products from "../data/products"
 
 export default props => {
   const T = useTranslation()
@@ -59,7 +47,7 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {products.map(({ name, img, id, background }) => (
+        {products.map(({ name, img, id }) => (
           <LocalizedLink
             to={`/${id}`}
             css={css`
