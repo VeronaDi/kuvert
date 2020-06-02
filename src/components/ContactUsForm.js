@@ -32,7 +32,7 @@ const MyInput = ({ label, ...props }) => {
           font-size: 12px;
           line-height: 14px;
           color: #000000;
-          margin-top: 16px;
+          padding-bottom: 5px;
         `}
       >
         {label}
@@ -49,6 +49,7 @@ const MyInput = ({ label, ...props }) => {
           padding: 20px;
           outline: none;
           margin-right: 100px;
+          margin-bottom: 16px;
           ::-webkit-input-placeholder {
             font-size: 16px;
             color: #ababab;
@@ -90,7 +91,7 @@ const MySelect = ({ label, ...props }) => {
           font-size: 12px;
           line-height: 14px;
           color: #000000;
-          margin-top: 16px;
+          padding-bottom: 5px;
         `}
       >
         {label}
@@ -113,6 +114,7 @@ const MySelect = ({ label, ...props }) => {
           padding: 18px;
           outline: none;
           color: #414141;
+          margin-bottom: 16px;
           :focus {
             border: 2px solid #c4c4c4;
           }
@@ -149,7 +151,7 @@ const MyMessageInput = ({ label, ...props }) => {
           font-size: 12px;
           line-height: 14px;
           color: #000000;
-          margin-top: 16px;
+          padding-bottom: 5px;
         `}
       >
         {label}
@@ -265,73 +267,94 @@ export default () => {
           <Form
             css={css`
               width: 1020px;
-              height: 290px;
+              height: 284px;
               margin: 0 auto;
               display: flex;
-              flex-direction: column;
+              flex-direction: row;
               flex-wrap: wrap;
-              justify-content: space-between;
-              align-content: space-between;
+              justify-content: center;
             `}
           >
-            <MyInput
-              label={t("name")}
-              name="name"
-              type="text"
-              placeholder={t("name")}
-            />
-            <MyInput
-              label="Email"
-              name="email"
-              type="email"
-              placeholder="hello@email.com"
-            />
-            <MyInput
-              label={t("phone")}
-              name="phone"
-              type="phone"
-              placeholder="123456789"
-            />
-            <MySelect label={t("department")} name="department">
-              <option value="Sales department">{t("salesDep")}</option>
-              <option value="Production department">
-                {t("productionDep")}
-              </option>
-              <option value="CEO">{t("CEO")}</option>
-            </MySelect>
-            <MyMessageInput
-              label={t("writeUs")}
-              name="message"
-              type="textarea"
-              placeholder={t("writeUs")}
-            />
-            <button
+            <div
               css={css`
-                color: black;
-                text-decoration: none;
-                border: 1px solid #000000;
-                box-sizing: border-box;
-                border-radius: 3px;
-                background: transparent;
-                padding: 18px 210px;
-                cursor: pointer;
-                outline: none;
-
-                &:hover {
-                  color: #c4c4c4;
-                  border: 1px solid #c4c4c4;
-                }
-
-                &:active {
-                  color: #676767;
-                  background: #ffffff;
-                }
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
               `}
-              type="submit"
-              disabled={isSubmitting}
             >
-              {t("send")}
-            </button>
+              <MyInput
+                label={t("name")}
+                name="name"
+                type="text"
+                placeholder={t("name")}
+              />
+              <MyInput
+                label="Email"
+                name="email"
+                type="email"
+                placeholder="hello@email.com"
+              />
+              <MyInput
+                label={t("phone")}
+                name="phone"
+                type="phone"
+                placeholder="123456789"
+              />
+            </div>
+            <div
+              css={css`
+                display: flex;
+                flex-direction: column;
+                align-content: space-between;
+              `}
+            >
+              <MySelect label={t("department")} name="department">
+                <option value="Sales department">{t("salesDep")}</option>
+                <option value="Production department">
+                  {t("productionDep")}
+                </option>
+                <option value="CEO">{t("CEO")}</option>
+              </MySelect>
+              <MyMessageInput
+                label={t("writeUs")}
+                name="message"
+                type="textarea"
+                placeholder={t("writeUs")}
+              />
+            </div>
+            <div
+              css={css`
+                margin-top: 41px;
+              `}
+            >
+              <button
+                css={css`
+                  color: black;
+                  text-decoration: none;
+                  border: 1px solid #000000;
+                  box-sizing: border-box;
+                  border-radius: 3px;
+                  background: transparent;
+                  padding: 18px 210px;
+                  cursor: pointer;
+                  outline: none;
+
+                  &:hover {
+                    color: #c4c4c4;
+                    border: 1px solid #c4c4c4;
+                  }
+
+                  &:active {
+                    color: #676767;
+                    background: #ffffff;
+                  }
+                `}
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {t("send")}
+              </button>
+            </div>
           </Form>
         )}
       </Formik>
