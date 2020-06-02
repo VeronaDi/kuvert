@@ -11,17 +11,29 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import backenvelopeswhite from "../images/background-envelopes-white.svg"
+
 let banderole = [
-  { img: "/products/1.png", name: "Airpoc", id: "airpoc" },
+  {
+    name: {
+      en: "Parcel bags with air bubbles",
+      uk: "Бандерольні пакети з повітряними бульбашками",
+    },
+    id: "airpoc",
+  },
   { img: "/products/1.png", name: "DocuFix", id: "docufix" },
   {
-    img: "/products/1.png",
-    name: "Envelopes with extension",
+    name: {
+      en: "Envelopes with extension",
+      uk: "Пакети з розширенням",
+    },
     id: "envelopes-extension",
   },
   {
-    img: "/products/1.png",
-    name: "Envelopes with cardboard insert",
+    name: {
+      en: "Envelopes with a cardboard insert",
+      uk: "Пакети з картонною вставкою",
+    },
     id: "envelopes-cardboard",
   },
 ]
@@ -57,36 +69,34 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {banderole.map(({ name, img, id }) => (
+        {banderole.map(({ name, id }) => (
           <LocalizedLink
             to={`${id}`}
             css={css`
               width: 24%;
               height: 457px;
-              padding-bottom: 15px;
+              background: url(${backenvelopeswhite}), rgba(104, 109, 103, 0.15);
               position: relative;
               text-align: center;
               cursor: pointer;
+              margin-bottom: 20px;
+              color: #b40039;
+              font-weight: bold;
+              font-size: 40px;
+              line-height: 47px;
+              text-decoration: none;
             `}
           >
-            <img src={img} alt={`${name}`} />
             <span
               css={css`
+                font-family: "Raleway", sans-serif;
                 position: absolute;
-                top: 50%;
+                top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 80%;
-                max-width: 345px;
-                background: rgba(0, 0, 0, 0.3);
-                border-radius: 3px;
-                font-weight: bold;
-                font-size: 40px;
-                color: #ffffff;
-                padding: 20px 0;
               `}
             >
-              {name}
+              {t(name)}
             </span>
           </LocalizedLink>
         ))}

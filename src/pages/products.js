@@ -67,6 +67,7 @@ export default props => {
           >
             <p
               css={css`
+                font-family: "Raleway", sans-serif;
                 position: absolute;
                 top: 35%;
                 left: 50%;

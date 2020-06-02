@@ -4,6 +4,15 @@ html {
   -webkit-text-size-adjust: 100%;
   background: #E5E5E5;
 }
+* {
+  box-sizing: border-box;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -186,21 +195,6 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
-}
-html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-* {
-  box-sizing: border-box;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
 }
 
 .leaflet-container {

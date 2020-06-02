@@ -15,17 +15,14 @@ import backenvelopeswhite from "../images/background-envelopes-white.svg"
 
 let envelopes = [
   {
-    img: "/products/standard.png",
     name: { en: "Standard", uk: "Стандартні" },
     id: "envelopes-standard",
   },
   {
-    img: "/products/thermopack.png",
     name: { en: "Thermopack", uk: "Термоупаковка" },
     id: "envelopes-thermopack",
   },
   {
-    img: "/products/triangular-envelope.png",
     name: { en: "Triangular flap", uk: "Трикутний клапан" },
     id: "envelopes-triangular",
   },
@@ -62,7 +59,7 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {envelopes.map(({ name, img, id }) => (
+        {envelopes.map(({ name, id }) => (
           <LocalizedLink
             to={`/${id}`}
             css={css`
@@ -75,13 +72,14 @@ export default props => {
               margin-bottom: 20px;
               color: #b40039;
               font-weight: bold;
-              font-size: 48px;
-              line-height: 56px;
+              font-size: 40px;
+              line-height: 47px;
               text-decoration: none;
             `}
           >
             <span
               css={css`
+                font-family: "Raleway", sans-serif;
                 position: absolute;
                 top: 45%;
                 left: 50%;

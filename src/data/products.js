@@ -6,7 +6,7 @@ export default [
   },
   {
     img: "/products/2.png",
-    name: { en: "Banderole packages", uk: "Бандерольні пакети" },
+    name: { en: "Parcel packages", uk: "Бандерольні пакети" },
     id: "banderole",
   },
   {
