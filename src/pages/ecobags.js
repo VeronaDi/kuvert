@@ -11,14 +11,12 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import backenvelopeswhite from "../images/background-envelopes-white.svg"
+
 let paperbags = [
-  { img: "/products/1.png", name: "White", id: "ecobags-white" },
-  { img: "/products/1.png", name: "Brown", id: "ecobags-brown" },
-  {
-    img: "/products/1.png",
-    name: "Color",
-    id: "ecobags-color",
-  },
+  { name: { en: "White", uk: "Білі" }, id: "ecobags-white" },
+  { name: { en: "Brown", uk: "Коричневі" }, id: "ecobags-brown" },
+  { name: { en: "Multicolor", uk: "Кольорові" }, id: "ecobags-color" },
 ]
 
 export default props => {
@@ -52,36 +50,34 @@ export default props => {
           padding-top: 46px;
         `}
       >
-        {paperbags.map(({ name, img, id }) => (
+        {paperbags.map(({ name, id }) => (
           <LocalizedLink
             to={`/${id}`}
             css={css`
-              width: 33%;
-              padding-bottom: 15px;
+              width: 32%;
+              height: 457px;
+              background: url(${backenvelopeswhite}), rgba(104, 109, 103, 0.15);
               position: relative;
               text-align: center;
               cursor: pointer;
+              margin-bottom: 20px;
+              color: #b40039;
+              font-weight: bold;
+              font-size: 40px;
+              line-height: 47px;
+              text-decoration: none;
             `}
           >
-            <img src={img} alt={`${name}`} />
             <span
               css={css`
+                font-family: "Raleway", sans-serif;
                 position: absolute;
-                top: 50%;
+                top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 80%;
-                max-width: 460px;
-                height: 205px;
-                background: rgba(0, 0, 0, 0.3);
-                border-radius: 3px;
-                font-weight: bold;
-                font-size: 48px;
-                color: #ffffff;
-                padding: 70px 0;
               `}
             >
-              {name}
+              {t(name)}
             </span>
           </LocalizedLink>
         ))}
