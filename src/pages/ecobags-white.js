@@ -86,6 +86,10 @@ export default props => {
             line-height: 27px;
             a {
               text-decoration: none;
+              color: black;
+              :hover {
+                text-decoration: underline;
+              }
             }
           `}
           dangerouslySetInnerHTML={{ __html: t("ecobagText") }}

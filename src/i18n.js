@@ -75,7 +75,7 @@ const resources = {
       ecobagWhite: "Білі пакети з паперовими ручками",
       ecobagBrown: "Коричневі пакети з паперовими ручками",
       ecobagText:
-        "Пакети з паперовими ручками <a href='https://ecobagnetwork.eu/' target='_blank rel='nofollow'>польської фабрики Eco Bags</a> виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
+        "Пакети з паперовими ручками польської фабрики <a href='https://ecobagnetwork.eu/' target='_blank rel='nofollow'>Ecobag Network</a> виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
       envelope: "Конверт",
       envelopes: "Конверти",
       envelopesStandard: "Стандартні конверти",
@@ -273,7 +273,7 @@ const resources = {
       ecobagWhite: "White paper bags with paper handles",
       ecobagBrown: "Brown paper bags with paper handles",
       ecobagText:
-        "Paper bags with paper handles manufactured by <a href='https://ecobagnetwork.eu/' target='_blank rel='nofollow'>Polish factory Ecobag Network</a> are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
+        "Paper bags with paper handles manufactured by Polish factory <a href='https://ecobagnetwork.eu/' target='_blank rel='nofollow'>Ecobag Network</a> are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
       envelope: "Envelope",
       envelopes: "envelopes",
       envelopesStandard: "Standard envelopes",
