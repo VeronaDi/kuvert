@@ -1,16 +1,12 @@
 import React from "react"
 import { Form, Formik, useField } from "formik"
-import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import plus from "../images/plus.png"
 import minus from "../images/minus.png"
-import error from "../images/error.svg"
 
 const MyInput = ({ label, ...props }) => {
-  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-  // which we can spread on <input> and alse replace ErrorMessage entirely.
   const [field, meta] = useField(props)
   return (
     <>
@@ -89,8 +85,6 @@ const MyInput = ({ label, ...props }) => {
 
 const MyAmountInput = ({ label, setFieldValue, ...props }) => {
   const [field, meta] = useField(props)
-  const quantityEnv = React.useRef()
-  console.log(props)
   return (
     <>
       <div
@@ -120,7 +114,6 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
         >
           <button
             onClick={() => {
-              console.log(field)
               let newValue = Number(field.value) - 1
               if (newValue < 1) newValue = 1
               setFieldValue(props.name, newValue)
@@ -166,7 +159,6 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
           />
           <button
             onClick={() => {
-              console.log(field)
               setFieldValue(props.name, Number(field.value) + 1)
             }}
             type="button"
@@ -238,8 +230,21 @@ export default ({ close }) => {
       >
         {t("weightcalc")}
       </h3>
-      <button type="button" onClick={close}>
-        x
+      <button
+        type="button"
+        onClick={close}
+        css={css`
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 8px 15px;
+          outline: none;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        `}
+      >
+        &times;
       </button>
       <p
         css={css`
@@ -259,35 +264,12 @@ export default ({ close }) => {
           paperGSM: "",
           amount: "",
         }}
-        // validationSchema={Yup.object({
-        //   width: Yup.number()
-        //     .min(90, "Too small")
-        //     .max(458, "Too big")
-        //     .required("Required"),
-        //   height: Yup.number()
-        //     .min(100, "Too small")
-        //     .max(324, "Too big")
-        //     .required("Required"),
-        //   paperGSM: Yup.number()
-        //     .min(75, "Too light")
-        //     .max(120, "Too heavy")
-        //     .required("Required"),
-        //   amount: Yup.number()
-        //     .min(1, "Not enough")
-        //     .required("Required"),
-        // })}
         onSubmit={({ width, height, paperGSM, amount }) => {
-          // setTimeout(() => {
-          //   alert(JSON.stringify(values, null, 2))
-          //   setSubmitting(false)
-          // }, 400)
-          console.log(width, height, paperGSM, amount)
           const weight =
             ((Number(width) * Number(height) * Number(paperGSM) * 2.5) /
               1000000) *
             Number(amount)
           setEnvelopeWeight(weight)
-          console.log(weight)
         }}
       >
         {({ isSubmitting, setFieldValue }) => (
@@ -362,7 +344,7 @@ export default ({ close }) => {
               `}
             >
               {t("weightResult")}
-              {envelopeWeight} g
+              {envelopeWeight} {t("g")}
             </p>
           </Form>
         )}
