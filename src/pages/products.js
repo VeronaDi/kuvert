@@ -52,7 +52,7 @@ export default props => {
             to={`/${id}`}
             css={css`
               width: 49%;
-              height: 300px;
+              height: 350px;
               background: url(${backenvelopeswhite}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;

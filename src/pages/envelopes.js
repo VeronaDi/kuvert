@@ -11,16 +11,22 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import backenvelopeswhite from "../images/background-envelopes-white.svg"
+
 let envelopes = [
-  { img: "/products/standard.png", name: "Standard", id: "envelopes-standard" },
+  {
+    img: "/products/standard.png",
+    name: { en: "Standard", uk: "Стандартні" },
+    id: "envelopes-standard",
+  },
   {
     img: "/products/thermopack.png",
-    name: "Thermopack",
+    name: { en: "Thermopack", uk: "Термоупаковка" },
     id: "envelopes-thermopack",
   },
   {
     img: "/products/triangular-envelope.png",
-    name: "Triangular valve",
+    name: { en: "Triangular flap", uk: "Трикутний клапан" },
     id: "envelopes-triangular",
   },
 ]
@@ -60,32 +66,29 @@ export default props => {
           <LocalizedLink
             to={`/${id}`}
             css={css`
-              width: 33%;
-              padding-bottom: 15px;
+              width: 32%;
+              height: 457px;
+              background: url(${backenvelopeswhite}), rgba(104, 109, 103, 0.15);
               position: relative;
               text-align: center;
               cursor: pointer;
+              margin-bottom: 20px;
+              color: #b40039;
+              font-weight: bold;
+              font-size: 48px;
+              line-height: 56px;
+              text-decoration: none;
             `}
           >
-            <img src={img} alt={`${name}`} />
             <span
               css={css`
                 position: absolute;
-                top: 50%;
+                top: 45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 80%;
-                max-width: 460px;
-                height: 205px;
-                background: rgba(0, 0, 0, 0.3);
-                border-radius: 3px;
-                font-weight: bold;
-                font-size: 48px;
-                color: #ffffff;
-                padding: 70px 0;
               `}
             >
-              {name}
+              {t(name)}
             </span>
           </LocalizedLink>
         ))}
