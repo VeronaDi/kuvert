@@ -46,7 +46,9 @@ export default () => {
         >
           <h4
             css={css`
+              font-weight: bold;
               font-size: 24px;
+              line-height: 36px;
               padding-bottom: 20px;
               margin: 0;
             `}
@@ -56,6 +58,9 @@ export default () => {
           <p
             css={css`
               margin: 0;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 36px;
             `}
           >
             {t("ivano")}
@@ -106,7 +111,9 @@ export default () => {
         >
           <h4
             css={css`
+              font-weight: bold;
               font-size: 24px;
+              line-height: 36px;
               padding-bottom: 20px;
               margin: 0;
             `}
@@ -319,14 +326,16 @@ export default () => {
           position: absolute;
           bottom: 0;
           text-align: center;
-          line-height: 25px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 30px;
           padding-top: 12px;
         `}
       >
         <a
           href="http://en.mayer-kuvert-network.com/mk-en"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           css={css`
             text-decoration: none;
             font-size: 20px;
@@ -339,6 +348,7 @@ export default () => {
           css={css`
             font-weight: bold;
             font-size: 14px;
+            line-height: 30px;
           `}
         >
           Copyright © 2020 Kuvert-Ukraine. All rights reserved.
@@ -346,7 +356,7 @@ export default () => {
         <a
           href="https://www.facebook.com/kuvert.ua/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           css={css`
             background: url(${facebook});
             width: 51px;
@@ -362,7 +372,7 @@ export default () => {
         <a
           href="https://www.linkedin.com/company/kuvertua/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           css={css`
             background: url(${linkedin});
             width: 51px;

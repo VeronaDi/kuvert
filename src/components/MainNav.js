@@ -24,11 +24,13 @@ const activeStyle = {
 const StyledLink = ({ isHome, to, children }) => (
   <LocalizedLink
     css={css`
-      margin: 0 23px;
+      margin: 46px;
       cursor: pointer;
       color: ${isHome ? "white" : "#040404"};
-      font-weight: normal;
       text-decoration: none;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
     `}
     activeStyle={activeStyle}
     to={to}
@@ -99,7 +101,9 @@ export default ({ isHome = false, location }) => {
         css={css`
           cursor: pointer;
           color: ${isHome ? "white" : "#040404"};
-          font-weight: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
           text-decoration: none;
           padding-top: 46px;
         `}

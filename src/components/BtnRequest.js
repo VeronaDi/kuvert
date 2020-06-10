@@ -17,9 +17,13 @@ export default () => {
         border: none;
         padding-top: 16px;
         padding-bottom: 16px;
+        width: 205.81px;
+        height: 56px;
         color: white;
         cursor: pointer;
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
         outline: none;
         text-decoration: none;
         display: block;

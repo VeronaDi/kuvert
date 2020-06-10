@@ -80,9 +80,10 @@ const IndexPage = props => {
         >
           <h1
             css={css`
-              font-size: 58px;
               font-weight: bold;
-              margin: 49px 70px 13px 70px;
+              font-size: 64px;
+              line-height: 75px;
+              margin-bottom: 27px;
             `}
           >
             {t("mainSlogan")}
@@ -97,15 +98,17 @@ const IndexPage = props => {
               text-align: center;
               font-weight: bold;
               font-size: 20px;
+              line-height: 30px;
             `}
           >
             «Mayer-Kuvert-network GmbH»
           </a>
           <p
             css={css`
+              font-weight: 500;
               font-size: 16px;
               line-height: 24px;
-              margin: 17px 80px 40px 80px;
+              margin: 17px 80px 0 80px;
             `}
           >
             {t("titleText")}
@@ -162,7 +165,9 @@ const IndexPage = props => {
         >
           <h1
             css={css`
+              font-weight: bold;
               font-size: 48px;
+              line-height: 56px;
               padding-bottom: 30px;
               border-bottom: 1px solid white;
               transform: rotate(-0.29deg);
@@ -173,8 +178,10 @@ const IndexPage = props => {
           </h1>
           <p
             css={css`
-              line-height: 27px;
               padding: 40px 0;
+              font-weight: normal;
+              font-size: 18px;
+              line-height: 27px;
             `}
           >
             {t("indexAbout")}
@@ -184,8 +191,10 @@ const IndexPage = props => {
             css={css`
               color: white;
               cursor: pointer;
-              text-decoration-line: underline;
               font-weight: bold;
+              font-size: 18px;
+              line-height: 27px;
+              text-decoration: none;
             `}
           >
             {t("learnMore")}
@@ -218,7 +227,7 @@ const IndexPage = props => {
             width: 100%;
             background: url(${ukraine});
             background-repeat: no-repeat;
-            background-position: 20%;
+            background-position: 18%;
             display: flex;
             justify-content: start;
             flex-direction: column;
@@ -235,18 +244,19 @@ const IndexPage = props => {
           >
             <h2
               css={css`
-                font-weight: bold;
+                font-weight: 500;
                 font-size: 48px;
+                line-height: 56px;
               `}
             >
               {t("contactUs")}
             </h2>
             <p
               css={css`
+                font-weight: normal;
                 font-size: 18px;
                 line-height: 27px;
-                padding-top: 36px;
-                padding-bottom: 25px;
+                padding: 36px 0;
               `}
             >
               {t("indexContactUs")}

@@ -67,7 +67,9 @@ export default () => {
     >
       <h2
         css={css`
+          font-weight: 500;
           font-size: 48px;
+          line-height: 56px;
           text-align: center;
           padding-bottom: 40px;
         `}
