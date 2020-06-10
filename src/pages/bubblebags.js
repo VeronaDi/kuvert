@@ -74,7 +74,7 @@ export default props => {
           background: url(${bubblebag}), #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 40% 100%;
+          background-size: 40% 80%;
           margin: 9px auto;
           padding: 30px 78px 90px 37%;
           color: #000000;
