@@ -24,25 +24,6 @@ import machine from "../images/machine.jpg"
 import ukraine from "../images/ukraine.png"
 import zeh from "../images/zeh.jpg"
 
-// import i18n from "i18next"
-// i18n.changeLanguage("en")
-
-// const VerstatImage = () => {
-//   const data = useStaticQuery(graphql`
-//     query {
-//       placeholderImage: file(relativePath: { eq: "verstat.jpg" }) {
-//         childImageSharp {
-//           fluid(maxWidth: 1055, maxHeight: 594) {
-//             ...GatsbyImageSharpFluid_withWebp
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-// }
-
 const IndexPage = props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {

@@ -49,7 +49,7 @@ export default props => {
           <LocalizedLink
             to={`/${id}`}
             css={css`
-              width: 49%;
+              width: 48%;
               height: 350px;
               background: url(${img}), rgba(128, 128, 128, 0.4);
               position: relative;

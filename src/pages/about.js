@@ -78,6 +78,7 @@ export default props => {
             css={css`
               display: table-cell;
               vertical-align: middle;
+              font-weight: 500;
               font-size: 24px;
               line-height: 36px;
               margin: 0 auto;

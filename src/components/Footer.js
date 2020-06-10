@@ -1,12 +1,19 @@
 import React from "react"
-// import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import facebook from "../images/facebook.svg"
 import linkedin from "../images/linkedin.svg"
 
-export default () => {
+import contacts from "../data/contacts"
+
+export default props => {
+  // const T = useTranslation()
+  // if (T.i18n.language !== props.pageContext.langKey) {
+  //   T.i18n.changeLanguage(props.pageContext.langKey)
+  // }
+
+  // const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
   const { t, i18n } = useTranslation()
 
   return (
@@ -55,50 +62,27 @@ export default () => {
           >
             {t("addressOfFactory")}
           </h4>
-          <p
-            css={css`
-              margin: 0;
-              font-weight: 500;
-              font-size: 18px;
-              line-height: 36px;
-            `}
-          >
-            {t("ivano")}
-          </p>
-          <p
-            css={css`
-              margin: 0;
-            `}
-          >
-            {t("addressFactory")}
-          </p>
-          <p
-            css={css`
-              margin: 0;
-              display: flex;
-              flex-direction: column;
-            `}
-          >
-            {t("phone")}:
-            <a
-              href="tel:+380503770801"
-              css={css`
-                text-decoration: none;
-                color: white;
-              `}
-            >
-              +38 050 377 08 01
-            </a>
-            <a
-              href="tel:+380673270801"
-              css={css`
-                text-decoration: none;
-                color: white;
-              `}
-            >
-              +38 067 327 08 01
-            </a>
-          </p>
+          {contacts.map(
+            ({
+              city,
+              street,
+              phoneOfficeVodafone,
+              phoneOfficeKyivstar,
+              phoneOffice,
+            }) => (
+              <li
+                key={city}
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 20px;
+                  padding-top: 15px;
+                `}
+              >
+                {phoneOfficeKyivstar}
+              </li>
+            )
+          )}
         </div>
         <div
           css={css`
