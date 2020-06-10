@@ -63,12 +63,12 @@ export default () => {
     >
       <h2
         css={css`
-          font-size: 36px;
           text-align: center;
           padding-bottom: 40px;
           color: black;
+          font-weight: 500;
+          font-size: 36px;
           line-height: 42px;
-          font-weight: bold;
         `}
       >
         {t("certificate")}

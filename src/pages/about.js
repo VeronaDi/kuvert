@@ -135,6 +135,7 @@ export default props => {
               display: table-cell;
               vertical-align: middle;
               font-size: 2.26vw;
+              font-weight: 500;
               color: white;
               padding: 0 14px;
               background: #b40039;
@@ -178,8 +179,9 @@ export default props => {
       >
         <div
           css={css`
+            font-weight: 500;
             font-size: 36px;
-            font-weight: bold;
+            line-height: 42px;
             padding-bottom: 20px;
           `}
         >
@@ -200,6 +202,7 @@ export default props => {
               css={css`
                 font-weight: bold;
                 font-size: 72px;
+                line-height: 84px;
                 margin: 0;
               `}
             >
@@ -212,6 +215,7 @@ export default props => {
               css={css`
                 font-weight: bold;
                 font-size: 72px;
+                line-height: 84px;
                 margin: 0;
               `}
             >
@@ -224,6 +228,7 @@ export default props => {
               css={css`
                 font-weight: bold;
                 font-size: 72px;
+                line-height: 84px;
                 margin: 0;
               `}
             >
@@ -236,6 +241,7 @@ export default props => {
               css={css`
                 font-weight: bold;
                 font-size: 72px;
+                line-height: 84px;
                 margin: 0;
               `}
             >
@@ -278,6 +284,7 @@ export default props => {
           <h3
             css={css`
               font-size: 36px;
+              line-height: 42px;
               color: white;
               font-weight: normal;
             `}
@@ -316,6 +323,7 @@ export default props => {
               text-decoration: none;
               font-weight: bold;
               font-size: 14px;
+              line-height: 27px;
             `}
           >
             {t("visitMayer")}
@@ -333,9 +341,10 @@ export default props => {
       >
         <h3
           css={css`
+            font-weight: 500;
             font-size: 36px;
+            line-height: 42px;
             color: white;
-            font-weight: normal;
             padding: 40px 10px 21px 15px;
             border-bottom: 1px solid #ffffff;
             width: 223.11px;
@@ -381,11 +390,11 @@ export default props => {
       >
         <h3
           css={css`
-            font-size: 36px;
             color: black;
-            font-weight: normal;
             padding-top: 40px;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
           `}
         >
           {t("participants")}
