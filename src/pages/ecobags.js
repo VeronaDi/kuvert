@@ -11,7 +11,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import backenvelopeswhite from "../images/background-envelopes-white.svg"
+import paperbagsPattern from "../../static/products/paperbags-pattern.png"
 
 let paperbags = [
   { name: { en: "White", uk: "Білі" }, id: "ecobags-white" },
@@ -56,7 +56,7 @@ export default props => {
             css={css`
               width: 32%;
               height: 457px;
-              background: url(${backenvelopeswhite}), rgba(104, 109, 103, 0.15);
+              background: url(${paperbagsPattern}), rgba(104, 109, 103, 0.15);
               position: relative;
               text-align: center;
               cursor: pointer;

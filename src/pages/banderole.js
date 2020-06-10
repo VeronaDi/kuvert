@@ -11,7 +11,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import backenvelopeswhite from "../images/background-envelopes-white.svg"
+import banderolePattern from "../../static/products/banderole-pattern.png"
 
 let banderole = [
   {
@@ -75,7 +75,7 @@ export default props => {
             css={css`
               width: 24%;
               height: 457px;
-              background: url(${backenvelopeswhite}), rgba(104, 109, 103, 0.15);
+              background: url(${banderolePattern}), rgba(104, 109, 103, 0.15);
               position: relative;
               text-align: center;
               cursor: pointer;
