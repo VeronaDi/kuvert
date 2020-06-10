@@ -7,12 +7,11 @@ import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
+import EcobagTopSection from "../components/EcobagTopSection"
 
 import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
-
-import triangularEnv from "../images/triangular-envelope.png"
 
 import ecobagsColor from "../data/ecobagColor"
 
@@ -65,112 +64,8 @@ export default props => {
       >
         {t("ecobagColor")}
       </h3>
-      <div
-        css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${triangularEnv}), #ffffff;
-          background-position: left;
-          background-repeat: no-repeat;
-          background-size: 40% 100%;
-          margin: 9px auto;
-          padding: 30px 78px 90px 37%;
-          color: #000000;
-        `}
-      >
-        <p
-          css={css`
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-          `}
-        >
-          {t("ecobagText")}
-        </p>
-        <div
-          css={css`
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: 200px;
-            padding-top: 15px;
-          `}
-        >
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("size")}
-            {ecobagsColor.map(({ size }) => (
-              <li
-                css={css`
-                  font-weight: 500;
-                  font-size: 18px;
-                  line-height: 36px;
-                  :before {
-                    content: "-";
-                    padding-right: 5px;
-                  }
-                `}
-              >
-                {size} {t("mm")}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div
-          css={css`
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 27px;
-            padding: 65px 0 0 0;
-          `}
-        >
-          {t("whereUse")}
-          <ul
-            css={css`
-              list-style: none;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              padding: 0;
-            `}
-          >
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("packPresent")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("packBulkProd")}
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <EcobagTopSection />
 
       <h4
         css={css`
