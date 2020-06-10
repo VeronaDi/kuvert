@@ -1,21 +1,21 @@
 export default [
   {
-    img: "/products/1.png",
+    img: "/products/envelopes-pattern.png",
     name: { en: "Envelopes", uk: "Конверти" },
     id: "envelopes",
   },
   {
-    img: "/products/2.png",
+    img: "/products/banderole-pattern.png",
     name: { en: "Parcel packages", uk: "Бандерольні пакети" },
     id: "banderole",
   },
   {
-    img: "/products/3.png",
+    img: "/products/paperbags-pattern.png",
     name: { en: "Paper bags", uk: "Паперові торбинки" },
     id: "ecobags",
   },
   {
-    img: "/products/4.png",
+    img: "/products/medical-pattern.png",
     name: {
       en: "Stericlin® sterilization bags",
       uk: "Стерилізаційні пакети Stericlin®",
@@ -23,12 +23,12 @@ export default [
     id: "med",
   },
   {
-    img: "/products/1.png",
+    img: "/products/print-pattern.png",
     name: { en: "Printed products", uk: "Продукція з друком" },
     id: "printed",
   },
   {
-    img: "/products/1.png",
+    img: "/products/individual-pattern.png",
     name: {
       en: "Envelopes with individual design",
       uk: "Конверти з індивідуальним дизайном",
@@ -36,9 +36,13 @@ export default [
     id: "envelopes-individual",
   },
   {
-    img: "/products/1.png",
+    img: "/products/other-pattern.png",
     name: { en: "Other products", uk: "Інша продукція" },
     id: "other",
   },
-  { img: "/products/5.png", name: { en: "Sale", uk: "Розпродаж" }, id: "sale" },
+  {
+    img: "/products/sale-pattern.png",
+    name: { en: "Sale", uk: "Розпродаж" },
+    id: "sale",
+  },
 ]

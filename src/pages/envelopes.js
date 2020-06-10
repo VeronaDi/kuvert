@@ -11,7 +11,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import backenvelopeswhite from "../images/background-envelopes-white.svg"
+import envelopesPattern from "../../static/products/envelopes-pattern.png"
 
 let envelopes = [
   {
@@ -65,7 +65,7 @@ export default props => {
             css={css`
               width: 32%;
               height: 457px;
-              background: url(${backenvelopeswhite}), rgba(104, 109, 103, 0.15);
+              background: url(${envelopesPattern}), rgba(104, 109, 103, 0.15);
               position: relative;
               text-align: center;
               cursor: pointer;

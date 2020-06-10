@@ -12,8 +12,6 @@ import { useTranslation } from "react-i18next"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 
-import backenvelopeswhite from "../images/background-envelopes-white.svg"
-
 import products from "../data/products"
 
 export default props => {
@@ -53,7 +51,7 @@ export default props => {
             css={css`
               width: 49%;
               height: 350px;
-              background: url(${backenvelopeswhite}), rgba(128, 128, 128, 0.4);
+              background: url(${img}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;
               cursor: pointer;
@@ -65,6 +63,7 @@ export default props => {
               text-decoration: none;
             `}
           >
+            {/* <img src={img} alt="logo" /> */}
             <p
               css={css`
                 font-family: "Raleway", sans-serif;

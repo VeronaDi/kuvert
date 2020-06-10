@@ -309,7 +309,7 @@ export default props => {
           <a
             href="http://en.mayer-kuvert-network.com/mk-en"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             css={css`
               color: white;
               text-decoration: none;
