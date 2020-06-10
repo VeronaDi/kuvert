@@ -10,7 +10,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import thermopack from "../images/thermopack.png"
+import thermopack from "../../static/products/thermopack.jpg"
 
 export default props => {
   const T = useTranslation()
@@ -43,7 +43,7 @@ export default props => {
           background: url(${thermopack}), #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 42% 100%;
+          background-size: 42% 80%;
           margin: 9px auto;
           padding: 30px 78px 90px 37%;
           color: #000000;
