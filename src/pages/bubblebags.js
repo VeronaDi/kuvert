@@ -12,7 +12,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import triangularEnv from "../images/triangular-envelope.png"
+import bubblebag from "../../static/products/bubblebag.jpg"
 
 import airpoc from "../data/airpoc"
 
@@ -53,7 +53,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Airpoc" />
+      <SEO title="Bags with bubbles" />
       <MainNav {...props} />
 
       <h3
@@ -64,14 +64,14 @@ export default props => {
           font-weight: 500;
         `}
       >
-        Airpoc
+        {t("airpoc")}
       </h3>
       <div
         css={css`
           width: 80%;
           height: auto;
           max-height: 720px;
-          background: url(${triangularEnv}), #ffffff;
+          background: url(${bubblebag}), #ffffff;
           background-position: left;
           background-repeat: no-repeat;
           background-size: 40% 100%;

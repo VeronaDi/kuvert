@@ -19,9 +19,9 @@ let banderole = [
       en: "Parcel bags with air bubbles",
       uk: "Бандерольні пакети з повітряними бульбашками",
     },
-    id: "airpoc",
+    id: "bubblebags",
   },
-  { img: "/products/1.png", name: "DocuFix", id: "docufix" },
+  { name: "DocuFix", id: "docufix" },
   {
     name: {
       en: "Envelopes with extension",

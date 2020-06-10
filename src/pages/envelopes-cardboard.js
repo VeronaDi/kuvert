@@ -12,7 +12,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import triangularEnv from "../images/triangular-envelope.png"
+import envCardboard from "../../static/products/env-cardboard.jpg"
 
 import cardboardEnv from "../data/cardboardEnvelopes"
 
@@ -70,7 +70,7 @@ export default props => {
           width: 80%;
           height: auto;
           max-height: 586px;
-          background: url(${triangularEnv}), #ffffff;
+          background: url(${envCardboard}), #ffffff;
           background-position: left;
           background-repeat: no-repeat;
           background-size: 40% 100%;

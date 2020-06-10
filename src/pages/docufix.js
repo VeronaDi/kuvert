@@ -9,7 +9,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import thermopack from "../images/thermopack.png"
+import docufix from "../../static/products/docufix.webp"
 
 export default props => {
   const T = useTranslation()
@@ -39,10 +39,10 @@ export default props => {
           width: 80%;
           height: auto;
           max-height: 586px;
-          background: url(${thermopack}), #ffffff;
+          background: url(${docufix}), #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 42% 100%;
+          background-size: 40% 100%;
           margin: 9px auto 50px auto;
           padding: 30px 78px 90px 37%;
           color: #000000;

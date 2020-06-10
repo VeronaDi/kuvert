@@ -26,8 +26,9 @@ const resources = {
       addressOfFactory: "Адреса фабрики",
       addressFactory: "вул.І.Макуха, 6",
       addToRequest: "Додати до запиту",
+      airpoc: "Бандерольні пакети з повітряними бульбашками",
       airpocText:
-        "Бандерольні пакети Airpoc з поліетиленовими повітряними вставками, що гарантує надійний захист для відправки крихких і цінних предметів.",
+        "Бандерольні пакети з поліетиленовими повітряними вставками, що гарантують надійний захист для відправки крихких і цінних предметів.",
       amount: "Кількість",
       banderole: "Бандерольні пакети",
       basicOrder: "Стандартний запит",
@@ -69,7 +70,7 @@ const resources = {
       dnipro: "Дніпро",
       docFlow: "Документообіг",
       docufixText:
-        "Пакети Docufix — поліетиленові пакети з клейовим шаром на всю сторону. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти документи в конверт Docufix і приклеїти його на коробку або піддон.",
+        "Конверти Docufix — прозорі поліетиленові конверти з клейовим шаром на всю сторону. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти їх в конверт Docufix і приклеїти його на коробку або піддон.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
       ecobagColor: "Кольорові пакети з паперовими ручками",
       ecobagWhite: "Білі пакети з паперовими ручками",
@@ -223,8 +224,9 @@ const resources = {
       addressOfFactory: "Address of factory",
       addressFactory: "Ivano-Frankivsk, Makuha str. 6",
       addToRequest: "Add to request",
+      airpoc: "Parcel bags with air bubbles",
       airpocText:
-        "Airpoc parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
+        "Parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
       amount: "Amount",
       banderole: "Banderole bags",
       basicOrder: "Basic order",
@@ -266,7 +268,7 @@ const resources = {
       dnipro: "Dnipro",
       docFlow: "Document flow",
       docufixText:
-        "Docufix bags - plastic bags with adhesive on the whole side. No more mail to send additional documents for goods, enough to put documents in an envelope Docufix and stick it on the box or pallet.",
+        "Docufix envelopes - transparent polyethylene envelopes with adhesive on the side. No more need send additional mail with documents for goods, just put them in an envelope Docufix and stick it on the box or pallet.",
       distributionProducts:
         "Distribution of advertising or information products",
       ecobagColor: "Colored paper bags with paper handles",

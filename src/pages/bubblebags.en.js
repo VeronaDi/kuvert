@@ -9,5 +9,5 @@
 //   return <Page {...props} />
 // }
 
-import X from "./airpoc"
+import X from "./bubblebags"
 export default X
