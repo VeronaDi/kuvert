@@ -152,6 +152,10 @@ const resources = {
       printProducts: "Продукція з друком",
       printProductsText:
         "Пропонуємо професійний друк на конвертах та паперових торбах— нанесення логотипу компанії, адреси, тощо. Залежно від призначення, іміджевих вимог та Вашого бюджету ми здійснюємо три види друку.",
+      printTypes: "Три види друку",
+      printReadyEnv: "Друк по готовому конверту",
+      printСutOutEnv: "Друк на викроях",
+      printDigital: "Цифровий друк",
       productLabeling: "Маркування товару",
       pcs: " шт.",
       quantityBox: "Кількість в коробці",
@@ -364,6 +368,10 @@ const resources = {
       printProductsText:
         "We offer professional printing on envelopes and paper bags - the company logo, address, etc. Depending on the purpose, image requirements and your budget we carry out three types of printing.",
       productionDep: "Production department",
+      printTypes: "Three types of print",
+      printReadyEnv: "Print on envelope",
+      printСutOutEnv: "Print on carved",
+      printDigital: "Digital print",
       productLabeling: "Product labeling",
       pcs: " pcs",
       quantityBox: "Quantity in box",

@@ -12,6 +12,9 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import printed from "../../static/products/print-mix.png"
+import printbag from "../../static/products/1.jpg"
+import printflex from "../../static/products/37.jpg"
+import printoffset from "../../static/products/52.jpg"
 
 export default props => {
   const T = useTranslation()
@@ -64,10 +67,91 @@ export default props => {
       <div
         css={css`
           width: 100%;
-height: 765px;
+          height: 765px;
           background: #e7e7e7;
+          text-align: center;
         `}
-      ></div>
+      >
+        <h4
+          css={css`
+            color: #000000;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 35px;
+            padding: 39px 0;
+          `}
+        >
+          {t("printTypes")}
+        </h4>
+        <div
+          css={css`
+            width: 100%;
+            height: 765px;
+            background: #e7e7e7;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+          `}
+        >
+          <div
+            css={css`
+              width: 30%;
+              background: url(${printflex});
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+            `}
+          >
+            <h5
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+              `}
+            >
+              {t("printReadyEnv")}
+            </h5>
+          </div>
+          <div
+            css={css`
+              width: 30%;
+              background: url(${printoffset});
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+            `}
+          >
+            <h5
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+              `}
+            >
+              {t("printСutOutEnv")}
+            </h5>
+          </div>
+          <div
+            css={css`
+              width: 30%;
+              background: url(${printbag});
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+            `}
+          >
+            <h5
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+              `}
+            >
+              {t("printDigital")}
+            </h5>
+          </div>
+        </div>
+      </div>
       <IndividualOrderSection />
       <Footer />
     </Layout>
