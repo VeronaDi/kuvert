@@ -64,6 +64,7 @@ const resources = {
       colorsAmount: "Кількість кольорів",
       company: "Організація",
       contactDetails: "Контактні дані",
+      cosmetic: "Косметичні кабінети",
       creatIndEnv: "Створіть запит, щоб перетворити мрію в реальність",
       createRequest: "Створити запит",
       department: "Відділ",
@@ -93,6 +94,7 @@ const resources = {
       historyP2:
         "«Куверт-Україна» пропонує споживачам найширший асортимент поштових конвертів та пакетів, унікальні запатентовані продукти та інновації в галузі рекламного конверта, постійні складські запаси та сертифікований контроль якості.",
       homepage: "Повернутися на головну",
+      hospital: "Лікарні та поліклініки",
       indexAbout:
         "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer Kuvert Network» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики.",
       indexContactUs:
@@ -105,6 +107,7 @@ const resources = {
         "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
       innerPrint: "Внутрішній друк",
       innerandouterPrint: "Зовнішній та внутрішній друк",
+      industrial: "Промислові підприємства",
       infoInscriptions: "Вкладення інформуючих написів на вантажах",
       ivano: "Івано-Франківськ",
       kyiv: "Київ",
@@ -150,6 +153,8 @@ const resources = {
       pcs: " шт.",
       quantityBox: "Кількість в коробці",
       right: "Відстань справа",
+      representativeVP:
+        "«Куверт-Україна» офіційний представник «VP group». <a href='https://www.vp-group.de/en/' target='_blank rel='nofollow'>Перейти на веб-сайт «VP group».</a>",
       request: "Створити запит",
       requestCall: "Замовити дзвінок",
       requestType: "Тип запиту",
@@ -162,9 +167,13 @@ const resources = {
       sendUsMessage: "Якщо у Вас виникли запитання, будь ласка, напишіть нам",
       sk: "самоклеючий",
       skl: "з відривною стрічкою",
+      smM: "см/м",
       statistic: "Важлива статистика",
       statisticFact: "Корисні та значні дані про нашу фабрику",
       stationery: "Канцелярські магазини",
+      stericlin: "Стерилізаційні пакети Stericlin®",
+      stericlinText:
+        "<a href='https://www.stericlin.de/en/' target='_blank rel='nofollow'>Stericlin®</a>— пакети для стерилізації медичного інструменту та розхідних матеріалів відповідають вимогам, що висуваються до медичних стерилізаційних пакувальних матеріалів. У наявності пакети з бічними складками і без бічних складок. ",
       supermarket: "Супермаркети",
       titleText:
         "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
@@ -262,6 +271,7 @@ const resources = {
       colorsAmount: "Amount of colors",
       company: "Company",
       contactDetails: "Contact details",
+      cosmetic: "Cosmetic cabinets",
       creatIndEnv: "Create a request to turn your dream into reality",
       createRequest: "Create request",
       department: "Department",
@@ -293,6 +303,7 @@ const resources = {
       historyP2:
         "Kuvert-Ukraine offers consumers the widest range of mail envelopes and packages, unique patented products and innovations in the field of advertising envelope, permanent warehouse stocks and certified quality control.",
       homepage: "Back to homepage",
+      hospital: "Hospitals and clinics",
       indexAbout:
         "Kuvert-Ukraine is part of Europe's largest Mayer-Kuvert-network envelope manufacturing group and the largest envelope manufacturer in Ukraine since 1999. Every year we produce over 250 million envelopes thanks to the factory's high quality machine park.",
       indexContactUs:
@@ -303,6 +314,7 @@ const resources = {
       individualOrder: "Individual inquiry",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+      industrial: "Industrial companies",
       innerPrint: "Inner print",
       innerandouterPrint: "Outer and inner print",
       infoInscriptions: "Attaching informational inscriptions on goods",
@@ -350,6 +362,8 @@ const resources = {
       pcs: " pcs",
       quantityBox: "Quantity in box",
       right: "Right distance",
+      representativeVP:
+        "«Kuvert-Ukraine» is official representative of «VP group». <a href='https://www.vp-group.de/en/' target='_blank rel='nofollow'>Visit «VP group» website.</a>",
       request: "Create request",
       requestCall: "Request call",
       requestType: "Request Type",
@@ -363,9 +377,13 @@ const resources = {
         "If you have any questions do not hesitate to send us a message",
       sk: "self seal",
       skl: "peel and seal",
+      smM: "sm/m",
       statistic: "Important statistic",
       statisticFact: "Useful and important information about our factory",
       stationery: "Stationery shops",
+      stericlin: "Stericlin® packaging system",
+      stericlinText:
+        "<a href='https://www.stericlin.de/en/' target='_blank rel='nofollow'>Stericlin®</a> - packages for sterilization medical instruments and consumables, meet the requirements that apply to medical sterilization packaging materials. There are packages with side folds and without side folds.",
       supermarket: "Supermarkets",
       titleText:
         "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",

@@ -20,7 +20,7 @@ export default [
       en: "Stericlin® sterilization bags",
       uk: "Стерилізаційні пакети Stericlin®",
     },
-    id: "med",
+    id: "stericlin",
   },
   {
     img: "/products/print-pattern.png",
