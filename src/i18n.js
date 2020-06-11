@@ -149,6 +149,9 @@ const resources = {
         "Якщо бажаєте надрукувати конверт у корпоративному стилі, додавши логотип, адресу, елементи компанії тощо, цей варіант саме для Вас.",
       printMockup: "Приклад друку (необов'язково)",
       productionDep: "Виробничий відділ",
+      printProducts: "Продукція з друком",
+      printProductsText:
+        "Пропонуємо професійний друк на конвертах та паперових торбах— нанесення логотипу компанії, адреси, тощо. Залежно від призначення, іміджевих вимог та Вашого бюджету ми здійснюємо три види друку.",
       productLabeling: "Маркування товару",
       pcs: " шт.",
       quantityBox: "Кількість в коробці",
@@ -357,6 +360,9 @@ const resources = {
       printedOrderText:
         "If you want to print a corporate-style envelope with the logo, address, company elements, etc., this option is for you.",
       printMockup: "Print sample (not necessary)",
+      printProducts: "Printed products",
+      printProductsText:
+        "We offer professional printing on envelopes and paper bags - the company logo, address, etc. Depending on the purpose, image requirements and your budget we carry out three types of printing.",
       productionDep: "Production department",
       productLabeling: "Product labeling",
       pcs: " pcs",
