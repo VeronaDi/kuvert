@@ -11,7 +11,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import individual from "../images/individual.jpg"
+import individual from "../../static/products/individual-mix.png"
 
 export default props => {
   const T = useTranslation()
@@ -30,19 +30,22 @@ export default props => {
         css={css`
           color: #000000;
           text-align: center;
-          font-size: 36px;
           font-weight: 500;
+          font-size: 36px;
+          line-height: 42px;
         `}
       >
         {t("individualEnv")}
       </h3>
       <div
         css={css`
-          width: 100%;
+          width: 1306px;
           height: 580px;
           background: url(${individual});
           background-position: center;
           background-repeat: no-repeat;
+          background-size: contain;
+          margin: 0 auto;
         `}
       ></div>
       <p

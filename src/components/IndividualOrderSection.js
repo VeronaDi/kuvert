@@ -37,7 +37,7 @@ export default () => {
       <p
         css={css`
           font-size: 18px;
-          font-weight: bold;
+          font-weight: 500;
           line-height: 50px;
           padding-bottom: 20px;
           margin: 0;
@@ -50,7 +50,9 @@ export default () => {
         css={css`
           color: white;
           text-decoration: none;
-          font-weight: bold;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
           border: 1px solid #ffffff;
           border-radius: 3px;
           background: transparent;
