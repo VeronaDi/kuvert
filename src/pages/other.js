@@ -59,7 +59,7 @@ export default props => {
           >
             <img
               css={css`
-                width: 50%;
+                width: 47%;
               `}
               src={img}
               alt="logo"
