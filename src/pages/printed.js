@@ -11,10 +11,8 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import printed from "../../static/products/print-mix.png"
-import printbag from "../../static/products/1.jpg"
-import printflex from "../../static/products/37.jpg"
-import printoffset from "../../static/products/52.jpg"
+import printedMix from "../../static/products/print-mix.png"
+import printed from "../data/printed"
 
 export default props => {
   const T = useTranslation()
@@ -44,7 +42,7 @@ export default props => {
         css={css`
           width: 1306px;
           height: 580px;
-          background: url(${printed});
+          background: url(${printedMix});
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
@@ -70,6 +68,7 @@ export default props => {
           height: 765px;
           background: #e7e7e7;
           text-align: center;
+          margin-bottom: 82px;
         `}
       >
         <h4
@@ -81,75 +80,49 @@ export default props => {
             padding: 39px 0;
           `}
         >
-          {t("printTypes")}
+          {t("typePrint")}
         </h4>
         <div
           css={css`
             width: 100%;
-            height: 765px;
             background: #e7e7e7;
             display: flex;
             justify-content: space-around;
-            text-align: center;
+            flex-flow: row wrap;
+            padding-top: 46px;
           `}
         >
-          <div
-            css={css`
-              width: 30%;
-              background: url(${printflex});
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-            `}
-          >
-            <h5
+          {printed.map(({ title, img, text, id }) => (
+            <div
+              key={id}
               css={css`
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 28px;
+                width: 30%;
               `}
             >
-              {t("printReadyEnv")}
-            </h5>
-          </div>
-          <div
-            css={css`
-              width: 30%;
-              background: url(${printoffset});
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-            `}
-          >
-            <h5
-              css={css`
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 28px;
-              `}
-            >
-              {t("printСutOutEnv")}
-            </h5>
-          </div>
-          <div
-            css={css`
-              width: 30%;
-              background: url(${printbag});
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
-            `}
-          >
-            <h5
-              css={css`
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 28px;
-              `}
-            >
-              {t("printDigital")}
-            </h5>
-          </div>
+              <img src={img} alt="logo" />
+              <h5
+                css={css`
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 28px;
+                  text-align: center;
+                  margin: 34px 0;
+                `}
+              >
+                {t(title)}
+              </h5>
+              <p
+                css={css`
+                  font-weight: 500;
+                  font-size: 18px;
+                  line-height: 27px;
+                  text-align: center;
+                `}
+              >
+                {t(text)}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
       <IndividualOrderSection />
