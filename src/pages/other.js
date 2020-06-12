@@ -47,16 +47,18 @@ export default props => {
           <div
             key={id}
             css={css`
-            width: 80%;
+              width: 80%;
               display: flex;
               flex-direction: row;
-              justify-content: center;
               margin: 0 auto 64px auto;
+              :nth-child(even) {
+                flex-direction: row-reverse;
+              }
             `}
           >
             <img
               css={css`
-              width: 50%;
+                width: 50%;
               `}
               src={img}
               alt="logo"
@@ -65,7 +67,8 @@ export default props => {
               css={css`
                 display: flex;
                 flex-direction: column;
-                padding-left: 100px;
+                justify-content: center;
+                align-content: space-between;
               `}
             >
               <h5
