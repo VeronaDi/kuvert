@@ -51,6 +51,7 @@ export default props => {
               display: flex;
               flex-direction: row;
               margin: 0 auto 64px auto;
+              justify-content: space-between;
               :nth-child(even) {
                 flex-direction: row-reverse;
               }
@@ -65,6 +66,7 @@ export default props => {
             />
             <div
               css={css`
+                width: 40%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
