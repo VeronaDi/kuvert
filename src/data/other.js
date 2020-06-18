@@ -26,9 +26,9 @@ export default [
     title: { en: "Welcome pack", uk: "Еко пак" },
     text: {
       en:
-        "Packaging for presentations: - ideal for presenting your products (e.g. chocolate) or 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐏𝐚𝐜𝐤: - for hotels (e.g. a set of disposable hygiene products for guests), - for new employees (e.g. pass / ID card, sweets), - your option.",
+        "Packaging for presentations is ideal for presenting your products (e.g. chocolate) or 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐏𝐚𝐜𝐤: for hotels (e.g. a set of disposable hygiene products for guests), for new employees (e.g. pass / ID card, sweets), your option.",
       uk:
-        "Паковання для презентацій: - ідеальний варіант для представлення Вашої продукції (наприклад, шоколад) або 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐏𝐚𝐜𝐤: - для готелів (наприклад, набір одноразових засобів гігієни для гостей), - для нових співробітників (наприклад, перепустка/ID картка, солодощі),- ваш варіант.",
+        "Паковання для презентацій - це ідеальний варіант для представлення Вашої продукції (наприклад, шоколад) або 𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐏𝐚𝐜𝐤: для готелів (наприклад, набір одноразових засобів гігієни для гостей), для нових співробітників (наприклад, перепустка/ID картка, солодощі), ваш варіант.",
     },
     id: "welcomepack",
   },
