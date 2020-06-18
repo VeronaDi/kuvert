@@ -4,9 +4,9 @@ export default [
     title: { en: "Paper filing pockets", uk: "Паперовий файл" },
     text: {
       en:
-        "Paper filing pockets (size A4) - an environmentally friendly and stylish replacement for polyethylene files: -convenient for storing documents; - easy to use for content records; - can be made of white or brown paper; - with or without your print.",
+        "Paper filing pockets (size A4) - it's an environmentally friendly and stylish replacement for polyethylene files. They convenient for storing documents, easy to use for content records, can be made of white or brown paper and with or without your print.",
       uk:
-        "Паперові файли - екологічна і стильна заміна поліетиленовим файлам: - зручні для зберігання документів; - легко використовувати для записів щодо вмісту; - можуть бути з білого або коричневого паперу; - з Вашим друком чи без друку.",
+        "Паперові файли - це екологічна і стильна заміна поліетиленовим файлам. Вони зручні для зберігання документів, легко використовувати для записів щодо вмісту, можуть бути з білого або коричневого паперу та з Вашим друком чи без друку.",
     },
     id: "paperFile",
   },
@@ -33,10 +33,10 @@ export default [
     id: "welcomepack",
   },
   {
-    img: "/products/greenoffice.jpg",
+    img: "/products/stolovi-prybory.png",
     title: {
-      en: "Envelopes for green office O2 Post®",
-      uk: "Конверти для зеленого офісу O2 Post®",
+      en: "Envelopes for cutlery",
+      uk: "Конверти для столових приборів",
     },
     text: {
       en:
@@ -47,59 +47,42 @@ export default [
     id: "greenoffice",
   },
   {
-    img: "/products/maildigital.jpg",
+    img: "/products/first-impression.gif",
     title: {
-      en: "Envelopes Mail digital® series",
-      uk: "Конверти серії Mail digital®",
+      en: "First impression envelopes",
+      uk: "Конверт «першого враження»",
     },
     text: {
       en:
-        "A series of envelopes for digital printing with a special heat-resistant film. The film can withstand temperatures of 150 ° and does not damage the equipment.",
+        "Keeps important information and intriguing, can be used for bank cards, loyalty cards, greeting a new employee and issuing an ID card / pass, your option. And the tear-off window can serve as a business card, leaving the envelope usable.",
       uk:
-        "Серія конвертів для цифрового друку зі спеціальною термостійкою плівкою. Плівка витримує температуру 150° і не псує техніку.",
+        "Зберігає важливу інформацію та інтригує, можна використовувати для банківських карток, карток лояльності, привітання нового працівника і видачі ID-картки/пропуску, ваш варіант. А відривне віконце може слугувати візиткою, залишаючи конверт придатним для використання.",
     },
-    id: "maildigital",
+    id: "firstimpression",
   },
   {
-    img: "/products/maildigital.jpg",
-    title: {
-      en: "3D-postcards",
-      uk: "3D-листівки",
-    },
+    img: "/products/2pockets.jpg",
+    title: "Sample-mail",
     text: {
       en:
-        "Outwardly, a 3D postcard is no different from a regular one, but as soon as you unfold it, a three-dimensional figure or a whole composition appears. The secret is in the correct curves, which are leveled when opening the card. Creates an emphasis on detail, a great alternative to the usual greeting cards.",
+        "Envelopes for sampling. Sample-Mail envelopes have two pockets: one - for a letter or booklet, the second - for a tea bag or coffee, for a sample of cosmetics or a test batch of seeds ...",
       uk:
-        "Зовні 3D-листівка не відрізняється від звичайної, але щойно розгорнеш її — виникає об’ємна фігура або ціла композиція. Секрет у правильних вигинах, які розрівнюються при відкритті листівки. Створює акцент на деталях, чудова альтернатива звичайним вітальним листівкам.",
+        "Конверти для семплінгу. Конверти Sample-Mail мають дві «кишеньки»: одну — для листа або буклету, другу — для пакетика чаю або кави, для пробника косметики або тестової партії насіння ... ",
     },
-    id: "3Dcards",
+    id: "samplemail",
   },
   {
-    img: "/products/maildigital.jpg",
+    img: "/products/2windows.jpg",
     title: {
-      en: "Invisio-Mail postcard",
-      uk: "Листівка Invisio-Mail",
+      en: "Envelope with 2 and more windows",
+      uk: "Конверт з двома і більше вікнами",
     },
     text: {
       en:
-        "The mechanical Invisio-Mail card intrigues the recipient:  first he noticed only the beginning of your message and pulling the corner - will open its second part.",
+        "More than 85% of all advertising letters in Europe - with windows. This trend has practical grounds. Advertising letters with an addressing window are better perceived by consumers than emails addressed by a label. Another option is to use additional windows on the front or back of the envelope. Such windows, especially if they open an interesting perspective, intrigue recipients and encourage the opening of the envelope.",
       uk:
-        "Механічна листівка Invisio-Mail інтригує отримувача: спочатку він помітить тільки початок Вашого повідомлення, а потягнувши за кут — відкриє його другу частину.",
+        "Понад 85 % всіх рекламних листів в Європі - з вікнами. Така тенденція має практичні підстави. Рекламні листи з вікном для адресації краще сприймаються споживачами, ніж листи, адресовані за допомогою етикетки. Ще одна можливість – використання додаткових вікон на передній чи зворотній стороні конверта. Такі вікна, особливо, якщо вони відкривають цікаву перспективу, інтригують одержувачів і спонукають до відкриття конверта.",
     },
-    id: "invisiomail",
-  },
-  {
-    img: "/products/maildigital.jpg",
-    title: {
-      en: "Vario-Mail postcard",
-      uk: "Листівка Vario-Mail",
-    },
-    text: {
-      en:
-        "The Vario-Mail mechanical card works on the principle of blinds: the image changes twice.",
-      uk:
-        "Механічна листівка Vario-Mail працює за принципом жалюзі: зображення змінюється двічі. ",
-    },
-    id: "variomail",
+    id: "twowindows",
   },
 ]
