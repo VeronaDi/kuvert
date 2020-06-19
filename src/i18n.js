@@ -157,7 +157,7 @@ const resources = {
         "Пропонуємо професійний друк на конвертах та паперових торбах— нанесення логотипу компанії, адреси, тощо. Залежно від призначення, іміджевих вимог та Вашого бюджету ми здійснюємо три види друку.",
       productLabeling: "Маркування товару",
       pcs: " шт.",
-      quantityBox: "Кількість в коробці",
+      quantityBox: "Коробка",
       right: "Відстань справа",
       representativeVP:
         "«Куверт-Україна» офіційний представник «VP group». <a href='https://www.vp-group.de/en/' target='_blank rel='nofollow'>Перейти на веб-сайт «VP group».</a>",
@@ -373,7 +373,7 @@ const resources = {
       productionDep: "Production department",
       productLabeling: "Product labeling",
       pcs: " pcs",
-      quantityBox: "Quantity in box",
+      quantityBox: "Box",
       right: "Right distance",
       representativeVP:
         "«Kuvert-Ukraine» is official representative of «VP group». <a href='https://www.vp-group.de/en/' target='_blank rel='nofollow'>Visit «VP group» website.</a>",

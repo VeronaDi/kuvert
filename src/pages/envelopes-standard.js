@@ -114,8 +114,8 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("sealing")}
-                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+                {t("window")}
+                <EnvelopeParam>{t(window)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -129,8 +129,11 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("window")}
-                <EnvelopeParam>{t(window)}</EnvelopeParam>
+                {t("quantityBox")}
+                <EnvelopeParam>
+                  {pack}
+                  {t("pcs")}
+                </EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -141,11 +144,8 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("quantityBox")}
-                <EnvelopeParam>
-                  {pack}
-                  {t("pcs")}
-                </EnvelopeParam>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
