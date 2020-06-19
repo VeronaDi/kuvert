@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
-import WeightCalculatorSection from "../components/WeightCalculatorSection"
 
 import { css } from "@emotion/core"
 
@@ -44,7 +43,7 @@ export default props => {
           background-position: left;
           background-repeat: no-repeat;
           background-size: 42% 80%;
-          margin: 9px auto;
+          margin: 9px auto 80px auto;
           padding: 30px 78px 90px 37%;
           color: #000000;
         `}
@@ -58,56 +57,7 @@ export default props => {
         >
           {t("thermopackText")}
         </p>
-
-        <div
-          css={css`
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 27px;
-            padding: 49px 0 0 0;
-          `}
-        >
-          {t("whereUse")}
-          <ul
-            css={css`
-              display: flex;
-              justify-content: start;
-              list-style: none;
-              padding: 0;
-            `}
-          >
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-right: 40px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("stationery")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("supermarket")}
-            </li>
-          </ul>
-        </div>
       </div>
-
-      <WeightCalculatorSection />
       <Footer />
     </Layout>
   )

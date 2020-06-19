@@ -50,7 +50,7 @@ export default props => {
             to={`/${id}`}
             css={css`
               width: 48%;
-              height: 350px;
+              height: 240px;
               background: url(${img}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;
@@ -58,7 +58,7 @@ export default props => {
               margin-bottom: 20px;
               color: #b40039;
               font-weight: bold;
-              font-size: 48px;
+              font-size: 40px;
               line-height: 56px;
               text-decoration: none;
             `}

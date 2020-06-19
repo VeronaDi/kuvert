@@ -65,14 +65,14 @@ export default props => {
             css={css`
               width: 32%;
               height: 457px;
-              background: url(${envelopesPattern}), rgba(104, 109, 103, 0.15);
+              background: url(${envelopesPattern}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;
               cursor: pointer;
               margin-bottom: 20px;
               color: #b40039;
               font-weight: bold;
-              font-size: 40px;
+              font-size: 48px;
               line-height: 47px;
               text-decoration: none;
             `}
@@ -81,7 +81,7 @@ export default props => {
               css={css`
                 font-family: "Raleway", sans-serif;
                 position: absolute;
-                top: 45%;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
               `}

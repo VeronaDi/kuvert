@@ -78,9 +78,8 @@ export default props => {
           ({
             code,
             size,
-            color,
+            paper,
             type,
-            gsm,
             pack,
             sealing,
             window,
@@ -110,24 +109,8 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("color")}
-                <EnvelopeParam>{t(color)}</EnvelopeParam>
-              </GeneralNames>
-              <GeneralNames>
-                {t("print")}
-                <EnvelopeParam>{t(print)}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("size")}
-                <EnvelopeParam>
-                  {size} {t("mm")})
-                </EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("paperGSM")}
-                <EnvelopeParam>{gsm}</EnvelopeParam>
+                {t("paperType")}, {t("gsm")}
+                <EnvelopeParam>{t(paper)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -141,8 +124,20 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
+                {t("innerPrintShort")}
+                <EnvelopeParam>{t(print)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
                 {t("window")}
                 <EnvelopeParam>{t(window)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("size")}
+                <EnvelopeParam>
+                  {size} {t("mm")})
+                </EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -154,7 +149,7 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("price")}
+                {t("price")} {t("thousandPcs")}
                 <EnvelopeParam>{t(price)}</EnvelopeParam>
               </GeneralNames>
 

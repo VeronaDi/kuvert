@@ -200,65 +200,6 @@ export default props => {
             </li>
           </ul>
         </div>
-        <div
-          css={css`
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 27px;
-            padding: 65px 0 0 0;
-          `}
-        >
-          {t("whereUse")}
-          <ul
-            css={css`
-              list-style: none;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              padding: 0;
-            `}
-          >
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("docFlow")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("distributionProducts")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("greetingLetters")}
-            </li>
-          </ul>
-        </div>
       </div>
 
       <h4
