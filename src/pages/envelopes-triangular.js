@@ -53,7 +53,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Triangular valve" />
+      <SEO title="Triangular flap" />
       <MainNav {...props} />
 
       <h3

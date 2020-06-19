@@ -43,7 +43,7 @@ export default props => {
         css={css`
           width: 90vw;
           height: 581px;
-          margin: 95px auto 20px auto;
+          margin: 95px auto 80px auto;
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
@@ -165,92 +165,6 @@ export default props => {
           transform: translate(-50%, -2%);
         `}
       ></Link>
-
-      <section
-        css={css`
-          width: 100vw;
-          height: 643px;
-          background: url(${statistic});
-          margin: 240px 0 140px 0;
-          text-align: center;
-          color: white;
-          padding: 110px 0 200px 0;
-        `}
-      >
-        <div
-          css={css`
-            font-weight: 500;
-            font-size: 36px;
-            line-height: 42px;
-            padding-bottom: 20px;
-          `}
-        >
-          {t("statistic")}
-        </div>
-        {t("statisticFact")}
-        <div
-          css={css`
-            display: flex;
-            justify-content: space-between;
-            width: 83%;
-            margin: 0 auto;
-            padding-top: 120px;
-          `}
-        >
-          <div>
-            <h5
-              css={css`
-                font-weight: bold;
-                font-size: 72px;
-                line-height: 84px;
-                margin: 0;
-              `}
-            >
-              10 mill
-            </h5>
-            envelopes are produced
-          </div>
-          <div>
-            <h5
-              css={css`
-                font-weight: bold;
-                font-size: 72px;
-                line-height: 84px;
-                margin: 0;
-              `}
-            >
-              20 years
-            </h5>
-            of work in Ukraine
-          </div>
-          <div>
-            <h5
-              css={css`
-                font-weight: bold;
-                font-size: 72px;
-                line-height: 84px;
-                margin: 0;
-              `}
-            >
-              1000+
-            </h5>
-            happy customers
-          </div>
-          <div>
-            <h5
-              css={css`
-                font-weight: bold;
-                font-size: 72px;
-                line-height: 84px;
-                margin: 0;
-              `}
-            >
-              100+
-            </h5>
-            kinds of products
-          </div>
-        </div>
-      </section>
 
       <section
         css={css`

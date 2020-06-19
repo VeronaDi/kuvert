@@ -15,8 +15,8 @@ import envelopesPattern from "../../static/products/envelopes-pattern.png"
 
 let envelopes = [
   {
-    name: { en: "Standard", uk: "Стандартні" },
-    id: "envelopes-standard",
+    name: { en: "Straight flap", uk: "Прямий клапан" },
+    id: "envelopes-straight",
   },
   {
     name: { en: "Thermopack", uk: "Термоупаковка" },

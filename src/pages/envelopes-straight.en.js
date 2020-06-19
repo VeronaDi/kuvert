@@ -9,5 +9,5 @@
 //   return <Page {...props} />
 // }
 
-import X from "./envelopes-standard"
+import X from "./envelopes-straight"
 export default X

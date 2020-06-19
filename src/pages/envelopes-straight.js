@@ -52,7 +52,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Standard envelopes" />
+      <SEO title="Straight flap" />
       <MainNav {...props} />
 
       <h3
