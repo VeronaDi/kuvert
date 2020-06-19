@@ -16,6 +16,7 @@ const resources = {
       changeLang: {
         uk: "Eng",
       },
+      aboutUsShort: "Коротко про нас",
       additionalDetails: "Додаткові відомості",
       additionalInfo: "Додаткова інформація (необов'язково)",
       addressBranch: "Структурні підрозділи",
@@ -31,9 +32,9 @@ const resources = {
         "Бандерольні пакети з поліетиленовими повітряними вставками, що гарантують надійний захист для відправки крихких і цінних предметів.",
       amount: "Кількість",
       banderole: "Бандерольні пакети",
-      basicOrder: "Стандартний запит",
+      basicOrder: "Складський запит",
       basicOrderText:
-        "Якщо Ви бажаєте обмежитись нескладним запитом, обравши звичайний конверт, цей варіант саме для Вас.",
+        "Якщо бажаєте обрати продукцію зі складу, цей варіант саме для Вас.",
       bk: "без клею",
       brown: "коричневий",
       bottom: "Відстань знизу",
@@ -90,13 +91,13 @@ const resources = {
       hearingLoss: "10% працівників нашої фабрики —  це люди з вадами слуху",
       height: "Висота, мм",
       historyP1:
-        "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer-Kuvert-network GmbH» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики. Співпраця з провідними європейськими виробниками паперу дає змогу забезпечувати виробництво гарантовано досконалою сировиною. Ми наполегливо працюємо над удосконаленням усіх процесів для того, щоб залишити екологічний слід якомога менший, тому на фабриці діє технологія безвідходного виробництва.",
+        "Фабрика конвертів «Куверт-Україна» належить до концерну «Mayer-Kuvert-network» і є найбільшим виробником поштових конвертів та пакетів в Україні з 1999 року. Співпраця з європейськими постачальниками забезпечує виробництво якісною сировиною. Ми наполегливо працюємо над удосконаленням усіх процесів, на фабриці діє технологія безвідходного виробництва, що залишає екологічний слід якомога менший.",
       historyP2:
         "«Куверт-Україна» пропонує споживачам найширший асортимент поштових конвертів та пакетів, унікальні запатентовані продукти та інновації в галузі рекламного конверта, постійні складські запаси та сертифікований контроль якості.",
       homepage: "Повернутися на головну",
       hospital: "Лікарні та поліклініки",
       indexAbout:
-        "Фабрика конвертів «Куверт-Україна» — частина найбільшого в Європі концерну з виробництва конвертів «Mayer Kuvert Network» і найбільший виробник конвертів в Україні з 1999 року. Щороку ми виготовляємо більше 250 млн. конвертів завдяки високоякісному машинному парку фабрики.",
+        "Фабрика конвертів «Куверт-Україна» належить до концерну «Mayer-Kuvert-network» і є найбільшим виробником поштових конвертів та пакетів в Україні з 1999 року. Потужність фабрики складає 2,5 млн конвертів за добу.",
       indexContactUs:
         "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львів.",
       individualEnv: "Конверти з індивідуальним дизайном",
@@ -104,7 +105,7 @@ const resources = {
         "Пропонуємо максимальну гнучкість в оформленні Вашого особливого конверта. Відповідно, можливості дизайну практично необмежені.",
       individualOrder: "Індивідуальний запит",
       individualOrderText:
-        "Якщо маєте власні ідеї для дизайну і Вам потрібна максимальна гнучкість в оформленні конверта, цей варіант саме для Вас.",
+        "Якщо бажаєте продукцію з власними параметрами, цей варіант саме для Вас.",
       innerPrint: "Внутрішній друк",
       innerandouterPrint: "Зовнішній та внутрішній друк",
       industrial: "Промислові підприємства",
@@ -118,7 +119,7 @@ const resources = {
       mainSlogan: "Конверт створює перше враження",
       missionTitle: "Наша місія",
       mission:
-        "Ми лідери галузі та приймаємо будь-які виклики, щоб забезпечувати клієнтів відмінною якістю роботи і найкращим результатом, можливим завдяки потужному технічному і технологічному виробництву, професіоналізму і злагодженій роботі команди, турботою про навколишнє довкілля при виготовленні продукції і можливості її переробки.",
+        "Ми лідери галузі та приймаємо будь-які виклики, щоб забезпечувати споживачів відмінною якістю роботи і найкращим результатом, можливим завдяки потужному технічному і технологічному виробництву, професіоналізму і злагодженій роботі команди, турботою про навколишнє довкілля при виготовленні продукції і можливості її переробки.",
       message: "Повідомлення",
       messageText: "Напишіть тут своє повідомлення",
       mm: "мм",
@@ -129,7 +130,6 @@ const resources = {
       other: "інший",
       otherProducts: "Інша продукція",
       ourClients: "Наші клієнти",
-      ourHistory: "Наша історія",
       outerPrint: "Зовнішній друк",
       ownEnvIdea: "У Вас є ідея для власного дизайну конвертів?",
       packPresent: "Пакування подарункової, рекламної та сувенірної продукції",
@@ -147,7 +147,7 @@ const resources = {
       printDetails: "Параметри друку",
       printedOrder: "Запит друку",
       printedOrderText:
-        "Якщо бажаєте надрукувати конверт у корпоративному стилі, додавши логотип, адресу, елементи компанії тощо, цей варіант саме для Вас.",
+        "Якщо бажаєте продукцію з власним друком, цей варіант саме для Вас.",
       printMockup: "Приклад друку (необов'язково)",
       productionDep: "Виробничий відділ",
       printProducts: "Продукція з друком",
@@ -227,6 +227,7 @@ const resources = {
       changeLang: {
         en: "Укр",
       },
+      aboutUsShort: "Briefly about us",
       additionalDetails: "Additional details",
       additionalInfo: "Additional information (not necessary)",
       addressBranch: "Offices",
@@ -242,9 +243,9 @@ const resources = {
         "Parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
       amount: "Amount",
       banderole: "Banderole bags",
-      basicOrder: "Basic order",
+      basicOrder: "Werehouse inquiry",
       basicOrderText:
-        "If you want to limit yourself to a simple inquiry by choosing a regular envelope, this option is for you.",
+        "If you want to choose products from warehouse, this option is for you.",
       bottom: "Bottom distance",
       bk: "without glue",
       brown: "brown",
@@ -303,18 +304,18 @@ const resources = {
         "10% of workers in our factory are people with hearing problems",
       height: "Height, mm",
       historyP1:
-        "The Kuvert-Ukraine envelope factory is the largest envelope manufacturer in Ukraine since 1999 and part of the Mayer-Kuvert-network GmbH - largest envelope manufacturing company in Europe. We produce over 250 million envelopes each year thanks to the factory's high quality machine range. Collaboration with leading European paper manufacturers makes it possible to ensure the production of guaranteed excellent raw materials. We are working hard to improve all processes to keep the environmental footprint as small as possible, so the factory has a waste-free technology.",
+        "The envelope factory «Kuvert-Ukraine» belongs to the concern «Mayer-Kuvert-network» and is the largest manufacturer of postal envelopes and packages in Ukraine since 1999. Cooperation with European suppliers ensures high-quality raw materials. We work hard to improve all processes, the factory has a technology of waste-free production, which leaves an ecological footprint as small as possible.",
       historyP2:
         "Kuvert-Ukraine offers consumers the widest range of mail envelopes and packages, unique patented products and innovations in the field of advertising envelope, permanent warehouse stocks and certified quality control.",
       homepage: "Back to homepage",
       hospital: "Hospitals and clinics",
       indexAbout:
-        "Kuvert-Ukraine is part of Europe's largest Mayer-Kuvert-network envelope manufacturing group and the largest envelope manufacturer in Ukraine since 1999. Every year we produce over 250 million envelopes thanks to the factory's high quality machine park.",
+        "The envelope factory «Kuvert-Ukraine» belongs to the concern «Mayer-Kuvert-network» and is the largest manufacturer of postal envelopes and packages in Ukraine since 1999. The capacity of the factory is 2.5 million envelopes per day.",
       indexContactUs:
         "The envelope factory Kuvert-Ukraine is located in the city of Ivano-Frankivsk. Our branches operate in the following cities: Kyiv, Kharkiv, Dnipro and Lviv.",
       individualEnv: "Envelopes with individual design",
       individualEnvText:
-        "We offer maximum flexibility in the design of your special envelope. Accordingly, the design possibilities are almost unlimited.",
+        "If you want products with your own parameters, this option is for you.",
       individualOrder: "Individual inquiry",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
@@ -342,7 +343,6 @@ const resources = {
       other: "other",
       otherProducts: "Other products",
       ourClients: "Our clients",
-      ourHistory: "Our history",
       outerPrint: "Outer print",
       ownEnvIdea: "Do you have an idea for your own envelope design?",
       packPresent: "Packaging of gift, advertising and souvenir products",
@@ -360,7 +360,7 @@ const resources = {
       printDetails: "Print details",
       printedOrder: "Printed order",
       printedOrderText:
-        "If you want to print a corporate-style envelope with the logo, address, company elements, etc., this option is for you.",
+        "If you want products with your own printing, this option is for you.",
       printMockup: "Print sample (not necessary)",
       printProducts: "Printed products",
       printProductsText:

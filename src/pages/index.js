@@ -9,8 +9,6 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
-import BtnRequestCall from "../components/BtnRequestCall"
-import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import SliderClients from "../components/SliderClients"
 import Footer from "../components/Footer"
 
@@ -19,7 +17,6 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import backenvelopes from "../images/background-envelopes.svg"
-import arrowdown from "../images/arrow-down.svg"
 import machine from "../images/machine.jpg"
 import ukraine from "../images/ukraine.png"
 import zeh from "../images/zeh.jpg"
@@ -111,20 +108,6 @@ const IndexPage = props => {
             <BtnViewProducts />
           </div>
         </div>
-        <Link
-          to="/about"
-          css={css`
-            background: url(${arrowdown});
-            width: 62px;
-            height: 158px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            -webkit-transform: translate(-50%, -2%);
-            transform: translate(-50%, -2%);
-          `}
-        ></Link>
-        <BtnRequestCall />
       </section>
       <section
         css={css`
@@ -191,8 +174,6 @@ const IndexPage = props => {
           `}
         ></div>
       </section>
-
-      <WeightCalculatorSection />
 
       <section
         css={css`

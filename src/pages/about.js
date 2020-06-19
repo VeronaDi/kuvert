@@ -289,7 +289,7 @@ export default props => {
               font-weight: normal;
             `}
           >
-            {t("ourHistory")}
+            {t("aboutUsShort")}
           </h3>
           <p
             css={css`
