@@ -8,7 +8,7 @@ import { css } from "@emotion/core"
 
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
-import SliderCertification from "../components/SliderCertification"
+import CertificationSection from "../components/CertificationSection"
 
 import { useTranslation } from "react-i18next"
 
@@ -18,7 +18,6 @@ import factory3 from "../images/about/3.jpg"
 import factory4 from "../images/about/4.jpg"
 import factory5 from "../images/about/5.jpg"
 import factory6 from "../images/about/6.jpg"
-import statistic from "../images/about/statistic.png"
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
 import fepe from "../images/organizations/fepe.png"
@@ -284,19 +283,10 @@ export default props => {
         </p>
       </section>
 
-      <section
-        css={css`
-          width: 100vw;
-          height: 632px;
-          background: #c4c4c4;
-        `}
-      >
-        <SliderCertification />
-      </section>
+      <CertificationSection />
 
       <section
         css={css`
-          width: 100vw;
           height: 356px;
           text-align: center;
           background: #ffffff;
@@ -309,6 +299,7 @@ export default props => {
             font-weight: 500;
             font-size: 36px;
             line-height: 42px;
+            margin: 0;
           `}
         >
           {t("participants")}
