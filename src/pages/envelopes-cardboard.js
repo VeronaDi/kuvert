@@ -277,7 +277,7 @@ export default props => {
             </GeneralNames>
 
             <GeneralNames>
-              {t("price")}
+              {t("price")} {t("thousandPcs")}
               <EnvelopeParam>{t(price)}</EnvelopeParam>
             </GeneralNames>
 

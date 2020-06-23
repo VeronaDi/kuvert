@@ -56,7 +56,7 @@ export default props => {
             css={css`
               width: 32%;
               height: 457px;
-              background: url(${paperbagsPattern}), rgba(104, 109, 103, 0.15);
+              background: url(${paperbagsPattern}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;
               cursor: pointer;
