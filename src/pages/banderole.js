@@ -16,7 +16,7 @@ import banderolePattern from "../../static/products/banderole-pattern.png"
 let banderole = [
   {
     name: {
-      en: "Parcel bags with air bubbles",
+      en: "Padded pockets",
       uk: "Бандерольні пакети з повітряними бульбашками",
     },
     id: "bubblebags",
@@ -24,14 +24,14 @@ let banderole = [
   { name: "DocuFix", id: "docufix" },
   {
     name: {
-      en: "Envelopes with extension",
+      en: "Expanded pockets",
       uk: "Пакети з розширенням",
     },
     id: "envelopes-extension",
   },
   {
     name: {
-      en: "Envelopes with a cardboard insert",
+      en: "Boardback pockets",
       uk: "Пакети з картонною вставкою",
     },
     id: "envelopes-cardboard",
@@ -48,7 +48,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Banderole" />
+      <SEO title="Banderole pockets" />
       <MainNav {...props} />
 
       <h1
@@ -75,7 +75,7 @@ export default props => {
             css={css`
               width: 24%;
               height: 457px;
-              background: url(${banderolePattern}), rgba(104, 109, 103, 0.15);
+              background: url(${banderolePattern}), rgba(128, 128, 128, 0.4);
               position: relative;
               text-align: center;
               cursor: pointer;
