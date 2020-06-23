@@ -30,7 +30,7 @@ const resources = {
       airpoc: "Бандерольні пакети з повітряними бульбашками",
       airpocText:
         "Бандерольні пакети з поліетиленовими повітряними вставками, що гарантують надійний захист для відправки крихких і цінних предметів.",
-      amount: "Кількість",
+      amount: "Кількість, шт",
       banderole: "Бандерольні пакети",
       basicOrder: "Складський запит",
       basicOrderText:
@@ -244,7 +244,7 @@ const resources = {
       airpoc: "Parcel bags with air bubbles",
       airpocText:
         "Parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
-      amount: "Amount",
+      amount: "Amount, pcs",
       banderole: "Banderole bags",
       basicOrder: "Werehouse inquiry",
       basicOrderText:
