@@ -87,7 +87,7 @@ export default props => {
               padding: 0 10px;
             `}
           >
-            {t("hearingLoss")}
+            {t("disableWorkers")}
           </h5>
         </div>
         <div

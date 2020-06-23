@@ -74,6 +74,7 @@ const resources = {
       docufixText:
         "Конверти Docufix — прозорі поліетиленові конверти з клейовим шаром на всю сторону. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти їх в конверт Docufix і приклеїти його на коробку або піддон.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
+      disableWorkers: "10% працівників нашої фабрики —  це люди з інвалідністю",
       ecobagColor: "Кольорові пакети з паперовими ручками",
       ecobagWhite: "Білі пакети з паперовими ручками",
       ecobagBrown: "Коричневі пакети з паперовими ручками",
@@ -88,7 +89,6 @@ const resources = {
         "Пакети з розширенням виготовлені з міцного крафтового паперу, вони зручні для відправки об'ємних вкладень: книг, журналів, великої кількості документації. Розширення становить 40 мм.",
       greetingLetters: "Вітальні листи",
       handleType: "Тип ручки",
-      hearingLoss: "10% працівників нашої фабрики —  це люди з вадами слуху",
       height: "Висота, мм",
       historyP1:
         "Фабрика конвертів «Куверт-Україна» належить до концерну «Mayer-Kuvert-network» і є найбільшим виробником поштових конвертів та пакетів в Україні з 1999 року. Співпраця з європейськими постачальниками забезпечує виробництво якісною сировиною. Ми наполегливо працюємо над удосконаленням усіх процесів, на фабриці діє технологія безвідходного виробництва, що залишає екологічний слід якомога менший.",
@@ -289,6 +289,8 @@ const resources = {
         "Docufix envelopes - transparent polyethylene envelopes with adhesive on the side. No more need send additional mail with documents for goods, just put them in an envelope Docufix and stick it on the box or pallet.",
       distributionProducts:
         "Distribution of advertising or information products",
+      disableWorkers:
+        "10% of workers in our factory are people with disabilities",
       ecobagColor: "Colored paper bags with paper handles",
       ecobagWhite: "White paper bags with paper handles",
       ecobagBrown: "Brown paper bags with paper handles",
@@ -303,8 +305,6 @@ const resources = {
         "Pockets with extension are made of durable kraft paper, they are convenient for sending bulky investments: books, magazines, a large amount of documentation. The extension is 40 mm.",
       greetingLetters: "Greeting letters",
       handleType: "Handle type",
-      hearingLoss:
-        "10% of workers in our factory are people with hearing problems",
       height: "Height, mm",
       historyP1:
         "The envelope factory «Kuvert-Ukraine» belongs to the concern «Mayer-Kuvert-network» and is the largest manufacturer of postal envelopes and packages in Ukraine since 1999. Cooperation with European suppliers ensures high-quality raw materials. We work hard to improve all processes, the factory has a technology of waste-free production, which leaves an ecological footprint as small as possible.",
