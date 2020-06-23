@@ -63,8 +63,7 @@ export default props => {
               text-decoration: none;
             `}
           >
-            {/* <img src={img} alt="logo" /> */}
-            <p
+            <h5
               css={css`
                 font-family: "Raleway", sans-serif;
                 position: absolute;
@@ -74,7 +73,7 @@ export default props => {
               `}
             >
               {t(name)}
-            </p>
+            </h5>
           </LocalizedLink>
         ))}
       </div>

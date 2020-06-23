@@ -10,6 +10,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import thermopack from "../../static/products/thermopack.jpg"
+import thermopackTable from "../../static/products/thermopack-table.jpg"
 
 export default props => {
   const T = useTranslation()
@@ -43,7 +44,7 @@ export default props => {
           background-position: left;
           background-repeat: no-repeat;
           background-size: 42% 80%;
-          margin: 9px auto 80px auto;
+          margin: 0 auto;
           padding: 30px 78px 90px 37%;
           color: #000000;
         `}
@@ -58,6 +59,15 @@ export default props => {
           {t("thermopackText")}
         </p>
       </div>
+      <img
+        css={css`
+          width: 50%;
+          display: block;
+          margin: 80px auto;
+        `}
+        src={thermopackTable}
+        alt="thermopack-table"
+      />
       <Footer />
     </Layout>
   )

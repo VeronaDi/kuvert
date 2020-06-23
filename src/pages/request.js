@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import LocalizedLink from "../components/LocalizedLink"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,9 +10,24 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import logoGrey from "../images/logoGrey.png"
-import requestBasic from "../images/request-basic.png"
-import requestPrinted from "../images/request-printed.png"
-import requestCustom from "../images/request-custom.png"
+
+let requests = [
+  {
+    name: { en: "Warehouse request", uk: "Складський запит" },
+    img: "../images/request-basic.png",
+    id: "basicform",
+  },
+  {
+    name: { en: "Print request", uk: "Запит друку" },
+    img: "../images/request-printed.png",
+    id: "printform",
+  },
+  {
+    name: { en: "Individual request", uk: "Індивідуальний запит" },
+    img: "../images/request-custom.png",
+    id: "individualform",
+  },
+]
 
 export default props => {
   const T = useTranslation()
@@ -128,107 +144,43 @@ export default props => {
             position: absolute;
             bottom: 175px;
           `}
-        ></div>
-        <Link
-          to="/products"
-          css={css`
-              text-decoration: none;
-              width: 28%;
-              height: 60vh;
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-              z-index: 1;
-              background: url(${requestBasic}), #ffffff;
-              background-repeat: no-repeat;
-              background-position: top 15vh left 50%;
-              text-align: center;
-              padding: 0 50px;
-              font-size: 18px;
-              line-height: 27px;
-              color: black;
-              :visited {
+        >
+          {requests.map(({ name, img, id }) => (
+            <LocalizedLink
+              key={id}
+              to={`/${id}`}
+              css={css`
+                text-decoration: none;
+                width: 28%;
+                height: 60vh;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                z-index: 1;
+                background: url(${img}), #ffffff;
+                background-repeat: no-repeat;
+                background-position: top 15vh left 50%;
+                text-align: center;
+                padding: 0 50px;
+                font-size: 18px;
+                line-height: 27px;
                 color: black;
-              }
-            }
-        `}
-        >
-          <h4
-            css={css`
-              font-size: 36px;
-              padding-top: 30vh;
-              margin: 0;
-              line-height: 1.1;
-            `}
-          >
-            {t("basicOrder")}
-          </h4>
-          <p>{t("basicOrderText")}</p>
-        </Link>
-        <Link
-          to="/printform"
-          css={css`
-            width: 28%;
-            height: 60vh;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            z-index: 1;
-            background: url(${requestPrinted}), #ffffff;
-            background-repeat: no-repeat;
-            background-position: top 15vh left 50%;
-            text-align: center;
-            padding: 0 70px;
-            font-size: 18px;
-            line-height: 27px;
-            text-decoration: none;
-            color: black;
-            :visited {
-              color: black;
-            }
-          `}
-        >
-          <h4
-            css={css`
-              font-size: 36px;
-              padding-top: 30vh;
-              padding-bottom: 15px;
-              margin: 0;
-            `}
-          >
-            {t("printedOrder")}
-          </h4>
-          <p>{t("printedOrderText")}</p>
-        </Link>
-        <Link
-          to="/individualform"
-          css={css`
-            width: 28%;
-            height: 60vh;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            z-index: 1;
-            background: url(${requestCustom}), #ffffff;
-            background-repeat: no-repeat;
-            background-position: top 15vh left 50%;
-            text-align: center;
-            padding: 0 70px;
-            font-size: 18px;
-            line-height: 27px;
-            text-decoration: none;
-            color: black;
-            :visited {
-              color: black;
-            }
-          `}
-        >
-          <h4
-            css={css`
-              font-size: 36px;
-              padding-top: 30vh;
-              margin: 0;
-              line-height: 1.1;
-            `}
-          >
-            {t("individualOrder")}
-          </h4>
-          <p>{t("individualOrderText")}</p>
-        </Link>
+                :visited {
+                  color: black;
+                }
+              `}
+            >
+              <h4
+                css={css`
+                  font-size: 36px;
+                  padding-top: 30vh;
+                  margin: 0;
+                  line-height: 1.1;
+                `}
+              >
+                {name}
+              </h4>
+            </LocalizedLink>
+          ))}
+        </div>
       </section>
     </Layout>
   )
