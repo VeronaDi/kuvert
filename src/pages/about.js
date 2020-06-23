@@ -23,6 +23,7 @@ import mayerLogo from "../images/mayer-logo.png"
 import fepe from "../images/organizations/fepe.png"
 import ema from "../images/organizations/ema.png"
 import tpp from "../images/organizations/tpp.png"
+import exportOffice from "../images/organizations/export-office.png"
 import arrowdown from "../images/arrow-down.svg"
 
 export default props => {
@@ -330,6 +331,13 @@ export default props => {
           <div
             css={css`
               background: url(${tpp}) center center/contain no-repeat;
+              width: 220px;
+              height: 220px;
+            `}
+          />
+          <div
+            css={css`
+              background: url(${exportOffice}) center center/contain no-repeat;
               width: 220px;
               height: 220px;
             `}
