@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,28 +13,13 @@ import requestBasic from "../images/request-basic.png"
 import requestPrinted from "../images/request-printed.png"
 import requestCustom from "../images/request-custom.png"
 
-// import i18n from "i18next"
-// i18n.changeLanguage("en")
-
-const IndexPage = props => {
+export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
     T.i18n.changeLanguage(props.pageContext.langKey)
   }
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
-
-  //   const requestType = ({ children }) => (
-  //     <div
-  //       css={css`
-  //         width: 28%;
-  //         background: #ffffff;
-  //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //       `}
-  //     >
-  //       {children}
-  //     </div>
-  //   )
 
   return (
     <Layout>
@@ -99,7 +82,7 @@ const IndexPage = props => {
             `}
           >
             2
-          </span>{" "}
+          </span>
           {t("requestOrderCreate")}
         </div>
         <div
@@ -147,7 +130,7 @@ const IndexPage = props => {
           `}
         ></div>
         <Link
-          to="/basicform"
+          to="/products"
           css={css`
               text-decoration: none;
               width: 28%;
@@ -250,5 +233,3 @@ const IndexPage = props => {
     </Layout>
   )
 }
-
-export default IndexPage
