@@ -242,6 +242,8 @@ export default ({ close }) => {
           position: absolute;
           top: 20px;
           right: 20px;
+          font-size: 24px;
+          color: #383838;
         `}
       >
         &times;
