@@ -20,11 +20,8 @@ import factory5 from "../images/about/5.jpg"
 import factory6 from "../images/about/6.jpg"
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
-import fepe from "../images/organizations/fepe.png"
-import ema from "../images/organizations/ema.png"
-import tpp from "../images/organizations/tpp.png"
-import exportOffice from "../images/organizations/export-office.png"
 import arrowdown from "../images/arrow-down.svg"
+import logosOrganization from "../images/logos_organizations.jpg"
 
 export default props => {
   const T = useTranslation()
@@ -305,44 +302,7 @@ export default props => {
         >
           {t("participants")}
         </h3>
-        <div
-          css={css`
-            width: 64vw;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            margin: 20px auto;
-          `}
-        >
-          <div
-            css={css`
-              background: url(${fepe}) center center/contain no-repeat;
-              width: 220px;
-              height: 220px;
-            `}
-          />
-          <div
-            css={css`
-              background: url(${ema}) center center/contain no-repeat;
-              width: 220px;
-              height: 220px;
-            `}
-          />
-          <div
-            css={css`
-              background: url(${exportOffice}) center center/contain no-repeat;
-              width: 220px;
-              height: 220px;
-            `}
-          />
-          <div
-            css={css`
-              background: url(${tpp}) center center/contain no-repeat;
-              width: 220px;
-              height: 220px;
-            `}
-          />
-        </div>
+        <img src={logosOrganization} alt="organization-logos" />
       </section>
       <Footer />
     </Layout>
