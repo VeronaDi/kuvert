@@ -1,9 +1,7 @@
 import React from "react"
-// import { Link } from "gatsby"
-import Popup from "reactjs-popup"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequestCard"
@@ -14,7 +12,6 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import envelopes from "../data/envelopes"
-import EnterAmount from "../components/EnterAmount"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -164,38 +161,7 @@ export default props => {
                   margin-bottom: 5px;
                 `}
               >
-                <Popup
-                  modal
-                  closeOnDocumentClick
-                  trigger={
-                    <button
-                      css={css`
-                        cursor: pointer;
-                        outline: none;
-                        text-decoration: none;
-                        display: block;
-                        text-align: center;
-                        width: 100%;
-                        height: 49px;
-                        border-radius: 3px;
-                        background: transparent;
-                        border: none;
-                        font-weight: 500;
-                        font-size: 16px;
-                        line-height: 19px;
-                        color: #383838;
-
-                        &:hover {
-                          border: 1px solid #383838;
-                        }
-                      `}
-                    >
-                      {t("addToRequest")}
-                    </button>
-                  }
-                >
-                  {close => <EnterAmount close={close} />}
-                </Popup>
+                <BtnAddToRequest />
               </div>
             </div>
           )
