@@ -12,6 +12,8 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import stericlin from "../../static/products/stericlin.jpg"
+import stericlinBack from "../images/stericlin-back.jpeg"
+import stericlinCert from "../../static/certificates/stericlin.jpg"
 
 import stericlinData from "../data/stericlin"
 
@@ -222,6 +224,65 @@ export default props => {
           <BtnAddToRequest />
         </div>
       ))}
+      <section
+        css={css`
+          width: 80%;
+          height: 747px;
+          margin: 80px auto;
+          position: relative;
+        `}
+      >
+        <img
+          src={stericlinCert}
+          alt="stericlin-certificate"
+          css={css`
+            height: 100%;
+            width: 45%;
+            float: left;
+          `}
+        />
+        <div
+          css={css`
+            height: 100%;
+            width: 55%;
+            float: right;
+            background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.74),
+                rgba(255, 255, 255, 0.74)
+              ),
+              url(${stericlinBack});
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+          `}
+        >
+          <span
+            css={css`
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 48px;
+            color: #1B1B1B;
+            position: absolute;
+            top: 40%;
+            left: 100px;
+            a {
+              text-decoration: none;
+              color: black;
+              font-weight: 900;
+              font-size: 14px;
+              line-height: 27px;
+              color: #1B1B1B;
+              display: block;
+              margin-top: 40px;
+                :hover {
+                  text-decoration: underline;
+                }
+          `}
+            dangerouslySetInnerHTML={{ __html: t("representativeVP") }}
+          ></span>
+        </div>
+      </section>
       <Footer />
     </Layout>
   )
