@@ -234,7 +234,25 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
-      <img src="" />
+      <section
+        css={css`
+          background: #ffffff;
+          padding: 45px 0;
+        `}
+      >
+        <h3
+          css={css`
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 56px;
+            text-align: center;
+            margin: 0;
+          `}
+        >
+          {t("ourClients")}
+        </h3>
+        <img src={logosClient} alt="client-logos" />
+      </section>
 
       <Footer />
     </Layout>

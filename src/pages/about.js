@@ -330,14 +330,14 @@ export default props => {
           />
           <div
             css={css`
-              background: url(${tpp}) center center/contain no-repeat;
+              background: url(${exportOffice}) center center/contain no-repeat;
               width: 220px;
               height: 220px;
             `}
           />
           <div
             css={css`
-              background: url(${exportOffice}) center center/contain no-repeat;
+              background: url(${tpp}) center center/contain no-repeat;
               width: 220px;
               height: 220px;
             `}
