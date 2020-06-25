@@ -80,6 +80,8 @@ const resources = {
       ecobagBrown: "Коричневі пакети з паперовими ручками",
       ecobagText:
         "Пакети з паперовими ручками польської фабрики <a href='https://ecobagnetwork.eu/' target='_blank rel='nofollow'>Ecobag Network</a> виготовлені з міцного паперу, що витримує вагу до 3-8 кг (залежно від розміру) і не псуються від вологи. Екологічне та комфортне пакування продукції.",
+      enterAmount: "Введіть кількість",
+      enterAmountText: "Вкажіть кількість, яка Вас цікавить",
       envelope: "Конверт",
       envelopes: "Конверти",
       envelopesStandard: "Прямий клапан",
@@ -296,6 +298,9 @@ const resources = {
       ecobagBrown: "Brown paper bags with paper handles",
       ecobagText:
         "Paper bags with paper handles manufactured by Polish factory <a href='https://ecobagnetwork.eu/' target='_blank rel='nofollow'>Ecobag Network</a> are made of durable paper that can withstand a weight of up to 3-8 kg (depending on size) and do not deteriorate from moisture. Ecological and comfortable packaging of products.",
+      enterAmount: "Enter amount",
+      enterAmountText:
+        "Specify the amount of envelopes you would like to order",
       envelope: "Envelope",
       envelopes: "envelopes",
       envelopesStandard: "Straight flap",
