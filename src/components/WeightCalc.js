@@ -318,8 +318,7 @@ export default ({ close }) => {
                 border-radius: 3px;
                 border: none;
                 background: #c5003e;
-                width: 100%;
-                max-width: 780px;
+                width: 780px;
                 padding: 18px 210px;
                 cursor: pointer;
                 outline: none;

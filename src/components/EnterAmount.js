@@ -216,12 +216,14 @@ export default ({ close }) => {
                 border-radius: 3px;
                 border: none;
                 background: #c5003e;
-                width: 100%;
-                max-width: 380px;
+                width: 380px;
                 height: 56px;
                 cursor: pointer;
                 outline: none;
                 margin-top: 40px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
 
                 &:hover {
                   background: #b60039;
