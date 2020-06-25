@@ -15,10 +15,7 @@ import ContactForm from "../components/ContactForm"
 
 import logoGrey from "../images/logoGrey.png"
 
-// import i18n from "i18next"
-// i18n.changeLanguage("en")
-
-const IndexPage = props => {
+export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
     T.i18n.changeLanguage(props.pageContext.langKey)
@@ -162,5 +159,3 @@ const IndexPage = props => {
     </Layout>
   )
 }
-
-export default IndexPage

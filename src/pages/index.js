@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
-import SliderClients from "../components/SliderClients"
+import NewsSection from "../components/NewsSection"
 import Footer from "../components/Footer"
 
 import { css } from "@emotion/core"
@@ -20,6 +20,7 @@ import backenvelopes from "../images/background-envelopes.svg"
 import machine from "../images/machine.jpg"
 import ukraine from "../images/ukraine.png"
 import zeh from "../images/zeh.jpg"
+import logosClient from "../images/logos_web.jpg"
 
 const IndexPage = props => {
   const T = useTranslation()
@@ -233,8 +234,8 @@ const IndexPage = props => {
           </div>
         </div>
       </section>
+      <img src="" />
 
-      <SliderClients />
       <Footer />
     </Layout>
   )
