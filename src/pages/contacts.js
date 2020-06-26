@@ -64,9 +64,7 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
-  const [cityIndex, setCityIndex] = React.useState(0)
-  const city = cities[cityIndex]
-  console.log(city)
+  const [city, setCity] = React.useState(cities[0])
 
   return (
     <Layout>
@@ -86,9 +84,9 @@ export default props => {
             padding: 35px 0;
           `}
         >
-          {cities.map((city, index) => (
+          {cities.map((currentCity, index) => (
             <button
-              onClick={() => setCityIndex(index)}
+              onClick={() => setCity(currentCity)}
               css={css`
                 width: 20%;
                 height: 68px;
@@ -104,13 +102,12 @@ export default props => {
                 & :last-child {
                   border-right: 2px solid #c1c1c1;
                 }
-                & :active {
-                  border: 2px solid #020202;
-                  color: #020202;
-                }
+
+                ${currentCity === city && "border: 2px solid #020202;"}
+                ${currentCity === city && "color: #020202;"}
               `}
             >
-              {city.name}
+              {currentCity.name}
             </button>
           ))}
         </div>
@@ -178,35 +175,18 @@ export default props => {
                   padding-top: 24px;
                 `}
               >
-                {cities.map((city, index) => (
-                  <a
-                    onClick={() => setCityIndex(index)}
-                    href="tel:{city.phoneOffice}"
-                    css={css`
-                      text-decoration: none;
-                      color: white;
-                      font-size: 14px;
-                      padding-right: 5px;
-                      font-weight: normal;
-                    `}
-                  >
-                    {city.phoneOffice}
-                  </a>
-                ))}
-                {cities.map((city, index) => (
-                  <a
-                    onClick={() => setCityIndex(index)}
-                    href="tel:{city.phone}"
-                    css={css`
-                      text-decoration: none;
-                      color: white;
-                      font-size: 14px;
-                      font-weight: normal;
-                    `}
-                  >
-                    {city.phone}
-                  </a>
-                ))}
+                <a
+                  href={`tel:${city.phoneOffice}`}
+                  css={css`
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                    padding-right: 5px;
+                    font-weight: normal;
+                  `}
+                >
+                  {city.phoneOffice}
+                </a>
               </div>
             </div>
             <div
@@ -220,17 +200,14 @@ export default props => {
               `}
             >
               {t("visitUs")}
-              {cities.map((city, index) => (
-                <p
-                  onClick={() => setCityIndex(index)}
-                  css={css`
-                    font-size: 14px;
-                    font-weight: normal;
-                  `}
-                >
-                  {city.location}
-                </p>
-              ))}
+              <p
+                css={css`
+                  font-size: 14px;
+                  font-weight: normal;
+                `}
+              >
+                {city.location}
+              </p>
             </div>
             <div
               css={css`
@@ -243,22 +220,19 @@ export default props => {
               `}
             >
               {t("writeUs")}
-              {cities.map((city, index) => (
-                <a
-                  onClick={() => setCityIndex(index)}
-                  href="mailto:{city.email}"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                    font-size: 14px;
-                    display: block;
-                    padding-top: 18px;
-                    font-weight: normal;
-                  `}
-                >
-                  {city.email}
-                </a>
-              ))}
+              <a
+                href="mailto:{city.email}"
+                css={css`
+                  text-decoration: none;
+                  color: white;
+                  font-size: 14px;
+                  display: block;
+                  padding-top: 18px;
+                  font-weight: normal;
+                `}
+              >
+                {city.email}
+              </a>
             </div>
           </div>
         </div>

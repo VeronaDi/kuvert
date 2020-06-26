@@ -38,8 +38,10 @@ const IndexPage = props => {
       <section
         css={css`
           height: 100vh;
+          min-height: 800px;
           background: url(${zeh});
           background-size: cover;
+          position: relative;
         `}
       >
         <div
@@ -175,6 +177,8 @@ const IndexPage = props => {
           `}
         ></div>
       </section>
+
+      <NewsSection />
 
       <section
         css={css`

@@ -7,7 +7,9 @@ import { useTranslation } from "react-i18next"
 import newsMain from "../data/news"
 
 export default () => {
-  const { t, i18n } = useTranslation()
+  const T = useTranslation()
+
+  const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
   return (
     <div
@@ -38,6 +40,7 @@ export default () => {
       >
         {newsMain.map(({ img, title, text }) => (
           <div
+            key={t(title)}
             css={css`
               padding: 0 40px;
               outline: none;
@@ -45,7 +48,7 @@ export default () => {
           >
             <img
               src={img}
-              alt={`${title} logo`}
+              alt={`${t(title)} logo`}
               css={css`
                 width: 216px;
                 height: 302px;
@@ -59,7 +62,7 @@ export default () => {
                 padding-top: 30px;
               `}
             >
-              {title}
+              {t(title)}
             </h6>
           </div>
         ))}

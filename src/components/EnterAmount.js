@@ -134,10 +134,6 @@ export default ({ close }) => {
       css={css`
         width: 700px;
         height: 435px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         text-align: center;
         background: white;
       `}

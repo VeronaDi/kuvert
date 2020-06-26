@@ -7,368 +7,167 @@ import linkedin from "../images/linkedin.svg"
 
 import contacts from "../data/contacts"
 
+const Office = ({ city, street, phones }) => {
+  return (
+    <div
+      css={css`
+        padding: 30px 30px;
+        flex-grow: 1;
+        flex-basis: 20%;
+        :first-of-type {
+          border-right: 3px solid #ffffff;
+        }
+      `}
+    >
+      <h4
+        css={css`
+          font-weight: bold;
+          font-size: 24px;
+          margin-bottom: 2em;
+        `}
+      >
+        {city}
+      </h4>
+
+      <p>{street}</p>
+
+      {phones.map(phone => (
+        <p
+          key={phone}
+          css={css`
+            font-weight: 500;
+            font-size: 16px;
+          `}
+        >
+          {phone}
+        </p>
+      ))}
+    </div>
+  )
+}
+
 export default props => {
-  // const T = useTranslation()
+  const T = useTranslation()
   // if (T.i18n.language !== props.pageContext.langKey) {
   //   T.i18n.changeLanguage(props.pageContext.langKey)
   // }
-
-  // const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
-  const { t, i18n } = useTranslation()
+  const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
   return (
     <section
       css={css`
         background: #4f4f4f;
-        height: 597px;
-        width: 100%;
         position: relative;
+        overflow: auto;
       `}
     >
       <div
         css={css`
-          max-width: 1475px;
-          width: 80%;
-          height: 324px;
           border: 3px solid #ffffff;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
           color: white;
           display: flex;
           justify-content: space-around;
           font-size: 18px;
+          margin: 140px 10%;
         `}
       >
-        <div
-          css={css`
-            border-right: 3px solid #ffffff;
-            padding: 40px 30px;
-            line-height: 36px;
-            max-width: 338px;
-            width: 25%;
-          `}
-        >
-          <h4
-            css={css`
-              font-weight: bold;
-              font-size: 24px;
-              line-height: 36px;
-              padding-bottom: 20px;
-              margin: 0;
-            `}
-          >
-            {t("addressOfFactory")}
-          </h4>
-          {contacts.map(
-            ({
-              city,
-              street,
-              phoneOfficeVodafone,
-              phoneOfficeKyivstar,
-              phoneOffice,
-            }) => (
-              <li
-                key={city}
-                css={css`
-                  font-weight: 500;
-                  font-size: 16px;
-                  line-height: 20px;
-                  padding-top: 15px;
-                `}
-              >
-                {phoneOfficeKyivstar}
-              </li>
-            )
-          )}
-        </div>
-        <div
-          css={css`
-            padding-top: 40px;
-            padding-bottom: 40px;
-            padding-left: 30px;
-            padding-right: 10px;
-            line-height: 36px;
-          `}
-        >
-          <h4
-            css={css`
-              font-weight: bold;
-              font-size: 24px;
-              line-height: 36px;
-              padding-bottom: 20px;
-              margin: 0;
-            `}
-          >
-            {t("addressBranch")}
-          </h4>
-          <div
-            css={css`
-              display: flex;
-            `}
-          >
-            <div
-              css={css`
-                max-width: 285px;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-              `}
-            >
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("kyiv")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("addressBranchKyiv")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                  display: flex;
-                  flex-direction: column;
-                `}
-              >
-                {t("phone")}:
-                <a
-                  href="tel:+380670090801"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                  `}
-                >
-                  +38 (067) 009 08 01
-                </a>
-              </p>
-            </div>
-            <div
-              css={css`
-                display: flex;
-                flex-direction: column;
-                max-width: 285px;
-                width: 100%;
-              `}
-            >
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("dnipro")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("addressBranchDnipro")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                  display: flex;
-                  flex-direction: column;
-                `}
-              >
-                {t("phone")}:
-                <a
-                  href="tel:+380504332838"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                  `}
-                >
-                  +38 (050) 433 28 38
-                </a>
-              </p>
-            </div>
-            <div
-              css={css`
-                max-width: 285px;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-              `}
-            >
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("kharkiv")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("addressBranchKharkiv")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                  display: flex;
-                  flex-direction: column;
-                `}
-              >
-                {t("phone")}:
-                <a
-                  href="tel:+380504332566"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                  `}
-                >
-                  +38 (050) 433 25 66
-                </a>
-              </p>
-            </div>
-            <div
-              css={css`
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-              `}
-            >
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("lviv")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {" "}
-                <a
-                  href="https://druktorba.business.site"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                  `}
-                >
-                  {" "}
-                  "{t("ukrinvest")}"
-                </a>
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {t("addressBranchLviv")}
-              </p>
-              <p
-                css={css`
-                  margin: 0;
-                  display: flex;
-                  flex-direction: column;
-                `}
-              >
-                {t("phone")}:
-                <a
-                  href="tel:+380322709191"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                  `}
-                >
-                  +38 (0322) 70-91-91
-                </a>
-                <a
-                  href="tel:+380503170387"
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                  `}
-                >
-                  +38 (050) 317 03 87
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
+        <Office
+          city={t(contacts.factory.city)}
+          street={t(contacts.factory.street)}
+          phones={contacts.factory.phones}
+        />
+
+        {contacts.offices.map(({ city, street, phones }) => (
+          <Office
+            key={t(city)}
+            city={t(city)}
+            street={t(street)}
+            phones={phones}
+          />
+        ))}
       </div>
+
       <div
         css={css`
-          width: 100%;
-          height: 94px;
           background: #383838;
           color: white;
-          position: absolute;
-          bottom: 0;
           text-align: center;
           font-weight: 500;
           font-size: 20px;
           line-height: 30px;
-          padding-top: 12px;
+          display: flex;
+          flex-direction: row;
         `}
       >
-        <a
-          href="http://en.mayer-kuvert-network.com/mk-en"
-          target="_blank"
-          rel="noopener noreferrer nofollow"
+        <div
           css={css`
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
+            flex-basis: 60%;
+            margin-left: 20%;
+            padding: 12px;
           `}
         >
-          «Mayer-Kuvert-network GmbH»
-        </a>
-        <p
+          <a
+            href="http://en.mayer-kuvert-network.com/mk-en"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            css={css`
+              text-decoration: none;
+              font-size: 20px;
+              color: white;
+            `}
+          >
+            «Mayer-Kuvert-network GmbH»
+          </a>
+          <p
+            css={css`
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 30px;
+              margin-bottom: 0;
+            `}
+          >
+            Copyright © 2020 Kuvert-Ukraine. All rights reserved.
+          </p>
+        </div>
+        <div
           css={css`
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 30px;
+            flex-basis: 20%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
           `}
         >
-          Copyright © 2020 Kuvert-Ukraine. All rights reserved.
-        </p>
-        <a
-          href="https://www.facebook.com/kuvert.ua/"
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          css={css`
-            background: url(${facebook});
-            width: 51px;
-            height: 51px;
-            position: absolute;
-            bottom: 25px;
-            right: 135px;
-            color: transparent;
-          `}
-        >
-          facebook
-        </a>
-        <a
-          href="https://www.linkedin.com/company/kuvertua/"
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-          css={css`
-            background: url(${linkedin});
-            width: 51px;
-            height: 51px;
-            position: absolute;
-            bottom: 25px;
-            right: 60px;
-            color: transparent;
-          `}
-        >
-          linkedin
-        </a>
+          <a
+            href="https://www.facebook.com/kuvert.ua/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            css={css`
+              display: inline-block;
+              background: url(${facebook});
+              width: 51px;
+              height: 51px;
+              color: transparent;
+              margin-right: 10px;
+            `}
+          >
+            facebook
+          </a>
+          <a
+            href="https://www.linkedin.com/company/kuvertua/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            css={css`
+              display: inline-block;
+              background: url(${linkedin});
+              width: 51px;
+              height: 51px;
+              color: transparent;
+            `}
+          >
+            linkedin
+          </a>
+        </div>
       </div>
     </section>
   )

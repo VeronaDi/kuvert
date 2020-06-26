@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import LocalizedLink from "./LocalizedLink"
@@ -40,6 +40,22 @@ const StyledLink = ({ isHome, to, children }) => (
 )
 
 export default ({ isHome = false, location }) => {
+  const [isSmall, setSmall] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 100) {
+        setSmall(true)
+      } else {
+        setSmall(false)
+      }
+    }
+
+    window.addEventListener("scroll", onScroll)
+
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
   const { t, i18n } = useTranslation()
 
   const nextLang = nextLangLink(i18n.language, location.pathname)
@@ -50,29 +66,34 @@ export default ({ isHome = false, location }) => {
         ${isHome && "position: fixed; background: rgba(56, 56, 56, 0.732);"}
         z-index: 5;
         width: 100%;
-        height: 112px;
         top: 0;
         padding: 0 50px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
       `}
     >
       <Link
         css={css`
-          ${isHome
-            ? `background: url(${logo}) center center no-repeat;`
-            : `background: url(${logoGrey}) center center no-repeat;`}
-          width: 190px;
-          height: 66px;
-          background-size: cover;
-          margin-top: 20px;
+          transition: all 0.3s;
+          width: ${isSmall ? "100px" : "190px"};
+          margin-top: ${isSmall ? "-5px" : "-15px"};
         `}
         to="/"
-      ></Link>
+      >
+        <img
+          src={isHome ? logo : logoGrey}
+          alt="logo"
+          css={css`
+            width: 100%;
+          `}
+        />
+      </Link>
 
       <div
         css={css`
-          padding-top: 40px;
+          transition: all 0.3s;
+          line-height: ${isSmall ? "50px" : "112px"};
         `}
       >
         <StyledLink isHome={isHome} to="/">
@@ -105,7 +126,6 @@ export default ({ isHome = false, location }) => {
           font-size: 18px;
           line-height: 21px;
           text-decoration: none;
-          padding-top: 46px;
         `}
         to={nextLang}
       >
