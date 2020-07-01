@@ -17,6 +17,7 @@ export default () => {
         padding-top: 40px;
         text-align: center;
         height: 632px;
+        margin-bottom: 80px;
       `}
     >
       <h2
@@ -29,13 +30,14 @@ export default () => {
           line-height: 42px;
         `}
       >
-        {t("certificate")}
+        {t("news")}
       </h2>
       <div
         css={css`
           display: flex;
           flex-direction: row;
           justify-content: space-around;
+          flex-wrap: wrap;
         `}
       >
         {newsMain.map(({ img, title, text }) => (
@@ -44,26 +46,42 @@ export default () => {
             css={css`
               padding: 0 40px;
               outline: none;
+              width: 460px;
+              height: 460px;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              background: url(${img}), #e7e7e7;
+              background-repeat: no-repeat;
+              background-size: 100% 50%;
+              border-radius: 3px;
+
             `}
           >
-            <img
-              src={img}
-              alt={`${t(title)} logo`}
+            <div
               css={css`
-                width: 216px;
-                height: 302px;
-              `}
-            />
-            <h6
-              css={css`
-                font-weight: normal;
-                font-size: 24px;
-                margin: 0;
-                padding-top: 30px;
+                margin-top: 240px;
               `}
             >
-              {t(title)}
-            </h6>
+              <h6
+                css={css`
+                  font-weight: 500;
+                  font-size: 24px;
+                  margin: 0;
+                  padding: 10px 0;
+                `}
+              >
+                {t(title)}
+              </h6>
+              <p
+                css={css`
+                  font-weight: normal;
+                  font-size: 18px;
+                  text-align: left;
+                  margin: 0;
+                `}
+              >
+                {t(text)}
+              </p>
+            </div>
           </div>
         ))}
       </div>
