@@ -14,6 +14,8 @@ const Office = ({ city, street, phones }) => {
         padding: 30px 30px;
         flex-grow: 1;
         flex-basis: 20%;
+        font-weight: 500;
+        font-size: 16px;
         :first-of-type {
           border-right: 3px solid #ffffff;
         }
@@ -28,19 +30,11 @@ const Office = ({ city, street, phones }) => {
       >
         {city}
       </h4>
-
+      <p>{city}</p>
       <p>{street}</p>
 
       {phones.map(phone => (
-        <p
-          key={phone}
-          css={css`
-            font-weight: 500;
-            font-size: 16px;
-          `}
-        >
-          {phone}
-        </p>
+        <p key={phone}>{phone}</p>
       ))}
     </div>
   )

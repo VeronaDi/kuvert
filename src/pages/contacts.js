@@ -98,10 +98,7 @@ export default props => {
                 outline: none;
                 border: 2px solid #c1c1c1;
                 border-radius: 3px;
-                border-right: none;
-                & :last-child {
-                  border-right: 2px solid #c1c1c1;
-                }
+                cursor: pointer;
 
                 ${currentCity === city && "border: 2px solid #020202;"}
                 ${currentCity === city && "color: #020202;"}
