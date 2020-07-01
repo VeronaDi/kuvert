@@ -47,6 +47,7 @@ export default props => {
       >
         {products.map(({ name, img, id }) => (
           <LocalizedLink
+            key={id}
             to={`/${id}`}
             css={css`
               width: 48%;

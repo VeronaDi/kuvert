@@ -14,16 +14,32 @@ import logoGrey from "../images/logoGrey.png"
 let requests = [
   {
     name: { en: "Warehouse request", uk: "Складський запит" },
+    text: {
+      en:
+        "If you want to choose products from warehouse, this option is for you.",
+      uk: "Якщо бажаєте обрати продукцію зі складу, цей варіант саме для Вас.",
+    },
     img: "../images/request-basic.png",
     id: "basicform",
   },
   {
     name: { en: "Print request", uk: "Запит друку" },
+    text: {
+      en:
+        "If you want products with your own printing, this option is for you.",
+      uk: "Якщо бажаєте продукцію з власним друком, цей варіант саме для Вас.",
+    },
     img: "../images/request-printed.png",
     id: "printform",
   },
   {
     name: { en: "Individual request", uk: "Індивідуальний запит" },
+    text: {
+      en:
+        "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+      uk:
+        "Якщо бажаєте продукцію з власними параметрами, цей варіант саме для Вас.",
+    },
     img: "../images/request-custom.png",
     id: "individualform",
   },
@@ -131,9 +147,7 @@ export default props => {
       </h1>
       <section
         css={css`
-          display: flex;
-          justify-content: space-around;
-          flex-direction: row;
+          position: relative;
         `}
       >
         <div
@@ -142,42 +156,53 @@ export default props => {
             height: 178px;
             background: #b40039;
             position: absolute;
-            bottom: 175px;
+            top: 30%;
+            z-index: 1;
+          `}
+        />
+        <div
+          css={css`
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            z-index: 5;
+            position: relative;
           `}
         >
-          {requests.map(({ name, img, id }) => (
+          {requests.map(({ name, text, img, id }) => (
             <LocalizedLink
               key={id}
               to={`/${id}`}
               css={css`
-                text-decoration: none;
-                width: 28%;
+                max-width: 552px;
+                width: 32%;
                 height: 60vh;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                z-index: 1;
                 background: url(${img}), #ffffff;
                 background-repeat: no-repeat;
-                background-position: top 15vh left 50%;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 text-align: center;
-                padding: 0 50px;
-                font-size: 18px;
-                line-height: 27px;
-                color: black;
-                :visited {
-                  color: black;
-                }
+                cursor: pointer;
+                text-decoration: none;
+                color: #000000;
               `}
             >
               <h4
                 css={css`
+                  font-weight: 500;
                   font-size: 36px;
-                  padding-top: 30vh;
                   margin: 0;
-                  line-height: 1.1;
                 `}
               >
-                {name}
+                {t(name)}
               </h4>
+              <p
+                css={css`
+                  font-size: 18px;
+                  line-height: 27px;
+                `}
+              >
+                {t(text)}
+              </p>
             </LocalizedLink>
           ))}
         </div>

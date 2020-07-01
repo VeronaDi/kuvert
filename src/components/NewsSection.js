@@ -53,7 +53,6 @@ export default () => {
               background-repeat: no-repeat;
               background-size: 100% 50%;
               border-radius: 3px;
-
             `}
           >
             <div
