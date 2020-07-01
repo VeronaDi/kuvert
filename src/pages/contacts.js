@@ -218,7 +218,7 @@ export default props => {
             >
               {t("writeUs")}
               <a
-                href="mailto:{city.email}"
+                href={`mailto:${city.email}`}
                 css={css`
                   text-decoration: none;
                   color: white;

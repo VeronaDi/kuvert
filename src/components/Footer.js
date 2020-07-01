@@ -34,7 +34,21 @@ const Office = ({ city, street, phones }) => {
       <p>{street}</p>
 
       {phones.map(phone => (
-        <p key={phone}>{phone}</p>
+        <a
+          key={phone}
+          href={`tel:${phone}`}
+          css={css`
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 15px;
+          `}
+        >
+          {phone}
+        </a>
       ))}
     </div>
   )
