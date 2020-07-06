@@ -19,7 +19,7 @@ let requests = [
         "If you want to choose products from warehouse, this option is for you.",
       uk: "Якщо бажаєте обрати продукцію зі складу, цей варіант саме для Вас.",
     },
-    img: "../images/request-basic.png",
+    img: "/icon/request-basic.png",
     id: "basicform",
   },
   {
@@ -29,18 +29,18 @@ let requests = [
         "If you want products with your own printing, this option is for you.",
       uk: "Якщо бажаєте продукцію з власним друком, цей варіант саме для Вас.",
     },
-    img: "../images/request-printed.png",
+    img: "/icon/request-printed.png",
     id: "printform",
   },
   {
-    name: { en: "Individual request", uk: "Індивідуальний запит" },
+    name: { en: "Custom request", uk: "Індивідуальний запит" },
     text: {
       en:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
       uk:
         "Якщо бажаєте продукцію з власними параметрами, цей варіант саме для Вас.",
     },
-    img: "../images/request-custom.png",
+    img: "/icon/request-custom.png",
     id: "individualform",
   },
 ]
@@ -177,15 +177,27 @@ export default props => {
                 max-width: 552px;
                 width: 32%;
                 height: 60vh;
-                background: url(${img}), #ffffff;
-                background-repeat: no-repeat;
+                background: #ffffff;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 text-align: center;
                 cursor: pointer;
                 text-decoration: none;
                 color: #000000;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: space-between;
+                align-items: center;
+                padding: 100px 40px;
               `}
             >
+              <img
+                src={img}
+                alt={`${img} type`}
+                css={css`
+                  width: 90px;
+                `}
+              />
               <h4
                 css={css`
                   font-weight: 500;

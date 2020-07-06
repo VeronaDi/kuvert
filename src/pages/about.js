@@ -20,7 +20,6 @@ import factory5 from "../images/about/5.jpg"
 import factory6 from "../images/about/6.jpg"
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
-import arrowdown from "../images/arrow-down.svg"
 import logosOrganization from "../images/logos_organizations.jpg"
 
 export default props => {
@@ -151,17 +150,6 @@ export default props => {
           `}
         ></div>
       </section>
-      <Link
-        to="/about"
-        css={css`
-          background: url(${arrowdown});
-          width: 62px;
-          height: 158px;
-          position: absolute;
-          left: 50%;
-          transform: translate(-50%, -2%);
-        `}
-      ></Link>
 
       <section
         css={css`
