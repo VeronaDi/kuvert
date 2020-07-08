@@ -16,7 +16,6 @@ export default () => {
       css={css`
         padding-top: 40px;
         text-align: center;
-        height: 632px;
         margin-bottom: 80px;
       `}
     >
@@ -32,54 +31,54 @@ export default () => {
       >
         {t("news")}
       </h2>
-      <div
-        css={css`
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          flex-wrap: wrap;
-        `}
-      >
+
+      <div className="row">
         {newsMain.map(({ img, title, text }) => (
-          <div
-            key={t(title)}
-            css={css`
-              padding: 0 40px;
-              outline: none;
-              width: 460px;
-              height: 460px;
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-              background: url(${img}), #e7e7e7;
-              background-repeat: no-repeat;
-              background-size: 100% 50%;
-              border-radius: 3px;
-            `}
-          >
+          <div className="w-full md:w-1/3 px-5">
             <div
+              key={t(title)}
               css={css`
-                margin-top: 240px;
+                height: 460px;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 3px;
+                overflow: hidden;
+                background: #e7e7e7;
+                margin-bottom: 20px;
               `}
             >
-              <h6
+              <div
                 css={css`
-                  font-weight: 500;
-                  font-size: 24px;
-                  margin: 0;
-                  padding: 10px 0;
+                  height: 50%;
+                  background: url(${img});
+                  background-size: cover;
+                `}
+              />
+              <div
+                css={css`
+                  padding: 0 40px;
                 `}
               >
-                {t(title)}
-              </h6>
-              <p
-                css={css`
-                  font-weight: normal;
-                  font-size: 18px;
-                  text-align: left;
-                  margin: 0;
-                `}
-              >
-                {t(text)}
-              </p>
+                <h6
+                  css={css`
+                    font-weight: 500;
+                    font-size: 24px;
+                    margin: 0;
+                    padding: 10px 0;
+                  `}
+                >
+                  {t(title)}
+                </h6>
+                <p
+                  css={css`
+                    font-weight: normal;
+                    font-size: 18px;
+                    text-align: left;
+                    margin: 0;
+                  `}
+                >
+                  {t(text)}
+                </p>
+              </div>
             </div>
           </div>
         ))}
