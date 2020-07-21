@@ -1,6 +1,6 @@
 export default [
   {
-    img: "/products/paperfile.jpg",
+    img: "/products/paperfile.png",
     title: { en: "Paper filing pockets", uk: "Паперовий файл" },
     text: {
       en:
@@ -11,7 +11,7 @@ export default [
     id: "paperFile",
   },
   {
-    img: "/products/ecoblock.jpg",
+    img: "/products/ecoblock.png",
     title: { en: "Ecoblocks for notes", uk: "Еко блоки для нотаток" },
     text: {
       en:
@@ -36,7 +36,7 @@ export default [
     id: "greenoffice",
   },
   {
-    img: "/products/2pockets.jpg",
+    img: "/products/2pockets.png",
     title: "Sample-mail",
     text: {
       en:
@@ -47,7 +47,7 @@ export default [
     id: "samplemail",
   },
   {
-    img: "/products/2windows.jpg",
+    img: "/products/2windows.png",
     title: {
       en: "Envelope with 2 and more windows",
       uk: "Конверт з двома і більше вікнами",
@@ -61,7 +61,7 @@ export default [
     id: "twowindows",
   },
   {
-    img: "/products/welcomepack.jpg",
+    img: "/products/welcomepack.png",
     title: { en: "Welcome pack", uk: "Еко пак" },
     text: {
       en:
