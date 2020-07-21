@@ -37,46 +37,49 @@ export default props => {
       >
         {t("products")}
       </h1>
-      <div
-        css={css`
-          display: flex;
-          justify-content: space-around;
-          flex-flow: row wrap;
-          padding-top: 46px;
-        `}
-      >
-        {products.map(({ name, img, id }) => (
-          <LocalizedLink
-            key={id}
-            to={`/${id}`}
-            css={css`
-              width: 48%;
-              height: 240px;
-              background: url(${img}), rgba(128, 128, 128, 0.4);
-              position: relative;
-              text-align: center;
-              cursor: pointer;
-              margin-bottom: 20px;
-              color: #b40039;
-              font-weight: bold;
-              font-size: 40px;
-              line-height: 56px;
-              text-decoration: none;
-            `}
-          >
-            <h5
-              css={css`
-                font-family: "Raleway", sans-serif;
-                position: absolute;
-                top: 35%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-              `}
-            >
-              {t(name)}
-            </h5>
-          </LocalizedLink>
-        ))}
+
+      <div className="overflow-hidden">
+        <div
+          className="row -mx-2"
+          css={css`
+            padding-top: 46px;
+          `}
+        >
+          {products.map(({ name, img, id }) => (
+            <div className="w-full md:w-1/2 px-2">
+              <LocalizedLink
+                key={id}
+                to={`/${id}`}
+                css={css`
+                  display: block;
+                  height: 240px;
+                  background: url(${img}), rgba(128, 128, 128, 0.4);
+                  position: relative;
+                  text-align: center;
+                  cursor: pointer;
+                  margin-bottom: 20px;
+                  color: #b40039;
+                  font-weight: bold;
+                  font-size: 40px;
+                  line-height: 56px;
+                  text-decoration: none;
+                `}
+              >
+                <h5
+                  css={css`
+                    font-family: "Raleway", sans-serif;
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  `}
+                >
+                  {t(name)}
+                </h5>
+              </LocalizedLink>
+            </div>
+          ))}
+        </div>
       </div>
 
       <Footer />
