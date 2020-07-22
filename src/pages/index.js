@@ -57,61 +57,93 @@ const IndexPage = props => {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            @media (max-width: 767px) {
+              width: 305px;
+              height: 333px;
+            }
           `}
         >
           <h1
             css={css`
               font-weight: bold;
               font-size: 64px;
-              line-height: 75px;
               margin-bottom: 27px;
+              @media (max-width: 767px) {
+                font-size: 36px;
+                text-align: center;
+                margin: 10px;
+              }
             `}
           >
             {t("mainSlogan")}
           </h1>
-          <a
-            href="http://en.mayer-kuvert-network.com/mk-en"
-            target="_blank"
-            rel="noopener noreferrer"
-            css={css`
-              color: white;
-              text-decoration: none;
-              text-align: center;
-              font-weight: bold;
-              font-size: 20px;
-              line-height: 30px;
-            `}
-          >
-            «Mayer-Kuvert-network GmbH»
-          </a>
-          <p
-            css={css`
-              font-weight: 500;
-              font-size: 16px;
-              line-height: 24px;
-              margin: 17px 80px 0 80px;
-            `}
-          >
-            {t("titleText")}
-          </p>
           <div
             css={css`
-              display: flex;
-              justify-content: space-between;
-              margin: 35px 80px 35px 80px;
+              @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+              }
             `}
           >
-            <div
+            <a
+              href="http://en.mayer-kuvert-network.com/mk-en"
+              target="_blank"
+              rel="noopener noreferrer"
               css={css`
-                width: 205px;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+                @media (max-width: 767px) {
+                  font-weight: 500;
+                  font-size: 12px;
+                }
               `}
             >
-              <BtnRequest />
+              «Mayer-Kuvert-network GmbH»
+            </a>
+            <p
+              css={css`
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                margin: 17px 80px 0 80px;
+                @media (max-width: 767px) {
+                  display: none;
+                }
+              `}
+            >
+              {t("titleText")}
+            </p>
+            <div
+              css={css`
+                display: flex;
+                justify-content: space-between;
+                margin: 35px 80px 35px 80px;
+                @media (max-width: 767px) {
+                  flex-direction: column;
+                  margin: 10px auto 15px auto;
+                }
+              `}
+            >
+              <div
+                css={css`
+                  width: 205px;
+                  @media (max-width: 767px) {
+                    width: 220px;
+                    margin-bottom: 25px;
+                  }
+                `}
+              >
+                <BtnRequest />
+              </div>
+              <BtnViewProducts />
             </div>
-            <BtnViewProducts />
           </div>
         </div>
       </section>
+
       <section
         css={css`
           display: flex;
