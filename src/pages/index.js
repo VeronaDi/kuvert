@@ -146,31 +146,46 @@ const IndexPage = props => {
 
       <section
         css={css`
+          width: 85%;
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100vh;
-          margin: 0 5%;
+          margin: 100px auto;
+          @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            width: 100%;
+          }
         `}
       >
         <div
+          className="w-full md\:w-1\/3"
           css={css`
             background: url(${backenvelopes}), #c5003e;
-            width: 40%;
             height: 594px;
             color: white;
-            padding: 50px 100px 167px 100px;
+            padding: 40px 50px 0 100px;
+            @media (max-width: 768px) {
+              padding: 26px 26px;
+              height: auto;
+            }
           `}
         >
           <h1
             css={css`
               font-weight: bold;
               font-size: 48px;
-              line-height: 56px;
               padding-bottom: 30px;
               border-bottom: 1px solid white;
-              transform: rotate(-0.29deg);
               width: 201px;
+              transform: rotate(-0.29deg);
+              @media (max-width: 768px) {
+                font-size: 24px;
+                border-bottom: none;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+              }
             `}
           >
             {t("about")}
@@ -181,6 +196,9 @@ const IndexPage = props => {
               font-weight: normal;
               font-size: 18px;
               line-height: 27px;
+              @media (max-width: 768px) {
+                font-size: 14px;
+              }
             `}
           >
             {t("indexAbout")}
@@ -192,20 +210,29 @@ const IndexPage = props => {
               cursor: pointer;
               font-weight: bold;
               font-size: 18px;
-              line-height: 27px;
               text-decoration: none;
+              @media (max-width: 768px) {
+                font-weight: 900;
+                font-size: 14px;
+                text-decoration: underline;
+                text-align: center;
+                display: block;
+              }
             `}
           >
             {t("learnMore")}
           </Link>
         </div>
         <div
+          className="w-full md\:w-2\/3"
           css={css`
-            width: 60%;
             height: 594px;
             background: url(${machine});
             background-size: cover;
             background-repeat: no-repeat;
+            @media (max-width: 768px) {
+              height: 234px;
+            }
           `}
         ></div>
       </section>
