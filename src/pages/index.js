@@ -241,73 +241,75 @@ const IndexPage = props => {
 
       <section
         css={css`
-          height: 100vh;
-          margin: 0 auto;
+          margin: 80px auto;
           padding-top: 60px;
-          padding-right: 60px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          @media (max-width: 768px) {
+            flex-direction: column;
+            margin: 40px auto;
+          }
         `}
       >
+        <img src={ukraine} alt={`map of Ukraine`} css={css``} />
         <div
           css={css`
-            height: 600px;
-            width: 100%;
-            background: url(${ukraine});
-            background-repeat: no-repeat;
-            background-position: 18%;
-            display: flex;
-            justify-content: start;
-            flex-direction: column;
-            align-items: flex-end;
+            padding: 80px 60px;
+            @media (max-width: 768px) {
+              padding: 30px 40px;
+            }
           `}
         >
-          <div
+          <h2
             css={css`
-              width: 342px;
-              height: 152px;
-              padding-top: 60px;
-              padding-right: 30px;
+              font-weight: 500;
+              font-size: 48px;
+              @media (max-width: 768px) {
+                font-size: 24px;
+                text-align: center;
+              }
             `}
           >
-            <h2
-              css={css`
-                font-weight: 500;
-                font-size: 48px;
-                line-height: 56px;
-              `}
-            >
-              {t("contactUs")}
-            </h2>
-            <p
-              css={css`
-                font-weight: normal;
-                font-size: 18px;
-                line-height: 27px;
-                padding: 36px 0;
-              `}
-            >
-              {t("indexContactUs")}
-            </p>
-            <div
-              css={css`
-                width: 100%;
-              `}
-            >
-              <BtnRequest />
-            </div>
+            {t("contactUs")}
+          </h2>
+          <p
+            css={css`
+              font-weight: normal;
+              font-size: 18px;
+              padding: 36px 0;
+              @media (max-width: 768px) {
+                font-size: 16px;
+              }
+            `}
+          >
+            {t("indexContactUs")}
+          </p>
+          <div
+            css={css`
+              width: 100%;
+              > a {
+                @media (max-width: 768px) {
+                  margin: 0 auto;
+                }
+              }
+            `}
+          >
+            <BtnRequest />
           </div>
         </div>
       </section>
+
       <section
         css={css`
           background: #ffffff;
-          padding: 45px 0;
+          margin: 45px 0;
         `}
       >
         <h3
           css={css`
             font-weight: 500;
             font-size: 48px;
-            line-height: 56px;
             text-align: center;
             margin: 0;
           `}
