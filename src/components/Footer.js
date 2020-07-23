@@ -19,17 +19,17 @@ const Office = ({ city, street, phones }) => {
         :first-of-type {
           border-right: 3px solid #ffffff;
         }
+        @media (max-width: 1024px) {
+          font-weight: normal;
+          font-size: 14px;
+          padding: 0;
+          :first-of-type {
+            border-bottom: 3px solid #ffffff;
+            border-right: none;
+          }
+        }
       `}
     >
-      <h4
-        css={css`
-          font-weight: bold;
-          font-size: 24px;
-          margin-bottom: 2em;
-        `}
-      >
-        {city}
-      </h4>
       <p>{city}</p>
       <p>{street}</p>
 
@@ -45,6 +45,10 @@ const Office = ({ city, street, phones }) => {
             display: flex;
             flex-direction: column;
             padding-bottom: 15px;
+            @media (max-width: 1024px) {
+              font-weight: normal;
+              font-size: 14px;
+            }
           `}
         >
           {phone}
@@ -77,14 +81,45 @@ export default props => {
           justify-content: space-around;
           font-size: 18px;
           margin: 140px 10%;
+          @media (max-width: 1024px) {
+            flex-direction: column;
+            text-align: center;
+            margin: 24px 10px;
+          }
         `}
       >
+        <h4
+          css={css`
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 2em;
+            @media (max-width: 1024px) {
+              font-size: 18px;
+              margin-bottom: 1em;
+            }
+          `}
+        >
+          {t("addressOfFactory")}
+        </h4>
         <Office
           city={t(contacts.factory.city)}
           street={t(contacts.factory.street)}
           phones={contacts.factory.phones}
         />
 
+        <h4
+          css={css`
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 2em;
+            @media (max-width: 1024px) {
+              font-size: 18px;
+              margin-bottom: 1em;
+            }
+          `}
+        >
+          {t("addressBranch")}
+        </h4>
         {contacts.offices.map(({ city, street, phones }) => (
           <Office
             key={t(city)}
@@ -102,9 +137,14 @@ export default props => {
           text-align: center;
           font-weight: 500;
           font-size: 20px;
-          line-height: 30px;
           display: flex;
           flex-direction: row;
+          @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-between;
+            padding: 29px 0 79px 0;
+          }
         `}
       >
         <div
@@ -112,10 +152,13 @@ export default props => {
             flex-basis: 60%;
             margin-left: 20%;
             padding: 12px;
+            @media (max-width: 1024px) {
+              margin-left: 0;
+            }
           `}
         >
           <a
-            href="http://en.mayer-kuvert-network.com/mk-en"
+            href="https://www.mayer-kuvert-network.com/"
             target="_blank"
             rel="noopener noreferrer nofollow"
             css={css`
@@ -130,7 +173,6 @@ export default props => {
             css={css`
               font-weight: bold;
               font-size: 14px;
-              line-height: 30px;
               margin-bottom: 0;
             `}
           >

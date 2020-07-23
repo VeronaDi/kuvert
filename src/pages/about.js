@@ -214,7 +214,7 @@ export default props => {
             {t("historyP2")}
           </p>
           <a
-            href="http://en.mayer-kuvert-network.com/mk-en"
+            href="https://www.mayer-kuvert-network.com/"
             target="_blank"
             rel="noopener noreferrer nofollow"
             css={css`
