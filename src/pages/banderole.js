@@ -71,6 +71,7 @@ export default props => {
       >
         {banderole.map(({ name, id }) => (
           <LocalizedLink
+            className="w-full md:w-1/4 -mx-2"
             to={`/${id}`}
             css={css`
               width: 24%;

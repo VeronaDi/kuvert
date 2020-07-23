@@ -52,6 +52,7 @@ export default props => {
       >
         {paperbags.map(({ name, id }) => (
           <LocalizedLink
+            className="w-full md:w-1/3 -mx-2"
             to={`/${id}`}
             css={css`
               width: 32%;
