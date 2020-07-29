@@ -1,6 +1,16 @@
 import React from "react"
 // import { Map, Marker, Popup, TileLayer } from "react-leaflet"
 
+import "ol/ol.css"
+import { Map, View } from "ol"
+import TileLayer from "ol/layer/Tile"
+import OSMSource from "ol/source/OSM"
+import VectorLayer from "ol/layer/Vector"
+import { fromLonLat } from "ol/proj"
+import { Icon, Style } from "ol/style"
+import Feature from "ol/Feature"
+import Point from "ol/geom/Point"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -19,7 +29,7 @@ import { useTranslation } from "react-i18next"
 const cities = [
   {
     name: "Ivano-Frankivsk",
-    position: [48.9064118, 24.7253379],
+    position: [24.7253379, 48.9064118],
     phoneOffice: "+38 050 377 08 01",
     phone: "+38 067 327 08 01",
     location: "Ivano-Frankivsk Makukha Str, 6",
@@ -27,34 +37,67 @@ const cities = [
   },
   {
     name: "Kyiv",
-    position: [50.4214245, 30.3981391],
+    position: [30.3981391, 50.4214245],
     phoneOffice: "+38 067 009 08 01",
     location: 'м. Київ, вул. Сім"ї Сосніних, 9',
     email: "kuvert.kiev@gmail.com",
   },
   {
     name: "Kharkiv",
-    position: [49.977438, 36.280344],
+    position: [36.280344, 49.977438],
     phoneOffice: "+38 050 433 25 66",
     location: "м. Харків, вул. Плеханівська, 117",
     email: "kuvert.kharkiv@gmail.com",
   },
   {
     name: "Dnipro",
-    position: [48.458113, 35.070495],
+    position: [35.070495, 48.458113],
     phoneOffice: "+38 050 339 20 21",
     location: "м. Дніпро, вул. Акінфієва, 18",
     email: "kuvert.dn@gmail.com",
   },
   {
     name: "Lviv",
-    position: [49.806572, 24.064176],
+    position: [24.064176, 48.458113],
     phoneOffice: "+38 0322 70 91 91",
     phone: "+38 050 317 03 87",
     location: "м. Львів, вул. Зелена 251",
     email: "konwert@ukr.net",
   },
 ]
+
+const IFLonLat = [24.7253379, 48.9064118]
+const IFWebMercator = fromLonLat(IFLonLat)
+const iconFeature = new Feature({
+  geometry: new Point(IFWebMercator),
+  name: "KUVERT",
+})
+
+const mapOL = new Map({
+  target: "mapOL",
+  layers: [
+    new TileLayer({
+      source: new OSMSource(),
+    }),
+    // new VectorLayer({
+    //   source: new VectorLayer({
+    //     features: [iconFeature],
+    //   }),
+    //   style: new Style({
+    //     image: new Icon({
+    //       anchor: IFWebMercator,
+    //       anchorXUnits: "fraction",
+    //       anchorYUnits: "pixels",
+    //       src: "data/location.png",
+    //     }),
+    //   }),
+    // }),
+  ],
+  view: new View({
+    center: IFWebMercator,
+    zoom: 15,
+  }),
+})
 
 export default props => {
   const T = useTranslation()
@@ -109,42 +152,30 @@ export default props => {
           ))}
         </div>
         <div
+          id="mapOL"
           css={css`
             position: relative;
+            height: 600px;
+            width: 100%;
           `}
         >
-          <iframe
-            title="mapkuvert"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10935.391700386486!2d24.725399862651894!3d48.90620217278415!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4db4ca10c71da75f!2z0JrRg9Cy0LXRgNGCLdCj0LrRgNCw0ZfQvdCwLCDQotCe0JI!5e0!3m2!1suk!2sua!4v1588173474444!5m2!1suk!2sua"
-            frameBorder="0"
-            allowFullScreen=""
-            aria-hidden="false"
-            tabIndex="0"
-            css={css`
-              width: 100%;
-              height: 689px;
-              position: relative;
-              z-index: 1;
-              padding-bottom: 76px;
-            `}
-          ></iframe>
           {/* {typeof window !== "undefined" && (
-              <Map center={city.position} zoom={13}>
-                <TileLayer
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                />
-                <Marker position={city.position}>
-                  <Popup
-                    css={css`
-                      color: red;
-                    `}
-                  >
-                    Kuvert-Ukraine
-                  </Popup>
-                </Marker>
-              </Map>
-            )} */}
+            <Map center={city.position} zoom={13}>
+              <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+              />
+              <Marker position={city.position}>
+                <Popup
+                  css={css`
+                    color: red;
+                  `}
+                >
+                  Kuvert-Ukraine
+                </Popup>
+              </Marker>
+            </Map>
+          )} */}
           <div
             css={css`
               width: 432px;
