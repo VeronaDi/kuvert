@@ -61,7 +61,6 @@ export default props => {
                   color: #b40039;
                   font-weight: bold;
                   font-size: 40px;
-                  line-height: 56px;
                   text-decoration: none;
                 `}
               >

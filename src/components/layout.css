@@ -215,6 +215,9 @@ textarea {
 .-mx-2 {
   margin: 0 -10px;
 }
+.-mx-4 {
+  margin: 0 3px;
+}
 .px-2 {
   padding: 0 10px;
 }
@@ -235,7 +238,7 @@ textarea {
 }
 
 .w-1\/4 {
-  width: 25%!important
+  width: 24.5%!important
 }
 
 .w-3\/4 {
@@ -284,7 +287,7 @@ textarea {
   }
 
   .md\:w-1\/4 {
-    width: 25%!important
+    width: 24.5%!important
   }
 
   .md\:w-3\/4 {
