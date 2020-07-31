@@ -75,7 +75,7 @@ export default props => {
                 to={`/${id}`}
                 css={css`
                   display: block;
-                  height: 467px;
+                  height: 457px;
                   background: url(${banderolePattern}), rgba(128, 128, 128, 0.4);
                   position: relative;
                   text-align: center;
