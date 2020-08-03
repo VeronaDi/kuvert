@@ -22,13 +22,16 @@ export default () => {
         text-align: center;
         color: white;
         padding: 25px 0;
+        display: flex;
+        justify-content: column;
+        flex-direction: column;
+        align-items: center;
       `}
     >
       <p
         css={css`
           font-size: 36px;
           font-weight: 500;
-          line-height: 50px;
           margin: 0;
         `}
       >
@@ -38,9 +41,6 @@ export default () => {
         css={css`
           font-size: 18px;
           font-weight: 500;
-          line-height: 50px;
-          padding-bottom: 20px;
-          margin: 0;
         `}
       >
         {t("creatIndEnv")}
@@ -52,7 +52,6 @@ export default () => {
           text-decoration: none;
           font-weight: 500;
           font-size: 18px;
-          line-height: 21px;
           border: 1px solid #ffffff;
           border-radius: 3px;
           background: transparent;
