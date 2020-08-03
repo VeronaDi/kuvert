@@ -1,15 +1,4 @@
 import React from "react"
-// import { Map, Marker, Popup, TileLayer } from "react-leaflet"
-
-import "ol/ol.css"
-import { Map, View } from "ol"
-import TileLayer from "ol/layer/Tile"
-import OSMSource from "ol/source/OSM"
-import VectorLayer from "ol/layer/Vector"
-import { fromLonLat } from "ol/proj"
-import { Icon, Style } from "ol/style"
-import Feature from "ol/Feature"
-import Point from "ol/geom/Point"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
