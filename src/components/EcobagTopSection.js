@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import ecobagsBrown from "../data/ecobagBrown"
-import torbyMix from "../../static/products/torby-mix.jpg"
+import ecobagsMix from "../../static/products/ecobags-mix.jpg"
 
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index
@@ -17,7 +17,7 @@ export default () => {
         width: 80%;
         height: auto;
         max-height: 586px;
-        background: url(${torbyMix}), #ffffff;
+        background: url(${ecobagsMix}), #ffffff;
         background-position: 30px 55px;
         background-repeat: no-repeat;
         background-size: 40% 80%;

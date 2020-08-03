@@ -26,6 +26,8 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
+import contacts from "../data/contacts"
+
 const cities = [
   {
     name: "Ivano-Frankivsk",
@@ -65,39 +67,6 @@ const cities = [
     email: "konwert@ukr.net",
   },
 ]
-
-const IFLonLat = [24.7253379, 48.9064118]
-const IFWebMercator = fromLonLat(IFLonLat)
-const iconFeature = new Feature({
-  geometry: new Point(IFWebMercator),
-  name: "KUVERT",
-})
-
-const mapOL = new Map({
-  target: "mapOL",
-  layers: [
-    new TileLayer({
-      source: new OSMSource(),
-    }),
-    // new VectorLayer({
-    //   source: new VectorLayer({
-    //     features: [iconFeature],
-    //   }),
-    //   style: new Style({
-    //     image: new Icon({
-    //       anchor: IFWebMercator,
-    //       anchorXUnits: "fraction",
-    //       anchorYUnits: "pixels",
-    //       src: "data/location.png",
-    //     }),
-    //   }),
-    // }),
-  ],
-  view: new View({
-    center: IFWebMercator,
-    zoom: 15,
-  }),
-})
 
 export default props => {
   const T = useTranslation()
@@ -151,117 +120,92 @@ export default props => {
             </button>
           ))}
         </div>
+
         <div
-          id="mapOL"
           css={css`
-            position: relative;
-            height: 600px;
-            width: 100%;
+            width: 432px;
+            height: 397px;
+            position: absolute;
+            left: 91px;
+            top: 84px;
+            background: rgba(56, 56, 56, 0.732);
+            z-index: 5;
           `}
         >
-          {/* {typeof window !== "undefined" && (
-            <Map center={city.position} zoom={13}>
-              <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              />
-              <Marker position={city.position}>
-                <Popup
-                  css={css`
-                    color: red;
-                  `}
-                >
-                  Kuvert-Ukraine
-                </Popup>
-              </Marker>
-            </Map>
-          )} */}
           <div
             css={css`
-              width: 432px;
-              height: 397px;
-              position: absolute;
-              left: 91px;
-              top: 84px;
-              background: rgba(56, 56, 56, 0.732);
-              z-index: 5;
+              width: 100%;
+              height: 132px;
+              padding: 30px 0 30px 130px;
+              background: url(${call}) 40px center no-repeat;
+              color: white;
+              font-weight: bold;
             `}
           >
+            {t("call")}
             <div
               css={css`
-                width: 100%;
-                height: 132px;
-                padding: 30px 0 30px 130px;
-                background: url(${call}) 40px center no-repeat;
-                color: white;
-                font-weight: bold;
+                padding-top: 24px;
               `}
             >
-              {t("call")}
-              <div
-                css={css`
-                  padding-top: 24px;
-                `}
-              >
-                <a
-                  href={`tel:${city.phoneOffice}`}
-                  css={css`
-                    text-decoration: none;
-                    color: white;
-                    font-size: 14px;
-                    padding-right: 5px;
-                    font-weight: normal;
-                  `}
-                >
-                  {city.phoneOffice}
-                </a>
-              </div>
-            </div>
-            <div
-              css={css`
-                width: 100%;
-                height: 132px;
-                padding: 30px 0 30px 130px;
-                background: url(${location}) 40px center no-repeat;
-                color: white;
-                font-weight: bold;
-              `}
-            >
-              {t("visitUs")}
-              <p
-                css={css`
-                  font-size: 14px;
-                  font-weight: normal;
-                `}
-              >
-                {city.location}
-              </p>
-            </div>
-            <div
-              css={css`
-                width: 100%;
-                height: 132px;
-                padding: 30px 0 30px 130px;
-                background: url(${write}) 40px center no-repeat;
-                color: white;
-                font-weight: bold;
-              `}
-            >
-              {t("writeUs")}
               <a
-                href={`mailto:${city.email}`}
+                href={`tel:${city.phoneOffice}`}
                 css={css`
                   text-decoration: none;
                   color: white;
                   font-size: 14px;
-                  display: block;
-                  padding-top: 18px;
+                  padding-right: 5px;
                   font-weight: normal;
                 `}
               >
-                {city.email}
+                {city.phoneOffice}
               </a>
             </div>
+          </div>
+          <div
+            css={css`
+              width: 100%;
+              height: 132px;
+              padding: 30px 0 30px 130px;
+              background: url(${location}) 40px center no-repeat;
+              color: white;
+              font-weight: bold;
+            `}
+          >
+            {t("visitUs")}
+            <p
+              css={css`
+                font-size: 14px;
+                font-weight: normal;
+              `}
+            >
+              {city.location}
+            </p>
+          </div>
+          <div
+            css={css`
+              width: 100%;
+              height: 132px;
+              padding: 30px 0 30px 130px;
+              background: url(${write}) 40px center no-repeat;
+              color: white;
+              font-weight: bold;
+            `}
+          >
+            {t("writeUs")}
+            <a
+              href={`mailto:${city.email}`}
+              css={css`
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                display: block;
+                padding-top: 18px;
+                font-weight: normal;
+              `}
+            >
+              {city.email}
+            </a>
           </div>
         </div>
       </section>
