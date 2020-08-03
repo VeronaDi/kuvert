@@ -35,7 +35,7 @@ export default () => {
           margin: 0;
         `}
       >
-        {t("ownEnvIdea")}
+        {t("ownPrintIdea")}
       </p>
       <p
         css={css`
@@ -46,7 +46,7 @@ export default () => {
         {t("creatIndEnv")}
       </p>
       <Link
-        to="/individualform"
+        to="/printform"
         css={css`
           color: white;
           text-decoration: none;

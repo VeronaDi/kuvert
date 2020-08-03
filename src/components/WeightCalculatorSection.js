@@ -29,7 +29,6 @@ export default () => {
         css={css`
           font-size: 36px;
           font-weight: 500;
-          line-height: 50px;
           margin: 0;
         `}
       >
@@ -39,7 +38,6 @@ export default () => {
         css={css`
           font-size: 16px;
           font-weight: bold;
-          padding-bottom: 20px;
         `}
       >
         {t("weightUse")}
@@ -54,7 +52,6 @@ export default () => {
               text-decoration: none;
               font-weight: 500;
               font-size: 18px;
-              line-height: 21px;
               border: 1px solid #ffffff;
               border-radius: 3px;
               background: transparent;

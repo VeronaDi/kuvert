@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
-import IndividualOrderSection from "../components/IndividualOrderSection"
+import IndividualPrintSection from "../components/IndividualPrintSection"
 
 import { css } from "@emotion/core"
 
@@ -125,7 +125,7 @@ export default props => {
           ))}
         </div>
       </div>
-      <IndividualOrderSection />
+      <IndividualPrintSection />
       <Footer />
     </Layout>
   )
