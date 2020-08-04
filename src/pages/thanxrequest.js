@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,32 +11,17 @@ import { useTranslation } from "react-i18next"
 import logoGrey from "../images/logoGrey.png"
 import thanx from "../images/thanx.png"
 
-// import i18n from "i18next"
-// i18n.changeLanguage("en")
-
-const IndexPage = props => {
+export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
     T.i18n.changeLanguage(props.pageContext.langKey)
   }
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
-
-  //   const requestType = ({ children }) => (
-  //     <div
-  //       css={css`
-  //         width: 28%;
-  //         background: #ffffff;
-  //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //       `}
-  //     >
-  //       {children}
-  //     </div>
-  //   )
-
   return (
     <Layout>
       <SEO title="Request" />
+
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;
@@ -122,5 +105,3 @@ const IndexPage = props => {
     </Layout>
   )
 }
-
-export default IndexPage
