@@ -1,6 +1,6 @@
 export default [
   {
-    img: "/products/37.jpg",
+    img: "/products/ready-env-print.png",
     title: { en: "Print on envelope", uk: "Друк по готових конвертах" },
     text: {
       en:
@@ -11,7 +11,7 @@ export default [
     id: "printReadyEnv",
   },
   {
-    img: "/products/52.jpg",
+    img: "/products/print-vukroi.png",
     title: { en: "Print on carved", uk: "Друк на викроях" },
     text: {
       en:
@@ -22,7 +22,7 @@ export default [
     id: "printCutoutEnv",
   },
   {
-    img: "/products/52.jpg",
+    img: "/products/digital-print.png",
     title: { en: "Digital print", uk: "Цифровий друк" },
     text: { en: "Digital full color print", uk: "Цифровий повноколірний друк" },
     id: "printDigital",
