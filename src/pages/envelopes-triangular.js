@@ -12,8 +12,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import triangularEnv from "../images/triangular-envelope.png"
-
+import triangularEnv from "../../static/products/triangular-envelope.png"
 import triangularEnvelopes from "../data/triangularEnvelopes"
 import { string } from "prop-types"
 
@@ -62,143 +61,155 @@ export default props => {
           text-align: center;
           font-size: 36px;
           font-weight: 500;
+          @media (max-width: 758px) {
+            font-size: 24px;
+          }
         `}
       >
         {t("triangularValve")}
       </h3>
       <div
+        className="w-full md:w-5/6 px-2"
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${triangularEnv}), #ffffff;
-          background-position: left;
-          background-repeat: no-repeat;
-          background-size: 40% 100%;
           margin: 9px auto;
-          padding: 30px 78px 90px 37%;
           color: #000000;
+          background: #ffffff;
+          display: flex;
+          flex-direction: row;
+          @media (max-width: 1024px) {
+            flex-direction: column;
+          }
         `}
       >
-        <p
+        <img
+          src={triangularEnv}
+          alt="Triangular flap envelope"
           css={css`
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
+            width: 40%;
+            margin: 0 auto;
           `}
-        >
-          {t("triangularValveText")}
-        </p>
+        />
         <div
           css={css`
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: 200px;
-            padding-top: 43px;
+            width: 60%;
+            padding: 0 20px;
+            font-weight: 500;
+            @media (max-width: 1024px) {
+              width: 100%;
+            }
           `}
         >
-          <ul
+          <p
             css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
+              font-size: 18px;
+              @media (max-width: 1024px) {
+                font-size: 14px;
+                font-weight: normal;
+              }
             `}
           >
-            {t("size")}
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              C6 (114x162) {t("mm")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              C5 (162x229) {t("mm")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              C4 (229x324) {t("mm")}
-            </li>
-          </ul>
-          <ul
+            {t("triangularValveText")}
+          </p>
+          <div
             css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              @media (max-width: 768px) {
+                flex-direction: column;
+              }
             `}
           >
-            {t("color")}
-            <li
+            <ul
               css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
+
+                font-size: 24px;
+                padding-left: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                @media (max-width: 1024px) {
+                  font-size: 18px;
                 }
               `}
             >
-              {t("brown")}
-            </li>
-          </ul>
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("sealing")}
-            <li
+              {t("size")}
+              {triangularEnvelopes.map(({ size }) => (
+                <li
+                  css={css`
+                    font-size: 16px;
+                    padding-top: 15px;
+                    :before {
+                      content: "-";
+                      padding-right: 5px;
+                    }
+                    @media (max-width: 1024px) {
+                      font-size: 14px;
+                      font-weight: normal;
+                    }
+                  `}
+                >
+                  {size} {t("mm")})
+                </li>
+              ))}
+            </ul>
+            <ul
               css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
+                font-size: 24px;
+                padding-left: 0;
+                list-style: none;
+                @media (max-width: 1024px) {
+                  font-size: 18px;
                 }
               `}
             >
-              {t("mk")}
-            </li>
-          </ul>
+              {t("color")}
+              <li
+                css={css`
+                  font-size: 16px;
+                  padding-top: 23px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                  @media (max-width: 1024px) {
+                    font-size: 14px;
+                    font-weight: normal;
+                  }
+                `}
+              >
+                {t("brown")}
+              </li>
+            </ul>
+            <ul
+              css={css`
+                font-size: 24px;
+                padding-left: 0;
+                list-style: none;
+                @media (max-width: 1024px) {
+                  font-size: 18px;
+                }
+              `}
+            >
+              {t("sealing")}
+              <li
+                css={css`
+                  font-size: 16px;
+                  padding-top: 23px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                  @media (max-width: 1024px) {
+                    font-size: 14px;
+                    font-weight: normal;
+                  }
+                `}
+              >
+                {t("mk")}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -206,9 +217,11 @@ export default props => {
         css={css`
           font-weight: 500;
           font-size: 28px;
-          line-height: 33px;
           text-align: center;
           margin: 54px 0 23px 0;
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
         `}
       >
         {t("chooseDesiredProduct")}

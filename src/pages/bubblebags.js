@@ -97,38 +97,36 @@ export default props => {
             padding-top: 20px;
           `}
         >
-          {
-            <ul
-              css={css`
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 23px;
-                padding-left: 0;
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                height: 240px;
-              `}
-            >
-              {t("size")}
-              {airpoc.map(({ size }) => (
-                <li
-                  css={css`
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 20px;
-                    padding-top: 15px;
-                    :before {
-                      content: "-";
-                      padding-right: 5px;
-                    }
-                  `}
-                >
-                  {size} {t("mm")}
-                </li>
-              ))}
-            </ul>
-          }
+          <ul
+            css={css`
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 23px;
+              padding-left: 0;
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              height: 240px;
+            `}
+          >
+            {t("size")}
+            {airpoc.map(({ size }) => (
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 20px;
+                  padding-top: 15px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {size} {t("mm")}
+              </li>
+            ))}
+          </ul>
           <ul
             css={css`
               font-weight: 500;
