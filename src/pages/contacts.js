@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import Footer from "../components/Footer"
 import ContactUs from "../components/ContactUsForm"
+import LeafletMap from "../components/LeafletMap"
 
 import call from "../images/call.png"
 import location from "../images/location.png"
@@ -20,8 +21,7 @@ import contacts from "../data/contacts"
 const cities = [
   {
     name: "Ivano-Frankivsk",
-    position:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2622.441663316134!2d24.724943999999994!3d48.906977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c1593adf868d%3A0x4db4ca10c71da75f!2z0JrQo9CS0JXQoNCiLdCj0JrQoNCQ0IfQndCQLCDQotCe0JI!5e0!3m2!1suk!2suk!4v1414147502833",
+    position: "",
     phoneOffice: "+38 050 377 08 01",
     phone: "+38 067 327 08 01",
     location: "Ivano-Frankivsk Makukha Str, 6",
@@ -29,32 +29,28 @@ const cities = [
   },
   {
     name: "Kyiv",
-    position:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1797.4214882411768!2d30.39014271255929!3d50.42362964778817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cbf270b03ff3%3A0x8a7d5abd981142ed!2z0LLRg9C7LiDQodGW0Lwn0Zcg0KHQvtGB0L3RltC90LjRhSwgOSwg0JrQuNGX0LI!5e0!3m2!1suk!2sua!4v1455004325667",
+    position: "",
     phoneOffice: "+38 067 009 08 01",
     location: 'м. Київ, вул. Сім"ї Сосніних, 9',
     email: "kuvert.kiev@gmail.com",
   },
   {
     name: "Kharkiv",
-    position:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2565.7943551646754!2d36.264592!3d49.977715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a083c0724a5b%3A0xd3b662a08de83dac!2z0JrQo9CS0JXQoNCiLdCj0JrQoNCQ0IfQndCQINCi0J7Qkiwg0KXQsNGA0LrRltCy0YHRjNC60LAg0YTRltC70ZbRjw!5e0!3m2!1sru!2suk!4v1414150387489",
+    position: "",
     phoneOffice: "+38 050 433 25 66",
     location: "м. Харків, вул. Плеханівська, 117",
     email: "kuvert.kharkiv@gmail.com",
   },
   {
     name: "Dnipro",
-    position:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2645.9191385710797!2d35.070558!3d48.45808099999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2d21b262e8b%3A0xbe1125e92be63390!2z0JrRg9Cy0LXRgNGCLdCj0LrRgNCw0LjQvdCw!5e0!3m2!1sru!2suk!4v1414150313408",
+    position: "",
     phoneOffice: "+38 050 339 20 21",
     location: "м. Дніпро, вул. Акінфієва, 18",
     email: "kuvert.dn@gmail.com",
   },
   {
     name: "Lviv",
-    position:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.909334117986!2d24.061987715385918!3d49.80657217939167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae92f576c5245%3A0xecf923d88f67dd25!2z0KPQutGA0ZbQvdCy0LXRgdGC0L_RgNC40LvQsNC0INCf0J8!5e0!3m2!1suk!2sua!4v1584883196421!5m2!1suk!2sua",
+    position: "",
     phoneOffice: "+38 0322 70 91 91",
     phone: "+38 050 317 03 87",
     location: "м. Львів, вул. Зелена 251",
@@ -114,14 +110,9 @@ export default props => {
             </button>
           ))}
         </div>
-        <iframe
-          src={city.position}
-          title={city.name}
-          css={css`
-            width: 100%;
-            height: 600px;
-          `}
-        />
+
+        <LeafletMap />
+
         <div
           css={css`
             width: 432px;
