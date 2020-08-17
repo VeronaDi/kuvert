@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
-import LocalizedLink from "./LocalizedLink"
 import { Link } from "gatsby"
+import LocalizedLink from "./LocalizedLink"
 import { useTranslation } from "react-i18next"
 
 import BtnRequest from "../components/BtnRequest"
@@ -43,11 +43,9 @@ export default ({ location }) => {
   return (
     <nav
       css={css`
-        width: 358px;
-        height: 100vh;
-        padding-left: 20px;
-        padding-top: 14px;
-        position: relative;
+        margin: 350px 0;
+        width: 100%;
+        padding: 20px 14px;
       `}
     >
       <img
@@ -57,6 +55,39 @@ export default ({ location }) => {
           width: 122px;
         `}
       />
+
+      <div
+        css={css`
+          position: relative;
+          width: 39px;
+          height: 3px;
+          background-color: #767561;
+          float: right;
+
+          :: before {
+            position: absolute;
+            left: 0;
+            top: -10px;
+            content: "";
+            display: block;
+            width: 39px;
+            height: 3px;
+            background-color: #767561;
+          }
+
+          :: after {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            content: "";
+            display: block;
+            width: 39px;
+            height: 3px;
+            background-color: #767561;
+          }
+        `}
+      />
+
       <div
         css={css`
           display: flex;
@@ -72,8 +103,9 @@ export default ({ location }) => {
       <div
         css={css`
           display: block;
-          width: 318px;
-          margin: 0 auto;
+          > a {
+            width: 100%;
+          }
         `}
       >
         <BtnRequest />
@@ -86,9 +118,6 @@ export default ({ location }) => {
           font-weight: 500;
           font-size: 16px;
           text-decoration: none;
-          position: absolute;
-          bottom: 20px;
-          left: 20px;
         `}
         to={nextLang}
       >

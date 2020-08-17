@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
 import NewsSection from "../components/NewsSection"
@@ -34,6 +35,8 @@ const IndexPage = props => {
     <Layout>
       <SEO title="Home" />
       <MainNav isHome {...props} />
+
+      <MobileNav />
 
       <section
         css={css`
