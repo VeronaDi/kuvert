@@ -3,7 +3,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 
 import "leaflet/dist/leaflet.css"
 
-import markerIcon from "../../static/icon/location.png"
+import contacts from "../data/contacts"
 
 export default class SimpleExample extends Component {
   state = {
@@ -22,9 +22,7 @@ export default class SimpleExample extends Component {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+            {/* <Popup>{t("popupMap")}</Popup> */}
           </Marker>
         </Map>
       )
