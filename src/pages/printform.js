@@ -144,14 +144,6 @@ const IndexPage = props => {
           transform: translate(-50%, -2%);
         `}
       >
-        <h3
-          css={css`
-            text-align: center;
-            margin-bottom: 40px;
-          `}
-        >
-          {t("envelopeDetails")}
-        </h3>
         <div
           css={css`
             display: flex;
@@ -174,7 +166,7 @@ const IndexPage = props => {
                 padding-bottom: 5px;
               `}
             >
-              {t("size")}
+              {t("product")}
             </label>
             <select
               name="entry.1177867946"
@@ -198,79 +190,21 @@ const IndexPage = props => {
               `}
             >
               <option disabled selected>
-                {t("chooseSize")}
+                {t("chooseDesiredProduct")}
               </option>
-              <option value="C6">C6 (114x162 {t("mm")})</option>
-              <option value="DL">DL (110x220 {t("mm")})</option>
-              <option value="C65">C65 (114x229 {t("mm")})</option>
-              <option value="C5">C5 (162x229 {t("mm")})</option>
-              <option value="C4">C4 (229x324 {t("mm")})</option>
+              <option value="konvert">{t("envelope")}</option>
+              <option value="paperovaTorba">{t("paperbags")}</option>
+              <option value="banderole">{t("banderole")}</option>
+              <option value="blank">{t("letterhead")}</option>
+              <option value="papirFajl">{t("paperfile")}</option>
+              <option value="ecoblok">{t("ecoblock")}</option>
             </select>
           </div>
           <InputAmount />
         </div>
 
-        <h3
-          css={css`
-            text-align: center;
-            margin: 40px 0;
-          `}
-        >
-          {t("printDetails")}
-        </h3>
-        <div
-          css={css`
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 780px;
-          `}
-        >
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-              padding-right: 19px;
-            `}
-          >
-            <label
-              css={css`
-                font-size: 12px;
-                padding-bottom: 5px;
-              `}
-            >
-              {t("colorsFront")}
-            </label>
-            <InputPrintColors />
-          </div>
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-            `}
-          >
-            <label
-              css={css`
-                font-size: 12px;
-                padding-bottom: 5px;
-              `}
-            >
-              {t("colorsBack")}
-            </label>
-            <InputPrintColors />
-          </div>
-        </div>
         <InputDragDrop />
 
-        <h3
-          css={css`
-            text-align: center;
-            margin: 40px 0;
-          `}
-        >
-          {t("additionalDetails")}
-        </h3>
         <div
           css={css`
             width: 100%;
@@ -279,16 +213,8 @@ const IndexPage = props => {
             flex-direction: column;
           `}
         >
-          <label
-            css={css`
-              font-size: 12px;
-              padding-bottom: 5px;
-            `}
-          >
-            {t("additionalInfo")}
-          </label>
           <textarea
-            placeholder="Additional comments, questions, important information, etc."
+            placeholder={t("placeholderPrintform")}
             css={css`
               width: 100%;
               height: 191px;
