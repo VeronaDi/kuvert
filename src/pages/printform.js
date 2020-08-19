@@ -11,7 +11,6 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import InputAmount from "../components/InputAmount"
-import InputPrintColors from "../components/InputPrintColors"
 import InputDragDrop from "../components/InputDragDrop"
 import BtnNext from "../components/BtnNext"
 

@@ -385,7 +385,7 @@ const resources = {
       price: "Price",
       print: "Print",
       printDetails: "Print details",
-      printedOrder: "Printed order",
+      printedOrder: "Printed request",
       printedOrderText:
         "If you want products with your own printing, this option is for you.",
       printMockup: "Print sample (not necessary)",
