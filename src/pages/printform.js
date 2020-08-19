@@ -216,7 +216,7 @@ const IndexPage = props => {
             placeholder={t("placeholderPrintform")}
             css={css`
               width: 100%;
-              height: 191px;
+              height: 300px;
               background: #ffffff;
               border: 1px solid #d6d6d6;
               color: #444444;

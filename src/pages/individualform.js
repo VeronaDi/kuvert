@@ -134,9 +134,31 @@ const IndexPage = props => {
       >
         {t("individualOrder")}
       </h1>
+
+      <div
+        css={css`
+          width: 100%;
+          max-width: 780px;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 27px;
+        `}
+      >
+        <ul>
+          Якщо Ви не знайшли те, що Вас цікавить серед стандартної продукції,
+          напишіть нам свої побажання щодо свого конверту і ми радо розглянемо
+          можливість його виробництва. Рекомендуємо вказати:
+          <li> - розмір конверту </li>
+          <li> - колір паперу та його щільність або ж марку паперу</li>
+          <li>
+            - наявність вікна (вікон), його (їх) розміри та розміщення на
+            конверті
+          </li>
+          <li>- з друком чи без друку</li>
+        </ul>
+      </div>
+
       <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSejJ5AVb5L0SeEnQzCxJO-HR_VXDXj5PTQmF09fDYN7qz8jwQ/formResponse"
-        method="POST"
         css={css`
           position: absolute;
           left: 50%;

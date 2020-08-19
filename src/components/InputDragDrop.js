@@ -45,6 +45,9 @@ export default () => {
           multiple
           css={css`
             outline: none;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
           `}
         />
         <label
