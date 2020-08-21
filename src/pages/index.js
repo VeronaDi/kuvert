@@ -36,7 +36,7 @@ const IndexPage = props => {
       <SEO title="Home" />
       <MainNav isHome {...props} />
 
-      <MobileNav />
+      <MobileNav {...props} />
 
       <section
         css={css`

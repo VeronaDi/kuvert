@@ -8,7 +8,7 @@ import plus from "../images/plus.png"
 import minus from "../images/minus.png"
 
 export default () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const quantityEnv = React.useRef()
 

@@ -71,6 +71,9 @@ export default ({ isHome = false, location }) => {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 1024px) {
+          display: none;
+        }
       `}
     >
       <Link

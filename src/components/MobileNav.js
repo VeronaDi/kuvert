@@ -38,14 +38,18 @@ const StyledLink = ({ to, children }) => (
 export default ({ location }) => {
   const { t, i18n } = useTranslation()
 
-  const nextLang = nextLangLink(i18n.language)
+  const nextLang = nextLangLink(i18n.language, location.pathname)
+
+  const [isOpen, setOpen] = React.useState(false)
 
   return (
     <nav
       css={css`
-        margin: 350px 0;
         width: 100%;
         padding: 20px 14px;
+        @media (min-width: 1024px) {
+          display: none;
+        }
       `}
     >
       <img
@@ -56,73 +60,59 @@ export default ({ location }) => {
         `}
       />
 
-      <div
-        css={css`
-          position: relative;
-          width: 39px;
-          height: 3px;
-          background-color: #767561;
-          float: right;
-
-          :: before {
-            position: absolute;
-            left: 0;
-            top: -10px;
-            content: "";
-            display: block;
-            width: 39px;
-            height: 3px;
-            background-color: #767561;
-          }
-
-          :: after {
-            position: absolute;
-            left: 0;
-            top: 10px;
-            content: "";
-            display: block;
-            width: 39px;
-            height: 3px;
-            background-color: #767561;
-          }
-        `}
-      />
-
-      <div
-        css={css`
-          display: flex;
-          flex-direction: column;
-          margin: 27px 0;
-        `}
+      <button
+        className={
+          isOpen
+            ? "hamburger hamburger--slider is-active"
+            : "hamburger hamburger--slider"
+        }
+        onClick={() => setOpen(!isOpen)}
+        type="button"
       >
-        <StyledLink to="/">{t("home")}</StyledLink>
-        <StyledLink to="/products">{t("products")}</StyledLink>
-        <StyledLink to="/about">{t("about")}</StyledLink>
-        <StyledLink to="/contacts">{t("contacts")}</StyledLink>
-      </div>
-      <div
-        css={css`
-          display: block;
-          > a {
-            width: 100%;
-          }
-        `}
-      >
-        <BtnRequest />
-      </div>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>
 
-      <Link
-        css={css`
-          cursor: pointer;
-          color: #383838;
-          font-weight: 500;
-          font-size: 16px;
-          text-decoration: none;
-        `}
-        to={nextLang}
-      >
-        {t(`changeLang.${i18n.language}`)}
-      </Link>
+      {isOpen && (
+        <>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              margin: 27px 0;
+            `}
+          >
+            <StyledLink to="/">{t("home")}</StyledLink>
+            <StyledLink to="/products">{t("products")}</StyledLink>
+            <StyledLink to="/about">{t("about")}</StyledLink>
+            <StyledLink to="/contacts">{t("contacts")}</StyledLink>
+          </div>
+          <div
+            css={css`
+              display: block;
+              > a {
+                width: 100%;
+              }
+            `}
+          >
+            <BtnRequest />
+          </div>
+
+          <Link
+            css={css`
+              cursor: pointer;
+              color: #383838;
+              font-weight: 500;
+              font-size: 16px;
+              text-decoration: none;
+            `}
+            to={nextLang}
+          >
+            {t(`changeLang.${i18n.language}`)}
+          </Link>
+        </>
+      )}
     </nav>
   )
 }

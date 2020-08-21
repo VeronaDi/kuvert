@@ -2,14 +2,11 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
-import ecobagsBrown from "../data/ecobagBrown"
-import ecobagsMix from "../../static/products/ecobags-mix.jpg"
-
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index
 }
-export default () => {
-  const { t, i18n } = useTranslation()
+export default ({ ecobags = [], img }) => {
+  const { t } = useTranslation()
 
   return (
     <div
@@ -17,7 +14,7 @@ export default () => {
         width: 80%;
         height: auto;
         max-height: 586px;
-        background: url(${ecobagsMix}), #ffffff;
+        background: url(${img}), #ffffff;
         background-position: 30px 55px;
         background-repeat: no-repeat;
         background-size: 40% 80%;
@@ -58,7 +55,7 @@ export default () => {
           `}
         >
           {t("size")}
-          {ecobagsBrown
+          {ecobags
             .map(({ size }) => size)
             .filter(onlyUnique)
             .map(size => (

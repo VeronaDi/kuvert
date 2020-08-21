@@ -11,22 +11,20 @@ const Office = ({ city, street, phones }) => {
   return (
     <div
       css={css`
-        padding: 30px 30px;
         flex-grow: 1;
-        flex-basis: 20%;
+        flex-basis: 25%;
         font-weight: 500;
         font-size: 16px;
-        :first-of-type {
-          border-right: 3px solid #ffffff;
+        padding: 0 10px;
+
+        :first-of-type,
+        :last-of-type {
+          padding: 0;
         }
         @media (max-width: 1024px) {
           font-weight: normal;
           font-size: 14px;
           padding: 0;
-          :first-of-type {
-            border-bottom: 3px solid #ffffff;
-            border-right: none;
-          }
         }
       `}
     >
@@ -88,46 +86,75 @@ export default props => {
           }
         `}
       >
-        <h4
+        <div
           css={css`
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 2em;
-            @media (max-width: 1024px) {
-              font-size: 18px;
-              margin-bottom: 1em;
-            }
-          `}
-        >
-          {t("addressOfFactory")}
-        </h4>
-        <Office
-          city={t(contacts.factory.city)}
-          street={t(contacts.factory.street)}
-          phones={contacts.factory.phones}
-        />
+            padding: 30px 30px;
+            border-right: 3px solid #ffffff;
 
-        <h4
-          css={css`
-            font-weight: bold;
-            font-size: 24px;
-            margin-bottom: 2em;
             @media (max-width: 1024px) {
-              font-size: 18px;
-              margin-bottom: 1em;
+              border-bottom: 3px solid #ffffff;
+              border-right: none;
             }
           `}
         >
-          {t("addressBranch")}
-        </h4>
-        {contacts.offices.map(({ city, street, phones }) => (
+          <h4
+            css={css`
+              font-weight: bold;
+              font-size: 24px;
+              margin-bottom: 2em;
+              @media (max-width: 1024px) {
+                font-size: 18px;
+                margin-bottom: 1em;
+              }
+            `}
+          >
+            {t("addressOfFactory")}
+          </h4>
           <Office
-            key={t(city)}
-            city={t(city)}
-            street={t(street)}
-            phones={phones}
+            city={t(contacts.factory.city)}
+            street={t(contacts.factory.street)}
+            phones={contacts.factory.phones}
           />
-        ))}
+        </div>
+
+        <div
+          css={css`
+            padding: 30px 30px;
+          `}
+        >
+          <h4
+            css={css`
+              font-weight: bold;
+              font-size: 24px;
+              margin-bottom: 2em;
+              @media (max-width: 1024px) {
+                font-size: 18px;
+                margin-bottom: 1em;
+              }
+            `}
+          >
+            {t("addressBranch")}
+          </h4>
+          <div
+            css={css`
+              display: flex;
+              justify-content: space-between;
+              @media (max-width: 1024px) {
+                flex-direction: column;
+                text-align: center;
+              }
+            `}
+          >
+            {contacts.offices.map(({ city, street, phones }) => (
+              <Office
+                key={t(city)}
+                city={t(city)}
+                street={t(street)}
+                phones={phones}
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
       <div

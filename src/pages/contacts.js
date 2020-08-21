@@ -18,46 +18,6 @@ import { useTranslation } from "react-i18next"
 
 import contacts from "../data/contacts"
 
-const cities = [
-  {
-    name: "Ivano-Frankivsk",
-    position: "",
-    phoneOffice: "+38 050 377 08 01",
-    phone: "+38 067 327 08 01",
-    location: "Ivano-Frankivsk Makukha Str, 6",
-    email: "info@kuvert.if.ua",
-  },
-  {
-    name: "Kyiv",
-    position: "",
-    phoneOffice: "+38 067 009 08 01",
-    location: 'м. Київ, вул. Сім"ї Сосніних, 9',
-    email: "kuvert.kiev@gmail.com",
-  },
-  {
-    name: "Kharkiv",
-    position: "",
-    phoneOffice: "+38 050 433 25 66",
-    location: "м. Харків, вул. Плеханівська, 117",
-    email: "kuvert.kharkiv@gmail.com",
-  },
-  {
-    name: "Dnipro",
-    position: "",
-    phoneOffice: "+38 050 339 20 21",
-    location: "м. Дніпро, вул. Акінфієва, 18",
-    email: "kuvert.dn@gmail.com",
-  },
-  {
-    name: "Lviv",
-    position: "",
-    phoneOffice: "+38 0322 70 91 91",
-    phone: "+38 050 317 03 87",
-    location: "м. Львів, вул. Зелена 251",
-    email: "konwert@ukr.net",
-  },
-]
-
 export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
@@ -66,7 +26,7 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
-  const [city, setCity] = React.useState(cities[0])
+  const [city, setCity] = React.useState(contacts.factory)
 
   return (
     <Layout>
@@ -86,7 +46,7 @@ export default props => {
             padding: 35px 0;
           `}
         >
-          {cities.map((currentCity, index) => (
+          {[contacts.factory, ...contacts.offices].map((currentCity, index) => (
             <button
               onClick={() => setCity(currentCity)}
               css={css`
@@ -106,12 +66,12 @@ export default props => {
                 ${currentCity === city && "color: #020202;"}
               `}
             >
-              {currentCity.name}
+              {t(currentCity.city)}
             </button>
           ))}
         </div>
 
-        <LeafletMap />
+        <LeafletMap position={city.position}/>
 
         <div
           css={css`
@@ -140,18 +100,21 @@ export default props => {
                 padding-top: 24px;
               `}
             >
-              <a
-                href={`tel:${city.phoneOffice}`}
-                css={css`
-                  text-decoration: none;
-                  color: white;
-                  font-size: 14px;
-                  padding-right: 5px;
-                  font-weight: normal;
-                `}
-              >
-                {city.phoneOffice}
-              </a>
+              {city.phones.map(phone => (
+                <a
+                  href={`tel:${phone}`}
+                  css={css`
+                    display: block;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+                    padding-right: 5px;
+                    font-weight: normal;
+                  `}
+                >
+                  {phone}
+                </a>
+              ))}
             </div>
           </div>
           <div
@@ -171,7 +134,7 @@ export default props => {
                 font-weight: normal;
               `}
             >
-              {city.location}
+              {t(city.street)}
             </p>
           </div>
           <div

@@ -43,6 +43,48 @@ const EnvelopeParam = ({ children }) => (
   </p>
 )
 
+const Stericlin = ({ stericlin: { nummer, code, size, pack }, t }) => (
+  <div
+    key={code}
+    css={css`
+      background: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      width: 1188px;
+      height: 93px;
+      margin: 20px auto 54px auto;
+      padding: 22px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    `}
+  >
+    <GeneralNames>
+      №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
+    </GeneralNames>
+
+    <GeneralNames>
+      {t("code")}
+      <EnvelopeParam>{code}</EnvelopeParam>
+    </GeneralNames>
+
+    <GeneralNames>
+      {t("size")}, {t("smM")}
+      <EnvelopeParam>{size}</EnvelopeParam>
+    </GeneralNames>
+
+    <GeneralNames>
+      {t("quantityBox")}
+      <EnvelopeParam>
+        {pack}
+        {t("pcs")}
+      </EnvelopeParam>
+    </GeneralNames>
+
+    <BtnAddToRequest />
+  </div>
+)
+
 export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
@@ -108,46 +150,12 @@ export default props => {
         {t("chooseDesiredProduct")}
       </h4>
 
-      {stericlinData.map(({ nummer, code, size, pack }) => (
-        <div
-          key={code}
-          css={css`
-            background: #ffffff;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 3px;
-            width: 1188px;
-            height: 93px;
-            margin: 20px auto 54px auto;
-            padding: 22px 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-          `}
-        >
-          <GeneralNames>
-            №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
-          </GeneralNames>
-
-          <GeneralNames>
-            {t("code")}
-            <EnvelopeParam>{code}</EnvelopeParam>
-          </GeneralNames>
-
-          <GeneralNames>
-            {t("size")}, {t("smM")}
-            <EnvelopeParam>{size}</EnvelopeParam>
-          </GeneralNames>
-
-          <GeneralNames>
-            {t("quantityBox")}
-            <EnvelopeParam>
-              {pack}
-              {t("pcs")}
-            </EnvelopeParam>
-          </GeneralNames>
-
-          <BtnAddToRequest />
-        </div>
+      {stericlinData.flat.map(stericlin => (
+        <Stericlin stericlin={stericlin} t={t} />
+      ))}
+xxx
+      {stericlinData.volume.map(stericlin => (
+        <Stericlin stericlin={stericlin} t={t} />
       ))}
       <section
         css={css`
