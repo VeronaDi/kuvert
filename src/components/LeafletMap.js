@@ -5,7 +5,7 @@ import L from "leaflet"
 import "leaflet/dist/leaflet.css"
 
 export default ({ position }) => (
-  <Map center={position} zoom={14}>
+  <Map center={position} zoom={15}>
     <TileLayer
       attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -13,7 +13,7 @@ export default ({ position }) => (
     <Marker
       position={position}
       icon={L.icon({
-        iconRetinaUrl: "markerIcon1.png",
+        iconRetinaUrl: "markerIcon.png",
         iconSize: [25, 34],
         iconAnchor: [13, 34],
       })}

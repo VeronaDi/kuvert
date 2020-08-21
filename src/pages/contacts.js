@@ -71,7 +71,7 @@ export default props => {
           ))}
         </div>
 
-        <LeafletMap position={city.position}/>
+        <LeafletMap position={city.position} />
 
         <div
           css={css`
