@@ -14,6 +14,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import ecobagsWhite from "../data/ecobagWhite"
+import ecobagsWh from "../../static/products/ecobags-white.jpg"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -65,7 +66,7 @@ export default props => {
         {t("ecobagWhite")}
       </h3>
 
-      <EcobagTopSection />
+      <EcobagTopSection ecobags={ecobagsWhite} img={ecobagsWh} />
 
       <h4
         css={css`
