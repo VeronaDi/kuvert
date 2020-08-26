@@ -47,6 +47,7 @@ export default ({ location }) => {
       css={css`
         width: 100%;
         padding: 20px 14px;
+        position: relative;
         @media (min-width: 1024px) {
           display: none;
         }
@@ -81,6 +82,7 @@ export default ({ location }) => {
               display: flex;
               flex-direction: column;
               margin: 27px 0;
+              height: 100%;
             `}
           >
             <StyledLink to="/">{t("home")}</StyledLink>
