@@ -1,5 +1,5 @@
 import React from "react"
-import { Map, TileLayer, Marker, Popup } from "react-leaflet"
+import { Map, TileLayer, Marker } from "react-leaflet"
 import L from "leaflet"
 
 import "leaflet/dist/leaflet.css"
@@ -13,12 +13,10 @@ export default ({ position }) => (
     <Marker
       position={position}
       icon={L.icon({
-        iconRetinaUrl: "markerIcon.png",
+        iconRetinaUrl: "icon/markerIcon.png",
         iconSize: [25, 34],
         iconAnchor: [13, 34],
       })}
-    >
-      {/* <Popup>{t("popupMap")}</Popup> */}
-    </Marker>
+    ></Marker>
   </Map>
 )

@@ -108,7 +108,7 @@ export default props => {
                     text-decoration: none;
                     color: white;
                     font-size: 14px;
-                    padding-right: 5px;
+                    padding-bottom: 10px;
                     font-weight: normal;
                   `}
                 >

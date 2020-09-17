@@ -140,20 +140,28 @@ export default props => {
 
       <h4
         css={css`
-          font-weight: 500;
-          font-size: 28px;
-          line-height: 33px;
+          color: #000000;
           text-align: center;
-          margin: 54px 0 23px 0;
+          font-size: 28px;
+          font-weight: 500;
         `}
       >
-        {t("chooseDesiredProduct")}
+        {t("stericlinPack")}
       </h4>
 
       {stericlinData.flat.map(stericlin => (
         <Stericlin stericlin={stericlin} t={t} />
       ))}
-xxx
+      <h4
+        css={css`
+          color: #000000;
+          text-align: center;
+          font-size: 28px;
+          font-weight: 500;
+        `}
+      >
+        {t("stericlinPackSide")}
+      </h4>
       {stericlinData.volume.map(stericlin => (
         <Stericlin stericlin={stericlin} t={t} />
       ))}

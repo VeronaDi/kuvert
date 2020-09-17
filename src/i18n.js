@@ -191,6 +191,8 @@ const resources = {
       stericlin: "Стерилізаційні пакети Stericlin®",
       stericlinText:
         "<a href='https://www.stericlin.de/en/' target='_blank rel='nofollow'>Stericlin®</a>— пакети для стерилізації медичного інструменту та розхідних матеріалів відповідають вимогам, що висуваються до медичних стерилізаційних пакувальних матеріалів. У наявності пакети з бічними складками і без бічних складок. ",
+      stericlinPack: "Пакети без бічних складок",
+      stericlinPackSide: "Пакети з бічними складками",
       supermarket: "Супермаркети",
       titleText:
         "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
@@ -420,6 +422,8 @@ const resources = {
       stericlin: "Stericlin® packaging system",
       stericlinText:
         "<a href='https://www.stericlin.de/en/' target='_blank rel='nofollow'>Stericlin®</a> - packages for sterilization medical instruments and consumables, meet the requirements that apply to medical sterilization packaging materials. There are packages with side folds and without side folds.",
+      stericlinPack: "Packages without side folds",
+      stericlinPackSide: "Packages with side folds",
       supermarket: "Supermarkets",
       titleText:
         "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",
