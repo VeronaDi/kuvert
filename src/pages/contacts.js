@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import ContactUs from "../components/ContactUsForm"
 import LeafletMap from "../components/LeafletMap"
@@ -32,6 +33,8 @@ export default props => {
     <Layout>
       <SEO title="Contacts" />
       <MainNav {...props} />
+      <MobileNav {...props} />
+
       <section
         css={css`
           height: 100vh;

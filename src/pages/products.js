@@ -10,6 +10,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 
 import products from "../data/products"
@@ -26,6 +27,7 @@ export default props => {
     <Layout>
       <SEO title="Products" />
       <MainNav {...props} />
+      <MobileNav {...props} />
 
       <h1
         css={css`

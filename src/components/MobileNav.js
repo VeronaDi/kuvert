@@ -48,7 +48,8 @@ export default ({ location }) => {
         width: 100%;
         padding: 20px 14px;
         position: relative;
-        @media (min-width: 1024px) {
+        display: block;
+        @media (min-width: 1170px) {
           display: none;
         }
       `}

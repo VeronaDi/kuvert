@@ -5,6 +5,7 @@ import LocalizedLink from "../components/LocalizedLink"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 
 import { css } from "@emotion/core"
@@ -31,6 +32,7 @@ export default props => {
     <Layout>
       <SEO title="Paper bags" />
       <MainNav {...props} />
+      <MobileNav {...props} />
 
       <h1
         css={css`

@@ -4,6 +4,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
 
@@ -97,6 +98,7 @@ export default props => {
     <Layout>
       <SEO title="Stericlin" />
       <MainNav {...props} />
+      <MobileNav {...props} />
 
       <h3
         css={css`

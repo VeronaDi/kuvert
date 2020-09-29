@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { css } from "@emotion/core"
 
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import CertificationSection from "../components/CertificationSection"
 
@@ -34,6 +35,7 @@ export default props => {
     <Layout>
       <SEO title="About" />
       <MainNav {...props} />
+      <MobileNav {...props} />
 
       <section
         css={css`

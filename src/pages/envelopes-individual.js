@@ -4,6 +4,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import IndividualOrderSection from "../components/IndividualOrderSection"
 
@@ -25,6 +26,7 @@ export default props => {
     <Layout>
       <SEO title="Individual envelopes" />
       <MainNav {...props} />
+      <MobileNav {...props} />
 
       <h3
         css={css`

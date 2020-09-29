@@ -4,6 +4,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
+import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequestCard"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
@@ -55,6 +56,7 @@ export default props => {
     <Layout>
       <SEO title="Bags with bubbles" />
       <MainNav {...props} />
+      <MobileNav {...props} />
 
       <h3
         css={css`
