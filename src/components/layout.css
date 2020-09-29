@@ -203,9 +203,11 @@ textarea {
   z-index: 1;
 }
 
-img.leaflet-marker-icon
+img.leaflet-marker-icon 
 {
     background-image: url("../../static/icon/markerIcon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* GRID */
@@ -223,6 +225,9 @@ img.leaflet-marker-icon
 }
 .-mx-4 {
   margin: 0 3px;
+}
+.mx-2 {
+  margin: 0 10px;
 }
 .px-2 {
   padding: 0 10px;

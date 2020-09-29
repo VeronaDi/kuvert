@@ -156,66 +156,82 @@ export default props => {
             height: 178px;
             background: #b40039;
             position: absolute;
-            top: 30%;
+            top: 120px;
             z-index: 1;
+            @media (max-width: 1024px) {
+              display: none;
+            }
           `}
         />
         <div
+          className="row -mx-2"
           css={css`
-            display: flex;
-            justify-content: space-around;
-            flex-flow: row wrap;
+            position: absolute;
+            top: 0px;
             z-index: 5;
-            position: relative;
           `}
         >
           {requests.map(({ name, text, img, id }) => (
-            <LocalizedLink
-              key={id}
-              to={`/${id}`}
-              css={css`
-                max-width: 552px;
-                width: 32%;
-                height: 60vh;
-                background: #ffffff;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                text-align: center;
-                cursor: pointer;
-                text-decoration: none;
-                color: #000000;
-                display: flex;
-                flex-direction: column;
-                align-content: center;
-                justify-content: space-between;
-                align-items: center;
-                padding: 100px 40px;
-              `}
-            >
-              <img
-                src={img}
-                alt={`${img} type`}
+            <div className="w-full md:w-1/3 px-2">
+              <LocalizedLink
+                key={id}
+                to={`/${id}`}
                 css={css`
-                  width: 90px;
-                `}
-              />
-              <h4
-                css={css`
-                  font-weight: 500;
-                  font-size: 36px;
-                  margin: 0;
+                  height: 60vh;
+                  background: #ffffff;
+                  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                  text-align: center;
+                  cursor: pointer;
+                  text-decoration: none;
+                  color: #000000;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-around;
+                  align-items: center;
+                  padding: 100px 40px;
+                  @media (max-width: 1024px) {
+                    height: 113px;
+                    flex-direction: row;
+                    margin-bottom: 25px;
+                    padding: 25px 17px;
+                    text-align: left;
+                  }
                 `}
               >
-                {t(name)}
-              </h4>
-              <p
-                css={css`
-                  font-size: 18px;
-                  line-height: 27px;
-                `}
-              >
-                {t(text)}
-              </p>
-            </LocalizedLink>
+                <img
+                  src={img}
+                  alt={`${img} type`}
+                  css={css`
+                    width: 90px;
+                  `}
+                />
+                <div>
+                  <h4
+                    css={css`
+                      font-weight: 500;
+                      font-size: 36px;
+                      margin: 0;
+                      @media (max-width: 1024px) {
+                        font-size: 18px;
+                      }
+                    `}
+                  >
+                    {t(name)}
+                  </h4>
+                  <p
+                    css={css`
+                      font-size: 18px;
+                      line-height: 27px;
+                      @media (max-width: 1024px) {
+                        font-size: 14px;
+                      }
+                    `}
+                  >
+                    {t(text)}
+                  </p>
+                </div>
+              </LocalizedLink>
+            </div>
           ))}
         </div>
       </section>

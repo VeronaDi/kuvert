@@ -33,7 +33,7 @@ export default {
         en: "Plekhanivska str., 117",
         uk: "вул. Плеханівська, 117",
       },
-      phones: ["+38 050 433 25 66"],
+      phones: ["+38 050 433 25 66", "+38 0572 51 71 32"],
       position: [49.977438, 36.280344],
       email: "kuvert.kharkiv@gmail.com",
     },

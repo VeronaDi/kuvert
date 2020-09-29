@@ -48,8 +48,7 @@ export default ({ location }) => {
         width: 100%;
         padding: 20px 14px;
         position: relative;
-        display: block;
-        @media (min-width: 1170px) {
+        @media (min-width: 1250px) {
           display: none;
         }
       `}
@@ -83,7 +82,6 @@ export default ({ location }) => {
               display: flex;
               flex-direction: column;
               margin: 27px 0;
-              height: 100%;
             `}
           >
             <StyledLink to="/">{t("home")}</StyledLink>
@@ -107,8 +105,10 @@ export default ({ location }) => {
               cursor: pointer;
               color: #383838;
               font-weight: 500;
-              font-size: 16px;
+              font-size: 18px;
               text-decoration: none;
+              position: absolute;
+              bottom: 20px;
             `}
             to={nextLang}
           >
