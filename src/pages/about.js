@@ -306,7 +306,6 @@ export default props => {
       <section
         css={css`
           width: 90vw;
-          height: 332px;
           margin: 0 auto 70px auto;
           background: #b40039;
         `}
@@ -331,8 +330,9 @@ export default props => {
             line-height: 27px;
             color: white;
             font-weight: normal;
-            padding: 30px 0 48px 0;
-            width: 704.05px;
+            padding: 30px 25px 48px 25px;
+            width: 100%;
+            max-width: 704px;
             margin: 0 auto;
             text-align: center;
             font-weight: normal;
@@ -346,7 +346,7 @@ export default props => {
 
       <section
         css={css`
-          height: 356px;
+          padding-bottom: 40px;
           text-align: center;
           background: #ffffff;
         `}
@@ -358,7 +358,7 @@ export default props => {
             font-weight: 500;
             font-size: 36px;
             line-height: 42px;
-            margin: 0;
+            margin: 0 0 10px 0;
           `}
         >
           {t("participants")}

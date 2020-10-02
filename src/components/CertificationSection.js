@@ -32,7 +32,7 @@ export default () => {
       <h2
         css={css`
           text-align: center;
-          padding-bottom: 40px;
+          padding-bottom: 20px;
           color: black;
           font-weight: 500;
           font-size: 36px;
@@ -41,40 +41,51 @@ export default () => {
       >
         {t("certificate")}
       </h2>
+
       <div
         css={css`
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
+          padding-bottom: 20px;
+          @media screen and (max-width: 900px) {
+            overflow-x: scroll;
+          }
         `}
       >
-        {certificate.map(({ name, img }) => (
-          <div
-            css={css`
-              padding: 0 40px;
-              outline: none;
-            `}
-          >
-            <img
-              src={img}
-              alt={`${name} logo`}
+        <div
+          css={css`
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            min-width: 900px;
+          `}
+        >
+          {certificate.map(({ name, img }) => (
+            <div
               css={css`
-                width: 216px;
-                height: 302px;
-              `}
-            />
-            <h6
-              css={css`
-                font-weight: normal;
-                font-size: 24px;
-                margin: 0;
-                padding-top: 30px;
+                padding: 0 40px;
+                outline: none;
               `}
             >
-              {name}
-            </h6>
-          </div>
-        ))}
+              <img
+                src={img}
+                alt={`${name} logo`}
+                css={css`
+                  width: 216px;
+                  height: 302px;
+                `}
+              />
+              <h6
+                css={css`
+                  font-weight: normal;
+                  font-size: 24px;
+                  margin: 0;
+                  padding-top: 30px;
+                `}
+              >
+                {name}
+              </h6>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
