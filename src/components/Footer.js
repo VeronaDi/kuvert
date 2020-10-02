@@ -21,7 +21,7 @@ const Office = ({ city, street, phones }) => {
         :last-of-type {
           padding: 0;
         }
-        @media (max-width: 1024px) {
+        @media (max-width: 1144px) {
           font-weight: normal;
           font-size: 14px;
           padding: 0;
@@ -43,7 +43,7 @@ const Office = ({ city, street, phones }) => {
             display: flex;
             flex-direction: column;
             padding-bottom: 15px;
-            @media (max-width: 1024px) {
+            @media (max-width: 1144px) {
               font-weight: normal;
               font-size: 14px;
             }
@@ -79,7 +79,7 @@ export default props => {
           justify-content: space-around;
           font-size: 18px;
           margin: 140px 10%;
-          @media (max-width: 1024px) {
+          @media (max-width: 1144px) {
             flex-direction: column;
             text-align: center;
             margin: 24px 10px;
@@ -91,7 +91,7 @@ export default props => {
             padding: 30px 30px;
             border-right: 3px solid #ffffff;
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1144px) {
               border-bottom: 3px solid #ffffff;
               border-right: none;
             }
@@ -102,7 +102,7 @@ export default props => {
               font-weight: bold;
               font-size: 24px;
               margin-bottom: 2em;
-              @media (max-width: 1024px) {
+              @media (max-width: 1144px) {
                 font-size: 18px;
                 margin-bottom: 1em;
               }
@@ -127,7 +127,7 @@ export default props => {
               font-weight: bold;
               font-size: 24px;
               margin-bottom: 2em;
-              @media (max-width: 1024px) {
+              @media (max-width: 1144px) {
                 font-size: 18px;
                 margin-bottom: 1em;
               }
@@ -139,7 +139,7 @@ export default props => {
             css={css`
               display: flex;
               justify-content: space-between;
-              @media (max-width: 1024px) {
+              @media (max-width: 1144px) {
                 flex-direction: column;
                 text-align: center;
               }
@@ -166,7 +166,7 @@ export default props => {
           font-size: 20px;
           display: flex;
           flex-direction: row;
-          @media (max-width: 1024px) {
+          @media (max-width: 1144px) {
             flex-direction: column-reverse;
             align-items: center;
             justify-content: space-between;
@@ -179,7 +179,7 @@ export default props => {
             flex-basis: 60%;
             margin-left: 20%;
             padding: 12px;
-            @media (max-width: 1024px) {
+            @media (max-width: 1144px) {
               margin-left: 0;
             }
           `}

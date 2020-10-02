@@ -317,6 +317,7 @@ const IndexPage = props => {
         css={css`
           background: #ffffff;
           margin: 45px 0;
+          padding: 45px 0;
         `}
       >
         <h3
