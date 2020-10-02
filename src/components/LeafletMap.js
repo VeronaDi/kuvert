@@ -13,7 +13,7 @@ export default ({ position }) => (
     <Marker
       position={position}
       icon={L.icon({
-        iconRetinaUrl: "/icon/markerIcon.png",
+        iconUrl: "/icon/markerIcon.png",
         iconSize: [25, 34],
         iconAnchor: [13, 34],
       })}
