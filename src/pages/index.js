@@ -248,18 +248,27 @@ const IndexPage = props => {
           padding-top: 60px;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: center;
           @media (max-width: 768px) {
             flex-direction: column;
             margin: 40px auto;
           }
         `}
       >
-        <img src={ukraine} alt={`map of Ukraine`} css={css``} />
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+          `}
+        >
+          <img src={ukraine} alt={`map of Ukraine`} css={css``} />
+        </div>
         <div
           css={css`
             padding: 80px 60px;
+            width: 500px;
             @media (max-width: 768px) {
+              width: 100%;
               padding: 30px 40px;
             }
           `}
