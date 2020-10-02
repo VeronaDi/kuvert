@@ -259,6 +259,7 @@ const IndexPage = props => {
           css={css`
             display: flex;
             align-items: center;
+            padding: 0 20px;
           `}
         >
           <img src={ukraine} alt={`map of Ukraine`} css={css``} />
