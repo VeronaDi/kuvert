@@ -45,14 +45,19 @@ export default props => {
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
+          @media screen and (max-width: 1144px) {
+            height: auto;
+            flex-direction: row;
+          }
         `}
       >
         <div
           css={css`
-            width: 27vw;
+            width: 25%;
             height: 100%;
             background: url(${factory1});
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             display: table;
@@ -63,12 +68,16 @@ export default props => {
             margin: 0 auto;
             :after {
               content: "";
-              width: 27vw;
+              width: 100%;
               height: 100%;
               background: rgba(0, 0, 0, 0.6);
               opacity: 1;
               position: absolute;
               left: 0;
+            }
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
             }
           `}
         >
@@ -90,54 +99,81 @@ export default props => {
         </div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory2});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory3});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory4});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory5});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             display: table;
             text-align: right;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         >
           <h4
             css={css`
               display: table-cell;
               vertical-align: middle;
-              font-size: 2.26vw;
+              font-size: 2vw;
               font-weight: 500;
               color: white;
               padding: 0 14px;
               background: #b40039;
               letter-spacing: 2px;
+              @media screen and (max-width: 1144px) {
+                font-size: 4vw;
+              }
             `}
           >
             {t("acquainted")}
@@ -145,10 +181,15 @@ export default props => {
         </div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory6});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
       </section>
