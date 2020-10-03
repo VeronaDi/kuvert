@@ -141,6 +141,7 @@ const IndexPage = props => {
       <form
         css={css`
           width: 90vw;
+          max-width: 780px;
           margin: 0 auto;
         `}
       >
