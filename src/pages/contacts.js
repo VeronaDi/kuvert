@@ -12,6 +12,7 @@ import LeafletMap from "../components/LeafletMap"
 import call from "../images/call.png"
 import location from "../images/location.png"
 import write from "../images/write_us.png"
+import arrowSelect from "../images/arrow-select.png"
 
 import { css } from "@emotion/core"
 
@@ -47,6 +48,9 @@ export default props => {
             width: 783px;
             margin: 0 auto;
             padding: 35px 0;
+            @media screen and (max-width: 943px) {
+              display: none;
+            }
           `}
         >
           {[contacts.factory, ...contacts.offices].map((currentCity, index) => (
@@ -72,6 +76,67 @@ export default props => {
               {t(currentCity.city)}
             </button>
           ))}
+        </div>
+
+        <div
+          css={css`
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            @media screen and (min-width: 943px) {
+              display: none;
+            }
+          `}
+        >
+          <select
+            onChange={e =>
+              setCity(
+                [contacts.factory, ...contacts.offices][e.target.selectedIndex]
+              )
+            }
+            css={css`
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              background: url(${arrowSelect}), #ffffff;
+              background-position: 97%;
+              background-repeat: no-repeat;
+              max-width: 200px;
+              width: 100%;
+              height: 65px;
+              font-size: 16px;
+              border: 0;
+              border-radius: 3px;
+              outline: none;
+              color: #414141;
+            `}
+          >
+            {[contacts.factory, ...contacts.offices].map(
+              (currentCity, index) => (
+                <option
+                  value={currentCity}
+                  css={css`
+                    width: 20%;
+                    height: 68px;
+                    background: transparent;
+                    color: #c1c1c1;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: center;
+                    outline: none;
+                    border: 2px solid #c1c1c1;
+                    border-radius: 3px;
+                    cursor: pointer;
+
+                    ${currentCity === city && "border: 2px solid #020202;"}
+                    ${currentCity === city && "color: #020202;"}
+                  `}
+                >
+                  {t(currentCity.city)}
+                </option>
+              )
+            )}
+          </select>
         </div>
 
         <LeafletMap position={city.position} />
