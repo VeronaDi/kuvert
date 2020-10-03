@@ -84,13 +84,15 @@ export default ({ location }) => {
               `
         }
       >
-        <img
-          src={logoGrey}
-          alt="logo"
-          css={css`
-            width: 122px;
-          `}
-        />
+        <Link to="/">
+          <img
+            src={logoGrey}
+            alt="logo"
+            css={css`
+              width: 122px;
+            `}
+          />
+        </Link>
 
         <button
           className={
