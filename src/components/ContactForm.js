@@ -11,6 +11,7 @@ export default () => {
     <div
       css={css`
         width: 90vw;
+        max-width: 780px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;

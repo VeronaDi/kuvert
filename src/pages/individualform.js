@@ -165,10 +165,9 @@ const IndexPage = props => {
 
       <form
         css={css`
-          position: absolute;
-          left: 50%;
-          -webkit-transform: translate(-50%, -2%);
-          transform: translate(-50%, -2%);
+          width: 90vw;
+          max-width: 780px;
+          margin: 0 auto;
         `}
       >
         <div
