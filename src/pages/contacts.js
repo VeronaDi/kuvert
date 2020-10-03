@@ -44,6 +44,9 @@ export default props => {
           height: 100vh;
           background: #ffffff;
           position: relative;
+          @media screen and (max-width: 943px) {
+            height: auto;
+          }
         `}
       >
         <div
