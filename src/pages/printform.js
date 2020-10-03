@@ -60,22 +60,23 @@ const IndexPage = props => {
         css={css`
           display: flex;
           flex-directon: row;
-          position: relative;
-          left: 50%;
-          -webkit-transform: translate(-50%, -2%);
-          transform: translate(-50%, -2%);
-          width: 40vw;
-          height: 44px;
+          justify-content: center;
           font-size: 14px;
           font-weight: bold;
-          margin: 80px 0 50px 0;
+          margin: 80px auto 50px auto;
+          @media (max-width: 1024px) {
+            margin-top: 120px;
+            padding: 0 10px;
+          }
         `}
       >
         <div
           css={css`
             color: #383838;
             border-bottom: 3px solid #383838;
-            width: 261px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
           `}
         >
           <span
@@ -92,7 +93,9 @@ const IndexPage = props => {
           css={css`
             color: #b40039;
             border-bottom: 3px solid #b40039;
-            width: 280px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
           `}
         >
           <span
@@ -109,7 +112,9 @@ const IndexPage = props => {
           css={css`
             color: #b4b4b4;
             border-bottom: 3px solid #b4b4b4;
-            width: 261px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
           `}
         >
           <span
