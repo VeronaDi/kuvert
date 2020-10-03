@@ -150,14 +150,20 @@ const IndexPage = props => {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
+            @media (max-width: 1024px) {
+              flex-direction: column;
+            }
           `}
         >
           <div
             css={css`
               display: flex;
               flex-direction: column;
-              padding-right: 19px;
               width: 48%;
+              @media (max-width: 1024px) {
+                width: 100%;
+                margin-bottom: 20px;
+              }
             `}
           >
             <label
@@ -201,6 +207,9 @@ const IndexPage = props => {
           <div
             css={css`
               width: 48%;
+              @media (max-width: 1024px) {
+                width: 100%;
+              }
             `}
           >
             <InputAmount />
