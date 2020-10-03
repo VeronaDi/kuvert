@@ -43,79 +43,111 @@ export default ({ location }) => {
   const [isOpen, setOpen] = React.useState(false)
 
   return (
-    <nav
-      css={css`
-        width: 100%;
-        padding: 20px 14px;
-        position: relative;
-        @media (min-width: 1250px) {
-          display: none;
-        }
-      `}
-    >
-      <img
-        src={logoGrey}
-        alt="logo"
+    <>
+      <div
         css={css`
-          width: 122px;
+          @media (max-width: 1250px) {
+            height: 86.6px;
+          }
         `}
-      />
-
-      <button
-        className={
-          isOpen
-            ? "hamburger hamburger--slider is-active"
-            : "hamburger hamburger--slider"
-        }
-        onClick={() => setOpen(!isOpen)}
-        type="button"
-      >
-        <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
-        </span>
-      </button>
-
-      {isOpen && (
-        <>
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-              margin: 27px 0;
-            `}
-          >
-            <StyledLink to="/">{t("home")}</StyledLink>
-            <StyledLink to="/products">{t("products")}</StyledLink>
-            <StyledLink to="/about">{t("about")}</StyledLink>
-            <StyledLink to="/contacts">{t("contacts")}</StyledLink>
-          </div>
-          <div
-            css={css`
-              display: block;
-              > a {
+      ></div>
+      <nav
+        css={
+          !isOpen
+            ? css`
                 width: 100%;
-              }
-            `}
-          >
-            <BtnRequest />
-          </div>
+                padding: 20px 14px;
+                background: #f8f8f8;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                z-index: 100;
+                @media (min-width: 1250px) {
+                  display: none;
+                }
+              `
+            : css`
+                width: 100%;
+                height: 100vh;
+                padding: 20px 14px;
+                background: #f8f8f8;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 100;
+                @media (min-width: 1250px) {
+                  display: none;
+                }
+              `
+        }
+      >
+        <img
+          src={logoGrey}
+          alt="logo"
+          css={css`
+            width: 122px;
+          `}
+        />
 
-          <Link
-            css={css`
-              cursor: pointer;
-              color: #383838;
-              font-weight: 500;
-              font-size: 18px;
-              text-decoration: none;
-              position: absolute;
-              bottom: 20px;
-            `}
-            to={nextLang}
-          >
-            {t(`changeLang.${i18n.language}`)}
-          </Link>
-        </>
-      )}
-    </nav>
+        <button
+          className={
+            isOpen
+              ? "hamburger hamburger--slider is-active"
+              : "hamburger hamburger--slider"
+          }
+          onClick={() => setOpen(!isOpen)}
+          type="button"
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+
+        {isOpen && (
+          <>
+            <div
+              css={css`
+                display: flex;
+                flex-direction: column;
+                margin: 27px 0;
+              `}
+            >
+              <StyledLink to="/">{t("home")}</StyledLink>
+              <StyledLink to="/products">{t("products")}</StyledLink>
+              <StyledLink to="/about">{t("about")}</StyledLink>
+              <StyledLink to="/contacts">{t("contacts")}</StyledLink>
+            </div>
+            <div
+              css={css`
+                display: block;
+                > a {
+                  width: 100%;
+                }
+              `}
+            >
+              <BtnRequest />
+            </div>
+
+            <Link
+              css={css`
+                cursor: pointer;
+                color: #383838;
+                font-weight: 500;
+                font-size: 18px;
+                text-decoration: none;
+                position: absolute;
+                bottom: 20px;
+              `}
+              to={nextLang}
+            >
+              {t(`changeLang.${i18n.language}`)}
+            </Link>
+          </>
+        )}
+      </nav>
+    </>
   )
 }
