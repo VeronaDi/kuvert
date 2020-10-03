@@ -41,14 +41,13 @@ const MyInput = ({ label, ...props }) => {
         {...field}
         {...props}
         css={css`
-          width: 460px;
+          width: 100%;
           height: 65px;
           background: #ffffff;
           border: 1px solid #d6d6d6;
           border-radius: 3px;
           padding: 20px;
           outline: none;
-          margin-right: 100px;
           margin-bottom: 16px;
           ::-webkit-input-placeholder {
             font-size: 16px;
@@ -62,7 +61,7 @@ const MyInput = ({ label, ...props }) => {
       {meta.touched && meta.error ? (
         <div
           css={css`
-            width: 141px;
+            width: 100%;
             height: 35px;
             background: #a74444;
             border-radius: 3px;
@@ -106,7 +105,7 @@ const MySelect = ({ label, ...props }) => {
           background: url(${arrowSelect}), #ffffff;
           background-position: 97%;
           background-repeat: no-repeat;
-          width: 460px;
+          width: 100%;
           height: 65px;
           font-size: 16px;
           border: 1px solid #d6d6d6;
@@ -123,7 +122,7 @@ const MySelect = ({ label, ...props }) => {
       {meta.touched && meta.error ? (
         <div
           css={css`
-            width: 141px;
+            width: 100%;
             height: 35px;
             background: #a74444;
             border-radius: 3px;
@@ -160,7 +159,7 @@ const MyMessageInput = ({ label, ...props }) => {
         {...field}
         {...props}
         css={css`
-          width: 460px;
+          width: 100%;
           height: 165px;
           background: #ffffff;
           border: 1px solid #d6d6d6;
@@ -180,7 +179,7 @@ const MyMessageInput = ({ label, ...props }) => {
       {meta.touched && meta.error ? (
         <div
           css={css`
-            width: 141px;
+            width: 100%;
             height: 35px;
             background: #a74444;
             border-radius: 3px;
@@ -208,17 +207,18 @@ export default () => {
     <div
       css={css`
         width: 100vw;
-        height: 722px;
         background: url(${plane}), #e5e5e5;
-        background-size: 100% 100%;
+        background-size: cover;
+        background-position: right;
         background-repeat: no-repeat;
+        padding-bottom: 60px;
       `}
     >
       <h5
         css={css`
           font-size: 36px;
           color: black;
-          width: 640px;
+          width: 90vw;
           margin: 0 auto 43px auto;
           padding-top: 55px;
           line-height: 54px;
@@ -266,20 +266,23 @@ export default () => {
         {({ isSubmitting }) => (
           <Form
             css={css`
-              width: 1020px;
-              height: 284px;
+              width: 90vw;
               margin: 0 auto;
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
-              justify-content: center;
+              justify-content: space-between;
             `}
           >
             <div
               css={css`
+                width: 48%;
                 display: flex;
                 flex-direction: column;
                 align-content: space-between;
+                @media screen and (max-width: 943px) {
+                  width: 100%;
+                }
               `}
             >
               <MyInput
@@ -303,9 +306,13 @@ export default () => {
             </div>
             <div
               css={css`
+                width: 48%;
                 display: flex;
                 flex-direction: column;
                 align-content: space-between;
+                @media screen and (max-width: 943px) {
+                  width: 100%;
+                }
               `}
             >
               <MySelect label={t("department")} name="department">
@@ -324,7 +331,10 @@ export default () => {
             </div>
             <div
               css={css`
+                width: 100%;
                 margin-top: 41px;
+                display: flex;
+                justify-content: center;
               `}
             >
               <button
