@@ -164,7 +164,7 @@ export default props => {
           `}
         />
         <div
-          className="row -mx-2"
+          className="row"
           css={css`
             position: absolute;
             top: 0px;
@@ -190,22 +190,32 @@ export default props => {
                   align-items: center;
                   padding: 100px 40px;
                   @media (max-width: 1024px) {
-                    height: 113px;
+                    height: auto;
                     flex-direction: row;
                     margin-bottom: 25px;
                     padding: 25px 17px;
                     text-align: left;
+                    justify-content: flex-start;
+                    width: 100%;
                   }
                 `}
               >
-                <img
-                  src={img}
-                  alt={`${img} type`}
-                  css={css`
-                    width: 90px;
-                  `}
-                />
                 <div>
+                  <img
+                    src={img}
+                    alt={`${img} type`}
+                    css={css`
+                      width: 90px;
+                    `}
+                  />
+                </div>
+                <div
+                  css={css`
+                    @media (max-width: 1024px) {
+                      padding: 0 20px;
+                    }
+                  `}
+                >
                   <h4
                     css={css`
                       font-weight: 500;
@@ -224,6 +234,7 @@ export default props => {
                       line-height: 27px;
                       @media (max-width: 1024px) {
                         font-size: 14px;
+                        margin-bottom: 0;
                       }
                     `}
                   >
