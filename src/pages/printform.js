@@ -140,10 +140,8 @@ const IndexPage = props => {
       </h1>
       <form
         css={css`
-          position: absolute;
-          left: 50%;
-          -webkit-transform: translate(-50%, -2%);
-          transform: translate(-50%, -2%);
+          width: 90vw;
+          margin: 0 auto;
         `}
       >
         <div
@@ -152,7 +150,6 @@ const IndexPage = props => {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-            max-width: 780px;
           `}
         >
           <div
@@ -160,6 +157,7 @@ const IndexPage = props => {
               display: flex;
               flex-direction: column;
               padding-right: 19px;
+              width: 48%;
             `}
           >
             <label
@@ -178,7 +176,6 @@ const IndexPage = props => {
                 background: url(${arrowSelect}), #ffffff;
                 background-position: 97%;
                 background-repeat: no-repeat;
-                width: 380px;
                 height: 65px;
                 font-size: 16px;
                 border: 1px solid #d6d6d6;
@@ -201,7 +198,13 @@ const IndexPage = props => {
               <option value="ecoblok">{t("ecoblock")}</option>
             </select>
           </div>
-          <InputAmount />
+          <div
+            css={css`
+              width: 48%;
+            `}
+          >
+            <InputAmount />
+          </div>
         </div>
 
         <InputDragDrop />
@@ -209,7 +212,6 @@ const IndexPage = props => {
         <div
           css={css`
             width: 100%;
-            max-width: 780px;
             display: flex;
             flex-direction: column;
           `}
@@ -238,7 +240,6 @@ const IndexPage = props => {
         <div
           css={css`
             width: 100%;
-            max-width: 780px;
             margin: 40px 0;
             display: block;
             text-align: center;

@@ -24,7 +24,7 @@ export default () => {
         text-decoration: none;
         display: block;
         text-align: center;
-        margin-bottom: 15px;
+        margin: 30px 0;
 
         &:hover {
           background: #b60039;

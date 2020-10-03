@@ -28,7 +28,6 @@ export default () => {
       <div
         css={css`
           position: relative;
-          width: 780px;
           height: 150px;
           background: #FFFFFF;
           border: 1px solid #D6D6D6;
