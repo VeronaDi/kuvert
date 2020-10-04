@@ -11,115 +11,139 @@ export default ({ ecobags = [], img }) => {
   return (
     <div
       css={css`
-        width: 80%;
-        height: auto;
-        max-height: 586px;
-        background: url(${img}), #ffffff;
-        background-position: 30px 55px;
+        width: 90vw;
+        background: #ffffff;
+        background-position: left;
         background-repeat: no-repeat;
         background-size: 40% 80%;
-        margin: 9px auto;
-        padding: 30px 78px 90px 37%;
+        margin: 9px auto 50px auto;
+        padding: 30px 70px 90px 70px;
         color: #000000;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
       `}
     >
-      <p
+      <div
         css={css`
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 27px;
-          a {
-            text-decoration: none;
-            color: black;
-            :hover {
-              text-decoration: underline;
-            }
+          width: 35%;
+          @media screen and (max-width: 768px) {
+            width: 100%;
           }
         `}
-        dangerouslySetInnerHTML={{ __html: t("ecobagText") }}
-      ></p>
-      <div>
-        <ul
+      >
+        <img src={img} alt="Ecobags white" />
+      </div>
+      <div
+        css={css`
+          width: 60%;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+        `}
+      >
+        <p
+          css={css`
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            a {
+              text-decoration: none;
+              color: black;
+              :hover {
+                text-decoration: underline;
+              }
+            }
+          `}
+          dangerouslySetInnerHTML={{ __html: t("ecobagText") }}
+        ></p>
+        <div>
+          <ul
+            css={css`
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 27px;
+              padding-left: 0;
+              list-style: none;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+              width: 100%;
+              height: 230px;
+              @media screen and (max-width: 768px) {
+                height: auto;
+              }
+            `}
+          >
+            {t("size")}
+            {ecobags
+              .map(({ size }) => size)
+              .filter(onlyUnique)
+              .map(size => (
+                <li
+                  css={css`
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 36px;
+                    :before {
+                      content: "-";
+                      padding-right: 5px;
+                    }
+                  `}
+                >
+                  {size} {t("mm")}
+                </li>
+              ))}
+          </ul>
+        </div>
+        <div
           css={css`
             font-weight: 500;
             font-size: 24px;
             line-height: 27px;
-            padding-left: 0;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
-            height: 230px;
+            padding: 5px 0 0 0;
           `}
         >
-          {t("size")}
-          {ecobags
-            .map(({ size }) => size)
-            .filter(onlyUnique)
-            .map(size => (
-              <li
-                css={css`
-                  font-weight: 500;
-                  font-size: 18px;
-                  line-height: 36px;
-                  :before {
-                    content: "-";
-                    padding-right: 5px;
-                  }
-                `}
-              >
-                {size} {t("mm")}
-              </li>
-            ))}
-        </ul>
-      </div>
-      <div
-        css={css`
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 27px;
-          padding: 5px 0 0 0;
-        `}
-      >
-        {t("whereUse")}
-        <ul
-          css={css`
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 0;
-          `}
-        >
-          <li
+          {t("whereUse")}
+          <ul
             css={css`
-              font-weight: 500;
-              font-size: 16px;
-              line-height: 36px;
-              :before {
-                content: "-";
-                padding-right: 5px;
-              }
+              list-style: none;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              padding: 0;
             `}
           >
-            {t("packPresent")}
-          </li>
-          <li
-            css={css`
-              font-weight: 500;
-              font-size: 16px;
-              line-height: 36px;
-              :before {
-                content: "-";
-                padding-right: 5px;
-              }
-            `}
-          >
-            {t("packBulkProd")}
-          </li>
-        </ul>
+            <li
+              css={css`
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 36px;
+                :before {
+                  content: "-";
+                  padding-right: 5px;
+                }
+              `}
+            >
+              {t("packPresent")}
+            </li>
+            <li
+              css={css`
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 36px;
+                :before {
+                  content: "-";
+                  padding-right: 5px;
+                }
+              `}
+            >
+              {t("packBulkProd")}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )

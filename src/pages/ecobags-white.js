@@ -89,50 +89,72 @@ export default props => {
             background: #ffffff;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 3px;
-            width: 1188px;
-            height: 93px;
+            width: 90vw;
             margin: 20px auto 54px auto;
-            padding: 22px 0;
+            padding: 30px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @media (max-width: 1024px) {
+              flex-direction: column;
+              align-items: center;
+            }
           `}
         >
-          <GeneralNames>
-            {t("size")}
-            <EnvelopeParam>
-              {size} {t("mm")}
-            </EnvelopeParam>
-          </GeneralNames>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              flex: 1;
+              padding-right: 40px;
+              @media (max-width: 1024px) {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 30px;
+              }
+              @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+              }
+              @media (max-width: 425px) {
+                grid-template-columns: 1fr;
+              }
+            `}
+          >
+            <GeneralNames>
+              {t("size")}
+              <EnvelopeParam>
+                {size} {t("mm")}
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("handleType")}
-            <EnvelopeParam>{t(handle)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("handleType")}
+              <EnvelopeParam>{t(handle)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("color")}
-            <EnvelopeParam>{t(color)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("color")}
+              <EnvelopeParam>{t(color)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("paperGSM")}
-            <EnvelopeParam>{gsm}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("paperGSM")}
+              <EnvelopeParam>{gsm}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("quantityBox")}
-            <EnvelopeParam>
-              {pack}
-              {t("pcs")}
-            </EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("quantityBox")}
+              <EnvelopeParam>
+                {pack}
+                {t("pcs")}
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("price")} {t("thousandPcs")}
-            <EnvelopeParam>{t(price)}</EnvelopeParam>
-          </GeneralNames>
-
+            <GeneralNames>
+              {t("price")} {t("thousandPcs")}
+              <EnvelopeParam>{t(price)}</EnvelopeParam>
+            </GeneralNames>
+          </div>
           <BtnAddToRequest />
         </div>
       ))}
