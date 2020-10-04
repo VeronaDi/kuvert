@@ -69,183 +69,207 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${envExtension}), #ffffff;
+          width: 90vw;
+          background: #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 40% 100%;
-          margin: 9px auto;
-          padding: 30px 78px 90px 37%;
+          background-size: 40% 80%;
+          margin: 9px auto 50px auto;
+          padding: 30px 70px 90px 70px;
           color: #000000;
+          display: flex;
+          justify-content: space-between;
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+          }
         `}
       >
-        <p
-          css={css`
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-          `}
-        >
-          {t("extensionEnvelopesText")}
-        </p>
         <div
           css={css`
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: 200px;
-            padding-top: 43px;
+            width: 35%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
           `}
         >
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("size")}
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              C4 (229x324) {t("mm")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              B4 (250x353) {t("mm")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              E4 (280x400) {t("mm")}
-            </li>
-          </ul>
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("color")}
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("brown")}
-            </li>
-          </ul>
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 27px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("sealing")}
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-top: 23px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("skl")}
-            </li>
-          </ul>
+          <img src={envExtension} alt="envelopes extension" />
         </div>
         <div
           css={css`
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 27px;
-            padding: 65px 0 0 0;
+            width: 60%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
           `}
         >
-          {t("whereUse")}
-          <ul
+          <p
             css={css`
-              list-style: none;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              padding: 0;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 27px;
+              width: 100%;
             `}
           >
-            <li
+            {t("extensionEnvelopesText")}
+          </p>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              padding-top: 43px;
+            `}
+          >
+            <ul
               css={css`
                 font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
+                font-size: 24px;
+                line-height: 27px;
+                padding-left: 0;
+                list-style: none;
+                margin-right: 40px;
               `}
             >
-              {t("docFlow")}
-            </li>
-            <li
+              {t("size")}
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  padding-top: 23px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                C4 (229x324) {t("mm")}
+              </li>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                B4 (250x353) {t("mm")}
+              </li>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                E4 (280x400) {t("mm")}
+              </li>
+            </ul>
+            <ul
               css={css`
                 font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
+                font-size: 24px;
+                line-height: 27px;
+                padding-left: 0;
+                list-style: none;
+                margin-right: 40px;
               `}
             >
-              {t("bulkyTransportation")}
-            </li>
-          </ul>
+              {t("color")}
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  padding-top: 23px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("brown")}
+              </li>
+            </ul>
+            <ul
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 27px;
+                padding-left: 0;
+                list-style: none;
+              `}
+            >
+              {t("sealing")}
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  padding-top: 23px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("skl")}
+              </li>
+            </ul>
+          </div>
+          <div
+            css={css`
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 27px;
+              padding: 65px 0 0 0;
+            `}
+          >
+            {t("whereUse")}
+            <ul
+              css={css`
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0;
+              `}
+            >
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  margin-right: 40px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("docFlow")}
+              </li>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("bulkyTransportation")}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -269,59 +293,82 @@ export default props => {
               background: #ffffff;
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
               border-radius: 3px;
-              width: 1188px;
-              height: 93px;
+              width: 90vw;
               margin: 20px auto 54px auto;
-              padding: 22px 0;
+              padding: 30px;
               display: flex;
-              flex-direction: row;
-              justify-content: space-around;
+              @media (max-width: 1440px) {
+                flex-direction: column;
+                align-items: center;
+              }
             `}
           >
-            <GeneralNames>
-              {t("code")}
-              <EnvelopeParam>{code}</EnvelopeParam>
-            </GeneralNames>
+            <div
+              css={css`
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex: 1;
+                padding-right: 40px;
+                @media (max-width: 1440px) {
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  margin-bottom: 30px;
+                }
+                @media (max-width: 768px) {
+                  grid-template-columns: repeat(2, 1fr);
+                }
+                @media (max-width: 425px) {
+                  grid-template-columns: 1fr;
+                }
+              `}
+            >
+              <GeneralNames>
+                {t("code")}
+                <EnvelopeParam>{code}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("size")}
-              <EnvelopeParam>
-                {size} {t("mm")})
-              </EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("size")}
+                <EnvelopeParam>
+                  {size} {t("mm")})
+                </EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("type")}
-              <EnvelopeParam>{t(type)}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("type")}
+                <EnvelopeParam>{t(type)}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("sealing")}
-              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("color")}
-              <EnvelopeParam>{t(color)}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("paperGSM")}
-              <EnvelopeParam>{gsm}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("paperGSM")}
+                <EnvelopeParam>{gsm}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("quantityBox")}
-              <EnvelopeParam>
-                {pack}
-                {t("pcs")}
-              </EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("quantityBox")}
+                <EnvelopeParam>
+                  {pack}
+                  {t("pcs")}
+                </EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("price")} {t("thousandPcs")}
-              <EnvelopeParam>{t(price)}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("price")} {t("thousandPcs")}
+                <EnvelopeParam>{t(price)}</EnvelopeParam>
+              </GeneralNames>
+            </div>
             <BtnAddToRequest />
           </div>
         )

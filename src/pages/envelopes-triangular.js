@@ -255,6 +255,7 @@ export default props => {
               flex-direction: row;
               justify-content: space-between;
               flex: 1;
+              padding-right: 40px;
               @media (max-width: 1024px) {
                 width: 100%;
                 display: grid;
