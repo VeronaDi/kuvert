@@ -21,7 +21,6 @@ const GeneralNames = ({ children }) => (
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
-      padding-right: 15px;
       word-wrap: break-word;
     `}
   >
@@ -68,11 +67,18 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
+          width: 90vw;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 8%;
+          grid-row-gap: 70px;
+          @media screen and (max-width: 1440px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+          }
         `}
       >
         {envelopes.map(
@@ -93,15 +99,14 @@ export default props => {
                 background: #ffffff;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 3px;
-                width: 380px;
-                height: 266px;
+                width: 100%;
                 padding: 28px 17px 0 17px;
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 15px;
                 flex-wrap: wrap;
                 justify-content: start;
                 position: relative;
-                margin: 30px 50px;
               `}
             >
               <GeneralNames>
@@ -157,10 +162,9 @@ export default props => {
               <div
                 css={css`
                   border-top: 0.2px solid #000000;
-                  width: 90%;
-                  position: absolute;
-                  bottom: 0;
-                  margin-bottom: 5px;
+                  width: 100%;
+                  padding: 16px 0;
+                  grid-column: 1 / 4;
                 `}
               >
                 <BtnAddToRequest />
