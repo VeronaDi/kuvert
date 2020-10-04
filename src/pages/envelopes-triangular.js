@@ -24,6 +24,7 @@ const GeneralNames = ({ children }) => (
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
+      margin-right: 30px;
     `}
   >
     {children}
@@ -71,30 +72,33 @@ export default props => {
         {t("triangularValve")}
       </h3>
       <div
-        className="w-full md:w-5/6 px-2"
         css={css`
+          width: 90vw;
           margin: 9px auto;
           color: #000000;
           background: #ffffff;
           display: flex;
-          flex-direction: row;
+          justify-content: space-between;
           @media (max-width: 1024px) {
             flex-direction: column;
           }
         `}
       >
-        <img
-          src={triangularEnv}
-          alt="Triangular flap envelope"
+        <div
           css={css`
-            width: 40%;
+            width: 35%;
             margin: 0 auto;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
           `}
-        />
+        >
+          <img src={triangularEnv} alt="Triangular flap envelope" />
+        </div>
         <div
           css={css`
             width: 60%;
-            padding: 0 20px;
+            padding: 20px 30px;
             font-weight: 500;
             @media (max-width: 1024px) {
               width: 100%;
@@ -124,8 +128,7 @@ export default props => {
           >
             <ul
               css={css`
-
-                font-size: 24px;
+                font-size: 20px;
                 padding-left: 0;
                 list-style: none;
                 display: flex;
@@ -157,7 +160,7 @@ export default props => {
             </ul>
             <ul
               css={css`
-                font-size: 24px;
+                font-size: 20px;
                 padding-left: 0;
                 list-style: none;
                 @media (max-width: 1024px) {
@@ -185,7 +188,7 @@ export default props => {
             </ul>
             <ul
               css={css`
-                font-size: 24px;
+                font-size: 20px;
                 padding-left: 0;
                 list-style: none;
                 @media (max-width: 1024px) {
@@ -236,50 +239,71 @@ export default props => {
             background: #ffffff;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 3px;
-            width: 1188px;
-            height: 93px;
+            width: 90vw;
             margin: 20px auto 54px auto;
-            padding: 22px 0;
+            padding: 30px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+            @media (max-width: 1024px) {
+              flex-direction: column;
+              align-items: center;
+            }
           `}
         >
-          <GeneralNames>
-            {t("code")}
-            <EnvelopeParam>{code}</EnvelopeParam>
-          </GeneralNames>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              flex: 1;
+              @media (max-width: 1024px) {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 30px;
+              }
+              @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+              }
+              @media (max-width: 425px) {
+                grid-template-columns: 1fr;
+              }
+            `}
+          >
+            <GeneralNames>
+              {t("code")}
+              <EnvelopeParam>{code}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("size")}
-            <EnvelopeParam>
-              {size} {t("mm")})
-            </EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("size")}
+              <EnvelopeParam>
+                {size} {t("mm")})
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("color")}
-            <EnvelopeParam>{t(color)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("color")}
+              <EnvelopeParam>{t(color)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("type")}
-            <EnvelopeParam>{t(type)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("type")}
+              <EnvelopeParam>{t(type)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("paperGSM")}
-            <EnvelopeParam>{gsm}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("paperGSM")}
+              <EnvelopeParam>{gsm}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("quantityBox")}
-            <EnvelopeParam>
-              {pack}
-              {t("pcs")}
-            </EnvelopeParam>
-          </GeneralNames>
-
+            <GeneralNames>
+              {t("quantityBox")}
+              <EnvelopeParam>
+                {pack}
+                {t("pcs")}
+              </EnvelopeParam>
+            </GeneralNames>
+          </div>
           <BtnAddToRequest />
         </div>
       ))}
