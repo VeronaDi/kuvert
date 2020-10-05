@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
+
 import { Form, Formik, useField } from "formik"
 import * as Yup from "yup"
 import Layout from "../components/layout"
@@ -259,8 +258,7 @@ const MyAmountInput = ({ label, ...props }) => {
         >
           <button
             onClick={() => {
-              quantityEnv.current.value =
-                Number(quantityEnv.current.value) - 250
+              quantityEnv.current.value = Number(quantityEnv.current.value) - 50
             }}
             type="button"
             css={css`
@@ -305,8 +303,7 @@ const MyAmountInput = ({ label, ...props }) => {
           />
           <button
             onClick={() => {
-              quantityEnv.current.value =
-                Number(quantityEnv.current.value) + 250
+              quantityEnv.current.value = Number(quantityEnv.current.value) + 50
             }}
             type="button"
             css={css`
@@ -347,9 +344,6 @@ const MyAmountInput = ({ label, ...props }) => {
     </>
   )
 }
-
-const emailRegExp = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 export default props => {
   const T = useTranslation()
@@ -466,10 +460,8 @@ export default props => {
       </h1>
       <Formik
         initialValues={{
-          format: "",
+          product: "",
           amount: "",
-          printFront: "",
-          printBack: "",
           message: "",
           name: "",
           company: "",
@@ -478,15 +470,9 @@ export default props => {
           phone: "",
         }}
         validationSchema={Yup.object({
-          name: Yup.string()
-            .max(30, "Too long")
-            .required("Required"),
-          email: Yup.string()
-            .matches(emailRegExp, "Invalid email addresss")
-            .required("Required"),
-          phone: Yup.string()
-            .matches(phoneRegExp, "Phone number is not valid")
-            .required("Required"),
+          name: Yup.string().required("Required"),
+          email: Yup.string().required("Required"),
+          phone: Yup.string().required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -504,17 +490,6 @@ export default props => {
               transform: translate(-50%, -2%);
             `}
           >
-            <h3
-              css={css`
-                text-align: center;
-                margin-bottom: 40px;
-                font-weight: 500;
-                font-size: 26px;
-                line-height: 30px;
-              `}
-            >
-              {t("envelopeDetails")}
-            </h3>
             <div
               css={css`
                 display: flex;
@@ -524,15 +499,16 @@ export default props => {
                 max-width: 780px;
               `}
             >
-              <MySelect label={t("size")} name="format">
+              <MySelect label={t("product")} name="product">
                 <option disabled selected>
-                  {t("chooseSize")}
+                  {t("chooseDesiredProduct")}
                 </option>
-                <option value="C6">C6 (114x162 {t("mm")})</option>
-                <option value="DL">DL (110x220 {t("mm")})</option>
-                <option value="C65">C65 (114x229 {t("mm")})</option>
-                <option value="C5">C5 (162x229 {t("mm")})</option>
-                <option value="C4">C4 (229x324 {t("mm")})</option>
+                <option value="konvert">{t("envelopes")}</option>
+                <option value="paperovaTorba">{t("paperbags")}</option>
+                <option value="banderole">{t("banderole")}</option>
+                <option value="blank">{t("letterhead")}</option>
+                <option value="papirFajl">{t("paperfile")}</option>
+                <option value="ecoblok">{t("ecoblock")}</option>
               </MySelect>
               <MyAmountInput
                 label={t("amount")}
@@ -541,63 +517,12 @@ export default props => {
                 placeholder="0"
               />
             </div>
-            <h3
-              css={css`
-                text-align: center;
-                margin: 40px 0;
-                font-weight: 500;
-                font-size: 26px;
-                line-height: 30px;
-              `}
-            >
-              {t("printDetails")}
-            </h3>
-            <div
-              css={css`
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                width: 100%;
-                max-width: 780px;
-              `}
-            >
-              <MySelect label={t("colorsFront")} name="printFront">
-                <option disabled selected>
-                  {t("chooseColor")}
-                </option>
-                <option value="zero">0</option>
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-              </MySelect>
-              <MySelect label={t("colorsBack")} name="printBackt">
-                <option disabled selected>
-                  {t("chooseColor")}
-                </option>
-                <option value="zero">0</option>
-                <option value="one">1</option>
-                <option value="two">2</option>
-                <option value="three">3</option>
-                <option value="four">4</option>
-              </MySelect>
-            </div>
-            <h3
-              css={css`
-                font-weight: 500;
-                font-size: 26px;
-                line-height: 30px;
-                text-align: center;
-              `}
-            >
-              {t("additionalDetails")}
-            </h3>
+
             <MyMessageInput
               label={t("additionalInfo")}
               name="message"
               type="textarea"
-              placeholder="Additional comments, questions, important information, etc."
+              placeholder={t("placeholderPrintform")}
             />
             <BtnNext />
 
@@ -611,16 +536,6 @@ export default props => {
               `}
             >
               <div>
-                <h3
-                  css={css`
-                    font-weight: 500;
-                    font-size: 26px;
-                    line-height: 30px;
-                    margin-bottom: 2rem;
-                  `}
-                >
-                  {t("personalDetails")}
-                </h3>
                 <MyInput
                   label={t("name")}
                   name="name"

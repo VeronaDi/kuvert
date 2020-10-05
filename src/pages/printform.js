@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -187,7 +185,7 @@ const IndexPage = props => {
               <option disabled selected>
                 {t("chooseDesiredProduct")}
               </option>
-              <option value="konvert">{t("envelope")}</option>
+              <option value="konvert">{t("envelopes")}</option>
               <option value="paperovaTorba">{t("paperbags")}</option>
               <option value="banderole">{t("banderole")}</option>
               <option value="blank">{t("letterhead")}</option>
