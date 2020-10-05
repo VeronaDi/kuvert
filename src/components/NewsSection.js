@@ -32,30 +32,40 @@ export default () => {
         {t("news")}
       </h2>
 
-      <div className="row">
+      <div
+        className="row"
+        css={css`
+          display: flex;
+        `}
+      >
         {newsMain.map(({ img, title, text }) => (
-          <div className="w-full md:w-1/3 px-5">
+          <div
+            className="w-full md:w-1/3 px-5"
+            css={css`
+              margin-bottom: 25px;
+            `}
+          >
             <div
               key={t(title)}
               css={css`
-                height: 460px;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 3px;
                 overflow: hidden;
                 background: #e7e7e7;
                 margin-bottom: 20px;
+                height: 100%;
               `}
             >
               <div
                 css={css`
-                  height: 50%;
+                  height: 300px;
                   background: url(${img});
                   background-size: cover;
                 `}
               />
               <div
                 css={css`
-                  padding: 0 40px;
+                  padding: 20px 40px 40px 40px;
                 `}
               >
                 <h6
