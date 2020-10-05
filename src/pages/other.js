@@ -49,7 +49,7 @@ export default props => {
           <div
             key={id}
             css={css`
-              width: 80%;
+              width: 90vw;
               display: flex;
               flex-direction: row;
               margin: 0 auto 64px auto;
@@ -57,15 +57,27 @@ export default props => {
               :nth-child(even) {
                 flex-direction: row-reverse;
               }
+              @media screen and (max-width: 1024px) {
+                flex-direction: column;
+                margin-bottom: 128px;
+                :nth-child(even) {
+                  flex-direction: column;
+                }
+              }
             `}
           >
-            <img
+            <div
               css={css`
                 width: 47%;
+                display: flex;
+                align-items: center;
+                @media screen and (max-width: 1024px) {
+                  width: 100%;
+                }
               `}
-              src={img}
-              alt="logo"
-            />
+            >
+              <img src={img} alt="logo" />
+            </div>
             <div
               css={css`
                 width: 40%;
@@ -73,6 +85,9 @@ export default props => {
                 flex-direction: column;
                 justify-content: center;
                 align-content: space-between;
+                @media screen and (max-width: 1024px) {
+                  width: 100%;
+                }
               `}
             >
               <h5
