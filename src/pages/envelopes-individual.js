@@ -39,21 +39,20 @@ export default props => {
       >
         {t("individualEnv")}
       </h3>
-      <div
+      <img
+        src={individual}
         css={css`
-          width: 1306px;
-          height: 580px;
-          background: url(${individual});
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
+          display: block;
+          max-width: 1306px;
+          width: 90vw;
           margin: 0 auto;
         `}
-      ></div>
+        alt="Individual"
+      />
       <p
         css={css`
-          width: 845px;
-          height: 81px;
+          width: 90vw;
+          max-width: 845px;
           font-weight: 500;
           font-size: 18px;
           line-height: 27px;
