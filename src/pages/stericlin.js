@@ -51,37 +51,59 @@ const Stericlin = ({ stericlin: { nummer, code, size, pack }, t }) => (
       background: #ffffff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 3px;
-      width: 1188px;
-      height: 93px;
+      width: 90vw;
       margin: 20px auto 54px auto;
-      padding: 22px 0;
+      padding: 30px;
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+      }
     `}
   >
-    <GeneralNames>
-      №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
-    </GeneralNames>
+    <div
+      css={css`
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1;
+        padding-right: 80px;
+        @media (max-width: 1024px) {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 425px) {
+          grid-template-columns: 1fr;
+        }
+      `}
+    >
+      <GeneralNames>
+        №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
+      </GeneralNames>
 
-    <GeneralNames>
-      {t("code")}
-      <EnvelopeParam>{code}</EnvelopeParam>
-    </GeneralNames>
+      <GeneralNames>
+        {t("code")}
+        <EnvelopeParam>{code}</EnvelopeParam>
+      </GeneralNames>
 
-    <GeneralNames>
-      {t("size")}, {t("smM")}
-      <EnvelopeParam>{size}</EnvelopeParam>
-    </GeneralNames>
+      <GeneralNames>
+        {t("size")}, {t("smM")}
+        <EnvelopeParam>{size}</EnvelopeParam>
+      </GeneralNames>
 
-    <GeneralNames>
-      {t("quantityBox")}
-      <EnvelopeParam>
-        {pack}
-        {t("pcs")}
-      </EnvelopeParam>
-    </GeneralNames>
-
+      <GeneralNames>
+        {t("quantityBox")}
+        <EnvelopeParam>
+          {pack}
+          {t("pcs")}
+        </EnvelopeParam>
+      </GeneralNames>
+    </div>
     <BtnAddToRequest />
   </div>
 )
@@ -112,20 +134,42 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${stericlin}), #ffffff;
+          width: 90vw;
+          background: #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 40% 100%;
-          margin: 9px auto;
-          padding: 30px 78px 90px 37%;
+          background-size: 40% 80%;
+          margin: 9px auto 50px auto;
+          padding: 0 70px 0 0;
           color: #000000;
+          display: flex;
+          justify-content: space-between;
+          @media screen and (max-width: 768px) {
+            padding: 30px 70px 90px 70px;
+            flex-direction: column;
+          }
         `}
       >
-        <p
+        <div
           css={css`
+            width: 35%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          `}
+        >
+          <img src={stericlin} alt="Ecobags white" />
+        </div>
+        <div
+          css={css`
+            width: 60%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          `}
+        >
+          <p
+            css={css`
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
@@ -136,8 +180,9 @@ export default props => {
                 text-decoration: underline;
               }
           `}
-          dangerouslySetInnerHTML={{ __html: t("stericlinText") }}
-        ></p>
+            dangerouslySetInnerHTML={{ __html: t("stericlinText") }}
+          ></p>
+        </div>
       </div>
 
       <h4
