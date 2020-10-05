@@ -339,13 +339,15 @@ export default () => {
             >
               <button
                 css={css`
+                  max-width: 100%;
+                  width: 460px;
                   color: black;
                   text-decoration: none;
                   border: 1px solid #000000;
                   box-sizing: border-box;
                   border-radius: 3px;
                   background: transparent;
-                  padding: 18px 210px;
+                  padding: 18px 0;
                   cursor: pointer;
                   outline: none;
 
