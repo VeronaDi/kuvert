@@ -11,7 +11,6 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import InputAmount from "../components/InputAmount"
-import InputDragDrop from "../components/InputDragDrop"
 import BtnNext from "../components/BtnNext"
 
 import logoGrey from "../images/logoGrey.png"
@@ -198,8 +197,6 @@ const IndexPage = props => {
           </div>
           <InputAmount />
         </div>
-
-        <InputDragDrop />
 
         <div
           css={css`

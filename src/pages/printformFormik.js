@@ -14,7 +14,6 @@ import { useTranslation } from "react-i18next"
 import logoGrey from "../images/logoGrey.png"
 import arrowSelect from "../images/arrow-select.png"
 import BtnSendForm from "../components/BtnSendForm"
-import InputDragDrop from "../components/InputDragDrop"
 import BtnNext from "../components/BtnNext"
 import plus from "../images/plus.png"
 import minus from "../images/minus.png"
@@ -583,7 +582,6 @@ export default props => {
                 <option value="three">3</option>
                 <option value="four">4</option>
               </MySelect>
-              <InputDragDrop />
             </div>
             <h3
               css={css`

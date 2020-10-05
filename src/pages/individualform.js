@@ -10,8 +10,6 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import InputDragDrop from "../components/InputDragDrop"
-
 import BtnNext from "../components/BtnNext"
 
 import logoGrey from "../images/logoGrey.png"
@@ -146,15 +144,15 @@ const IndexPage = props => {
       >
         <ul>
           Якщо Ви не знайшли те, що Вас цікавить серед стандартної продукції,
-          напишіть нам свої побажання щодо свого конверту і ми радо розглянемо
-          можливість його виробництва. Рекомендуємо вказати:
+          напишіть нам побажання щодо свого конверту і ми розглянемо можливість
+          його виробництва. Рекомендуємо вказати:
           <li> - розмір конверту </li>
           <li> - колір паперу та його щільність або ж марку паперу</li>
           <li>
             - наявність вікна (вікон), його (їх) розміри та розміщення на
             конверті
           </li>
-          <li>- з друком чи без друку</li>
+          <li>- чистий чи з друком (вкажіть кількість кольорів)</li>
         </ul>
       </div>
 
@@ -203,8 +201,6 @@ const IndexPage = props => {
               `}
             ></textarea>
           </div>
-
-          <InputDragDrop />
         </div>
 
         <div

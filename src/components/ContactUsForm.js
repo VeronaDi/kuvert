@@ -313,6 +313,7 @@ export default () => {
                 <option value="Production department">
                   {t("productionDep")}
                 </option>
+                <option value="Accounting department">{t("accountDep")}</option>
                 <option value="CEO">{t("CEO")}</option>
               </MySelect>
               <MyMessageInput
