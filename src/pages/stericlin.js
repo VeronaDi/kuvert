@@ -207,9 +207,12 @@ export default props => {
       <section
         css={css`
           width: 80%;
-          height: 747px;
           margin: 80px auto;
           position: relative;
+          display: flex;
+          @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+          }
         `}
       >
         <img
@@ -218,14 +221,18 @@ export default props => {
           css={css`
             height: 100%;
             width: 45%;
-            float: left;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+              height: auto;
+            }
           `}
         />
         <div
           css={css`
-            height: 100%;
-            width: 55%;
-            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
             background: linear-gradient(
                 0deg,
                 rgba(255, 255, 255, 0.74),
@@ -243,9 +250,6 @@ export default props => {
             font-size: 36px;
             line-height: 48px;
             color: #1B1B1B;
-            position: absolute;
-            top: 40%;
-            left: 100px;
             a {
               text-decoration: none;
               color: black;
