@@ -17,8 +17,8 @@ export default [
   {
     img: "/products/medical-pattern.png",
     name: {
-      en: "Stericlin® sterilization bags",
-      uk: "Стерилізаційні пакети Stericlin®",
+      en: "Stericlin® see-through reels",
+      uk: "Stericlin® - рулони для стерилізації",
     },
     id: "stericlin",
   },

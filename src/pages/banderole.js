@@ -30,13 +30,6 @@ let banderole = [
     },
     id: "envelopes-extension",
   },
-  {
-    name: {
-      en: "Boardback pockets",
-      uk: "Пакети з картонною вставкою",
-    },
-    id: "envelopes-cardboard",
-  },
 ]
 
 export default props => {
@@ -72,7 +65,7 @@ export default props => {
           `}
         >
           {banderole.map(({ name, id }) => (
-            <div className="w-full md:w-1/4 px-2">
+            <div className="w-full md:w-1/3 px-2">
               <LocalizedLink
                 to={`/${id}`}
                 css={css`
