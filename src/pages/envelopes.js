@@ -66,16 +66,20 @@ export default props => {
               className="w-full md:w-1/3 px-2"
               css={css`
                 height: 240px;
+                margin-bottom: 20px;
                 @media screen and (max-width: 1024px) {
-                  height: calc((100vh - 223px) / ${envelopes.length});
+                  height: calc((100vh - 242px) / ${envelopes.length});
                   min-height: 75px;
+                  margin-bottom: 10px;
                 }
               `}
             >
               <LocalizedLink
                 to={`/${id}`}
                 css={css`
-                  display: block;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
                   height: 100%;
                   background: url(${envelopesPattern}), rgba(128, 128, 128, 0.4);
                   position: relative;
@@ -94,10 +98,6 @@ export default props => {
                 <span
                   css={css`
                     font-family: "Raleway", sans-serif;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
                   `}
                 >
                   {t(name)}

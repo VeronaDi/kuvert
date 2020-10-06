@@ -52,9 +52,11 @@ export default props => {
               className="w-full md:w-1/2 px-2"
               css={css`
                 height: 240px;
+                margin-bottom: 20px;
                 @media screen and (max-width: 1024px) {
-                  height: calc((100vh - 223px) / ${products.length});
+                  height: calc((100vh - 293px) / ${products.length});
                   min-height: 75px;
+                  margin-bottom: 10px;
                 }
               `}
             >
@@ -70,7 +72,6 @@ export default props => {
                   position: relative;
                   text-align: center;
                   cursor: pointer;
-                  margin-bottom: 20px;
                   color: #b40039;
                   font-weight: bold;
                   font-size: 40px;
