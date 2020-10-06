@@ -4,6 +4,7 @@ import LocalizedLink from "../components/LocalizedLink"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Steps from "../components/Steps"
 
 import { css } from "@emotion/core"
 
@@ -53,6 +54,12 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
+  const steps = [
+    t("requestType"),
+    t("requestOrderCreate"),
+    t("requestPersonal"),
+  ]
+
   return (
     <Layout>
       <SEO title="Request" />
@@ -68,78 +75,7 @@ export default props => {
         `}
         to="/"
       ></Link>
-      <section
-        css={css`
-          display: flex;
-          flex-directon: row;
-          justify-content: center;
-          font-size: 14px;
-          font-weight: bold;
-          margin: 80px auto 50px auto;
-          @media (max-width: 1024px) {
-            margin-top: 120px;
-            padding: 0 10px;
-          }
-        `}
-      >
-        <div
-          css={css`
-            color: #b40039;
-            border-bottom: 3px solid #b40039;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-          `}
-        >
-          <span
-            css={css`
-              font-size: 26px;
-              padding-right: 5px;
-            `}
-          >
-            1
-          </span>
-          {t("requestType")}
-        </div>
-        <div
-          css={css`
-            color: #b4b4b4;
-            border-bottom: 3px solid #b4b4b4;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-          `}
-        >
-          <span
-            css={css`
-              font-size: 26px;
-              padding-right: 5px;
-            `}
-          >
-            2
-          </span>
-          {t("requestOrderCreate")}
-        </div>
-        <div
-          css={css`
-            color: #b4b4b4;
-            border-bottom: 3px solid #b4b4b4;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-          `}
-        >
-          <span
-            css={css`
-              font-size: 26px;
-              padding-right: 5px;
-            `}
-          >
-            3
-          </span>
-          {t("requestPersonal")}
-        </div>
-      </section>
+      <Steps steps={steps} activeStep={0} />
       <h1
         css={css`
           font-size: 40px;

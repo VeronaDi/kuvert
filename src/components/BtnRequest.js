@@ -1,7 +1,7 @@
 import React from "react"
 // import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { Link } from "gatsby"
+import LocalizedLink from "../components/LocalizedLink"
 
 import { useTranslation } from "react-i18next"
 
@@ -9,7 +9,7 @@ export default () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <Link
+    <LocalizedLink
       to="/request"
       css={css`
         background: #c5003e;
@@ -39,6 +39,6 @@ export default () => {
       `}
     >
       {t("request")}
-    </Link>
+    </LocalizedLink>
   )
 }
