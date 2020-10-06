@@ -40,8 +40,8 @@ const IndexPage = props => {
 
       <section
         css={css`
-          height: 100vh;
-          min-height: 800px;
+          height: calc(100vh - 86.59px);
+          min-height: 590px;
           background: url(${zeh});
           background-size: cover;
           position: relative;
