@@ -39,23 +39,38 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${thermopack}), #ffffff;
-          background-position: left;
-          background-repeat: no-repeat;
-          background-size: 42% 80%;
+          width: 90vw;
+          background: #ffffff;
           margin: 0 auto;
-          padding: 30px 78px 90px 37%;
+          padding: 30px 78px 90px 78px;
           color: #000000;
+          display: flex;
+          justify-content: space-between;
+          @media screen and (max-width: 1024px) {
+            flex-direction: column;
+          }
         `}
       >
+        <div
+          css={css`
+            width: 35%;
+            @media screen and (max-width: 1024px) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
+          `}
+        >
+          <img src={thermopack} alt="Thermopack" />
+        </div>
         <p
           css={css`
+            width: 60%;
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
+            @media screen and (max-width: 1024px) {
+              width: 100%;
+            }
           `}
         >
           {t("thermopackText")}
@@ -66,6 +81,9 @@ export default props => {
           width: 50%;
           display: block;
           margin: 80px auto;
+          @media screen and (max-width: 1024px) {
+            width: 90vw;
+          }
         `}
         src={thermopackTable}
         alt="thermopack-table"

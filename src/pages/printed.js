@@ -40,21 +40,20 @@ export default props => {
       >
         {t("printProducts")}
       </h3>
-      <div
+      <img
+        src={printedMix}
         css={css`
-          width: 1306px;
-          height: 580px;
-          background: url(${printedMix});
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
+          display: block;
+          width: 90vw;
+          max-width: 1300px;
           margin: 0 auto;
         `}
-      ></div>
+        alt="Printed mix"
+      />
       <p
         css={css`
-          width: 845px;
-          height: 81px;
+          width: 90vw;
+          max-width: 845px;
           font-weight: 500;
           font-size: 18px;
           line-height: 27px;
@@ -67,7 +66,6 @@ export default props => {
       <div
         css={css`
           width: 100%;
-          height: 765px;
           background: #e7e7e7;
           text-align: center;
           margin-bottom: 82px;
@@ -86,12 +84,13 @@ export default props => {
         </h4>
         <div
           css={css`
-            width: 100%;
+            width: 90vw;
+            margin: 0 auto;
             background: #e7e7e7;
             display: flex;
             justify-content: space-around;
             flex-flow: row wrap;
-            padding-top: 46px;
+            padding-bottom: 46px;
           `}
         >
           {printed.map(({ title, img, text, id }) => (
@@ -99,6 +98,9 @@ export default props => {
               key={id}
               css={css`
                 width: 30%;
+                @media screen and (max-width: 768px) {
+                  width: 100%;
+                }
               `}
             >
               <img src={img} alt="logo" />

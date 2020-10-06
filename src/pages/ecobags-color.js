@@ -89,50 +89,63 @@ export default props => {
             background: #ffffff;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 3px;
-            width: 1188px;
-            height: 93px;
+            width: 90vw;
             margin: 20px auto 54px auto;
-            padding: 22px 0;
+            padding: 30px;
             display: flex;
-            flex-direction: row;
             justify-content: space-around;
+            align-items: center;
+            @media screen and (max-width: 570px) {
+              flex-direction: column;
+            }
           `}
         >
-          <GeneralNames>
-            {t("size")}
-            <EnvelopeParam>
-              {size} {t("mm")}
-            </EnvelopeParam>
-          </GeneralNames>
+          <div
+            css={css`
+              display: flex;
+              justify-content: space-around;
+              flex: 1;
+              @media screen and (max-width: 1024px) {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 150px);
+              }
+            `}
+          >
+            <GeneralNames>
+              {t("size")}
+              <EnvelopeParam>
+                {size} {t("mm")}
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("handleType")}
-            <EnvelopeParam>{t(handle)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("handleType")}
+              <EnvelopeParam>{t(handle)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("color")}
-            <EnvelopeParam>{t(color)}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("color")}
+              <EnvelopeParam>{t(color)}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("paperGSM")}
-            <EnvelopeParam>{gsm}</EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("paperGSM")}
+              <EnvelopeParam>{gsm}</EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("quantityBox")}
-            <EnvelopeParam>
-              {pack}
-              {t("pcs")}
-            </EnvelopeParam>
-          </GeneralNames>
+            <GeneralNames>
+              {t("quantityBox")}
+              <EnvelopeParam>
+                {pack}
+                {t("pcs")}
+              </EnvelopeParam>
+            </GeneralNames>
 
-          <GeneralNames>
-            {t("price")} {t("thousandPcs")}
-            <EnvelopeParam>{t(price)}</EnvelopeParam>
-          </GeneralNames>
-
+            <GeneralNames>
+              {t("price")} {t("thousandPcs")}
+              <EnvelopeParam>{t(price)}</EnvelopeParam>
+            </GeneralNames>
+          </div>
           <BtnAddToRequest />
         </div>
       ))}

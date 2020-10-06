@@ -20,11 +20,10 @@ import airpoc from "../data/airpoc"
 const GeneralNames = ({ children }) => (
   <div
     css={css`
-      font-weight: normal;
+      font-weight: 500;
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
-      padding-right: 30px;
     `}
   >
     {children}
@@ -70,49 +69,97 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 720px;
-          background: url(${bubblebag}), #ffffff;
+          width: 90vw;
+          background: #ffffff;
           background-position: left;
           background-repeat: no-repeat;
           background-size: 40% 80%;
           margin: 9px auto;
-          padding: 30px 78px 90px 37%;
+          padding: 30px 70px 90px 70px;
           color: #000000;
+          display: flex;
+          justify-content: space-between;
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+          }
         `}
       >
-        <p
-          css={css`
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-          `}
-        >
-          {t("airpocText")}
-        </p>
         <div
           css={css`
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-top: 20px;
+            width: 35%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
           `}
         >
-          <ul
+          <img src={bubblebag} alt="Bubble bag" />
+        </div>
+        <div
+          css={css`
+            width: 60%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          `}
+        >
+          <p
             css={css`
               font-weight: 500;
-              font-size: 24px;
-              line-height: 23px;
-              padding-left: 0;
-              list-style: none;
-              display: flex;
-              flex-direction: column;
-              height: 240px;
+              font-size: 18px;
+              line-height: 27px;
             `}
           >
-            {t("size")}
-            {airpoc.map(({ size }) => (
+            {t("airpocText")}
+          </p>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              padding-top: 20px;
+            `}
+          >
+            <ul
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 23px;
+                padding-left: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                margin-right: 40px;
+              `}
+            >
+              {t("size")}
+              {airpoc.map(({ size }) => (
+                <li
+                  css={css`
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding-top: 15px;
+                    :before {
+                      content: "-";
+                      padding-right: 5px;
+                    }
+                  `}
+                >
+                  {size} {t("mm")}
+                </li>
+              ))}
+            </ul>
+            <ul
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 23px;
+                padding-left: 0;
+                list-style: none;
+                margin-right: 40px;
+              `}
+            >
+              {t("color")}
               <li
                 css={css`
                   font-weight: 500;
@@ -125,120 +172,95 @@ export default props => {
                   }
                 `}
               >
-                {size} {t("mm")}
+                {t("brown")}
               </li>
-            ))}
-          </ul>
-          <ul
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 20px;
+                  padding-top: 15px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("white")}
+              </li>
+            </ul>
+            <ul
+              css={css`
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 23px;
+                padding-left: 0;
+                list-style: none;
+              `}
+            >
+              {t("sealing")}
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 20px;
+                  padding-top: 15px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("skl")}
+              </li>
+            </ul>
+          </div>
+          <div
             css={css`
               font-weight: 500;
               font-size: 24px;
-              line-height: 23px;
-              padding-left: 0;
-              list-style: none;
+              line-height: 27px;
+              padding: 40px 0 0 0;
             `}
           >
-            {t("color")}
-            <li
+            {t("whereUse")}
+            <ul
               css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 20px;
-                padding-top: 15px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0;
               `}
             >
-              {t("brown")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 20px;
-                padding-top: 15px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("white")}
-            </li>
-          </ul>
-          <ul
-            css={css`
-              font-weight: 500;
-              font-size: 24px;
-              line-height: 23px;
-              padding-left: 0;
-              list-style: none;
-            `}
-          >
-            {t("sealing")}
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 20px;
-                padding-top: 15px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("skl")}
-            </li>
-          </ul>
-        </div>
-        <div
-          css={css`
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 27px;
-            padding: 170px 0 0 0;
-          `}
-        >
-          {t("whereUse")}
-          <ul
-            css={css`
-              list-style: none;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              padding: 0;
-            `}
-          >
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 25px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("docFlow")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 25px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("bulkyTransportation")}
-            </li>
-          </ul>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 25px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("docFlow")}
+              </li>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 25px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("bulkyTransportation")}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -253,15 +275,7 @@ export default props => {
       >
         {t("chooseDesiredProduct")}
       </h4>
-      <div
-        css={css`
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-        `}
-      >
+      <div>
         {airpoc.map(({ code, size, color, pack, sealing, price }) => (
           <div
             key={code}
@@ -269,60 +283,64 @@ export default props => {
               background: #ffffff;
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
               border-radius: 3px;
-              width: 380px;
-              height: 266px;
-              padding: 28px 17px 0 17px;
+              width: 90vw;
+              margin: 20px auto 54px auto;
+              padding: 30px;
               display: flex;
-              flex-direction: column;
-              flex-wrap: wrap;
-              justify-content: start;
-              position: relative;
-              margin: 30px 50px;
+              justify-content: space-around;
+              align-items: center;
+              @media screen and (max-width: 570px) {
+                flex-direction: column;
+              }
             `}
           >
-            <GeneralNames>
-              {t("code")}
-              <EnvelopeParam>{code}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("color")}
-              <EnvelopeParam>{t(color)}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("quantityBox")}
-              <EnvelopeParam>
-                {pack}
-                {t("pcs")}
-              </EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("size")}
-              <EnvelopeParam>
-                {size} {t("mm")}
-              </EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("sealing")}
-              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("price")} {t("thousandPcs")}
-              <EnvelopeParam>{t(price)}</EnvelopeParam>
-            </GeneralNames>
             <div
               css={css`
-                border-top: 0.2px solid #000000;
-                width: 90%;
-                position: absolute;
-                bottom: 0;
-                margin-bottom: 5px;
+                display: flex;
+                justify-content: space-around;
+                flex: 1;
+                @media screen and (max-width: 1024px) {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, 150px);
+                }
               `}
             >
+              <GeneralNames>
+                {t("code")}
+                <EnvelopeParam>{code}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("quantityBox")}
+                <EnvelopeParam>
+                  {pack}
+                  {t("pcs")}
+                </EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("size")}
+                <EnvelopeParam>
+                  {size} {t("mm")}
+                </EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("price")} {t("thousandPcs")}
+                <EnvelopeParam>{t(price)}</EnvelopeParam>
+              </GeneralNames>
+            </div>
+            <div>
               <BtnAddToRequest />
             </div>
           </div>

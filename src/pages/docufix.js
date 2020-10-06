@@ -38,88 +38,111 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${docufix}), #ffffff;
+          width: 90vw;
+          background: #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 40% 100%;
+          background-size: 40% 80%;
           margin: 9px auto 50px auto;
-          padding: 30px 78px 90px 37%;
+          padding: 30px 70px 90px 70px;
           color: #000000;
+          display: flex;
+          justify-content: space-between;
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+          }
         `}
       >
-        <p
-          css={css`
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 27px;
-          `}
-        >
-          {t("docufixText")}
-        </p>
-
         <div
           css={css`
-            font-weight: 500;
-            font-size: 24px;
-            line-height: 27px;
-            padding: 49px 0 0 0;
+            width: 35%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
           `}
         >
-          {t("whereUse")}
-          <ul
+          <img src={docufix} alt="Docufix" />
+        </div>
+        <div
+          css={css`
+            width: 60%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          `}
+        >
+          <p
             css={css`
-              display: flex;
-              justify-content: start;
-              flex-wrap: wrap;
-              list-style: none;
-              padding: 0;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 27px;
+              width: 100%;
             `}
           >
-            <li
+            {t("docufixText")}
+          </p>
+
+          <div
+            css={css`
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 27px;
+              padding: 49px 0 0 0;
+            `}
+          >
+            {t("whereUse")}
+            <ul
               css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-right: 40px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
+                display: flex;
+                justify-content: start;
+                flex-wrap: wrap;
+                list-style: none;
+                padding: 0;
               `}
             >
-              {t("productLabeling")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                padding-right: 40px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("docFlow")}
-            </li>
-            <li
-              css={css`
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 36px;
-                :before {
-                  content: "-";
-                  padding-right: 5px;
-                }
-              `}
-            >
-              {t("infoInscriptions")}
-            </li>
-          </ul>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  padding-right: 40px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("productLabeling")}
+              </li>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  padding-right: 40px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("docFlow")}
+              </li>
+              <li
+                css={css`
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 36px;
+                  :before {
+                    content: "-";
+                    padding-right: 5px;
+                  }
+                `}
+              >
+                {t("infoInscriptions")}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

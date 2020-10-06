@@ -16,6 +16,9 @@ const MyInput = ({ label, ...props }) => {
           flex-direction: column;
           text-align: left;
           position: relative;
+          @media screen and (max-width: 1024px) {
+            width: 100%;
+          }
         `}
       >
         <label
@@ -55,6 +58,9 @@ const MyInput = ({ label, ...props }) => {
             :focus {
               border: 2px solid #c4c4c4;
             }
+            @media screen and (max-width: 1024px) {
+              width: 100%;
+            }
           `}
         />
         {meta.touched && meta.error ? (
@@ -92,6 +98,9 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
           display: flex;
           flex-direction: column;
           text-align: left;
+          @media screen and (max-width: 1024px) {
+            width: 100%;
+          }
         `}
       >
         <label
@@ -121,7 +130,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
             type="button"
             css={css`
               position: absolute;
-              left: 70px;
+              left: 10%;
               top: 50%;
               transform: translate(0%, -50%);
               border: none;
@@ -155,6 +164,9 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
                 -webkit-appearance: none;
                 margin: 0;
               }
+              @media screen and (max-width: 1024px) {
+                width: 100%;
+              }
             `}
           />
           <button
@@ -164,7 +176,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
             type="button"
             css={css`
               position: absolute;
-              right: 70px;
+              right: 10%;
               top: 50%;
               transform: translate(0, -50%);
               border: none;
@@ -209,8 +221,8 @@ export default ({ close }) => {
   return (
     <div
       css={css`
-        width: 944px;
-        height: 597px;
+        max-width: 944px;
+        width: 90vw;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -250,7 +262,7 @@ export default ({ close }) => {
       </button>
       <p
         css={css`
-          width: 342px;
+          padding: 0 30px;
           margin: 0 auto;
           font-weight: normal;
           font-size: 14px;
@@ -278,12 +290,17 @@ export default ({ close }) => {
         {({ isSubmitting, setFieldValue }) => (
           <Form
             css={css`
-              height: 290px;
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
               justify-content: space-around;
               align-content: space-between;
+              padding: 0 60px;
+              @media screen and (max-width: 1024px) {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 30px;
+              }
             `}
           >
             <MyInput
@@ -319,7 +336,8 @@ export default ({ close }) => {
                 border: none;
                 background: #c5003e;
                 width: 780px;
-                padding: 18px 210px;
+                max-width: 80%;
+                padding: 18px 0;
                 cursor: pointer;
                 outline: none;
                 margin-top: 36px;
@@ -342,7 +360,6 @@ export default ({ close }) => {
                 font-weight: bold;
                 line-height: 30px;
                 color: #000000;
-                padding-top: 40px;
               `}
             >
               {t("weightResult")}

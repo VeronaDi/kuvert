@@ -17,6 +17,7 @@ export default () => {
       css={css`
         display: flex;
         flex-direction: column;
+        width: 100%;
       `}
     >
       <label
@@ -39,7 +40,7 @@ export default () => {
           type="button"
           css={css`
             position: absolute;
-            left: 70px;
+            left: 10%;
             top: 50%;
             transform: translate(0%, -50%);
             border: none;
@@ -56,7 +57,7 @@ export default () => {
           min="0"
           step="250"
           css={css`
-            width: 380px;
+            width: 100%;
             height: 65px;
             background: #ffffff;
             border: 1px solid #d6d6d6;
@@ -82,7 +83,7 @@ export default () => {
           type="button"
           css={css`
             position: absolute;
-            right: 70px;
+            right: 10%;
             top: 50%;
             transform: translate(0, -50%);
             border: none;

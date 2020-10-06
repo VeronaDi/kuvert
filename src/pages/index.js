@@ -40,11 +40,17 @@ const IndexPage = props => {
 
       <section
         css={css`
-          height: 100vh;
-          min-height: 800px;
+          height: calc(100vh - 86.59px);
+          min-height: 590px;
           background: url(${zeh});
           background-size: cover;
-          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media screen and (min-width: 1250px) {
+            height: 100vh;
+            min-height: 740px;
+          }
         `}
       >
         <div
@@ -56,10 +62,6 @@ const IndexPage = props => {
             color: white;
             text-align: center;
             z-index: 3;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             @media (max-width: 767px) {
               width: 305px;
               height: 333px;
@@ -248,18 +250,28 @@ const IndexPage = props => {
           padding-top: 60px;
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: center;
           @media (max-width: 768px) {
             flex-direction: column;
             margin: 40px auto;
           }
         `}
       >
-        <img src={ukraine} alt={`map of Ukraine`} css={css``} />
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+          `}
+        >
+          <img src={ukraine} alt={`map of Ukraine`} css={css``} />
+        </div>
         <div
           css={css`
             padding: 80px 60px;
+            width: 500px;
             @media (max-width: 768px) {
+              width: 100%;
               padding: 30px 40px;
             }
           `}
@@ -307,6 +319,7 @@ const IndexPage = props => {
         css={css`
           background: #ffffff;
           margin: 45px 0;
+          padding: 45px 0;
         `}
       >
         <h3

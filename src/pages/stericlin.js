@@ -51,37 +51,51 @@ const Stericlin = ({ stericlin: { nummer, code, size, pack }, t }) => (
       background: #ffffff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 3px;
-      width: 1188px;
-      height: 93px;
+      width: 90vw;
       margin: 20px auto 54px auto;
-      padding: 22px 0;
+      padding: 30px;
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
+      align-items: center;
+      @media screen and (max-width: 570px) {
+        flex-direction: column;
+      }
     `}
   >
-    <GeneralNames>
-      №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
-    </GeneralNames>
+    <div
+      css={css`
+        display: flex;
+        justify-content: space-between;
+        padding-right: 40px;
+        flex: 1;
+        @media screen and (max-width: 817px) {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 120px);
+        }
+      `}
+    >
+      <GeneralNames>
+        №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
+      </GeneralNames>
 
-    <GeneralNames>
-      {t("code")}
-      <EnvelopeParam>{code}</EnvelopeParam>
-    </GeneralNames>
+      <GeneralNames>
+        {t("code")}
+        <EnvelopeParam>{code}</EnvelopeParam>
+      </GeneralNames>
 
-    <GeneralNames>
-      {t("size")}, {t("smM")}
-      <EnvelopeParam>{size}</EnvelopeParam>
-    </GeneralNames>
+      <GeneralNames>
+        {t("size")}, {t("smM")}
+        <EnvelopeParam>{size}</EnvelopeParam>
+      </GeneralNames>
 
-    <GeneralNames>
-      {t("quantityBox")}
-      <EnvelopeParam>
-        {pack}
-        {t("pcs")}
-      </EnvelopeParam>
-    </GeneralNames>
-
+      <GeneralNames>
+        {t("quantityBox")}
+        <EnvelopeParam>
+          {pack}
+          {t("pcs")}
+        </EnvelopeParam>
+      </GeneralNames>
+    </div>
     <BtnAddToRequest />
   </div>
 )
@@ -112,20 +126,42 @@ export default props => {
       </h3>
       <div
         css={css`
-          width: 80%;
-          height: auto;
-          max-height: 586px;
-          background: url(${stericlin}), #ffffff;
+          width: 90vw;
+          background: #ffffff;
           background-position: left;
           background-repeat: no-repeat;
-          background-size: 40% 100%;
-          margin: 9px auto;
-          padding: 30px 78px 90px 37%;
+          background-size: 40% 80%;
+          margin: 9px auto 50px auto;
+          padding: 0 70px 0 0;
           color: #000000;
+          display: flex;
+          justify-content: space-between;
+          @media screen and (max-width: 768px) {
+            padding: 30px 70px 90px 70px;
+            flex-direction: column;
+          }
         `}
       >
-        <p
+        <div
           css={css`
+            width: 35%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          `}
+        >
+          <img src={stericlin} alt="Ecobags white" />
+        </div>
+        <div
+          css={css`
+            width: 60%;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+            }
+          `}
+        >
+          <p
+            css={css`
             font-weight: 500;
             font-size: 18px;
             line-height: 27px;
@@ -136,8 +172,9 @@ export default props => {
                 text-decoration: underline;
               }
           `}
-          dangerouslySetInnerHTML={{ __html: t("stericlinText") }}
-        ></p>
+            dangerouslySetInnerHTML={{ __html: t("stericlinText") }}
+          ></p>
+        </div>
       </div>
 
       <h4
@@ -170,9 +207,12 @@ export default props => {
       <section
         css={css`
           width: 80%;
-          height: 747px;
           margin: 80px auto;
           position: relative;
+          display: flex;
+          @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+          }
         `}
       >
         <img
@@ -181,14 +221,18 @@ export default props => {
           css={css`
             height: 100%;
             width: 45%;
-            float: left;
+            @media screen and (max-width: 768px) {
+              width: 100%;
+              height: auto;
+            }
           `}
         />
         <div
           css={css`
-            height: 100%;
-            width: 55%;
-            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
             background: linear-gradient(
                 0deg,
                 rgba(255, 255, 255, 0.74),
@@ -206,9 +250,6 @@ export default props => {
             font-size: 36px;
             line-height: 48px;
             color: #1B1B1B;
-            position: absolute;
-            top: 40%;
-            left: 100px;
             a {
               text-decoration: none;
               color: black;

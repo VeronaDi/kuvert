@@ -72,22 +72,23 @@ export default props => {
         css={css`
           display: flex;
           flex-directon: row;
-          position: relative;
-          left: 50%;
-          -webkit-transform: translate(-50%, -2%);
-          transform: translate(-50%, -2%);
-          width: 40vw;
-          height: 44px;
+          justify-content: center;
           font-size: 14px;
           font-weight: bold;
-          margin: 80px 0 50px 0;
+          margin: 80px auto 50px auto;
+          @media (max-width: 1024px) {
+            margin-top: 120px;
+            padding: 0 10px;
+          }
         `}
       >
         <div
           css={css`
             color: #b40039;
             border-bottom: 3px solid #b40039;
-            width: 261px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
           `}
         >
           <span
@@ -104,7 +105,9 @@ export default props => {
           css={css`
             color: #b4b4b4;
             border-bottom: 3px solid #b4b4b4;
-            width: 280px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
           `}
         >
           <span
@@ -121,7 +124,9 @@ export default props => {
           css={css`
             color: #b4b4b4;
             border-bottom: 3px solid #b4b4b4;
-            width: 261px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
           `}
         >
           <span
@@ -164,7 +169,7 @@ export default props => {
           `}
         />
         <div
-          className="row -mx-2"
+          className="row"
           css={css`
             position: absolute;
             top: 0px;
@@ -190,22 +195,32 @@ export default props => {
                   align-items: center;
                   padding: 100px 40px;
                   @media (max-width: 1024px) {
-                    height: 113px;
+                    height: auto;
                     flex-direction: row;
                     margin-bottom: 25px;
                     padding: 25px 17px;
                     text-align: left;
+                    justify-content: flex-start;
+                    width: 100%;
                   }
                 `}
               >
-                <img
-                  src={img}
-                  alt={`${img} type`}
-                  css={css`
-                    width: 90px;
-                  `}
-                />
                 <div>
+                  <img
+                    src={img}
+                    alt={`${img} type`}
+                    css={css`
+                      width: 90px;
+                    `}
+                  />
+                </div>
+                <div
+                  css={css`
+                    @media (max-width: 1024px) {
+                      padding: 0 20px;
+                    }
+                  `}
+                >
                   <h4
                     css={css`
                       font-weight: 500;
@@ -224,6 +239,7 @@ export default props => {
                       line-height: 27px;
                       @media (max-width: 1024px) {
                         font-size: 14px;
+                        margin-bottom: 0;
                       }
                     `}
                   >

@@ -45,14 +45,19 @@ export default props => {
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
+          @media screen and (max-width: 1144px) {
+            height: auto;
+            flex-direction: row;
+          }
         `}
       >
         <div
           css={css`
-            width: 27vw;
+            width: 25%;
             height: 100%;
             background: url(${factory1});
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
             display: table;
@@ -63,12 +68,16 @@ export default props => {
             margin: 0 auto;
             :after {
               content: "";
-              width: 27vw;
+              width: 100%;
               height: 100%;
               background: rgba(0, 0, 0, 0.6);
               opacity: 1;
               position: absolute;
               left: 0;
+            }
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
             }
           `}
         >
@@ -90,54 +99,81 @@ export default props => {
         </div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory2});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory3});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory4});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory5});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             display: table;
             text-align: right;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         >
           <h4
             css={css`
               display: table-cell;
               vertical-align: middle;
-              font-size: 2.26vw;
+              font-size: 2vw;
               font-weight: 500;
               color: white;
               padding: 0 14px;
               background: #b40039;
               letter-spacing: 2px;
+              @media screen and (max-width: 1144px) {
+                font-size: 4vw;
+              }
             `}
           >
             {t("acquainted")}
@@ -145,41 +181,42 @@ export default props => {
         </div>
         <div
           css={css`
-            width: 21vw;
+            width: 25%;
             height: 50%;
             background: url(${factory6});
-            background-size: 100% 100%;
+            background-size: cover;
+            background-position: center;
+            @media screen and (max-width: 1144px) {
+              width: 50%;
+              height: 220px;
+            }
           `}
         ></div>
       </section>
 
       <section
         css={css`
-          background: url(${kuvertFactory}), #444444;
-          background-position: right;
+          background: #444444;
+          background-position: top 0 left 50vw;
           background-repeat: no-repeat;
-          background-size: 55% 100%;
+          background-size: auto 100%;
           width: 100vw;
-          height: 747px;
           margin-bottom: 71px;
-          position: relative;
+          display: flex;
+          @media screen and (max-width: 1144px) {
+            flex-direction: column;
+          }
         `}
       >
         <div
           css={css`
-            background: url(${mayerLogo}), rgba(0, 0, 0, 0.488);
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 20%;
-            height: 26%;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-          `}
-        ></div>
-        <div
-          css={css`
-            padding: 59px 0 65px 106px;
+            padding: 59px 50px 65px 106px;
+            width: 50vw;
+            @media screen and (max-width: 1144px) {
+              width: 90vw;
+              margin: 0 auto;
+              padding: 59px 0 65px 0;
+            }
           `}
         >
           <h3
@@ -188,6 +225,7 @@ export default props => {
               line-height: 42px;
               color: white;
               font-weight: normal;
+              margin-top: 0;
             `}
           >
             {t("aboutUsShort")}
@@ -198,7 +236,6 @@ export default props => {
               font-size: 18px;
               line-height: 27px;
               color: white;
-              width: 35%;
             `}
           >
             {t("historyP1")}
@@ -209,7 +246,6 @@ export default props => {
               font-size: 18px;
               line-height: 27px;
               color: white;
-              width: 35%;
               padding-bottom: 20px;
             `}
           >
@@ -230,12 +266,46 @@ export default props => {
             {t("visitMayer")}
           </a>
         </div>
+        <div
+          css={css`
+            background: url(${kuvertFactory}), #444444;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+            position: relative;
+            @media screen and (max-width: 1144px) {
+              height: 350px;
+              width: 100%;
+            }
+          `}
+        >
+          <div
+            css={css`
+              background: url(${mayerLogo}), rgba(0, 0, 0, 0.488);
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+              width: 20%;
+              height: 26%;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              @media screen and (max-width: 1144px) {
+                width: 30%;
+                height: 30%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            `}
+          ></div>
+        </div>
       </section>
 
       <section
         css={css`
           width: 90vw;
-          height: 332px;
           margin: 0 auto 70px auto;
           background: #b40039;
         `}
@@ -260,8 +330,9 @@ export default props => {
             line-height: 27px;
             color: white;
             font-weight: normal;
-            padding: 30px 0 48px 0;
-            width: 704.05px;
+            padding: 30px 25px 48px 25px;
+            width: 100%;
+            max-width: 704px;
             margin: 0 auto;
             text-align: center;
             font-weight: normal;
@@ -275,7 +346,7 @@ export default props => {
 
       <section
         css={css`
-          height: 356px;
+          padding-bottom: 40px;
           text-align: center;
           background: #ffffff;
         `}
@@ -287,7 +358,7 @@ export default props => {
             font-weight: 500;
             font-size: 36px;
             line-height: 42px;
-            margin: 0;
+            margin: 0 0 10px 0;
           `}
         >
           {t("participants")}

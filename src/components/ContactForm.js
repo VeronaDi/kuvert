@@ -10,12 +10,25 @@ export default () => {
   return (
     <div
       css={css`
-        width: 780px;
-        height: 440px;
+        width: 90vw;
+        max-width: 780px;
+        margin: 0 auto;
         display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          padding-bottom: 80px;
+        }
       `}
     >
-      <div>
+      <div
+        css={css`
+          width: 48%;
+          @media screen and (max-width: 768px) {
+            width: 100%
+          }
+        `}
+      >
         <h3
           css={css`
             font-size: 26px;
@@ -43,7 +56,6 @@ export default () => {
             type="text"
             placeholder="Bob Green"
             css={css`
-              width: 378px;
               height: 65px;
               background: #ffffff;
               border: 1px solid #d6d6d6;
@@ -51,7 +63,6 @@ export default () => {
               box-sizing: border-box;
               padding: 20px;
               outline: none;
-              margin-right: 100px;
               ::-webkit-input-placeholder {
                 font-size: 16px;
                 color: #ababab;
@@ -82,7 +93,6 @@ export default () => {
             type="text"
             placeholder="Company"
             css={css`
-              width: 378px;
               height: 65px;
               background: #ffffff;
               border: 1px solid #d6d6d6;
@@ -90,7 +100,6 @@ export default () => {
               box-sizing: border-box;
               padding: 20px;
               outline: none;
-              margin-right: 100px;
               ::-webkit-input-placeholder {
                 font-size: 16px;
                 color: #ababab;
@@ -103,7 +112,14 @@ export default () => {
           ></input>
         </div>
       </div>
-      <div>
+      <div
+        css={css`
+          width: 48%;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+        `}
+      >
         <h3
           css={css`
             font-size: 26px;
@@ -131,7 +147,6 @@ export default () => {
             type="text"
             placeholder="Kyiv"
             css={css`
-              width: 378px;
               height: 65px;
               background: #ffffff;
               border: 1px solid #d6d6d6;
@@ -139,7 +154,6 @@ export default () => {
               box-sizing: border-box;
               padding: 20px;
               outline: none;
-              margin-right: 100px;
               ::-webkit-input-placeholder {
                 font-size: 16px;
                 color: #ababab;
@@ -170,7 +184,6 @@ export default () => {
             type="email"
             placeholder="example@gmail.com"
             css={css`
-              width: 378px;
               height: 65px;
               background: #ffffff;
               border: 1px solid #d6d6d6;
@@ -208,7 +221,6 @@ export default () => {
             type="phone"
             placeholder="+380123456789"
             css={css`
-              width: 378px;
               height: 65px;
               background: #ffffff;
               border: 1px solid #d6d6d6;

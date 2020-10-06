@@ -10,8 +10,12 @@ import ContactUs from "../components/ContactUsForm"
 import LeafletMap from "../components/LeafletMap"
 
 import call from "../images/call.png"
+import callDark from "../images/call-dark.png"
 import location from "../images/location.png"
+import locationDark from "../images/location-dark.png"
 import write from "../images/write_us.png"
+import writeDark from "../images/write_us-dark.png"
+import arrowSelect from "../images/arrow-select.png"
 
 import { css } from "@emotion/core"
 
@@ -40,6 +44,9 @@ export default props => {
           height: 100vh;
           background: #ffffff;
           position: relative;
+          @media screen and (max-width: 943px) {
+            height: auto;
+          }
         `}
       >
         <div
@@ -47,6 +54,9 @@ export default props => {
             width: 783px;
             margin: 0 auto;
             padding: 35px 0;
+            @media screen and (max-width: 943px) {
+              display: none;
+            }
           `}
         >
           {[contacts.factory, ...contacts.offices].map((currentCity, index) => (
@@ -74,27 +84,103 @@ export default props => {
           ))}
         </div>
 
-        <LeafletMap position={city.position} />
+        <div
+          css={css`
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            @media screen and (min-width: 943px) {
+              display: none;
+            }
+          `}
+        >
+          <select
+            onChange={e =>
+              setCity(
+                [contacts.factory, ...contacts.offices][e.target.selectedIndex]
+              )
+            }
+            css={css`
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              background: url(${arrowSelect}), #ffffff;
+              background-position: 97%;
+              background-repeat: no-repeat;
+              max-width: 200px;
+              width: 100%;
+              height: 65px;
+              font-size: 16px;
+              border: 0;
+              border-radius: 3px;
+              outline: none;
+              color: #414141;
+            `}
+          >
+            {[contacts.factory, ...contacts.offices].map(
+              (currentCity, index) => (
+                <option
+                  value={currentCity}
+                  css={css`
+                    width: 20%;
+                    height: 68px;
+                    background: transparent;
+                    color: #c1c1c1;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: center;
+                    outline: none;
+                    border: 2px solid #c1c1c1;
+                    border-radius: 3px;
+                    cursor: pointer;
+
+                    ${currentCity === city && "border: 2px solid #020202;"}
+                    ${currentCity === city && "color: #020202;"}
+                  `}
+                >
+                  {t(currentCity.city)}
+                </option>
+              )
+            )}
+          </select>
+        </div>
 
         <div
           css={css`
             width: 432px;
-            height: 397px;
             position: absolute;
             left: 91px;
             top: 25%;
             background: rgba(56, 56, 56, 0.8);
             z-index: 5;
+            color: #fff;
+            a {
+              color: #fff;
+            }
+            @media screen and (max-width: 943px) {
+              position: static;
+              background: #fff;
+              color: #000;
+              text-align: center;
+              width: 100%;
+              max-width: 330px;
+              margin: 0 auto 40px auto;
+              a {
+                color: #000;
+              }
+            }
           `}
         >
           <div
             css={css`
               width: 100%;
-              height: 132px;
               padding: 30px 0 30px 130px;
               background: url(${call}) 40px center no-repeat;
-              color: white;
               font-weight: bold;
+              @media screen and (max-width: 943px) {
+                background: url(${callDark}) 40px center no-repeat;
+                padding-left: 100px;
+              }
             `}
           >
             {t("call")}
@@ -109,7 +195,6 @@ export default props => {
                   css={css`
                     display: block;
                     text-decoration: none;
-                    color: white;
                     font-size: 14px;
                     padding-bottom: 10px;
                     font-weight: normal;
@@ -123,11 +208,13 @@ export default props => {
           <div
             css={css`
               width: 100%;
-              height: 132px;
               padding: 30px 0 30px 130px;
               background: url(${location}) 40px center no-repeat;
-              color: white;
               font-weight: bold;
+              @media screen and (max-width: 943px) {
+                background: url(${locationDark}) 40px center no-repeat;
+                padding-left: 100px;
+              }
             `}
           >
             {t("visitUs")}
@@ -143,11 +230,13 @@ export default props => {
           <div
             css={css`
               width: 100%;
-              height: 132px;
               padding: 30px 0 30px 130px;
               background: url(${write}) 40px center no-repeat;
-              color: white;
               font-weight: bold;
+              @media screen and (max-width: 943px) {
+                background: url(${writeDark}) 40px center no-repeat;
+                padding-left: 100px;
+              }
             `}
           >
             {t("writeUs")}
@@ -155,7 +244,6 @@ export default props => {
               href={`mailto:${city.email}`}
               css={css`
                 text-decoration: none;
-                color: white;
                 font-size: 14px;
                 display: block;
                 padding-top: 18px;
@@ -166,6 +254,8 @@ export default props => {
             </a>
           </div>
         </div>
+
+        <LeafletMap position={city.position} />
       </section>
       <ContactUs />
       <Footer />
