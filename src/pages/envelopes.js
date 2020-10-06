@@ -75,7 +75,7 @@ export default props => {
                   margin-bottom: 20px;
                   color: #b40039;
                   font-weight: bold;
-                  font-size: 48px;
+                  font-size: 42px;
                   line-height: 47px;
                   text-decoration: none;
                 `}
