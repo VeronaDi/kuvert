@@ -86,6 +86,7 @@ const resources = {
       enterAmountText: "Вкажіть кількість, яка Вас цікавить",
       envelope: "Конверт",
       envelopes: "Конверти",
+      envelopeSize: "розмір конверту",
       envelopesStandard: "Прямий клапан",
       envelopeDetails: "Параметри конверта",
       extensionEnvelopes: "Пакети з розширенням",
@@ -110,6 +111,8 @@ const resources = {
       individualOrder: "Індивідуальний запит",
       individualOrderText:
         "Якщо бажаєте продукцію з власними параметрами, цей варіант саме для Вас.",
+      individualRequestText:
+        "Якщо Ви не знайшли те, що Вас цікавить серед стандартної продукції, напишіть нам побажання щодо свого конверту і ми розглянемо можливість його виробництва. Рекомендуємо вказати:",
       innerPrint: "Внутрішній друк",
       innerPrintShort: "Внутр. друк",
       innerandouterPrint: "Зовнішній та внутрішній друк",
@@ -149,10 +152,10 @@ const resources = {
       paperbags: "Паперові торби з крученими ручками",
       paperfile: "Паперові файли",
       paperType: "Папір",
+      paperParam: "колір паперу та його щільність або ж марку паперу",
       phone: "Телефон",
       personalDetails: "Особисті дані",
       pocket: "Пакет",
-      popupMap: "Фабрика конвертів Куверт-Україна",
       placeholderPrintform:
         "Напишіть нам бажаний розмір обраної продукції, колір та щільність паперу, кількість кольорів друку та інші параметри, які вважаєте необхідними.",
       price: "Ціна",
@@ -161,7 +164,7 @@ const resources = {
       printedOrder: "Запит друку",
       printedOrderText:
         "Якщо бажаєте продукцію з власним друком, цей варіант саме для Вас.",
-      printMockup: "Приклад друку (необов'язково)",
+      printParam: "чистий чи з друком (вкажіть кількість кольорів)",
       productionDep: "Виробничий відділ",
       printProducts: "Продукція з друком",
       printProductsText:
@@ -215,9 +218,8 @@ const resources = {
       visitUs: "Відвідайте нас",
       visitMayer: "Відвідати вебсайт “Mayer-Kuvert-network GmbH”",
       window: "Вікно",
-      windowDetails: "Параметри вікна",
-      windowYes: "з вікном",
-      windowNo: "без вікна",
+      windowParam:
+        "наявність вікна (вікон), його (їх) розміри та розміщення на конверті",
       width: "Ширина, мм",
       weight: "Потрібна допомога з розрахунком ваги конвертів?",
       weightUse: "Скористайтесь нашим калькулятором",
@@ -317,6 +319,7 @@ const resources = {
         "Specify the amount of envelopes you would like to order",
       envelope: "Envelope",
       envelopes: "Envelopes",
+      envelopeSize: "envelope size",
       envelopesStandard: "Straight flap",
       envelopeDetails: "Envelope details",
       extensionEnvelopes: "Pockets with extension",
@@ -341,6 +344,8 @@ const resources = {
       individualOrder: "Individual inquiry",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+      individualRequestText:
+        "If you do not find something that interests you among the standard products, write us your wishes about your envelope and we will consider the possibility of its production. We recommend that you specify:",
       industrial: "Industrial companies",
       innerPrint: "Inner print",
       innerPrintShort: "Inner print",
@@ -380,19 +385,19 @@ const resources = {
       paperbags: "Paper bags with twisted handles",
       paperfile: "Paper filing pockets",
       paperType: "Paper",
+      paperParam: "paper color, it's density or brand of paper",
       phone: "Phone",
       personalDetails: "Personal details",
       pocket: "Pocket",
-      popupMap: "Kuvert-Ukraine envelope factory",
       placeholderPrintform:
         "Tell us required product size, paper color and GSM, how much printing colors and any other details you think is necessary.",
       price: "Price",
       print: "Print",
       printDetails: "Print details",
       printedOrder: "Printed request",
+      printParam: "blank or printed (specify number of colors)",
       printedOrderText:
         "If you want products with your own printing, this option is for you.",
-      printMockup: "Print sample (not necessary)",
       printProducts: "Printed products",
       printProductsText:
         "We offer professional printing on envelopes and paper bags - the company logo, address, etc. Depending on the purpose, image requirements and your budget we carry out three types of printing.",
@@ -447,9 +452,8 @@ const resources = {
       visitUs: "Visit us",
       visitMayer: "Visit “Mayer-Kuvert-network GmbH” website",
       window: "Window",
-      windowDetails: "Window details",
-      windowYes: "with window",
-      windowNo: "without window",
+      windowParam:
+        "with or without window (windows), size of it (them) and placement on the envelope",
       width: "Width, mm",
       weight: "Need help calculating envelope weight?",
       weightUse: "Use our calculator",
