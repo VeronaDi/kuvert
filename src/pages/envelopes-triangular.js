@@ -296,13 +296,7 @@ export default props => {
               </EnvelopeParam>
             </GeneralNames>
           </div>
-          <div
-            css={css`
-              // flex: 1;
-            `}
-          >
-            <BtnAddToRequest />
-          </div>
+          <BtnAddToRequest />
         </div>
       ))}
       <WeightCalculatorSection />

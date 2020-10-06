@@ -297,30 +297,21 @@ export default props => {
               margin: 20px auto 54px auto;
               padding: 30px;
               display: flex;
-              @media (max-width: 1440px) {
+              justify-content: space-around;
+              align-items: center;
+              @media screen and (max-width: 570px) {
                 flex-direction: column;
-                align-items: center;
               }
             `}
           >
             <div
               css={css`
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                justify-content: space-around;
                 flex: 1;
-                padding-right: 40px;
-                @media (max-width: 1440px) {
-                  width: 100%;
+                @media screen and (max-width: 1024px) {
                   display: grid;
-                  grid-template-columns: repeat(3, 1fr);
-                  margin-bottom: 30px;
-                }
-                @media (max-width: 768px) {
-                  grid-template-columns: repeat(2, 1fr);
-                }
-                @media (max-width: 425px) {
-                  grid-template-columns: 1fr;
+                  grid-template-columns: repeat(auto-fill, 150px);
                 }
               `}
             >

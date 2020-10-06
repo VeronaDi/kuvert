@@ -299,60 +299,64 @@ export default props => {
               background: #ffffff;
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
               border-radius: 3px;
-              width: 100%;
-              padding: 28px 17px 0 17px;
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-              grid-gap: 15px;
-              flex-wrap: wrap;
-              justify-content: start;
-              position: relative;
+              width: 90vw;
+              margin: 20px auto 54px auto;
+              padding: 30px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              @media screen and (max-width: 570px) {
+                flex-direction: column;
+              }
             `}
           >
-            <GeneralNames>
-              {t("code")}
-              <EnvelopeParam>{code}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("color")}
-              <EnvelopeParam>{t(color)}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("quantityBox")}
-              <EnvelopeParam>
-                {pack}
-                {t("pcs")}
-              </EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("size")}
-              <EnvelopeParam>
-                {size} {t("mm")}
-              </EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("sealing")}
-              <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-            </GeneralNames>
-
-            <GeneralNames>
-              {t("price")} {t("thousandPcs")}
-              <EnvelopeParam>{t(price)}</EnvelopeParam>
-            </GeneralNames>
             <div
               css={css`
-                border-top: 0.2px solid #000000;
-                width: 100%;
-                padding: 16px 0;
-                grid-column: 1 / 4;
+                display: flex;
+                justify-content: space-around;
+                flex: 1;
+                @media screen and (max-width: 1024px) {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, 150px);
+                }
               `}
             >
-              <BtnAddToRequest />
+              <GeneralNames>
+                {t("code")}
+                <EnvelopeParam>{code}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("quantityBox")}
+                <EnvelopeParam>
+                  {pack}
+                  {t("pcs")}
+                </EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("size")}
+                <EnvelopeParam>
+                  {size} {t("mm")}
+                </EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("price")} {t("thousandPcs")}
+                <EnvelopeParam>{t(price)}</EnvelopeParam>
+              </GeneralNames>
             </div>
+            <BtnAddToRequest />
           </div>
         ))}
       </div>
