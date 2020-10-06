@@ -72,12 +72,21 @@ export default props => {
           `}
         >
           {banderole.map(({ name, id }) => (
-            <div className="w-full md:w-1/4 px-2">
+            <div
+              className="w-full md:w-1/4 px-2"
+              css={css`
+                height: 240px;
+                @media screen and (max-width: 1024px) {
+                  height: calc((100vh - 223px) / ${banderole.length});
+                  min-height: 133px;
+                }
+              `}
+            >
               <LocalizedLink
                 to={`/${id}`}
                 css={css`
                   display: block;
-                  height: 457px;
+                  height: 100%;
                   background: url(${banderolePattern}), rgba(128, 128, 128, 0.4);
                   position: relative;
                   text-align: center;
@@ -87,6 +96,9 @@ export default props => {
                   font-weight: bold;
                   font-size: 40px;
                   text-decoration: none;
+                  @media screen and (max-width: 1024px) {
+                    font-size: 22px;
+                  }
                 `}
               >
                 <span

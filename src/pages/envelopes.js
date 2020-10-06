@@ -62,12 +62,21 @@ export default props => {
           `}
         >
           {envelopes.map(({ name, id }) => (
-            <div className="w-full md:w-1/3 px-2">
+            <div
+              className="w-full md:w-1/3 px-2"
+              css={css`
+                height: 240px;
+                @media screen and (max-width: 1024px) {
+                  height: calc((100vh - 223px) / ${envelopes.length});
+                  min-height: 75px;
+                }
+              `}
+            >
               <LocalizedLink
                 to={`/${id}`}
                 css={css`
                   display: block;
-                  height: 457px;
+                  height: 100%;
                   background: url(${envelopesPattern}), rgba(128, 128, 128, 0.4);
                   position: relative;
                   text-align: center;
@@ -76,8 +85,10 @@ export default props => {
                   color: #b40039;
                   font-weight: bold;
                   font-size: 42px;
-                  line-height: 47px;
                   text-decoration: none;
+                  @media screen and (max-width: 1024px) {
+                    font-size: 22px;
+                  }
                 `}
               >
                 <span
