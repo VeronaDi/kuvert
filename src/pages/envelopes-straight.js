@@ -107,6 +107,9 @@ export default props => {
                 flex-wrap: wrap;
                 justify-content: start;
                 position: relative;
+                @media screen and (max-width: 425px) {
+                  grid-template-columns: repeat(2, 1fr);
+                }
               `}
             >
               <GeneralNames>
@@ -165,6 +168,9 @@ export default props => {
                   width: 100%;
                   padding: 16px 0;
                   grid-column: 1 / 4;
+                  @media screen and (max-width: 425px) {
+                    grid-column: 1 / 3;
+                  }
                 `}
               >
                 <BtnAddToRequest />
