@@ -44,7 +44,13 @@ const IndexPage = props => {
           min-height: 590px;
           background: url(${zeh});
           background-size: cover;
-          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media screen and (min-width: 1250px) {
+            height: 100vh;
+            min-height: 740px;
+          }
         `}
       >
         <div
@@ -56,10 +62,6 @@ const IndexPage = props => {
             color: white;
             text-align: center;
             z-index: 3;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             @media (max-width: 767px) {
               width: 305px;
               height: 333px;
