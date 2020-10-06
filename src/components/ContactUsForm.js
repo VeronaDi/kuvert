@@ -198,9 +198,6 @@ const MyMessageInput = ({ label, ...props }) => {
   )
 }
 
-const emailRegExp = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
-
 export default () => {
   const { t, i18n } = useTranslation()
 
@@ -236,18 +233,10 @@ export default () => {
           message: "",
         }}
         validationSchema={Yup.object({
-          name: Yup.string()
-            .max(30, "Too long")
-            .required("Required"),
-          email: Yup.string()
-            .matches(emailRegExp, "Invalid email addresss")
-            .required("Required"),
-          phone: Yup.string()
-            .matches(phoneRegExp, "Phone number is not valid")
-            .required("Required"),
-          message: Yup.string()
-            .min(10, "Too short")
-            .required("Required"),
+          name: Yup.string().required("Required"),
+          email: Yup.string().required("Required"),
+          phone: Yup.string().required("Required"),
+          message: Yup.string().required("Required"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           // setTimeout(() => {
