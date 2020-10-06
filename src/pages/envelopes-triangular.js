@@ -24,7 +24,7 @@ const GeneralNames = ({ children }) => (
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
-      margin-right: 30px;
+      margin-right: 20px;
     `}
   >
     {children}
@@ -243,30 +243,21 @@ export default props => {
             margin: 20px auto 54px auto;
             padding: 30px;
             display: flex;
-            @media (max-width: 1024px) {
+            justify-content: space-around;
+            align-items: center;
+            @media screen and (max-width: 570px) {
               flex-direction: column;
-              align-items: center;
             }
           `}
         >
           <div
             css={css`
               display: flex;
-              flex-direction: row;
-              justify-content: space-between;
+              justify-content: space-around;
               flex: 1;
-              padding-right: 40px;
-              @media (max-width: 1024px) {
-                width: 100%;
+              @media screen and (max-width: 1024px) {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                margin-bottom: 30px;
-              }
-              @media (max-width: 768px) {
-                grid-template-columns: repeat(2, 1fr);
-              }
-              @media (max-width: 425px) {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fill, 150px);
               }
             `}
           >
@@ -305,7 +296,13 @@ export default props => {
               </EnvelopeParam>
             </GeneralNames>
           </div>
-          <BtnAddToRequest />
+          <div
+            css={css`
+              // flex: 1;
+            `}
+          >
+            <BtnAddToRequest />
+          </div>
         </div>
       ))}
       <WeightCalculatorSection />
