@@ -20,11 +20,10 @@ import airpoc from "../data/airpoc"
 const GeneralNames = ({ children }) => (
   <div
     css={css`
-      font-weight: normal;
+      font-weight: 500;
       font-size: 12px;
       line-height: 14px;
       color: #4f4f4f;
-      padding-right: 30px;
     `}
   >
     {children}
@@ -276,22 +275,7 @@ export default props => {
       >
         {t("chooseDesiredProduct")}
       </h4>
-      <div
-        css={css`
-          width: 90vw;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-column-gap: 8%;
-          grid-row-gap: 70px;
-          @media screen and (max-width: 1440px) {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          @media screen and (max-width: 768px) {
-            grid-template-columns: 1fr;
-          }
-        `}
-      >
+      <div>
         {airpoc.map(({ code, size, color, pack, sealing, price }) => (
           <div
             key={code}
@@ -356,7 +340,9 @@ export default props => {
                 <EnvelopeParam>{t(price)}</EnvelopeParam>
               </GeneralNames>
             </div>
-            <BtnAddToRequest />
+            <div>
+              <BtnAddToRequest />
+            </div>
           </div>
         ))}
       </div>
