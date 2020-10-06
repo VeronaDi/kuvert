@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
+import { Form, Formik, useField } from "formik"
+import * as Yup from "yup"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -20,25 +20,69 @@ import BtnSendForm from "../components/BtnSendForm"
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
 
-const IndexPage = props => {
+const MyMessageInput = ({ ...props }) => {
+  const [field, meta] = useField(props)
+  return (
+    <>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          position: relative;
+          margin: 20px 0 50px 0;
+        `}
+      >
+        <textarea
+          {...field}
+          {...props}
+          css={css`
+            width: 780px;
+            height: 263px;
+            background: #ffffff;
+            border: 1px solid #d6d6d6;
+            border-radius: 3px;
+            padding: 20px;
+            outline: none;
+            resize: none;
+            ::-webkit-input-placeholder {
+              font-size: 16px;
+              color: #ababab;
+            }
+            :focus {
+              border: 2px solid #c4c4c4;
+            }
+          `}
+        />
+        {meta.touched && meta.error ? (
+          <div
+            css={css`
+              width: 141px;
+              height: 35px;
+              background: #a74444;
+              border-radius: 3px;
+              color: white;
+              color: #ffffff;
+              font-size: 12px;
+              line-height: 14px;
+              text-align: center;
+            `}
+          >
+            {meta.error}
+          </div>
+        ) : null}
+      </div>
+    </>
+  )
+}
+
+export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
     T.i18n.changeLanguage(props.pageContext.langKey)
   }
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
-
-  //   const requestType = ({ children }) => (
-  //     <div
-  //       css={css`
-  //         width: 28%;
-  //         background: #ffffff;
-  //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //       `}
-  //     >
-  //       {children}
-  //     </div>
-  //   )
 
   return (
     <Layout>
@@ -156,70 +200,77 @@ const IndexPage = props => {
         </ul>
       </div>
 
-      <form
-        css={css`
-          position: absolute;
-          left: 50%;
-          -webkit-transform: translate(-50%, -2%);
-          transform: translate(-50%, -2%);
-        `}
+      <Formik
+        initialValues={{
+          message: "",
+          name: "",
+          company: "",
+          city: "",
+          email: "",
+          phone: "",
+        }}
+        validationSchema={Yup.object({
+          name: Yup.string().required("Required"),
+          email: Yup.string().required("Required"),
+          phone: Yup.string().required("Required"),
+        })}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2))
+            setSubmitting(false)
+          }, 400)
+        }}
       >
-        <div
-          css={css`
-            display: flex;
-            flex-direction: column;
-            padding-right: 19px;
-            padding-top: 40px;
-          `}
-        >
-          <div
+        {({ isSubmitting, setFieldValue }) => (
+          <Form
             css={css`
-              width: 100%;
-              max-width: 780px;
-              display: flex;
-              flex-direction: column;
+              position: absolute;
+              left: 50%;
+              -webkit-transform: translate(-50%, -2%);
+              transform: translate(-50%, -2%);
             `}
           >
-            <textarea
-              placeholder={t("placeholderPrintform")}
+            <div
+              css={css`
+                display: flex;
+                flex-direction: column;
+                padding-right: 19px;
+                padding-top: 40px;
+              `}
+            >
+              <div
+                css={css`
+                  width: 100%;
+                  max-width: 780px;
+                  display: flex;
+                  flex-direction: column;
+                `}
+              >
+                <MyMessageInput
+                  name="message"
+                  type="textarea"
+                  placeholder={t("placeholderPrintform")}
+                />
+              </div>
+            </div>
+
+            <div
               css={css`
                 width: 100%;
-                height: 300px;
-                background: #ffffff;
-                border: 1px solid #d6d6d6;
-                color: #444444;
-                padding: 20px;
-                outline: none;
-                resize: none;
-                ::-webkit-input-placeholder {
-                  font-size: 16px;
-                  color: #9d9d9d;
-                }
-                :focus {
-                  border: 2px solid #c4c4c4;
-                }
+                max-width: 780px;
+                margin: 40px 0;
+                display: block;
+                text-align: center;
               `}
-            ></textarea>
-          </div>
-        </div>
-
-        <div
-          css={css`
-            width: 100%;
-            max-width: 780px;
-            margin: 40px 0;
-            display: block;
-            text-align: center;
-          `}
-        >
-          <BtnNext />
-        </div>
-        <button type="submit">submit</button>
-        <ContactForm />
-        <BtnSendForm />
-      </form>
+            >
+              <BtnNext />
+            </div>
+            <button type="submit">submit</button>
+            <ContactForm />
+            <BtnSendForm />
+          </Form>
+        )}
+      </Formik>
     </Layout>
   )
 }
-
-export default IndexPage

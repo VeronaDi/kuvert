@@ -11,7 +11,10 @@ export default [
   },
   {
     img: "/products/paperbags-pattern.png",
-    name: { en: "Paper bags", uk: "Паперові торбинки" },
+    name: {
+      en: "Paper bags with twisted handles",
+      uk: "Паперові торби з крученими ручками",
+    },
     id: "ecobags",
   },
   {

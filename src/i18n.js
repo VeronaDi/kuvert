@@ -260,7 +260,7 @@ const resources = {
       airpocText:
         "Parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
       amount: "Amount, pcs",
-      banderole: "Banderole pockets",
+      banderole: "Parcel packages",
       basicOrder: "Werehouse inquiry",
       basicOrderText:
         "If you want to choose products from warehouse, this option is for you.",
@@ -316,7 +316,7 @@ const resources = {
       enterAmountText:
         "Specify the amount of envelopes you would like to order",
       envelope: "Envelope",
-      envelopes: "envelopes",
+      envelopes: "Envelopes",
       envelopesStandard: "Straight flap",
       envelopeDetails: "Envelope details",
       extensionEnvelopes: "Pockets with extension",
