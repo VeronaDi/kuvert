@@ -65,12 +65,25 @@ export default props => {
           `}
         >
           {banderole.map(({ name, id }) => (
-            <div className="w-full md:w-1/3 px-2">
+            <div
+              className="w-full md:w-1/3 px-2"
+              css={css`
+                height: 240px;
+                margin-bottom: 10px;
+                @media screen and (max-width: 1024px) {
+                  height: calc((100vh - 253px) / ${banderole.length});
+                  min-height: 133px;
+                  margin-bottom: 10px;
+                }
+              `}
+            >
               <LocalizedLink
                 to={`/${id}`}
                 css={css`
-                  display: block;
-                  height: 457px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100%;
                   background: url(${banderolePattern}), rgba(128, 128, 128, 0.4);
                   position: relative;
                   text-align: center;
@@ -80,15 +93,14 @@ export default props => {
                   font-weight: bold;
                   font-size: 40px;
                   text-decoration: none;
+                  @media screen and (max-width: 1024px) {
+                    font-size: 22px;
+                  }
                 `}
               >
                 <span
                   css={css`
                     font-family: "Raleway", sans-serif;
-                    position: absolute;
-                    top: 45%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
                   `}
                 >
                   {t(name)}

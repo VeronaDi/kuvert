@@ -1,16 +1,13 @@
 import React from "react"
-// import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { Link } from "gatsby"
 
 import { useTranslation } from "react-i18next"
 
 export default () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
-    <Link
-      to="/thanxrequest"
+    <button
       css={css`
         background: #c5003e;
         border-radius: 3px;
@@ -19,23 +16,25 @@ export default () => {
         padding-bottom: 18px;
         color: white;
         cursor: pointer;
-        font-weight: bold;
+        font-weight: 500;
+        font-size: 18px;
         outline: none;
         text-decoration: none;
         display: block;
         text-align: center;
         margin: 30px 0;
-
+        width: 100%;
         &:hover {
           background: #b60039;
         }
-
         &:active {
           background: #f4004d;
         }
       `}
+      type="submit"
+      // disabled={isSubmitting}
     >
       {t("request")}
-    </Link>
+    </button>
   )
 }
