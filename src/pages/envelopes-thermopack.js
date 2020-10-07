@@ -11,7 +11,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import thermopack from "../../static/products/thermopack.jpg"
-import thermopackTable from "../../static/products/thermopack-table.jpg"
+import thermopackTable from "../../static/products/thermopack-table.png"
 
 export default props => {
   const T = useTranslation()
@@ -42,7 +42,7 @@ export default props => {
           width: 90vw;
           background: #ffffff;
           margin: 0 auto;
-          padding: 30px 78px 90px 78px;
+          padding: 30px 78px;
           color: #000000;
           display: flex;
           justify-content: space-between;
