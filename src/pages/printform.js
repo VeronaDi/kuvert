@@ -105,11 +105,8 @@ const MySelect = ({ label, ...props }) => {
       <label
         htmlFor={props.id || props.name}
         css={css`
-          font-weight: normal;
           font-size: 12px;
-          line-height: 14px;
-          color: #000000;
-          margin-bottom: 5px;
+          padding-bottom: 5px;
         `}
       >
         {label}
@@ -124,11 +121,9 @@ const MySelect = ({ label, ...props }) => {
           background: url(${arrowSelect}), #ffffff;
           background-position: 97%;
           background-repeat: no-repeat;
-          width: 380px;
           height: 65px;
           font-size: 16px;
           border: 1px solid #d6d6d6;
-          border-radius: 3px;
           padding: 18px;
           outline: none;
           color: #444444;
@@ -162,40 +157,27 @@ const MyMessageInput = ({ label, ...props }) => {
   return (
     <div
       css={css`
+        width: 100%;
         display: flex;
         flex-direction: column;
-        text-align: left;
-        position: relative;
-        margin: 20px 0 50px 0;
+        margin-top: 40px;
       `}
     >
-      <label
-        htmlFor={props.id || props.name}
-        css={css`
-          font-weight: normal;
-          font-size: 12px;
-          line-height: 14px;
-          color: #000000;
-          margin-bottom: 5px;
-        `}
-      >
-        {label}
-      </label>
       <textarea
         {...field}
         {...props}
         css={css`
-          width: 780px;
-          height: 263px;
+          width: 100%;
+          height: 300px;
           background: #ffffff;
           border: 1px solid #d6d6d6;
-          border-radius: 3px;
+          color: #444444;
           padding: 20px;
           outline: none;
           resize: none;
           ::-webkit-input-placeholder {
             font-size: 16px;
-            color: #ababab;
+            color: #9d9d9d;
           }
           :focus {
             border: 2px solid #c4c4c4;
@@ -231,17 +213,14 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
       css={css`
         display: flex;
         flex-direction: column;
-        text-align: left;
+        width: 100%;
       `}
     >
       <label
         htmlFor={props.id || props.name}
         css={css`
-          font-weight: normal;
           font-size: 12px;
-          line-height: 14px;
-          color: #000000;
-          margin-bottom: 5px;
+          padding-bottom: 5px;
         `}
       >
         {label}
@@ -260,7 +239,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
           type="button"
           css={css`
             position: absolute;
-            left: 70px;
+            left: 10%;
             top: 50%;
             transform: translate(0%, -50%);
             border: none;
@@ -278,7 +257,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
           min="0"
           step="50"
           css={css`
-            width: 380px;
+            width: 100%;
             height: 65px;
             background: #ffffff;
             border: 1px solid #d6d6d6;
@@ -304,7 +283,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
           type="button"
           css={css`
             position: absolute;
-            right: 70px;
+            right: 10%;
             top: 50%;
             transform: translate(0, -50%);
             border: none;
@@ -384,7 +363,7 @@ export default props => {
           height: 66px;
           background-size: cover;
           position: absolute;
-          top: 20px;
+          top: 10px;
           left: 30px;
         `}
         to="/"
@@ -396,8 +375,7 @@ export default props => {
         css={css`
           font-weight: 500;
           font-size: 36px;
-          line-height: 42px;
-          margin-bottom: 50px;
+          margin-bottom: 30px;
           text-align: center;
         `}
       >
@@ -427,10 +405,9 @@ export default props => {
         {({ isSubmitting, setFieldValue }) => (
           <Form
             css={css`
-              position: absolute;
-              left: 50%;
-              -webkit-transform: translate(-50%, -2%);
-              transform: translate(-50%, -2%);
+              width: 90vw;
+              max-width: 780px;
+              margin: 0 auto;
             `}
           >
             {step === 1 && (
@@ -441,27 +418,50 @@ export default props => {
                     flex-direction: row;
                     justify-content: space-between;
                     width: 100%;
-                    max-width: 780px;
+                    @media (max-width: 1024px) {
+                      flex-direction: column;
+                    }
                   `}
                 >
-                  <MySelect label={t("product")} name="product">
-                    <option disabled selected>
-                      {t("chooseDesiredProduct")}
-                    </option>
-                    <option value="konvert">{t("envelopes")}</option>
-                    <option value="paperovaTorba">{t("paperbags")}</option>
-                    <option value="banderole">{t("banderole")}</option>
-                    <option value="blank">{t("letterhead")}</option>
-                    <option value="papirFajl">{t("paperfile")}</option>
-                    <option value="ecoblok">{t("ecoblock")}</option>
-                  </MySelect>
-                  <MyAmountInput
-                    label={t("amount")}
-                    name="amount"
-                    type="number"
-                    placeholder="0"
-                    setFieldValue={setFieldValue}
-                  />
+                  <div
+                    css={css`
+                      display: flex;
+                      flex-direction: column;
+                      width: 48%;
+                      @media (max-width: 1024px) {
+                        width: 100%;
+                        margin-bottom: 20px;
+                      }
+                    `}
+                  >
+                    <MySelect label={t("product")} name="product">
+                      <option disabled selected>
+                        {t("chooseDesiredProduct")}
+                      </option>
+                      <option value="konvert">{t("envelopes")}</option>
+                      <option value="paperovaTorba">{t("paperbags")}</option>
+                      <option value="banderole">{t("banderole")}</option>
+                      <option value="blank">{t("letterhead")}</option>
+                      <option value="papirFajl">{t("paperfile")}</option>
+                      <option value="ecoblok">{t("ecoblock")}</option>
+                    </MySelect>
+                  </div>
+                  <div
+                    css={css`
+                      width: 48%;
+                      @media (max-width: 1024px) {
+                        width: 100%;
+                      }
+                    `}
+                  >
+                    <MyAmountInput
+                      label={t("amount")}
+                      name="amount"
+                      type="number"
+                      placeholder="0"
+                      setFieldValue={setFieldValue}
+                    />
+                  </div>
                 </div>
 
                 <MyMessageInput
@@ -470,7 +470,16 @@ export default props => {
                   type="textarea"
                   placeholder={t("placeholderPrintform")}
                 />
-                <BtnNext type="button" onClick={() => setStep(2)} />
+                <div
+                  css={css`
+                    width: 100%;
+                    margin: 40px 0;
+                    display: block;
+                    text-align: center;
+                  `}
+                >
+                  <BtnNext type="button" onClick={() => setStep(2)} />
+                </div>
               </>
             )}
 

@@ -16,12 +16,17 @@ export default ({ steps, activeStep }) => {
         display: flex;
         flex-directon: row;
         position: relative;
-        width: 779px;
+        width: 54%;
+        max-width: 768px;
         height: 44px;
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
-        margin: 80px auto 50px auto;
+        margin: 70px auto 30px auto;
+        @media (max-width: 1024px) {
+          width: 90%;
+          margin: 100px auto 30px auto;
+        }
       `}
     >
       {steps.map((stepTitle, index) => (
@@ -36,6 +41,9 @@ export default ({ steps, activeStep }) => {
             css={css`
               font-size: 26px;
               padding-right: 5px;
+              @media (max-width: 1024px) {
+                font-size: 30px;
+              }
             `}
           >
             {index + 1}
