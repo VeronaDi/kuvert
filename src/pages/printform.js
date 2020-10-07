@@ -32,19 +32,14 @@ const MyInput = ({ label, ...props }) => {
       css={css`
         display: flex;
         flex-direction: column;
-        text-align: left;
-        position: relative;
-        margin-bottom: 39px;
+        margin-top: 2rem;
       `}
     >
       <label
         htmlFor={props.id || props.name}
         css={css`
-          font-weight: normal;
           font-size: 12px;
-          line-height: 14px;
-          color: #000000;
-          margin-bottom: 5px;
+          padding-bottom: 5px;
         `}
       >
         {label}
@@ -53,20 +48,20 @@ const MyInput = ({ label, ...props }) => {
         {...field}
         {...props}
         css={css`
-          width: 380px;
           height: 65px;
           background: #ffffff;
           border: 1px solid #d6d6d6;
           border-radius: 3px;
+          box-sizing: border-box;
           padding: 20px;
           outline: none;
-          margin-right: 20px;
           ::-webkit-input-placeholder {
             font-size: 16px;
             color: #ababab;
           }
           :focus {
             border: 2px solid #c4c4c4;
+            border-radius: 3px;
           }
         `}
       />
@@ -371,16 +366,6 @@ export default props => {
 
       <Steps steps={steps} activeStep={step} />
 
-      <h1
-        css={css`
-          font-weight: 500;
-          font-size: 36px;
-          margin-bottom: 30px;
-          text-align: center;
-        `}
-      >
-        {t("printedOrder")}
-      </h1>
       <Formik
         initialValues={{
           product: "",
@@ -410,6 +395,16 @@ export default props => {
               margin: 0 auto;
             `}
           >
+            <h1
+              css={css`
+                font-weight: 500;
+                font-size: 36px;
+                margin-bottom: 30px;
+                text-align: center;
+              `}
+            >
+              {t("printedOrder")}
+            </h1>
             {step === 1 && (
               <>
                 <div
@@ -487,14 +482,25 @@ export default props => {
               <>
                 <div
                   css={css`
-                    width: 780px;
-                    height: 440px;
+                    width: 90vw;
+                    max-width: 780px;
+                    margin: 0 auto;
                     display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    @media screen and (max-width: 768px) {
+                      flex-direction: column;
+                      padding-bottom: 80px;
+                    }
                   `}
                 >
-                  <div>
+                  <div
+                    css={css`
+                      width: 48%;
+                      @media screen and (max-width: 768px) {
+                        width: 100%;
+                      }
+                    `}
+                  >
                     <MyInput
                       label={t("name")}
                       name="name"
@@ -508,17 +514,14 @@ export default props => {
                       placeholder={t("company")}
                     />
                   </div>
-                  <div>
-                    <h3
-                      css={css`
-                        font-weight: 500;
-                        font-size: 26px;
-                        line-height: 30px;
-                        margin-bottom: 2rem;
-                      `}
-                    >
-                      {t("contactDetails")}
-                    </h3>
+                  <div
+                    css={css`
+                      width: 48%;
+                      @media screen and (max-width: 768px) {
+                        width: 100%;
+                      }
+                    `}
+                  >
                     <MyInput
                       label={t("city")}
                       name="city"
@@ -544,24 +547,20 @@ export default props => {
                     background: #c5003e;
                     border-radius: 3px;
                     border: none;
+                    padding-top: 18px;
+                    padding-bottom: 18px;
                     color: white;
                     cursor: pointer;
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 21px;
+                    font-weight: bold;
                     outline: none;
                     text-decoration: none;
                     display: block;
                     text-align: center;
-                    margin-bottom: 15px;
-                    margin-top: 50px;
-                    width: 780px;
-                    height: 52px;
-
+                    margin: 30px 0;
+                    width: 100%;
                     &:hover {
                       background: #b60039;
                     }
-
                     &:active {
                       background: #f4004d;
                     }
