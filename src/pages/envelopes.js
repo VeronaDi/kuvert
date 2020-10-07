@@ -68,7 +68,7 @@ export default props => {
             <div
               className="w-full md:w-1/3 px-2"
               css={css`
-                height: 240px;
+                height: 280px;
                 margin-bottom: 20px;
                 @media screen and (max-width: 1024px) {
                   height: calc((100vh - 293px) / ${envelopes.length});
