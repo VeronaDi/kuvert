@@ -50,6 +50,9 @@ export default props => {
           className="row -mx-2"
           css={css`
             padding-top: 46px;
+            @media screen and (max-width: 1024px) {
+              padding-top: 15px;
+            }
           `}
         >
           {paperbags.map(({ name, id }) => (
@@ -59,13 +62,14 @@ export default props => {
                 height: 240px;
                 margin-bottom: 20px;
                 @media screen and (max-width: 1024px) {
-                  height: calc((100vh - 243px) / ${paperbags.length});
+                  height: calc((100vh - 293px) / ${paperbags.length});
                   min-height: 75px;
                   margin-bottom: 10px;
                 }
               `}
             >
               <LocalizedLink
+                key={id}
                 to={`/${id}`}
                 css={css`
                   display: flex;

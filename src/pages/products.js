@@ -45,6 +45,9 @@ export default props => {
           className="row -mx-2"
           css={css`
             padding-top: 46px;
+            @media screen and (max-width: 1024px) {
+              padding-top: 15px;
+            }
           `}
         >
           {products.map(({ name, img, id }) => (

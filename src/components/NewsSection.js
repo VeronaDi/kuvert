@@ -38,15 +38,15 @@ export default () => {
           display: flex;
         `}
       >
-        {newsMain.map(({ img, title, text }) => (
+        {newsMain.map(({ id, img, title, text }) => (
           <div
+            key={id}
             className="w-full md:w-1/3 px-5"
             css={css`
               margin-bottom: 25px;
             `}
           >
             <div
-              key={t(title)}
               css={css`
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 3px;
