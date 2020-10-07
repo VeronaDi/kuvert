@@ -11,6 +11,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import BtnNext from "../components/BtnNext"
+import Steps from "../components/Steps"
 
 import logoGrey from "../images/logoGrey.png"
 
@@ -77,6 +78,8 @@ const MyMessageInput = ({ ...props }) => {
 }
 
 export default props => {
+  const [step, setStep] = React.useState(1)
+
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
     T.i18n.changeLanguage(props.pageContext.langKey)
@@ -84,6 +87,11 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
+  const steps = [
+    t("requestType"),
+    t("requestOrderCreate"),
+    t("requestPersonal"),
+  ]
   return (
     <Layout>
       <SEO title="Request" />
@@ -99,73 +107,9 @@ export default props => {
         `}
         to="/"
       ></Link>
-      <section
-        css={css`
-          display: flex;
-          flex-directon: row;
-          position: relative;
-          left: 50%;
-          -webkit-transform: translate(-50%, -2%);
-          transform: translate(-50%, -2%);
-          width: 40vw;
-          height: 44px;
-          font-size: 14px;
-          font-weight: bold;
-          margin: 80px 0 50px 0;
-        `}
-      >
-        <div
-          css={css`
-            color: #383838;
-            border-bottom: 3px solid #383838;
-            width: 261px;
-          `}
-        >
-          <span
-            css={css`
-              font-size: 26px;
-              padding-right: 5px;
-            `}
-          >
-            1
-          </span>
-          {t("requestType")}
-        </div>
-        <div
-          css={css`
-            color: #b40039;
-            border-bottom: 3px solid #b40039;
-            width: 280px;
-          `}
-        >
-          <span
-            css={css`
-              font-size: 26px;
-              padding-right: 5px;
-            `}
-          >
-            2
-          </span>
-          {t("requestOrderCreate")}
-        </div>
-        <div
-          css={css`
-            color: #b4b4b4;
-            border-bottom: 3px solid #b4b4b4;
-            width: 261px;
-          `}
-        >
-          <span
-            css={css`
-              font-size: 26px;
-              padding-right: 5px;
-            `}
-          >
-            3
-          </span>
-          {t("requestPersonal")}
-        </div>
-      </section>
+
+      <Steps steps={steps} activeStep={step} />
+
       <h1
         css={css`
           font-size: 40px;
@@ -225,44 +169,51 @@ export default props => {
               transform: translate(-50%, -2%);
             `}
           >
-            <div
-              css={css`
-                display: flex;
-                flex-direction: column;
-                padding-right: 19px;
-                padding-top: 40px;
-              `}
-            >
-              <div
-                css={css`
-                  width: 100%;
-                  max-width: 780px;
-                  display: flex;
-                  flex-direction: column;
-                `}
-              >
-                <MyMessageInput
-                  name="message"
-                  type="textarea"
-                  placeholder={t("placeholderPrintform")}
-                />
-              </div>
-            </div>
+            {step === 1 && (
+              <>
+                <div
+                  css={css`
+                    display: flex;
+                    flex-direction: column;
+                    padding-right: 19px;
+                    padding-top: 40px;
+                  `}
+                >
+                  <div
+                    css={css`
+                      width: 100%;
+                      max-width: 780px;
+                      display: flex;
+                      flex-direction: column;
+                    `}
+                  >
+                    <MyMessageInput
+                      name="message"
+                      type="textarea"
+                      placeholder={t("placeholderPrintform")}
+                    />
+                  </div>
+                </div>
 
-            <div
-              css={css`
-                width: 100%;
-                max-width: 780px;
-                margin: 40px 0;
-                display: block;
-                text-align: center;
-              `}
-            >
-              <BtnNext />
-            </div>
-            <button type="submit">submit</button>
-            <ContactForm />
-            <BtnSendForm />
+                <div
+                  css={css`
+                    width: 100%;
+                    max-width: 780px;
+                    margin: 40px 0;
+                    display: block;
+                    text-align: center;
+                  `}
+                >
+                  <BtnNext type="button" onClick={() => setStep(2)} />
+                </div>
+              </>
+            )}
+            {step === 2 && (
+              <>
+                <ContactForm />
+                <BtnSendForm />
+              </>
+            )}
           </Form>
         )}
       </Formik>
