@@ -147,7 +147,7 @@ const MySelect = ({ label, ...props }) => {
   )
 }
 
-const MyMessageInput = ({ label, ...props }) => {
+const MyMessageInput = ({ ...props }) => {
   const [field, meta] = useField(props)
   return (
     <div
@@ -551,7 +551,8 @@ export default props => {
                     padding-bottom: 18px;
                     color: white;
                     cursor: pointer;
-                    font-weight: bold;
+                    font-weight: 500;
+                    font-size: 18px;
                     outline: none;
                     text-decoration: none;
                     display: block;

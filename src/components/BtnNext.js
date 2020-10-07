@@ -22,6 +22,8 @@ export default ({ ...props }) => {
         cursor: pointer;
         outline: none;
         width: 100%;
+        font-weight: 500;
+        font-size: 18px;
 
         &:hover {
           background: #b60039;
