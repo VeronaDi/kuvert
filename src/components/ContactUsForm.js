@@ -3,21 +3,10 @@ import { Form, Formik, useField } from "formik"
 import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
-import axios from "axios"
+import { localizedNavigate } from "../components/LocalizedLink"
 
 import plane from "../images/plane.png"
 import arrowSelect from "../images/arrow-select.png"
-
-const FieldsMapping = {
-  name: "entry.821706310",
-  email: "entry.1618547010",
-  phone: "entry.747057626",
-  department: "entry.47509862",
-  message: "entry.935094477",
-}
-
-const FormURL =
-  "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeugBj2SWuZrPFIGtBYSIRrDPG4PyUEDaoU8uBhTHg6BhQPfA/formResponse"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -30,7 +19,6 @@ const MyInput = ({ label, ...props }) => {
         css={css`
           font-weight: normal;
           font-size: 12px;
-          line-height: 14px;
           color: #000000;
           padding-bottom: 5px;
         `}
@@ -88,7 +76,6 @@ const MySelect = ({ label, ...props }) => {
         css={css`
           font-weight: normal;
           font-size: 12px;
-          line-height: 14px;
           color: #000000;
           padding-bottom: 5px;
         `}
@@ -148,14 +135,13 @@ const MyMessageInput = ({ label, ...props }) => {
         css={css`
           font-weight: normal;
           font-size: 12px;
-          line-height: 14px;
           color: #000000;
           padding-bottom: 5px;
         `}
       >
         {label}
       </label>
-      <input
+      <textarea
         {...field}
         {...props}
         css={css`
@@ -197,8 +183,15 @@ const MyMessageInput = ({ label, ...props }) => {
   )
 }
 
-export default () => {
-  const { t, i18n } = useTranslation()
+const sendEmail = async values => {
+  return fetch("https://hooks.zapier.com/hooks/catch/8670957/og9qtfo/", {
+    method: "POST",
+    body: JSON.stringify(values),
+  })
+}
+
+export default props => {
+  const { t } = useTranslation()
 
   return (
     <div
@@ -238,18 +231,9 @@ export default () => {
           phone: Yup.string().required("Required"),
           message: Yup.string().required("Required"),
         })}
-        onSubmit={(values, { setSubmitting }) => {
-          // setTimeout(() => {
-          //   alert(JSON.stringify(values, null, 2))
-          //   setSubmitting(false)
-          // }, 400)
-          const data = Object.keys(values).reduce(function(acc, fieldName) {
-            const GoogleFieldName = FieldsMapping[fieldName]
-            acc[GoogleFieldName] = values[fieldName]
-            return acc
-          }, {})
-          axios.post(FormURL, data)
-          console.log(data)
+        onSubmit={async () => {
+          await sendEmail()
+          localizedNavigate("/thanxrequest", props.pageContext.langKey)
         }}
       >
         {({ isSubmitting }) => (
@@ -340,6 +324,9 @@ export default () => {
                   padding: 18px 0;
                   cursor: pointer;
                   outline: none;
+                  @media screen and (max-width: 943px) {
+                    width: 100%;
+                  }
 
                   &:hover {
                     color: #c4c4c4;
