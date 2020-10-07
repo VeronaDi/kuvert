@@ -315,7 +315,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
 }
 
 const sendEmail = async values => {
-  return fetch("https://hooks.zapier.com/hooks/catch/5302156/og1on98", {
+  return fetch("https://hooks.zapier.com/hooks/catch/8670957/og9qtfo/", {
     method: "POST",
     body: JSON.stringify(values),
   })
