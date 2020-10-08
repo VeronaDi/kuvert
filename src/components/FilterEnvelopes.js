@@ -24,20 +24,24 @@ const FilterTitle = ({ children }) => (
 )
 
 const FilterCheckbox = ({ children }) => (
-  <div>
-    <lable>
-      <input type="checkbox" />
-      <span
+  <ul
+    css={css`
+      list-style-type: none;
+      padding: 0;
+    `}
+  >
+    <li>
+      <input type="checkbox" css={css``} />
+      <lable
         css={css`
           font-size: 14px;
           font-weight: 400;
-          padding-left: 10px;
         `}
       >
         {children}
-      </span>
-    </lable>
-  </div>
+      </lable>
+    </li>
+  </ul>
 )
 
 export default props => {
