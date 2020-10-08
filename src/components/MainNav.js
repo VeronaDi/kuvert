@@ -8,6 +8,8 @@ import BtnRequest from "../components/BtnRequest"
 
 import logo from "../images/logo.png"
 import logoGrey from "../images/logoGrey.png"
+import envelopeCart from "../../static/icon/request-basic.png"
+import envelopeCartWhite from "../../static/icon/request-basic-white.png"
 
 function nextLangLink(lang, url) {
   if (lang === "uk") {
@@ -120,6 +122,23 @@ export default ({ isHome = false, location }) => {
           {!isHome && <BtnRequest />}
         </div>
       </div>
+
+      <LocalizedLink
+        css={css`
+          cursor: pointer;
+          color: ${isHome ? "white" : "#040404"};
+        `}
+        to="/cart"
+      >
+        <img
+          src={isHome ? envelopeCartWhite : envelopeCart}
+          alt="cart"
+          css={css`
+            width: 40%;
+            float: right;
+          `}
+        />
+      </LocalizedLink>
 
       <Link
         css={css`

@@ -22,7 +22,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Basic inquiry" />
+      <SEO title="Warehouse inquiry" />
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;
