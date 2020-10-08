@@ -69,7 +69,7 @@ export default ({ isHome = false, location }) => {
         z-index: 5;
         width: 100%;
         top: 0;
-        padding: 0 50px;
+        padding: 0 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -126,7 +126,6 @@ export default ({ isHome = false, location }) => {
       <LocalizedLink
         css={css`
           cursor: pointer;
-          color: ${isHome ? "white" : "#040404"};
         `}
         to="/cart"
       >

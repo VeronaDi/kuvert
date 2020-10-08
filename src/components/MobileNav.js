@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 import BtnRequest from "../components/BtnRequest"
 
 import logoGrey from "../images/logoGrey.png"
+import envelopeCart from "../../static/icon/request-basic.png"
 
 function nextLangLink(lang, url) {
   if (lang === "uk") {
@@ -93,6 +94,18 @@ export default ({ location }) => {
             `}
           />
         </Link>
+
+        <LocalizedLink to="/cart">
+          <img
+            src={envelopeCart}
+            alt="cart"
+            css={css`
+              width: 50px;
+              float: right;
+              margin-right: 100px;
+            `}
+          />
+        </LocalizedLink>
 
         <button
           className={
