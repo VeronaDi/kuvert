@@ -82,17 +82,7 @@ export default props => {
         `}
       >
         {envelopes.map(
-          ({
-            code,
-            size,
-            paper,
-            type,
-            pack,
-            sealing,
-            window,
-            price,
-            print,
-          }) => (
+          ({ code, size, paper, type, box, sealing, window, price, print }) => (
             <div
               key={code}
               css={css`
@@ -138,18 +128,13 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("quantityBox")}
-                <EnvelopeParam>
-                  {pack}
-                  {t("pcs")}
-                </EnvelopeParam>
+                {t("quantityBox")}, {t("pcs")}
+                <EnvelopeParam>{box}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
-                {t("size")}
-                <EnvelopeParam>
-                  {size} {t("mm")})
-                </EnvelopeParam>
+                {t("size")}, {t("mm")}
+                <EnvelopeParam>{size}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
