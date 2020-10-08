@@ -11,130 +11,79 @@ function onlyUnique(value, index, self) {
   return self.indexOf(value) === index
 }
 
-const GeneralNames = ({ children }) => (
-  <div
+const FilterTitle = ({ children }) => (
+  <h6
     css={css`
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 14px;
-      color: #4f4f4f;
-      word-wrap: break-word;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 20px 0;
     `}
   >
     {children}
+  </h6>
+)
+
+const FilterCheckbox = ({ children }) => (
+  <div>
+    <lable>
+      <input type="checkbox" />
+      <span
+        css={css`
+          font-size: 14px;
+          font-weight: 400;
+          padding-left: 10px;
+        `}
+      >
+        {children}
+      </span>
+    </lable>
   </div>
 )
 
-const EnvelopeParam = ({ children }) => (
-  <p
-    css={css`
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 19px;
-      color: #000000;
-    `}
-  >
-    {children}
-  </p>
-)
-
 export default props => {
-  //   const T = useTranslation()
-  //   if (T.i18n.language !== props.pageContext.langKey) {
-  //     T.i18n.changeLanguage(props.pageContext.langKey)
-  //   }
-
-  //   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
-
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <Layout>
       <div
         css={css`
-          width: 50vw;
+          width: 60vw;
           margin: 40px auto;
           display: flex;
           flex-direction: row;
+          justify-content: space-around;
         `}
       >
         <div>
-          <h6
-            css={css`
-              font-size: 16px;
-              font-weight: 700;
-            `}
-          >
+          <FilterTitle>
             {t("size")}, {t("mm")}
-          </h6>
+          </FilterTitle>
+
           {envelopes
             .map(({ size }) => size)
             .filter(onlyUnique)
             .map(size => (
-              <>
-                <div>
-                  <input type="checkbox" />
-                  <lable>{size}</lable>
-                </div>
-              </>
+              <FilterCheckbox>{size}</FilterCheckbox>
             ))}
         </div>
 
         <div>
-          <h6
-            css={css`
-              font-size: 16px;
-              font-weight: 700;
-            `}
-          >
-            {t("type")}
-          </h6>
-          <div>
-            <input type="checkbox" />
-            <lable>{t("envelope")}</lable>
-
-            <input type="checkbox" />
-            <lable>{t("pocket")}</lable>
-          </div>
+          <FilterTitle>{t("type")}</FilterTitle>
+          <FilterCheckbox> {t("envelope")}</FilterCheckbox>
+          <FilterCheckbox> {t("pocket")}</FilterCheckbox>
         </div>
 
         <div>
-          <h6
-            css={css`
-              font-size: 16px;
-              font-weight: 700;
-            `}
-          >
-            {t("paperType")}
-          </h6>
-          <div>
-            <input type="checkbox" />
-            <lable>{t("white")}</lable>
-
-            <input type="checkbox" />
-            <lable>{t("brown")}</lable>
-          </div>
+          <FilterTitle>{t("paperType")}</FilterTitle>
+          <FilterCheckbox> {t("white")}</FilterCheckbox>
+          <FilterCheckbox> {t("brown")}</FilterCheckbox>
         </div>
 
         <div>
-          <h6
-            css={css`
-              font-size: 16px;
-              font-weight: 700;
-            `}
-          >
-            {t("sealing")}
-          </h6>
-          <div>
-            <input type="checkbox" />
-            <lable>{t("mk")}</lable>
-
-            <input type="checkbox" />
-            <lable>{t("sk")}</lable>
-
-            <input type="checkbox" />
-            <lable>{t("skl")}</lable>
-          </div>
+          <FilterTitle>{t("sealing")}</FilterTitle>
+          <FilterCheckbox> {t("mk")}</FilterCheckbox>
+          <FilterCheckbox> {t("sk")}</FilterCheckbox>
+          <FilterCheckbox> {t("skl")}</FilterCheckbox>
         </div>
       </div>
     </Layout>
