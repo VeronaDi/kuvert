@@ -1,8 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -23,21 +20,9 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
-  //   const requestType = ({ children }) => (
-  //     <div
-  //       css={css`
-  //         width: 28%;
-  //         background: #ffffff;
-  //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //       `}
-  //     >
-  //       {children}
-  //     </div>
-  //   )
-
   return (
     <Layout>
-      <SEO title="Request" />
+      <SEO title="Basic inquiry" />
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;

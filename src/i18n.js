@@ -43,7 +43,7 @@ const resources = {
       cardboardEnv: "Пакети з картонною вставкою",
       cardboardEnvText:
         "Пакети з картонною вставкою чудово підійдуть для відправки декількох аркушів формату А4, впораються зі збереженням зовнішнього вигляду вмісту. Такий пакет вдвічі легший, ніж повністю картонний пакет, а також значно дешевший.",
-      city: "Місто",
+      city: "Населений пункт",
       chooseDepartment: "Оберіть відділ",
       chooseType: "Оберіть тип запиту",
       chooseSize: "Оберіть розмір конверта",
@@ -87,6 +87,7 @@ const resources = {
       envelopes: "Конверти",
       envelopesStandard: "Прямий клапан",
       envelopeDetails: "Параметри конверта",
+      envelopeSize: "розмір конверта",
       extensionEnvelopes: "Пакети з розширенням",
       extensionEnvelopesText:
         "Пакети з розширенням виготовлені з міцного крафтового паперу, вони зручні для відправки об'ємних вкладень: книг, журналів, великої кількості документації. Розширення становить 40 мм.",
@@ -109,6 +110,8 @@ const resources = {
       individualOrder: "Індивідуальний запит",
       individualOrderText:
         "Якщо бажаєте продукцію з власними параметрами, цей варіант саме для Вас.",
+      individualRequestText:
+        "Якщо Ви не знайшли те, що Вас цікавить серед стандартної продукції, напишіть нам побажання щодо свого конверту і ми розглянемо можливість його виробництва. Рекомендуємо вказати:",
       innerPrint: "Внутрішній друк",
       innerPrintShort: "Внутр. друк",
       innerandouterPrint: "Зовнішній та внутрішній друк",
@@ -145,6 +148,7 @@ const resources = {
       participants: "Ми є частиною",
       paperGSM: "Щільність паперу, г/м²",
       paperBrand: "Марка паперу",
+      paperParam: "колір паперу та його щільність або ж марку паперу",
       paperbags: "Пакети з паперовими ручками",
       paperfile: "Паперові файли",
       paperType: "Папір",
@@ -165,6 +169,7 @@ const resources = {
       printProducts: "Продукція з друком",
       printProductsText:
         "Пропонуємо професійний друк на конвертах та паперових торбах— нанесення логотипу компанії, адреси, тощо. Залежно від призначення, іміджевих вимог та Вашого бюджету ми здійснюємо три види друку.",
+      printParam: "чисті чи з друком (вкажіть кількість кольорів)",
       productLabeling: "Маркування товару",
       product: "Виріб",
       pcs: " шт.",
@@ -215,6 +220,8 @@ const resources = {
       visitMayer: "Відвідати вебсайт “Mayer-Kuvert-network GmbH”",
       window: "Вікно",
       windowDetails: "Параметри вікна",
+      windowParam:
+        "наявність вікна (вікон), його (їх) розміри та розміщення на конверті",
       windowYes: "з вікном",
       windowNo: "без вікна",
       width: "Ширина, мм",
@@ -316,6 +323,7 @@ const resources = {
       envelope: "Envelope",
       envelopes: "envelopes",
       envelopesStandard: "Straight flap",
+      envelopeSize: "envelope size",
       envelopeDetails: "Envelope details",
       extensionEnvelopes: "Pockets with extension",
       extensionEnvelopesText:
@@ -339,6 +347,8 @@ const resources = {
       individualOrder: "Individual inquiry",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
+      individualRequestText:
+        "If you do not found something that interests you among the standard products, write us your wishes about envelope and we will consider the possibility of its production. We recommend that you specify:",
       industrial: "Industrial companies",
       innerPrint: "Inner print",
       innerPrintShort: "Inner print",
@@ -375,6 +385,7 @@ const resources = {
       participants: "We are part of",
       paperGSM: "Paper GSM",
       paperBrand: "Paper brand",
+      paperParam: "paper color and density or brand of paper",
       paperbags: "Paper bags",
       paperfile: "Paper filing pockets",
       paperType: "Paper",
@@ -394,6 +405,7 @@ const resources = {
       printProducts: "Printed products",
       printProductsText:
         "We offer professional printing on envelopes and paper bags - the company logo, address, etc. Depending on the purpose, image requirements and your budget we carry out three types of printing.",
+      printParam: "blank or printed (specify the number of colors)",
       productionDep: "Production department",
       productLabeling: "Product labeling",
       product: "Product",
@@ -446,6 +458,8 @@ const resources = {
       visitMayer: "Visit “Mayer-Kuvert-network GmbH” website",
       window: "Window",
       windowDetails: "Window details",
+      windowParam:
+        "the presence of the window (windows), its (their) size and placement on the envelope",
       windowYes: "with window",
       windowNo: "without window",
       width: "Width, mm",

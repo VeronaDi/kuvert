@@ -45,6 +45,9 @@ export default props => {
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
+          grid-template-areas:
+            "a b c d"
+            "a e f g";
           @media screen and (max-width: 1144px) {
             height: auto;
             flex-direction: row;

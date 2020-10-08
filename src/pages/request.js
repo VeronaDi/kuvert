@@ -14,17 +14,17 @@ import logoGrey from "../images/logoGrey.png"
 
 let requests = [
   {
-    name: { en: "Warehouse request", uk: "Складський запит" },
+    name: { en: "Warehouse inquiry", uk: "Складський запит" },
     text: {
       en:
         "If you want to choose products from warehouse, this option is for you.",
       uk: "Якщо бажаєте обрати продукцію зі складу, цей варіант саме для Вас.",
     },
     img: "/icon/request-basic.png",
-    id: "basicform",
+    id: "products",
   },
   {
-    name: { en: "Print request", uk: "Запит друку" },
+    name: { en: "Print inquiry", uk: "Запит друку" },
     text: {
       en:
         "If you want products with your own printing, this option is for you.",
@@ -34,7 +34,7 @@ let requests = [
     id: "printform",
   },
   {
-    name: { en: "Custom request", uk: "Індивідуальний запит" },
+    name: { en: "Custom inquiry", uk: "Індивідуальний запит" },
     text: {
       en:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
@@ -62,7 +62,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Request" />
+      <SEO title="Inquiry type" />
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;
