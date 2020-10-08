@@ -121,11 +121,19 @@ export default props => {
 
       <Steps steps={steps} activeStep={step} />
 
+      <h1
+        css={css`
+          font-size: 40px;
+          font-weight: bold;
+          margin-bottom: 50px;
+          text-align: center;
+        `}
+      >
+        {t("basicOrder")}
+      </h1>
+
       <Formik
         initialValues={{
-          product: "",
-          amount: "",
-          message: "",
           name: "",
           company: "",
           city: "",
@@ -150,28 +158,15 @@ export default props => {
               margin: 0 auto;
             `}
           >
-            <h1
-              css={css`
-                font-size: 40px;
-                font-weight: bold;
-                margin-bottom: 50px;
-                text-align: center;
-              `}
-            >
-              {t("basicOrder")}
-            </h1>
             {step === 1 && (
               <>
-                <section
+                <div
                   css={css`
-                    width: 50%;
-                    height: 350px;
+                    width: 100%;
+                    min-height: 318px;
                     background: #d6d6d6;
                     border-radius: 3px;
-                    position: absolute;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -2%);
-                    transform: translate(-50%, -2%);
+                    position: relative;
                   `}
                 >
                   <div
@@ -182,14 +177,21 @@ export default props => {
                       height: 78px;
                       position: absolute;
                       bottom: 0;
-                      text-align: right;
-                      padding-right: 37px;
-                      padding-top: 28px;
+                      display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+                      padding: 0 37px;
+                      > button {
+                        width: 30%;
+                        @media (max-width: 1024px) {
+                          width: 100%;
+                        }
+                      }
                     `}
                   >
                     <BtnNext type="button" onClick={() => setStep(2)} />
                   </div>
-                </section>
+                </div>
               </>
             )}
             {step === 2 && (
