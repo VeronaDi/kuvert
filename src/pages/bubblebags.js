@@ -53,7 +53,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Bags with bubbles" />
+      <SEO title={t("airpoc")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

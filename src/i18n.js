@@ -261,9 +261,9 @@ const resources = {
       addressOfFactory: "Address of factory",
       addressFactory: "Ivano-Frankivsk, Makuha str. 6",
       addToRequest: "Add to request",
-      airpoc: "Parcel bags with air bubbles",
+      airpoc: "Air padded envelopes",
       airpocText:
-        "Parcel packages with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
+        "Padded envelopes with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
       amount: "Amount, pcs",
       banderole: "Banderole pockets",
       basicOrder: "Warehouse inquiry",

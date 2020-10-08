@@ -7,6 +7,7 @@ import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequestCard"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
+import FilterEnvelopes from "../components/FilterEnvelopes"
 
 import { css } from "@emotion/core"
 
@@ -51,7 +52,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Straight flap" />
+      <SEO title={t("envelopesStandard")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 
@@ -65,6 +66,8 @@ export default props => {
       >
         {t("envelopesStandard")}
       </h3>
+
+      <FilterEnvelopes />
       <div
         css={css`
           width: 90vw;

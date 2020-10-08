@@ -150,7 +150,7 @@ export default props => {
             }
           `}
         >
-          <img src={stericlin} alt="Ecobags white" />
+          <img src={stericlin} alt="Stericlin" />
         </div>
         <div
           css={css`
