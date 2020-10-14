@@ -3,8 +3,6 @@ import Layout from "../components/layout"
 
 import { css } from "@emotion/core"
 
-import { useTranslation } from "react-i18next"
-
 import envelopes from "../data/envelopes"
 
 function onlyUnique(value, index, self) {
@@ -23,32 +21,56 @@ const FilterTitle = ({ children }) => (
   </h6>
 )
 
-const FilterCheckbox = ({ children }) => (
-  <ul
-    css={css`
-      list-style-type: none;
-      padding: 0;
-    `}
-  >
-    <li>
-      <input type="checkbox" css={css``} />
-      <lable
-        css={css`
-          font-size: 14px;
-          font-weight: 400;
-        `}
-      >
-        {children}
-      </lable>
-    </li>
-  </ul>
+const FilterCheckbox = ({ label, isActive, onClick }) => (
+  <>
+    <input
+      id={label}
+      type="checkbox"
+      css={css``}
+      checked={isActive}
+      onChange={onClick}
+    />
+    <label
+      htmlFor={label}
+      css={css`
+        font-size: 14px;
+        font-weight: 400;
+      `}
+    >
+      {label}
+    </label>
+  </>
 )
 
-export default props => {
-  const { t } = useTranslation()
+const sizes = envelopes.map(({ size }) => size).filter(onlyUnique)
+const types = envelopes.map(({ type }) => type).filter(onlyUnique)
+const colors = envelopes.map(({ color }) => color).filter(onlyUnique)
+const sealings = envelopes.map(({ sealing }) => sealing).filter(onlyUnique)
 
+export default ({
+  sizesFilter,
+  setSizesFilter,
+  typesFilter,
+  setTypesFilter,
+  colorsFilter,
+  setColorsFilter,
+  sealingsFilter,
+  setSealingsFilter,
+  t,
+}) => {
   return (
     <Layout>
+      <button
+        type="button"
+        onClick={() => {
+          setSizesFilter([])
+          setTypesFilter([])
+          setColorsFilter([])
+          setSealingsFilter([])
+        }}
+      >
+        Reset
+      </button>
       <div
         css={css`
           width: 60vw;
@@ -63,31 +85,95 @@ export default props => {
             {t("size")}, {t("mm")}
           </FilterTitle>
 
-          {envelopes
-            .map(({ size }) => size)
-            .filter(onlyUnique)
-            .map(size => (
-              <FilterCheckbox>{size}</FilterCheckbox>
+          <ul
+            css={css`
+              list-style-type: none;
+              padding: 0;
+            `}
+          >
+            <li>
+              {sizesFilter.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSizesFilter([])
+                  }}
+                >
+                  Усі
+                </button>
+              )}
+            </li>
+
+            {sizes.map(size => (
+              <li key={size}>
+                <FilterCheckbox
+                  label={size}
+                  isActive={sizesFilter.includes(size)}
+                  onClick={() => {
+                    setSizesFilter(prevFilter =>
+                      prevFilter.includes(size)
+                        ? prevFilter.filter(s => s !== size)
+                        : [...prevFilter, size]
+                    )
+                  }}
+                />
+              </li>
             ))}
+          </ul>
         </div>
 
         <div>
           <FilterTitle>{t("type")}</FilterTitle>
-          <FilterCheckbox> {t("envelope")}</FilterCheckbox>
-          <FilterCheckbox> {t("pocket")}</FilterCheckbox>
+          {types.map(type => (
+            <FilterCheckbox
+              key={type}
+              label={t(type)}
+              isActive={typesFilter.includes(type)}
+              onClick={() => {
+                setTypesFilter(prevFilter =>
+                  prevFilter.includes(type)
+                    ? prevFilter.filter(s => s !== type)
+                    : [...prevFilter, type]
+                )
+              }}
+            />
+          ))}
         </div>
 
         <div>
           <FilterTitle>{t("paperType")}</FilterTitle>
-          <FilterCheckbox> {t("white")}</FilterCheckbox>
-          <FilterCheckbox> {t("brown")}</FilterCheckbox>
+          {colors.map(type => (
+            <FilterCheckbox
+              key={type}
+              label={t(type)}
+              isActive={colorsFilter.includes(type)}
+              onClick={() => {
+                setColorsFilter(prevFilter =>
+                  prevFilter.includes(type)
+                    ? prevFilter.filter(s => s !== type)
+                    : [...prevFilter, type]
+                )
+              }}
+            />
+          ))}
         </div>
 
         <div>
           <FilterTitle>{t("sealing")}</FilterTitle>
-          <FilterCheckbox> {t("mk")}</FilterCheckbox>
-          <FilterCheckbox> {t("sk")}</FilterCheckbox>
-          <FilterCheckbox> {t("skl")}</FilterCheckbox>
+          {sealings.map(type => (
+            <FilterCheckbox
+              key={type}
+              label={t(type)}
+              isActive={sealingsFilter.includes(type)}
+              onClick={() => {
+                setSealingsFilter(prevFilter =>
+                  prevFilter.includes(type)
+                    ? prevFilter.filter(s => s !== type)
+                    : [...prevFilter, type]
+                )
+              }}
+            />
+          ))}
         </div>
       </div>
     </Layout>

@@ -50,6 +50,25 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
+  const [sizesFilter, setSizesFilter] = React.useState([])
+  const [typesFilter, setTypesFilter] = React.useState([])
+  const [colorsFilter, setColorsFilter] = React.useState([])
+  const [sealingsFilter, setSealingsFilter] = React.useState([])
+
+  const isFilterGood = (filter, value) =>
+    filter.length === 0 || filter.includes(value)
+
+  const filterEnvelops = () => {
+    return envelopes.filter(
+      envelope =>
+        isFilterGood(sizesFilter, envelope.size) &&
+        isFilterGood(typesFilter, envelope.type) &&
+        isFilterGood(colorsFilter, envelope.color) &&
+        isFilterGood(sealingsFilter, envelope.sealing)
+    )
+  }
+  const filteredEnvelops = filterEnvelops()
+
   return (
     <Layout>
       <SEO title={t("envelopesStandard")} />
@@ -67,7 +86,17 @@ export default props => {
         {t("envelopesStandard")}
       </h3>
 
-      <FilterEnvelopes />
+      <FilterEnvelopes
+        t={t}
+        sizesFilter={sizesFilter}
+        setSizesFilter={setSizesFilter}
+        typesFilter={typesFilter}
+        setTypesFilter={setTypesFilter}
+        colorsFilter={colorsFilter}
+        setColorsFilter={setColorsFilter}
+        sealingsFilter={sealingsFilter}
+        setSealingsFilter={setSealingsFilter}
+      />
       <div
         css={css`
           width: 90vw;
@@ -84,7 +113,7 @@ export default props => {
           }
         `}
       >
-        {envelopes.map(
+        {filteredEnvelops.map(
           ({ code, size, paper, type, box, sealing, window, price, print }) => (
             <div
               key={code}

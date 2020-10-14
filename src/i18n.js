@@ -85,6 +85,22 @@ const resources = {
       enterAmountText: "Вкажіть кількість, яка Вас цікавить",
       envelope: "Конверт",
       envelopes: "Конверти",
+      // TODO: en
+      envelopesProperties: {
+        sealing: {
+          gummed: "мокроклеючий",
+          selfSeal: "самоклеючий",
+          peelSeal: "відривна стрічка",
+        },
+        type: {
+          envelope: "конверт",
+          pocket: "пакет",
+        },
+        color: {
+          white: "білий",
+          brown: "коричневиий",
+        },
+      },
       envelopesStandard: "Прямий клапан",
       envelopeDetails: "Параметри конверта",
       envelopeSize: "розмір конверта",
