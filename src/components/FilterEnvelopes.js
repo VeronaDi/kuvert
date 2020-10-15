@@ -26,7 +26,105 @@ const FilterCheckbox = ({ label, isActive, onClick }) => (
     <input
       id={label}
       type="checkbox"
-      css={css``}
+      css={css`
+      --active: #B70039;
+      --active-inner: #fff;
+      --focus: 1px rgba(182, 1, 57, 0.6);
+      --border: #C8C8C8;
+      --border-hover: #B70039;
+      --background: #fff;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 20px;
+      outline: none;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      margin: 3px 0;
+      cursor: pointer;
+      border: 1px solid var(--bc, var(--border));
+      background: var(--b, var(--background));
+      transition: background .3s, border-color .2s, box-shadow .2s;
+      &:after {
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      }
+      &:checked {
+        --b: var(--active);
+        --bc: var(--active);
+        --d-o: .3s;
+        --d-t: .6s;
+        --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      }
+        & + label {
+          cursor: not-allowed;
+        }
+      }
+      &:hover {
+        &:not(:checked) {
+            --bc: var(--border-hover);
+        }
+      }
+      &:focus {
+        box-shadow: 0 0 0 var(--focus);
+      }
+      &:not(.switch) {
+        width: 21px;
+        &:after {
+          opacity: var(--o, 0);
+        }
+        &:checked {
+          --o: 1;
+        }
+      }
+      & + label {
+        font-size: 14px;
+        line-height: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-left: 6px;
+      }
+    }
+    &:not(.switch) {
+      border-radius: 3px;
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+    }
+  } 
+      `}
       checked={isActive}
       onChange={onClick}
     />
@@ -62,6 +160,9 @@ export default ({
     <Layout>
       <button
         type="button"
+        css={css`
+          margin: 0 auto;
+        `}
         onClick={() => {
           setSizesFilter([])
           setTypesFilter([])
@@ -69,7 +170,7 @@ export default ({
           setSealingsFilter([])
         }}
       >
-        Reset
+        Скинути параметри
       </button>
       <div
         css={css`
@@ -124,56 +225,80 @@ export default ({
 
         <div>
           <FilterTitle>{t("type")}</FilterTitle>
-          {types.map(type => (
-            <FilterCheckbox
-              key={type}
-              label={t(type)}
-              isActive={typesFilter.includes(type)}
-              onClick={() => {
-                setTypesFilter(prevFilter =>
-                  prevFilter.includes(type)
-                    ? prevFilter.filter(s => s !== type)
-                    : [...prevFilter, type]
-                )
-              }}
-            />
-          ))}
+          <ul
+            css={css`
+              list-style-type: none;
+              padding: 0;
+            `}
+          >
+            {types.map(type => (
+              <li key={type}>
+                <FilterCheckbox
+                  label={t(type)}
+                  isActive={typesFilter.includes(type)}
+                  onClick={() => {
+                    setTypesFilter(prevFilter =>
+                      prevFilter.includes(type)
+                        ? prevFilter.filter(s => s !== type)
+                        : [...prevFilter, type]
+                    )
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
           <FilterTitle>{t("paperType")}</FilterTitle>
-          {colors.map(color => (
-            <FilterCheckbox
-              key={color}
-              label={t(color)}
-              isActive={colorsFilter.includes(color)}
-              onClick={() => {
-                setColorsFilter(prevFilter =>
-                  prevFilter.includes(color)
-                    ? prevFilter.filter(s => s !== color)
-                    : [...prevFilter, color]
-                )
-              }}
-            />
-          ))}
+          <ul
+            css={css`
+              list-style-type: none;
+              padding: 0;
+            `}
+          >
+            {colors.map(color => (
+              <li key={color}>
+                <FilterCheckbox
+                  label={t(color)}
+                  isActive={colorsFilter.includes(color)}
+                  onClick={() => {
+                    setColorsFilter(prevFilter =>
+                      prevFilter.includes(color)
+                        ? prevFilter.filter(s => s !== color)
+                        : [...prevFilter, color]
+                    )
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
           <FilterTitle>{t("sealing")}</FilterTitle>
-          {sealings.map(type => (
-            <FilterCheckbox
-              key={type}
-              label={t(type)}
-              isActive={sealingsFilter.includes(type)}
-              onClick={() => {
-                setSealingsFilter(prevFilter =>
-                  prevFilter.includes(type)
-                    ? prevFilter.filter(s => s !== type)
-                    : [...prevFilter, type]
-                )
-              }}
-            />
-          ))}
+          <ul
+            css={css`
+              list-style-type: none;
+              padding: 0;
+            `}
+          >
+            {sealings.map(type => (
+              <li key={type}>
+                <FilterCheckbox
+                  label={t(type)}
+                  isActive={sealingsFilter.includes(type)}
+                  onClick={() => {
+                    setSealingsFilter(prevFilter =>
+                      prevFilter.includes(type)
+                        ? prevFilter.filter(s => s !== type)
+                        : [...prevFilter, type]
+                    )
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </Layout>
