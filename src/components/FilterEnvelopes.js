@@ -158,27 +158,19 @@ export default ({
 }) => {
   return (
     <Layout>
-      <button
-        type="button"
-        css={css`
-          margin: 0 auto;
-        `}
-        onClick={() => {
-          setSizesFilter([])
-          setTypesFilter([])
-          setColorsFilter([])
-          setSealingsFilter([])
-        }}
-      >
-        Скинути параметри
-      </button>
       <div
         css={css`
           width: 60vw;
-          margin: 40px auto;
+          margin: 40px auto 5px auto;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
+
+          @media screen and (max-width: 892px) {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto 30px auto;
+          }
         `}
       >
         <div>
@@ -192,7 +184,7 @@ export default ({
               padding: 0;
             `}
           >
-            <li>
+            {/* <li>
               {sizesFilter.length > 0 && (
                 <button
                   type="button"
@@ -203,7 +195,7 @@ export default ({
                   Усі
                 </button>
               )}
-            </li>
+            </li> */}
 
             {sizes.map(size => (
               <li key={size}>
@@ -300,6 +292,31 @@ export default ({
             ))}
           </ul>
         </div>
+      </div>
+      <div
+        css={css`
+          width: 100%;
+          text-align: center;
+          margin-bottom: 50px;
+        `}
+      >
+        <button
+          type="button"
+          css={css`
+            background: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          `}
+          onClick={() => {
+            setSizesFilter([])
+            setTypesFilter([])
+            setColorsFilter([])
+            setSealingsFilter([])
+          }}
+        >
+          Скинути параметри
+        </button>
       </div>
     </Layout>
   )
