@@ -142,16 +142,16 @@ export default ({
 
         <div>
           <FilterTitle>{t("paperType")}</FilterTitle>
-          {colors.map(type => (
+          {colors.map(color => (
             <FilterCheckbox
-              key={type}
-              label={t(type)}
-              isActive={colorsFilter.includes(type)}
+              key={color}
+              label={t(color)}
+              isActive={colorsFilter.includes(color)}
               onClick={() => {
                 setColorsFilter(prevFilter =>
-                  prevFilter.includes(type)
-                    ? prevFilter.filter(s => s !== type)
-                    : [...prevFilter, type]
+                  prevFilter.includes(color)
+                    ? prevFilter.filter(s => s !== color)
+                    : [...prevFilter, color]
                 )
               }}
             />
