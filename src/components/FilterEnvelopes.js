@@ -307,7 +307,7 @@ export default ({
                   src={gummed}
                   // alt={`${img} sealing type`}
                   css={css`
-                    width: 100px;
+                    width: 150px;
                   `}
                 />
               </li>
