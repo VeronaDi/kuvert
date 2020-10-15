@@ -5,6 +5,10 @@ import { css } from "@emotion/core"
 
 import envelopes from "../data/envelopes"
 
+import peelSeal from "../images/peelSeal.gif"
+import selfSeal from "../images/selfSeal.gif"
+import gummed from "../images/gummed.gif"
+
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index
 }
@@ -276,7 +280,18 @@ export default ({
             `}
           >
             {sealings.map(type => (
-              <li key={type}>
+              <li
+                key={type}
+                css={css`
+                  > img {
+                    display: none;
+                  }
+
+                  :hover > img {
+                    display: block;
+                  }
+                `}
+              >
                 <FilterCheckbox
                   label={t(type)}
                   isActive={sealingsFilter.includes(type)}
@@ -287,6 +302,13 @@ export default ({
                         : [...prevFilter, type]
                     )
                   }}
+                />
+                <img
+                  src={gummed}
+                  // alt={`${img} sealing type`}
+                  css={css`
+                    width: 100px;
+                  `}
                 />
               </li>
             ))}
