@@ -85,7 +85,6 @@ const resources = {
       enterAmountText: "Вкажіть кількість, яка Вас цікавить",
       envelope: "Конверт",
       envelopes: "Конверти",
-      // TODO: en
       envelopesProperties: {
         sealing: {
           gummed: "мокроклеючий",
@@ -338,6 +337,21 @@ const resources = {
         "Specify the amount of envelopes you would like to order",
       envelope: "Envelope",
       envelopes: "envelopes",
+      envelopesProperties: {
+        sealing: {
+          gummed: "Gummed",
+          selfSeal: "Self Seal",
+          peelSeal: "Peel & Seal",
+        },
+        type: {
+          envelope: "Envelope",
+          pocket: "Pocket",
+        },
+        color: {
+          white: "White",
+          brown: "Brown",
+        },
+      },
       envelopesStandard: "Straight flap",
       envelopeSize: "envelope size",
       envelopeDetails: "Envelope details",
