@@ -100,7 +100,7 @@ import envelopes from '../data/envelopes'
 
 
 
-const getProductDescription = function (t) {
+const getEnvelopeDescription = function (t) {
   return [
     this.format,
     t(this.type),
@@ -117,7 +117,7 @@ const allProducts = {}
 envelopes.forEach(envelope => {
   allProducts[envelope.code] = {
     ...envelope,
-    getProductDescription,
+    getProductDescription: getEnvelopeDescription,
   }
 })
 
