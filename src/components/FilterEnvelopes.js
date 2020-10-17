@@ -195,19 +195,6 @@ export default ({
               padding: 0;
             `}
           >
-            {/* <li>
-              {formatsFilter.length > 0 && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setformatsFilter([])
-                  }}
-                >
-                  Усі
-                </button>
-              )}
-            </li> */}
-
             {formats.map(format => (
               <li key={format}>
                 <FilterCheckbox

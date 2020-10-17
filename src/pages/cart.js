@@ -99,28 +99,36 @@ const getCardProducts = () => {
 import envelopes from '../data/envelopes'
 
 
-const findProduct = (code) => {
-  return envelopes.find((e) => e.code === code)
+
+const getProductDescription = function (t) {
+  return [
+    this.format,
+    t(this.type),
+    t(this.sealing),
+    t(this.color),
+    `${this.gsm}${t('gsm')}`,
+    `${t("window")}: ${this.window ? t(this.window)+t('mm') : '-'}`,
+    `${t("innerPrintShort")}: ${this.print ? t(this.print) : '-'}`
+  ].join('; ')
 }
 
-const getProductDescription = (code, t) => {
-  const p = findProduct(code)
+const allProducts = {}
 
-  return [
-    p.size,
-    t(p.type),
-    t(p.sealing),
-    t(p.color),
-    `${p.gsm}${t('gsm')}`,
-    `${t("window")}: ${p.window ? t(p.window)+t('mm') : '-'}`,
-    `${t("innerPrintShort")}: ${p.print ? t(p.print) : '-'}`
-  ].join('; ')
+envelopes.forEach(envelope => {
+  allProducts[envelope.code] = {
+    ...envelope,
+    getProductDescription,
+  }
+})
+
+const findProduct = (code) => {
+  return allProducts[code]
 }
 
 const ProductRow = ({ index, t }) => {
   const [field] = useField({name: `products.${index}.code`});
   const code = field.value
-  const description = getProductDescription(code, t)
+  const description = findProduct(code).getProductDescription(t)
 
   return (
     <div>
