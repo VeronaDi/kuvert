@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 
 import EnterAmount from "../components/EnterAmount"
 
-export default () => {
+export default ({ boxQuantity = 1, code }) => {
   const { t, i18n } = useTranslation()
 
   return (
@@ -41,7 +41,9 @@ export default () => {
         </button>
       }
     >
-      {close => <EnterAmount close={close} />}
+      {close => (
+        <EnterAmount close={close} boxQuantity={boxQuantity} code={code} />
+      )}
     </Popup>
   )
 }

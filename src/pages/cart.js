@@ -169,6 +169,7 @@ export default props => {
                     position: relative;
                   `}
                 >
+                  {/* user card content */}
                   <div
                     css={css`
                       width: 100%;
@@ -188,7 +189,7 @@ export default props => {
                         }
                       }
                     `}
-                  >
+                  >                    
                     <BtnNext type="button" onClick={() => setStep(2)} />
                   </div>
                 </div>

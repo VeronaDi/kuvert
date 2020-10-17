@@ -65,7 +65,8 @@ export default ({ isHome = false, location }) => {
   return (
     <nav
       css={css`
-        ${isHome && "position: fixed; background: rgba(56, 56, 56, 0.732);"}
+        position: fixed;
+        background: ${isHome ? "rgba(56, 56, 56, 0.732)" : "#F8F8F8"};
         z-index: 5;
         width: 100%;
         top: 0;
@@ -119,7 +120,7 @@ export default ({ isHome = false, location }) => {
             width: 180px;
           `}
         >
-          {!isHome && <BtnRequest />}
+          {!isHome && <BtnRequest isSmall={isSmall} />}
         </div>
       </div>
 

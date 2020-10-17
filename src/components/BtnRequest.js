@@ -5,7 +5,7 @@ import LocalizedLink from "../components/LocalizedLink"
 
 import { useTranslation } from "react-i18next"
 
-export default () => {
+export default ({ isSmall = false }) => {
   const { t, i18n } = useTranslation()
 
   return (
@@ -15,10 +15,7 @@ export default () => {
         background: #c5003e;
         border-radius: 3px;
         border: none;
-        padding-top: 16px;
-        padding-bottom: 16px;
-        width: 205.81px;
-        height: 56px;
+        padding: ${isSmall ? "8px 0" : "16px 0"};
         color: white;
         cursor: pointer;
         font-weight: 500;

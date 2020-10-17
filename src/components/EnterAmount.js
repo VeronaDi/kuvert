@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import plus from "../images/plus.png"
 import minus from "../images/minus.png"
 
-const MyAmountInput = ({ label, setFieldValue, ...props }) => {
+const MyAmountInput = ({ label, setFieldValue, step = 1, ...props }) => {
   const [field, meta] = useField(props)
   return (
     <>
@@ -37,8 +37,9 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
         >
           <button
             onClick={() => {
-              let newValue = Number(field.value) - 1
-              if (newValue < 1) newValue = 1
+              let newValue =
+                Math.floor((Number(field.value) - step) / step) * step
+              if (newValue < step) newValue = step
               setFieldValue(props.name, newValue)
             }}
             type="button"
@@ -82,7 +83,10 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
           />
           <button
             onClick={() => {
-              setFieldValue(props.name, Number(field.value) + 1)
+              setFieldValue(
+                props.name,
+                Math.floor((Number(field.value) + step) / step) * step
+              )
             }}
             type="button"
             css={css`
@@ -124,10 +128,8 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
   )
 }
 
-export default ({ close }) => {
+export default ({ close, boxQuantity = 1, code }) => {
   const { t, i18n } = useTranslation()
-
-  const [setEnvelopeAmount] = React.useState(0)
 
   return (
     <div
@@ -184,7 +186,19 @@ export default ({ close }) => {
           amount: "",
         }}
         onSubmit={({ amount }) => {
-          setEnvelopeAmount(amount)
+          if (amount <= 0) return
+          let card = JSON.parse(window.localStorage.getItem("card")) || {}
+
+          const newAmmount = card[code] ? amount + card[code] : amount
+
+          card = {
+            ...card,
+            [code]: newAmmount,
+          }
+
+          window.localStorage.setItem("card", JSON.stringify(card))
+
+          close()
         }}
       >
         {({ isSubmitting, setFieldValue }) => (
@@ -203,6 +217,7 @@ export default ({ close }) => {
               name="amount"
               type="number"
               placeholder="0"
+              step={boxQuantity}
               setFieldValue={setFieldValue}
             />
             <button

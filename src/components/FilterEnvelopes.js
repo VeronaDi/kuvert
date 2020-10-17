@@ -25,6 +25,12 @@ const FilterTitle = ({ children }) => (
   </h6>
 )
 
+const sealingTypes = {
+  "envelopesProperties.sealing.peelSeal": peelSeal,
+  "envelopesProperties.sealing.selfSeal": selfSeal,
+  "envelopesProperties.sealing.gummed": gummed,
+}
+
 const FilterCheckbox = ({ label, isActive, onClick }) => (
   <>
     <input
@@ -304,10 +310,14 @@ export default ({
                   }}
                 />
                 <img
-                  src={gummed}
-                  // alt={`${img} sealing type`}
+                  src={sealingTypes[type]}
+                  alt="sealing illustration"
                   css={css`
+                    position: absolute;
+                    z-index: 5;
                     width: 150px;
+                    margin-left: 150px;
+                    margin-top: -30px;
                   `}
                 />
               </li>

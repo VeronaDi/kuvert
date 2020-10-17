@@ -190,7 +190,7 @@ export default props => {
                   }
                 `}
               >
-                <BtnAddToRequest />
+                <BtnAddToRequest boxQuantity={box} code={code} />
               </div>
             </div>
           )
