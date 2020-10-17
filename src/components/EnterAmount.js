@@ -189,11 +189,11 @@ export default ({ close, boxQuantity = 1, code }) => {
           if (amount <= 0) return
           let card = JSON.parse(window.localStorage.getItem("card")) || {}
 
-          const newAmmount = card[code] ? amount + card[code] : amount
+          const newAmount = card[code] ? amount + card[code] : amount
 
           card = {
             ...card,
-            [code]: newAmmount,
+            [code]: newAmount,
           }
 
           window.localStorage.setItem("card", JSON.stringify(card))

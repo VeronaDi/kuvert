@@ -22,8 +22,8 @@ export default ({ boxQuantity = 1, code }) => {
             text-decoration: none;
             display: block;
             text-align: center;
-            width: 100%;
             height: 49px;
+            width: 100%;
             border-radius: 3px;
             background: transparent;
             border: none;
@@ -31,6 +31,7 @@ export default ({ boxQuantity = 1, code }) => {
             font-size: 16px;
             line-height: 19px;
             color: #383838;
+            border: 1px solid transparent;
 
             &:hover {
               border: 1px solid #383838;

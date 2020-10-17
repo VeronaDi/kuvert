@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Form, Formik, useField } from "formik"
+import { Form, Field, FieldArray, Formik, useField } from "formik"
 import * as Yup from "yup"
 import { localizedNavigate } from "../components/LocalizedLink"
 
@@ -87,6 +87,55 @@ const sendEmail = async values => {
   })
 }
 
+const getCardProducts = () => {
+  let cardData = JSON.parse(window.localStorage.getItem("card")) || {}
+
+  return Object.keys(cardData).map(code => ({
+    code,
+    quantity: cardData[code]
+  }))
+}
+
+import envelopes from '../data/envelopes'
+
+
+const findProduct = (code) => {
+  return envelopes.find((e) => e.code === code)
+}
+
+const getProductDescription = (code, t) => {
+  const p = findProduct(code)
+
+  return [
+    p.size,
+    t(p.type),
+    t(p.sealing),
+    t(p.color),
+    `${p.gsm}${t('gsm')}`,
+    `${t("window")}: ${p.window ? t(p.window)+t('mm') : '-'}`,
+    `${t("innerPrintShort")}: ${p.print ? t(p.print) : '-'}`
+  ].join('; ')
+}
+
+const ProductRow = ({ index, t }) => {
+  const [field] = useField({name: `products.${index}.code`});
+  const code = field.value
+  const description = getProductDescription(code, t)
+
+  return (
+    <div>
+      {description}
+      <Field name={`products.${index}.code`} type='hidden' />
+      <Field name={`products.${index}.quantity`} />
+
+      <button type="button" onClick={() => arrayHelpers.remove(index)}>
+        -
+      </button>
+    </div>
+  )
+}
+
+
 export default props => {
   const [step, setStep] = React.useState(1)
 
@@ -139,6 +188,7 @@ export default props => {
           city: "",
           email: "",
           phone: "",
+          products: getCardProducts()
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("Required"),
@@ -150,7 +200,7 @@ export default props => {
           localizedNavigate("/thanxrequest", props.pageContext.langKey)
         }}
       >
-        {({ isSubmitting, setFieldValue }) => (
+        {({ isSubmitting, setFieldValue, values }) => (
           <Form
             css={css`
               width: 90vw;
@@ -169,7 +219,16 @@ export default props => {
                     position: relative;
                   `}
                 >
-                  {/* user card content */}
+                  <FieldArray
+                    name="products"
+                    render={arrayHelpers => (
+                      <div>
+                        {values.products.map((_product, index) => (
+                          <ProductRow key={index} index={index} t={t} />
+                        ))}
+                      </div>
+                    )}
+                  />
                   <div
                     css={css`
                       width: 100%;
@@ -189,7 +248,7 @@ export default props => {
                         }
                       }
                     `}
-                  >                    
+                  >
                     <BtnNext type="button" onClick={() => setStep(2)} />
                   </div>
                 </div>

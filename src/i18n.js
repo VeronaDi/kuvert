@@ -99,6 +99,9 @@ const resources = {
           white: "білий",
           brown: "коричневиий",
         },
+        print: {
+          gray: "сірий"
+        }
       },
       envelopesStandard: "Прямий клапан",
       envelopeDetails: "Параметри конверта",
@@ -351,6 +354,9 @@ const resources = {
           white: "White",
           brown: "Brown",
         },
+        print: {
+          gray: "gray"
+        }
       },
       envelopesStandard: "Straight flap",
       envelopeSize: "envelope size",

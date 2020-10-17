@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import { css } from "@emotion/core"
 
 import envelopes from "../data/envelopes"
+import formatSizes from "../data/formatSizes"
 
 import peelSeal from "../images/peelSeal.gif"
 import selfSeal from "../images/selfSeal.gif"
@@ -133,7 +134,7 @@ const FilterCheckbox = ({ label, isActive, onClick }) => (
         --x: 17px;
       }
     }
-  } 
+  }
       `}
       checked={isActive}
       onChange={onClick}
@@ -150,14 +151,14 @@ const FilterCheckbox = ({ label, isActive, onClick }) => (
   </>
 )
 
-const sizes = envelopes.map(({ size }) => size).filter(onlyUnique)
+const formats = envelopes.map(({ format }) => format).filter(onlyUnique)
 const types = envelopes.map(({ type }) => type).filter(onlyUnique)
 const colors = envelopes.map(({ color }) => color).filter(onlyUnique)
 const sealings = envelopes.map(({ sealing }) => sealing).filter(onlyUnique)
 
 export default ({
-  sizesFilter,
-  setSizesFilter,
+  formatsFilter,
+  setFormatsFilter,
   typesFilter,
   setTypesFilter,
   colorsFilter,
@@ -195,11 +196,11 @@ export default ({
             `}
           >
             {/* <li>
-              {sizesFilter.length > 0 && (
+              {formatsFilter.length > 0 && (
                 <button
                   type="button"
                   onClick={() => {
-                    setSizesFilter([])
+                    setformatsFilter([])
                   }}
                 >
                   Усі
@@ -207,16 +208,16 @@ export default ({
               )}
             </li> */}
 
-            {sizes.map(size => (
-              <li key={size}>
+            {formats.map(format => (
+              <li key={format}>
                 <FilterCheckbox
-                  label={size}
-                  isActive={sizesFilter.includes(size)}
+                  label={`${format} (${formatSizes[format]})`}
+                  isActive={formatsFilter.includes(format)}
                   onClick={() => {
-                    setSizesFilter(prevFilter =>
-                      prevFilter.includes(size)
-                        ? prevFilter.filter(s => s !== size)
-                        : [...prevFilter, size]
+                    setFormatsFilter(prevFilter =>
+                      prevFilter.includes(format)
+                        ? prevFilter.filter(s => s !== format)
+                        : [...prevFilter, format]
                     )
                   }}
                 />
@@ -341,7 +342,7 @@ export default ({
             cursor: pointer;
           `}
           onClick={() => {
-            setSizesFilter([])
+            setformatsFilter([])
             setTypesFilter([])
             setColorsFilter([])
             setSealingsFilter([])

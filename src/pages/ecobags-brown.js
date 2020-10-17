@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
-import BtnAddToRequest from "../components/BtnAddToRequest"
+import BtnAddToRequest from "../components/BtnAddToRequestCard"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import EcobagTopSection from "../components/EcobagTopSection"
 

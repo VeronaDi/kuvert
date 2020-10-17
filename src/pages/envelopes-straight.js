@@ -14,6 +14,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import envelopes from "../data/envelopes"
+import formatSizes from "../data/formatSizes"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -50,7 +51,7 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
-  const [sizesFilter, setSizesFilter] = React.useState([])
+  const [formatsFilter, setFormatsFilter] = React.useState([])
   const [typesFilter, setTypesFilter] = React.useState([])
   const [colorsFilter, setColorsFilter] = React.useState([])
   const [sealingsFilter, setSealingsFilter] = React.useState([])
@@ -61,7 +62,7 @@ export default props => {
   const filterEnvelops = () => {
     return envelopes.filter(
       envelope =>
-        isFilterGood(sizesFilter, envelope.size) &&
+        isFilterGood(formatsFilter, envelope.format) &&
         isFilterGood(typesFilter, envelope.type) &&
         isFilterGood(colorsFilter, envelope.color) &&
         isFilterGood(sealingsFilter, envelope.sealing)
@@ -88,8 +89,8 @@ export default props => {
 
       <FilterEnvelopes
         t={t}
-        sizesFilter={sizesFilter}
-        setSizesFilter={setSizesFilter}
+        formatsFilter={formatsFilter}
+        setFormatsFilter={setFormatsFilter}
         typesFilter={typesFilter}
         setTypesFilter={setTypesFilter}
         colorsFilter={colorsFilter}
@@ -114,7 +115,7 @@ export default props => {
         `}
       >
         {filteredEnvelops.map(
-          ({ code, size, paper, type, box, sealing, window, price, print }) => (
+          ({ code, format, size, gsm, color, type, boxSize, sealing, window, price, print }) => (
             <div
               key={code}
               css={css`
@@ -141,12 +142,12 @@ export default props => {
 
               <GeneralNames>
                 {t("paperType")}, {t("gsm")}
-                <EnvelopeParam>{t(paper)}</EnvelopeParam>
+              <EnvelopeParam>{t(color)}, {gsm}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("window")}
-                <EnvelopeParam>{t(window)}</EnvelopeParam>
+                <EnvelopeParam>{window ? window + t('mm') : '-'}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -156,17 +157,17 @@ export default props => {
 
               <GeneralNames>
                 {t("innerPrintShort")}
-                <EnvelopeParam>{t(print)}</EnvelopeParam>
+                <EnvelopeParam>{print ? t(print) : '-'}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("quantityBox")}, {t("pcs")}
-                <EnvelopeParam>{box}</EnvelopeParam>
+                <EnvelopeParam>{boxSize}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("size")}, {t("mm")}
-                <EnvelopeParam>{size}</EnvelopeParam>
+              <EnvelopeParam>{format} ({formatSizes[format]})</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -185,12 +186,13 @@ export default props => {
                   width: 100%;
                   padding: 16px 0;
                   grid-column: 1 / 4;
+                  display: flex;
                   @media screen and (max-width: 425px) {
                     grid-column: 1 / 3;
                   }
                 `}
               >
-                <BtnAddToRequest boxQuantity={box} code={code} />
+                <BtnAddToRequest boxQuantity={boxSize} code={code} />
               </div>
             </div>
           )

@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
-import BtnAddToRequest from "../components/BtnAddToRequest"
+import BtnAddToRequest from "../components/BtnAddToRequestCard"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 
 import { css } from "@emotion/core"
@@ -286,7 +286,7 @@ export default props => {
       </h4>
 
       {extensionEnvelopes.map(
-        ({ code, size, color, type, gsm, pack, sealing, price }) => (
+        ({ code, size, color, type, gsm, boxSize, sealing, price }) => (
           <div
             key={code}
             css={css`
@@ -350,7 +350,7 @@ export default props => {
               <GeneralNames>
                 {t("quantityBox")}
                 <EnvelopeParam>
-                  {pack}
+                  {boxSize}
                   {t("pcs")}
                 </EnvelopeParam>
               </GeneralNames>
@@ -360,7 +360,11 @@ export default props => {
                 <EnvelopeParam>{t(price)}</EnvelopeParam>
               </GeneralNames>
             </div>
-            <BtnAddToRequest />
+            <div css={css`
+              width: 153px;
+            `}>
+              <BtnAddToRequest boxQuantity={boxSize} code={code} />
+            </div>
           </div>
         )
       )}
