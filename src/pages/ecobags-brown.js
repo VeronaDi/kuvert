@@ -7,7 +7,6 @@ import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
-import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import EcobagTopSection from "../components/EcobagTopSection"
 
 import { css } from "@emotion/core"
@@ -83,7 +82,7 @@ export default props => {
       </h4>
 
       {ecobagsBrown.map(
-        ({ code, size, color, handle, gsm, pack, price, paperType }) => (
+        ({ code, size, color, handle, gsm, boxSize, price, paperType }) => (
           <div
             key={code}
             css={css`
@@ -120,18 +119,8 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("handleType")}
-                <EnvelopeParam>{t(handle)}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
                 {t("color")}
                 <EnvelopeParam>{t(color)}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("paperType")}
-                <EnvelopeParam>{t(paperType)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -140,23 +129,31 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("quantityBox")}
-                <EnvelopeParam>
-                  {pack}
-                  {t("pcs")}
-                </EnvelopeParam>
+                {t("paperType")}
+                <EnvelopeParam>{t(paperType)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("handleType")}
+                <EnvelopeParam>{t(handle)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("quantityBox")}, {t("pcs")}
+                <EnvelopeParam>{boxSize}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>{t(price)}</EnvelopeParam>
+                <EnvelopeParam>
+                  {t("from")} {price} {t("uah")}
+                </EnvelopeParam>
               </GeneralNames>
             </div>
-            <BtnAddToRequest />
+            <BtnAddToRequest boxQuantity={boxSize} code={code} />
           </div>
         )
       )}
-      <WeightCalculatorSection />
       <Footer />
     </Layout>
   )

@@ -290,9 +290,8 @@ export default props => {
                     {t("from")} {price} {t("uah")}
                   </EnvelopeParam>
                 </GeneralNames>
-
-                <BtnAddToRequest boxQuantity={boxSize} code={code} />
               </div>
+              <BtnAddToRequest boxQuantity={boxSize} code={code} />
             </div>
           )
         )}
