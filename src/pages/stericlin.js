@@ -44,7 +44,7 @@ const EnvelopeParam = ({ children }) => (
   </p>
 )
 
-const Stericlin = ({ stericlin: { nummer, code, size, pack }, t }) => (
+const Stericlin = ({ stericlin: { nummer, code, size, boxSize }, t }) => (
   <div
     key={code}
     css={css`
@@ -75,7 +75,7 @@ const Stericlin = ({ stericlin: { nummer, code, size, pack }, t }) => (
       `}
     >
       <GeneralNames>
-        №<EnvelopeParam>{t(nummer)}</EnvelopeParam>
+        №<EnvelopeParam>{nummer}</EnvelopeParam>
       </GeneralNames>
 
       <GeneralNames>
@@ -89,14 +89,11 @@ const Stericlin = ({ stericlin: { nummer, code, size, pack }, t }) => (
       </GeneralNames>
 
       <GeneralNames>
-        {t("quantityBox")}
-        <EnvelopeParam>
-          {pack}
-          {t("pcs")}
-        </EnvelopeParam>
+        {t("quantityBox")}, {t("pcs")}
+        <EnvelopeParam>{boxSize}</EnvelopeParam>
       </GeneralNames>
     </div>
-    <BtnAddToRequest />
+    <BtnAddToRequest boxQuantity={boxSize} code={code} />
   </div>
 )
 
