@@ -16,6 +16,7 @@ import { useTranslation } from "react-i18next"
 import envExtension from "../../static/products/env-extension.jpg"
 
 import extensionEnvelopes from "../data/extensionEnvelopes"
+import formatSizes from "../data/formatSizes"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -286,7 +287,7 @@ export default props => {
       </h4>
 
       {extensionEnvelopes.map(
-        ({ code, size, color, type, gsm, boxSize, sealing, price }) => (
+        ({ code, format, color, type, gsm, boxSize, sealing, price }) => (
           <div
             key={code}
             css={css`
@@ -321,9 +322,9 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("size")}
+                {t("size")}, {t("mm")}
                 <EnvelopeParam>
-                  {size} {t("mm")})
+                  {format} ({formatSizes[format]})
                 </EnvelopeParam>
               </GeneralNames>
 
@@ -357,14 +358,13 @@ export default props => {
 
               <GeneralNames>
                 {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>{t(price)}</EnvelopeParam>
+                <EnvelopeParam>
+                  {t("from")} {price} {t("uah")}
+                </EnvelopeParam>
               </GeneralNames>
             </div>
-            <div css={css`
-              width: 153px;
-            `}>
-              <BtnAddToRequest boxQuantity={boxSize} code={code} />
-            </div>
+
+            <BtnAddToRequest boxQuantity={boxSize} code={code} />
           </div>
         )
       )}
