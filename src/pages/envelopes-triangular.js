@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next"
 
 import triangularEnv from "../../static/products/triangular-envelope.png"
 import triangularEnvelopes from "../data/triangularEnvelopes"
-import { string } from "prop-types"
+import formatSizes from "../data/formatSizes"
 
 const GeneralNames = ({ children }) => (
   <div
@@ -139,7 +139,7 @@ export default props => {
               `}
             >
               {t("size")}
-              {triangularEnvelopes.map(({ size }) => (
+              {triangularEnvelopes.map(({ format }) => (
                 <li
                   css={css`
                     font-size: 16px;
@@ -154,7 +154,7 @@ export default props => {
                     }
                   `}
                 >
-                  {size} {t("mm")})
+                  {format} ({formatSizes[format]} {t("mm")})
                 </li>
               ))}
             </ul>
@@ -232,73 +232,72 @@ export default props => {
         {t("chooseDesiredProduct")}
       </h4>
 
-      {triangularEnvelopes.map(({ code, size, color, type, gsm, pack }) => (
-        <div
-          key={code}
-          css={css`
-            background: #ffffff;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 3px;
-            width: 90vw;
-            margin: 20px auto 54px auto;
-            padding: 30px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            @media screen and (max-width: 570px) {
-              flex-direction: column;
-            }
-          `}
-        >
+      {triangularEnvelopes.map(
+        ({ code, format, color, type, gsm, boxSize }) => (
           <div
+            key={code}
             css={css`
+              background: #ffffff;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 3px;
+              width: 90vw;
+              margin: 20px auto 54px auto;
+              padding: 30px;
               display: flex;
               justify-content: space-around;
-              flex: 1;
-              @media screen and (max-width: 1024px) {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, 150px);
+              align-items: center;
+              @media screen and (max-width: 570px) {
+                flex-direction: column;
               }
             `}
           >
-            <GeneralNames>
-              {t("code")}
-              <EnvelopeParam>{code}</EnvelopeParam>
-            </GeneralNames>
+            <div
+              css={css`
+                display: flex;
+                justify-content: space-around;
+                flex: 1;
+                @media screen and (max-width: 1024px) {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, 150px);
+                }
+              `}
+            >
+              <GeneralNames>
+                {t("code")}
+                <EnvelopeParam>{code}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("size")}
-              <EnvelopeParam>
-                {size} {t("mm")})
-              </EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("size")}, {t("mm")}
+                <EnvelopeParam>
+                  {format} ({formatSizes[format]})
+                </EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("color")}
-              <EnvelopeParam>{t(color)}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("type")}
-              <EnvelopeParam>{t(type)}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("type")}
+                <EnvelopeParam>{t(type)}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("paperGSM")}
-              <EnvelopeParam>{gsm}</EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("paperGSM")}
+                <EnvelopeParam>{gsm}</EnvelopeParam>
+              </GeneralNames>
 
-            <GeneralNames>
-              {t("quantityBox")}
-              <EnvelopeParam>
-                {pack}
-                {t("pcs")}
-              </EnvelopeParam>
-            </GeneralNames>
+              <GeneralNames>
+                {t("quantityBox")}, {t("pcs")}
+                <EnvelopeParam>{boxSize}</EnvelopeParam>
+              </GeneralNames>
+            </div>
+            <BtnAddToRequest boxQuantity={boxSize} code={code} />
           </div>
-          <BtnAddToRequest />
-        </div>
-      ))}
+        )
+      )}
       <WeightCalculatorSection />
       <Footer />
     </Layout>
