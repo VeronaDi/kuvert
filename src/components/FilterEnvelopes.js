@@ -329,7 +329,7 @@ export default ({
             cursor: pointer;
           `}
           onClick={() => {
-            setformatsFilter([])
+            setFormatsFilter([])
             setTypesFilter([])
             setColorsFilter([])
             setSealingsFilter([])

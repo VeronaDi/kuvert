@@ -5,10 +5,10 @@ import Popup from "reactjs-popup"
 
 import { useTranslation } from "react-i18next"
 
-import EnterAmount from "../components/EnterAmount"
+import EnterAmount from "./EnterAmount"
 
 export default ({ boxQuantity = 1, code }) => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <Popup
@@ -23,7 +23,6 @@ export default ({ boxQuantity = 1, code }) => {
             display: block;
             text-align: center;
             height: 49px;
-            width: 100%;
             border-radius: 3px;
             background: transparent;
             border: none;

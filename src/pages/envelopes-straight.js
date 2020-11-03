@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
-import BtnAddToRequest from "../components/BtnAddToRequestCard"
+import BtnAddToRequest from "../components/BtnAddToRequest"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import FilterEnvelopes from "../components/FilterEnvelopes"
 
@@ -59,7 +59,7 @@ export default props => {
   const isFilterGood = (filter, value) =>
     filter.length === 0 || filter.includes(value)
 
-  const filterEnvelops = () => {
+  const filterEnvelopes = () => {
     return envelopes.filter(
       envelope =>
         isFilterGood(formatsFilter, envelope.format) &&
@@ -68,7 +68,7 @@ export default props => {
         isFilterGood(sealingsFilter, envelope.sealing)
     )
   }
-  const filteredEnvelops = filterEnvelops()
+  const filteredEnvelopes = filterEnvelopes()
 
   return (
     <Layout>
@@ -98,23 +98,8 @@ export default props => {
         sealingsFilter={sealingsFilter}
         setSealingsFilter={setSealingsFilter}
       />
-      <div
-        css={css`
-          width: 90vw;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-column-gap: 8%;
-          grid-row-gap: 70px;
-          @media screen and (max-width: 1440px) {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          @media screen and (max-width: 768px) {
-            grid-template-columns: 1fr;
-          }
-        `}
-      >
-        {filteredEnvelops.map(
+      <div>
+        {/* {filteredEnvelops.map(
           ({
             code,
             format,
@@ -209,6 +194,103 @@ export default props => {
                   }
                 `}
               >
+                <BtnAddToRequest boxQuantity={boxSize} code={code} />
+              </div> */}
+
+        {filteredEnvelopes.map(
+          ({
+            code,
+            format,
+            gsm,
+            color,
+            type,
+            boxSize,
+            sealing,
+            window,
+            price,
+            print,
+          }) => (
+            <div
+              key={code}
+              css={css`
+                background: #ffffff;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 3px;
+                width: 90vw;
+                margin: 20px auto 54px auto;
+                padding: 30px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                @media screen and (max-width: 570px) {
+                  flex-direction: column;
+                }
+              `}
+            >
+              <div
+                css={css`
+                  display: flex;
+                  justify-content: space-around;
+                  flex: 1;
+                  @media screen and (max-width: 1024px) {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, 150px);
+                  }
+                `}
+              >
+                <GeneralNames>
+                  {t("code")}
+                  <EnvelopeParam>{code}</EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("size")}, {t("mm")}
+                  <EnvelopeParam>
+                    {format} ({formatSizes[format]})
+                  </EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("type")}
+                  <EnvelopeParam>{t(type)}</EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("sealing")}
+                  <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("paperType")}, {t("gsm")}
+                  <EnvelopeParam>
+                    {t(color)}, {gsm}
+                  </EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("window")}
+                  <EnvelopeParam>
+                    {window ? window + t("mm") : "-"}
+                  </EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("innerPrintShort")}
+                  <EnvelopeParam>{print ? t(print) : "-"}</EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("quantityBox")}, {t("pcs")}
+                  <EnvelopeParam>{boxSize}</EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("price")} {t("thousandPcs")}
+                  <EnvelopeParam>
+                    {t("from")} {price} {t("uah")}
+                  </EnvelopeParam>
+                </GeneralNames>
+
                 <BtnAddToRequest boxQuantity={boxSize} code={code} />
               </div>
             </div>

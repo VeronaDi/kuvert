@@ -123,7 +123,7 @@ const findProduct = code => {
   return allProducts[code]
 }
 
-const ProductRow = ({ index, t }) => {
+const ProductRow = ({ index, t, arrayHelpers }) => {
   const [field] = useField({ name: `products.${index}.code` })
   const code = field.value
   const description = findProduct(code).getProductDescription(t)
