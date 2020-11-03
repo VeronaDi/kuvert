@@ -276,7 +276,7 @@ export default props => {
         {t("chooseDesiredProduct")}
       </h4>
       <div>
-        {airpoc.map(({ code, size, color, pack, sealing, price }) => (
+        {airpoc.map(({ code, size, color, boxSize, sealing, price }) => (
           <div
             key={code}
             css={css`
@@ -311,23 +311,8 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("color")}
-                <EnvelopeParam>{t(color)}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("quantityBox")}
-                <EnvelopeParam>
-                  {pack}
-                  {t("pcs")}
-                </EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("size")}
-                <EnvelopeParam>
-                  {size} {t("mm")}
-                </EnvelopeParam>
+                {t("size")}, {t("mm")}
+                <EnvelopeParam>{size}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -336,17 +321,28 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("quantityBox")}, {t("pcs")}
+                <EnvelopeParam>{boxSize}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
                 {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>{t(price)}</EnvelopeParam>
+                <EnvelopeParam>
+                  {t("from")} {price} {t("uah")}
+                </EnvelopeParam>
               </GeneralNames>
             </div>
-            <div>
-              <BtnAddToRequest />
-            </div>
+
+            <BtnAddToRequest boxQuantity={boxSize} code={code} />
           </div>
         ))}
       </div>
-      <WeightCalculatorSection />
+
       <Footer />
     </Layout>
   )

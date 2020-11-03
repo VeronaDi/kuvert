@@ -98,6 +98,7 @@ const resources = {
         color: {
           white: "білий",
           brown: "коричневиий",
+          whbr: "білий/коричневий",
         },
         print: {
           gray: "сірий",
@@ -355,6 +356,7 @@ const resources = {
         color: {
           white: "White",
           brown: "Brown",
+          whbr: "white/brown",
         },
         print: {
           gray: "gray",
