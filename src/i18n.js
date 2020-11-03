@@ -89,7 +89,8 @@ const resources = {
         color: {
           white: "білий",
           brown: "коричневий",
-          whbr: "white/brown",
+          multicolor: "кольорові",
+          black: "чорний",
         },
         paperType: {
           ribbed: "рифлений",
@@ -360,9 +361,10 @@ const resources = {
         },
 
         color: {
-          white: "White",
-          brown: "Brown",
-          whbr: "white/brown",
+          white: "white",
+          brown: "brown",
+          multicolor: "multicolor",
+          black: "black",
         },
         paperType: {
           ribbed: "ribbed",
