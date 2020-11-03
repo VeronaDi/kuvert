@@ -18,6 +18,7 @@ import Steps from "../components/Steps"
 import logoGrey from "../images/logoGrey.png"
 
 import envelopes from "../data/envelopes"
+import bubblebags from "../data/airpoc"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -110,12 +111,28 @@ const getEnvelopeDescription = function(t) {
   ].join("; ")
 }
 
+const getBubblebagDescription = function(t) {
+  return [
+    this.size,
+    t(this.sealing),
+    t(this.color),
+    `${this.gsm}${t("gsm")}`,
+  ].join("; ")
+}
+
 const allProducts = {}
 
 envelopes.forEach(envelope => {
   allProducts[envelope.code] = {
     ...envelope,
     getProductDescription: getEnvelopeDescription,
+  }
+})
+
+bubblebags.forEach(bubblebag => {
+  allProducts[bubblebag.code] = {
+    ...bubblebag,
+    getProductDescription: getBubblebagDescription,
   }
 })
 
