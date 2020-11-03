@@ -100,8 +100,8 @@ const resources = {
           brown: "коричневиий",
         },
         print: {
-          gray: "сірий"
-        }
+          gray: "сірий",
+        },
       },
       envelopesStandard: "Прямий клапан",
       envelopeDetails: "Параметри конверта",
@@ -118,6 +118,7 @@ const resources = {
         "«Куверт-Україна» пропонує споживачам найширший асортимент поштових конвертів та пакетів, унікальні запатентовані продукти та інновації в галузі рекламного конверта, постійні складські запаси та сертифікований контроль якості.",
       homepage: "Повернутися на головну",
       hospital: "Лікарні та поліклініки",
+      from: "від",
       indexAbout:
         "Фабрика конвертів «Куверт-Україна» належить до концерну «Mayer-Kuvert-network» і є найбільшим виробником поштових конвертів та пакетів в Україні з 1999 року. Потужність фабрики складає 2,5 млн конвертів за добу.",
       indexContactUs:
@@ -254,6 +255,7 @@ const resources = {
       whiteCoated: "білий крейдований",
       whereUse: "Сфера застосування",
       writeUs: "Напишіть нам",
+      uah: "грн",
     },
   },
   en: {
@@ -355,8 +357,8 @@ const resources = {
           brown: "Brown",
         },
         print: {
-          gray: "gray"
-        }
+          gray: "gray",
+        },
       },
       envelopesStandard: "Straight flap",
       envelopeSize: "envelope size",
@@ -373,6 +375,7 @@ const resources = {
         "Kuvert-Ukraine offers consumers the widest range of mail envelopes and packages, unique patented products and innovations in the field of advertising envelope, permanent warehouse stocks and certified quality control.",
       homepage: "Back to homepage",
       hospital: "Hospitals and clinics",
+      from: "from",
       indexAbout:
         "The envelope factory «Kuvert-Ukraine» belongs to the concern «Mayer-Kuvert-network» and is the largest manufacturer of postal envelopes and packages in Ukraine since 1999. The capacity of the factory is 2.5 million envelopes per day.",
       indexContactUs:
@@ -510,6 +513,7 @@ const resources = {
       whiteCoated: "white coated",
       whereUse: "Where to use",
       writeUs: "Write us",
+      uah: "UAH",
     },
   },
 }

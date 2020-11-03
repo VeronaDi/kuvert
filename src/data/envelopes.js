@@ -9,7 +9,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 4 305 UAH", uk: "від 4 305 грн" },
+    price: 4305,
   },
   {
     code: "08-0027",
@@ -21,7 +21,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 3 394 UAH", uk: "від 3 394 грн" },
+    price: 3394,
   },
   {
     code: "4040",
@@ -33,7 +33,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 1 191 UAH", uk: "від 1 191 грн" },
+    price: 1191,
   },
   {
     code: "4041",
@@ -45,7 +45,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: "envelopesProperties.print.gray",
-    price: { en: "from 1 348 UAH", uk: "від 1 348 грн" },
+    price: 1348,
   },
   {
     code: "4240",
@@ -57,7 +57,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 1 121 UAH", uk: "від 1 121 грн" },
+    price: 1121,
   },
   {
     code: "5040",
@@ -69,7 +69,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 1 542 UAH", uk: "від 1 542 грн" },
+    price: 1542,
   },
   {
     code: "5240",
@@ -81,7 +81,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 1 571 UAH", uk: "від 1 571 грн" },
+    price: 1571,
   },
   {
     code: "010-5090",
@@ -93,7 +93,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 3 220 UAH", uk: "від 3 220 грн" },
+    price: 3220,
   },
   {
     code: "3500",
@@ -103,9 +103,9 @@ export default [
     type: "envelopesProperties.type.envelope",
     boxSize: 500,
     sealing: "envelopesProperties.sealing.gummed",
-    window: '45x90',
+    window: "45x90",
     print: null,
-    price: { en: "from 541 UAH", uk: "від 541 грн" },
+    price: 541,
   },
   {
     code: "3428",
@@ -117,7 +117,7 @@ export default [
     sealing: "envelopesProperties.sealing.selfSeal",
     window: null,
     print: null,
-    price: { en: "from 488 UAH", uk: "від 488 грн" },
+    price: 488,
   },
   {
     code: "3444",
@@ -129,7 +129,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 528 UAH", uk: "від 528 грн" },
+    price: 528,
   },
   {
     code: "3445",
@@ -141,7 +141,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: "envelopesProperties.print.gray",
-    price: { en: "from 555 UAH", uk: "від 555 грн" },
+    price: 555,
   },
   {
     code: "6104",
@@ -153,7 +153,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: "45x90",
     print: null,
-    price: { en: "from 510 UAH", uk: "від 510 грн" },
+    price: 510,
   },
   {
     code: "3644",
@@ -165,7 +165,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 510 UAH", uk: "від 510 грн" },
+    price: 510,
   },
   {
     code: "6056T",
@@ -177,7 +177,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 928 UAH", uk: "від 928 грн" },
+    price: 928,
   },
   {
     code: "361257",
@@ -189,7 +189,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 819 UAH", uk: "від 819 грн" },
+    price: 819,
   },
   {
     code: "2012",
@@ -201,7 +201,7 @@ export default [
     sealing: "envelopesProperties.sealing.gummed",
     window: null,
     print: null,
-    price: { en: "from 314 UAH", uk: "від 314 грн" },
+    price: 314,
   },
   {
     code: "2020",
@@ -213,7 +213,7 @@ export default [
     sealing: "envelopesProperties.sealing.selfSeal",
     window: null,
     print: null,
-    price: { en: "from 330 UAH", uk: "від 330 грн" },
+    price: 330,
   },
   {
     code: "2052",
@@ -225,7 +225,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 345 UAH", uk: "від 345 грн" },
+    price: 345,
   },
   {
     code: "2041",
@@ -237,7 +237,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: "envelopesProperties.print.gray",
-    price: { en: "from 409 UAH", uk: "від 409 грн" },
+    price: 409,
   },
   {
     code: "2040",
@@ -249,7 +249,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 423 UAH", uk: "від 423 грн" },
+    price: 423,
   },
   {
     code: "2140",
@@ -261,7 +261,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: "45x90",
     print: null,
-    price: { en: "from 423 UAH", uk: "від 423 грн" },
+    price: 423,
   },
   {
     code: "2260",
@@ -273,7 +273,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 390 UAH", uk: "від 390 грн" },
+    price: 390,
   },
   {
     code: "2600",
@@ -285,7 +285,7 @@ export default [
     sealing: "envelopesProperties.sealing.gummed",
     window: "45x90",
     print: null,
-    price: { en: "from 386 UAH", uk: "від 386 грн" },
+    price: 386,
   },
   {
     code: "1012",
@@ -297,7 +297,7 @@ export default [
     sealing: "envelopesProperties.sealing.gummed",
     window: null,
     print: null,
-    price: { en: "from 244 UAH", uk: "від 244 грн" },
+    price: 244,
   },
   {
     code: "1020",
@@ -309,7 +309,7 @@ export default [
     sealing: "envelopesProperties.sealing.selfSeal",
     window: null,
     print: null,
-    price: { en: "from 264 UAH", uk: "від 264 грн" },
+    price: 264,
   },
   {
     code: "1040",
@@ -321,7 +321,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 275 UAH", uk: "від 275 грн" },
+    price: 275,
   },
   {
     code: "1041",
@@ -333,7 +333,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: "envelopesProperties.print.gray",
-    price: { en: "from 275 UAH", uk: "від 275 грн" },
+    price: 275,
   },
   {
     code: "1060",
@@ -345,7 +345,7 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 269 UAH", uk: "від 269 грн" },
+    price: 269,
   },
   {
     code: "1740",
@@ -357,6 +357,6 @@ export default [
     sealing: "envelopesProperties.sealing.peelSeal",
     window: null,
     print: null,
-    price: { en: "from 676 UAH", uk: "від 676 грн" },
+    price: 676,
   },
 ]

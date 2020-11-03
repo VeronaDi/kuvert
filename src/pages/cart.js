@@ -17,6 +17,8 @@ import Steps from "../components/Steps"
 
 import logoGrey from "../images/logoGrey.png"
 
+import envelopes from "../data/envelopes"
+
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
   // which we can spread on <input> and alse replace ErrorMessage entirely.
@@ -92,24 +94,20 @@ const getCardProducts = () => {
 
   return Object.keys(cardData).map(code => ({
     code,
-    quantity: cardData[code]
+    quantity: cardData[code],
   }))
 }
 
-import envelopes from '../data/envelopes'
-
-
-
-const getEnvelopeDescription = function (t) {
+const getEnvelopeDescription = function(t) {
   return [
     this.format,
     t(this.type),
     t(this.sealing),
     t(this.color),
-    `${this.gsm}${t('gsm')}`,
-    `${t("window")}: ${this.window ? t(this.window)+t('mm') : '-'}`,
-    `${t("innerPrintShort")}: ${this.print ? t(this.print) : '-'}`
-  ].join('; ')
+    `${this.gsm}${t("gsm")}`,
+    `${t("window")}: ${this.window ? t(this.window) + t("mm") : "-"}`,
+    `${t("innerPrintShort")}: ${this.print ? t(this.print) : "-"}`,
+  ].join("; ")
 }
 
 const allProducts = {}
@@ -121,19 +119,19 @@ envelopes.forEach(envelope => {
   }
 })
 
-const findProduct = (code) => {
+const findProduct = code => {
   return allProducts[code]
 }
 
 const ProductRow = ({ index, t }) => {
-  const [field] = useField({name: `products.${index}.code`});
+  const [field] = useField({ name: `products.${index}.code` })
   const code = field.value
   const description = findProduct(code).getProductDescription(t)
 
   return (
     <div>
       {description}
-      <Field name={`products.${index}.code`} type='hidden' />
+      <Field name={`products.${index}.code`} type="hidden" />
       <Field name={`products.${index}.quantity`} />
 
       <button type="button" onClick={() => arrayHelpers.remove(index)}>
@@ -142,7 +140,6 @@ const ProductRow = ({ index, t }) => {
     </div>
   )
 }
-
 
 export default props => {
   const [step, setStep] = React.useState(1)
@@ -196,7 +193,7 @@ export default props => {
           city: "",
           email: "",
           phone: "",
-          products: getCardProducts()
+          products: getCardProducts(),
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("Required"),

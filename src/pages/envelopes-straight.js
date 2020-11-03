@@ -115,7 +115,18 @@ export default props => {
         `}
       >
         {filteredEnvelops.map(
-          ({ code, format, size, gsm, color, type, boxSize, sealing, window, price, print }) => (
+          ({
+            code,
+            format,
+            gsm,
+            color,
+            type,
+            boxSize,
+            sealing,
+            window,
+            price,
+            print,
+          }) => (
             <div
               key={code}
               css={css`
@@ -142,12 +153,14 @@ export default props => {
 
               <GeneralNames>
                 {t("paperType")}, {t("gsm")}
-              <EnvelopeParam>{t(color)}, {gsm}</EnvelopeParam>
+                <EnvelopeParam>
+                  {t(color)}, {gsm}
+                </EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
                 {t("window")}
-                <EnvelopeParam>{window ? window + t('mm') : '-'}</EnvelopeParam>
+                <EnvelopeParam>{window ? window + t("mm") : "-"}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -157,7 +170,7 @@ export default props => {
 
               <GeneralNames>
                 {t("innerPrintShort")}
-                <EnvelopeParam>{print ? t(print) : '-'}</EnvelopeParam>
+                <EnvelopeParam>{print ? t(print) : "-"}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -167,7 +180,9 @@ export default props => {
 
               <GeneralNames>
                 {t("size")}, {t("mm")}
-              <EnvelopeParam>{format} ({formatSizes[format]})</EnvelopeParam>
+                <EnvelopeParam>
+                  {format} ({formatSizes[format]})
+                </EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
@@ -177,7 +192,9 @@ export default props => {
 
               <GeneralNames>
                 {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>{t(price)}</EnvelopeParam>
+                <EnvelopeParam>
+                  {t("from")} {price} {t("uah")}
+                </EnvelopeParam>
               </GeneralNames>
 
               <div
