@@ -72,7 +72,7 @@ const resources = {
       dnipro: "Дніпро",
       docFlow: "Документообіг",
       docufixText:
-        "Конверти Docufix — прозорі поліетиленові конверти з клейовим шаром на всю сторону. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти їх в конверт Docufix і приклеїти його на коробку або піддон.",
+        "Прозорі поліетиленові конверти з клейовим шаром на всю сторону та з відривною стрічкою на клапані. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти їх в такий конверт і приклеїти його на коробку або піддон.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
       disableWorkers: "10% працівників нашої фабрики —  це люди з інвалідністю",
       ecoblock: "Еко блоки для нотаток",
@@ -343,7 +343,7 @@ const resources = {
       dnipro: "Dnipro",
       docFlow: "Document flow",
       docufixText:
-        "Docufix envelopes - transparent polyethylene envelopes with adhesive on the side. No more need send additional mail with documents for goods, just put them in an envelope Docufix and stick it on the box or pallet.",
+        "Transparent polyethylene envelopes with an adhesive layer on back side and with a detachable tape on the valve. You no longer need to send additional documents for goods by mail, just put them in such an envelope and stick it on a box or pallet.",
       distributionProducts:
         "Distribution of advertising or information products",
       disableWorkers:

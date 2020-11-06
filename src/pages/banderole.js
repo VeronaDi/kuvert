@@ -22,7 +22,13 @@ let banderole = [
     },
     id: "bubblebags",
   },
-  { name: "DocuFix", id: "docufix" },
+  {
+    name: {
+      en: "Envelopes for accompanying documents",
+      uk: "Конверти для супровідних документів",
+    },
+    id: "docufix",
+  },
   {
     name: {
       en: "Gusset envelopes",

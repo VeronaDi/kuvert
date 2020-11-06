@@ -18,7 +18,13 @@ import Steps from "../components/Steps"
 import logoGrey from "../images/logoGrey.png"
 
 import envelopes from "../data/envelopes"
-import bubblebags from "../data/airpoc"
+import extEnvelopes from "../data/extensionEnvelopes"
+import triangularEnvelopes from "../data/triangularEnvelopes"
+import airpoc from "../data/airpoc"
+import ecobagWhite from "../data/ecobagWhite"
+import ecobagBrown from "../data/ecobagBrown"
+import ecobagColor from "../data/ecobagColor"
+import stericlin from "../data/stericlin"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -101,6 +107,7 @@ const getCardProducts = () => {
 
 const getEnvelopeDescription = function(t) {
   return [
+    this.code,
     this.format,
     t(this.type),
     t(this.sealing),
@@ -111,14 +118,65 @@ const getEnvelopeDescription = function(t) {
   ].join("; ")
 }
 
-const getBubblebagDescription = function(t) {
+const getExtensionEnvelopeDescription = function(t) {
   return [
-    this.size,
+    this.code,
+    this.format,
+    t(this.type),
     t(this.sealing),
     t(this.color),
     `${this.gsm}${t("gsm")}`,
   ].join("; ")
 }
+
+const getTriangularEnvelopeDescription = function(t) {
+  return [
+    this.code,
+    this.format,
+    t(this.type),
+    t(this.sealing),
+    t(this.color),
+    `${this.gsm}${t("gsm")}`,
+  ].join("; ")
+}
+
+const getAirpocDescription = function(t) {
+  return [this.code, this.size, t(this.sealing), t(this.color)].join("; ")
+}
+
+const getEcobagWhiteDescription = function(t) {
+  return [
+    this.code,
+    this.size,
+    t(this.color),
+    `${this.gsm}${t("gsm")}`,
+    t(this.handle),
+  ].join("; ")
+}
+
+const getEcobagBrownDescription = function(t) {
+  return [
+    this.code,
+    this.size,
+    t(this.color),
+    `${this.gsm}${t("gsm")}`,
+    t(this.handle),
+  ].join("; ")
+}
+
+const getEcobagColorDescription = function(t) {
+  return [
+    this.code,
+    this.size,
+    t(this.color),
+    `${this.gsm}${t("gsm")}`,
+    t(this.handle),
+  ].join("; ")
+}
+
+// const getStericlinDescription = function(t) {
+//   return [this.code, this.articul, this.size].join("; ")
+// }
 
 const allProducts = {}
 
@@ -129,12 +187,54 @@ envelopes.forEach(envelope => {
   }
 })
 
-bubblebags.forEach(bubblebag => {
-  allProducts[bubblebag.code] = {
-    ...bubblebag,
-    getProductDescription: getBubblebagDescription,
+extEnvelopes.forEach(extenvelope => {
+  allProducts[extenvelope.code] = {
+    ...extenvelope,
+    getProductDescription: getExtensionEnvelopeDescription,
   }
 })
+
+triangularEnvelopes.forEach(triangenvelope => {
+  allProducts[triangenvelope.code] = {
+    ...triangenvelope,
+    getProductDescription: getTriangularEnvelopeDescription,
+  }
+})
+
+airpoc.forEach(airpoc => {
+  allProducts[airpoc.code] = {
+    ...airpoc,
+    getProductDescription: getAirpocDescription,
+  }
+})
+
+ecobagWhite.forEach(ecobagwh => {
+  allProducts[ecobagwh.code] = {
+    ...ecobagwh,
+    getProductDescription: getEcobagWhiteDescription,
+  }
+})
+
+ecobagBrown.forEach(ecobagbr => {
+  allProducts[ecobagbr.code] = {
+    ...ecobagbr,
+    getProductDescription: getEcobagBrownDescription,
+  }
+})
+
+ecobagColor.forEach(ecobagclr => {
+  allProducts[ecobagclr.code] = {
+    ...ecobagclr,
+    getProductDescription: getEcobagColorDescription,
+  }
+})
+
+// stericlin.forEach(stericlin => {
+//   allProducts[stericlin.code] = {
+//     ...stericlin,
+//     getProductDescription: getStericlinDescription,
+//   }
+// })
 
 const findProduct = code => {
   return allProducts[code]

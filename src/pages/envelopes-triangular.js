@@ -233,7 +233,7 @@ export default props => {
       </h4>
 
       {triangularEnvelopes.map(
-        ({ code, format, color, type, gsm, boxSize }) => (
+        ({ code, format, color, type, sealing, gsm, boxSize }) => (
           <div
             key={code}
             css={css`
@@ -275,13 +275,18 @@ export default props => {
               </GeneralNames>
 
               <GeneralNames>
-                {t("color")}
-                <EnvelopeParam>{t(color)}</EnvelopeParam>
+                {t("type")}
+                <EnvelopeParam>{t(type)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
-                {t("type")}
-                <EnvelopeParam>{t(type)}</EnvelopeParam>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
