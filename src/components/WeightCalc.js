@@ -214,7 +214,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
 }
 
 export default ({ close }) => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   const [envelopeWeight, setEnvelopeWeight] = React.useState(0)
 

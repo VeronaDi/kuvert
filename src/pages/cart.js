@@ -110,12 +110,12 @@ const getEnvelopeDescription = function(t) {
     this.code,
     this.format,
     t(this.type),
-    t(this.sealing),
     t(this.color),
     `${this.gsm}${t("gsm")}`,
+    t(this.sealing),
     `${t("window")}: ${this.window ? t(this.window) + t("mm") : "-"}`,
     `${t("innerPrintShort")}: ${this.print ? t(this.print) : "-"}`,
-  ].join("; ")
+  ].join(" ")
 }
 
 const getExtensionEnvelopeDescription = function(t) {
@@ -123,10 +123,10 @@ const getExtensionEnvelopeDescription = function(t) {
     this.code,
     this.format,
     t(this.type),
-    t(this.sealing),
     t(this.color),
     `${this.gsm}${t("gsm")}`,
-  ].join("; ")
+    t(this.sealing),
+  ].join(" ")
 }
 
 const getTriangularEnvelopeDescription = function(t) {
@@ -134,14 +134,14 @@ const getTriangularEnvelopeDescription = function(t) {
     this.code,
     this.format,
     t(this.type),
-    t(this.sealing),
     t(this.color),
     `${this.gsm}${t("gsm")}`,
-  ].join("; ")
+    t(this.sealing),
+  ].join(" ")
 }
 
 const getAirpocDescription = function(t) {
-  return [this.code, this.size, t(this.sealing), t(this.color)].join("; ")
+  return [this.code, this.size, t(this.sealing), t(this.color)].join(" ")
 }
 
 const getEcobagWhiteDescription = function(t) {
@@ -151,7 +151,7 @@ const getEcobagWhiteDescription = function(t) {
     t(this.color),
     `${this.gsm}${t("gsm")}`,
     t(this.handle),
-  ].join("; ")
+  ].join(" ")
 }
 
 const getEcobagBrownDescription = function(t) {
@@ -161,7 +161,7 @@ const getEcobagBrownDescription = function(t) {
     t(this.color),
     `${this.gsm}${t("gsm")}`,
     t(this.handle),
-  ].join("; ")
+  ].join(" ")
 }
 
 const getEcobagColorDescription = function(t) {
@@ -171,11 +171,11 @@ const getEcobagColorDescription = function(t) {
     t(this.color),
     `${this.gsm}${t("gsm")}`,
     t(this.handle),
-  ].join("; ")
+  ].join(" ")
 }
 
 // const getStericlinDescription = function(t) {
-//   return [this.code, this.articul, this.size].join("; ")
+//   return [this.code, this.articul, this.size].join(" ")
 // }
 
 const allProducts = {}
@@ -246,12 +246,74 @@ const ProductRow = ({ index, t, arrayHelpers }) => {
   const description = findProduct(code).getProductDescription(t)
 
   return (
-    <div>
-      {description}
+    <div
+      css={css`
+        position: relative;
+        padding: 40px;
+        color: #444444;
+        font-size: 16px;
+        border-bottom: 1px solid #aeaeae;
+        :last-child {
+          border-bottom: none;
+        }
+      `}
+    >
+      <div
+        css={css`
+        display: flex;
+        flex-wrap: wrap;
+        width: 65%;
+        }
+      `}
+      >
+        {description}
+      </div>
       <Field name={`products.${index}.code`} type="hidden" />
-      <Field name={`products.${index}.quantity`} />
+      <Field
+        name={`products.${index}.quantity`}
+        css={css`
+          position: absolute;
+          top: 20px;
+          right: 60px;
+          width: 170px;
+          height: 65px;
+          text-align: center;
+          outline: none;
+          color: #444444;
+          font-size: 16px;
+        `}
+      />
 
-      <button type="button" onClick={() => arrayHelpers.remove(index)}>
+      <button
+        type="button"
+        onClick={() => arrayHelpers.remove(index)}
+        css={css`
+          position: absolute;
+          right: 20px;
+          top: 40px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          :before {
+            position: absolute;
+            left: 9px;
+            content: " ";
+            height: 18px;
+            width: 2px;
+            background-color: #ffffff;
+            transform: rotate(45deg);
+          }
+          :after {
+            position: absolute;
+            left: 9px;
+            content: " ";
+            height: 18px;
+            width: 2px;
+            background-color: #ffffff;
+            transform: rotate(-45deg);
+          }
+        `}
+      >
         -
       </button>
     </div>
@@ -335,10 +397,9 @@ export default props => {
                 <div
                   css={css`
                     width: 100%;
-                    min-height: 318px;
+                    height: auto;
                     background: #d6d6d6;
                     border-radius: 3px;
-                    position: relative;
                   `}
                 >
                   <FieldArray
@@ -357,8 +418,6 @@ export default props => {
                       background: #8a8a8a;
                       border-radius: 0px 0px 3px 3px;
                       height: 78px;
-                      position: absolute;
-                      bottom: 0;
                       display: flex;
                       justify-content: flex-end;
                       align-items: center;
