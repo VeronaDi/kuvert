@@ -31,6 +31,7 @@ export default ({ steps, activeStep }) => {
     >
       {steps.map((stepTitle, index) => (
         <div
+          key={index}
           css={css`
             color: ${getColor(index)};
             border-bottom: 3px solid ${getColor(index)};

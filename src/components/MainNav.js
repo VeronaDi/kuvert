@@ -11,6 +11,8 @@ import logoGrey from "../images/logoGrey.png"
 import envelopeCart from "../../static/icon/request-basic.png"
 import envelopeCartWhite from "../../static/icon/request-basic-white.png"
 
+import { useCart } from "../useCard"
+
 function nextLangLink(lang, url) {
   if (lang === "uk") {
     return `/en${url}`
@@ -61,6 +63,8 @@ export default ({ isHome = false, location }) => {
   const { t, i18n } = useTranslation()
 
   const nextLang = nextLangLink(i18n.language, location.pathname)
+
+  const [cart] = useCart()
 
   return (
     <nav
@@ -138,6 +142,7 @@ export default ({ isHome = false, location }) => {
             float: right;
           `}
         />
+        {Object.keys(cart).length}
       </LocalizedLink>
 
       <Link

@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import { Form, Field, FieldArray, Formik, useField } from "formik"
+import {
+  Form,
+  Field,
+  FieldArray,
+  Formik,
+  useField,
+  useFormikContext,
+} from "formik"
 import * as Yup from "yup"
 import { localizedNavigate } from "../components/LocalizedLink"
 
@@ -16,6 +23,8 @@ import ContactForm from "../components/ContactForm"
 import Steps from "../components/Steps"
 
 import logoGrey from "../images/logoGrey.png"
+import plus from "../images/plus.png"
+import minus from "../images/minus.png"
 
 import envelopes from "../data/envelopes"
 import extEnvelopes from "../data/extensionEnvelopes"
@@ -25,6 +34,8 @@ import ecobagWhite from "../data/ecobagWhite"
 import ecobagBrown from "../data/ecobagBrown"
 import ecobagColor from "../data/ecobagColor"
 import stericlin from "../data/stericlin"
+
+import { useCart } from "../useCard"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -96,18 +107,15 @@ const sendEmail = async values => {
   })
 }
 
-const getCardProducts = () => {
-  let cardData = JSON.parse(window.localStorage.getItem("card")) || {}
-
-  return Object.keys(cardData).map(code => ({
+const getCardProducts = data => {
+  return Object.keys(data).map(code => ({
     code,
-    quantity: cardData[code],
+    quantity: data[code],
   }))
 }
 
 const getEnvelopeDescription = function(t) {
   return [
-    this.code,
     this.format,
     t(this.type),
     t(this.color),
@@ -120,7 +128,6 @@ const getEnvelopeDescription = function(t) {
 
 const getExtensionEnvelopeDescription = function(t) {
   return [
-    this.code,
     this.format,
     t(this.type),
     t(this.color),
@@ -131,7 +138,6 @@ const getExtensionEnvelopeDescription = function(t) {
 
 const getTriangularEnvelopeDescription = function(t) {
   return [
-    this.code,
     this.format,
     t(this.type),
     t(this.color),
@@ -141,12 +147,11 @@ const getTriangularEnvelopeDescription = function(t) {
 }
 
 const getAirpocDescription = function(t) {
-  return [this.code, this.size, t(this.sealing), t(this.color)].join(" ")
+  return [this.size, t(this.sealing), t(this.color)].join(" ")
 }
 
 const getEcobagWhiteDescription = function(t) {
   return [
-    this.code,
     this.size,
     t(this.color),
     `${this.gsm}${t("gsm")}`,
@@ -156,7 +161,6 @@ const getEcobagWhiteDescription = function(t) {
 
 const getEcobagBrownDescription = function(t) {
   return [
-    this.code,
     this.size,
     t(this.color),
     `${this.gsm}${t("gsm")}`,
@@ -166,7 +170,6 @@ const getEcobagBrownDescription = function(t) {
 
 const getEcobagColorDescription = function(t) {
   return [
-    this.code,
     this.size,
     t(this.color),
     `${this.gsm}${t("gsm")}`,
@@ -174,9 +177,9 @@ const getEcobagColorDescription = function(t) {
   ].join(" ")
 }
 
-// const getStericlinDescription = function(t) {
-//   return [this.code, this.articul, this.size].join(" ")
-// }
+const getStericlinDescription = function(t) {
+  return [this.articul, this.size].join(" ")
+}
 
 const allProducts = {}
 
@@ -229,26 +232,112 @@ ecobagColor.forEach(ecobagclr => {
   }
 })
 
-// stericlin.forEach(stericlin => {
-//   allProducts[stericlin.code] = {
-//     ...stericlin,
-//     getProductDescription: getStericlinDescription,
-//   }
-// })
+stericlin.flat.forEach(stericlin => {
+  allProducts[stericlin.code] = {
+    ...stericlin,
+    getProductDescription: getStericlinDescription,
+  }
+})
+
+stericlin.volume.forEach(stericlin => {
+  allProducts[stericlin.code] = {
+    ...stericlin,
+    getProductDescription: getStericlinDescription,
+  }
+})
 
 const findProduct = code => {
   return allProducts[code]
 }
 
-const ProductRow = ({ index, t, arrayHelpers }) => {
-  const [field] = useField({ name: `products.${index}.code` })
-  const code = field.value
-  const description = findProduct(code).getProductDescription(t)
+const AmountInput = ({ step = 1, ...props }) => {
+  const [field, meta, { setValue }] = useField(props.name)
 
   return (
     <div
       css={css`
+        width: 25%;
         position: relative;
+      `}
+    >
+      <button
+        onClick={() => {
+          let newValue = Math.floor((Number(meta.value) - step) / step) * step
+          if (newValue < step) newValue = step
+          setValue(newValue)
+        }}
+        type="button"
+        css={css`
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translate(0%, -50%);
+          border: none;
+          background: url(${minus}) no-repeat center;
+          outline: none;
+          padding: 10px;
+          cursor: pointer;
+        `}
+      />
+      <input
+        {...field}
+        {...props}
+        type="number"
+        min="0"
+        step="1"
+        css={css`
+          width: 100%;
+          height: 65px;
+          background: #ffffff;
+          border: 1px solid #d6d6d6;
+          border-radius: 3px;
+          padding: 23px 18px;
+          outline: none;
+          text-align: center;
+          color: #444444;
+          :focus {
+            border: 2px solid #c4c4c4;
+          }
+          ::-webkit-inner-spin-button,
+          ::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        `}
+      />
+      <button
+        onClick={() => {
+          setValue(Math.floor((Number(meta.value) + step) / step) * step)
+        }}
+        type="button"
+        css={css`
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translate(0, -50%);
+          border: none;
+          background: url(${plus}) no-repeat center;
+          outline: none;
+          padding: 10px;
+          cursor: pointer;
+        `}
+      />
+    </div>
+  )
+}
+
+const ProductRow = ({ index, t, arrayHelpers }) => {
+  const [field] = useField({ name: `products.${index}.code` })
+  const code = field.value
+  const product = findProduct(code)
+  const description = product.getProductDescription(t)
+
+  return (
+    <div
+      css={css`
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 40px;
         color: #444444;
         font-size: 16px;
@@ -260,68 +349,70 @@ const ProductRow = ({ index, t, arrayHelpers }) => {
     >
       <div
         css={css`
-        display: flex;
-        flex-wrap: wrap;
-        width: 65%;
+          display: flex;
+          flex-wrap: wrap;
+          width: 15%;
+        }
+      `}
+      >
+        {code}
+      </div>
+      <div
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+          width: 50%;
         }
       `}
       >
         {description}
       </div>
       <Field name={`products.${index}.code`} type="hidden" />
-      <Field
+
+      <AmountInput
         name={`products.${index}.quantity`}
-        css={css`
-          position: absolute;
-          top: 20px;
-          right: 60px;
-          width: 170px;
-          height: 65px;
-          text-align: center;
-          outline: none;
-          color: #444444;
-          font-size: 16px;
-        `}
+        type="number"
+        placeholder="0"
+        step={product.boxSize}
       />
 
       <button
         type="button"
         onClick={() => arrayHelpers.remove(index)}
         css={css`
-          position: absolute;
-          right: 20px;
-          top: 40px;
+          position: relative;
           background: transparent;
           border: none;
           cursor: pointer;
-          :before {
-            position: absolute;
-            left: 9px;
-            content: " ";
-            height: 18px;
-            width: 2px;
-            background-color: #ffffff;
-            transform: rotate(45deg);
-          }
-          :after {
-            position: absolute;
-            left: 9px;
-            content: " ";
-            height: 18px;
-            width: 2px;
-            background-color: #ffffff;
-            transform: rotate(-45deg);
-          }
         `}
       >
-        -
+        ✕
       </button>
     </div>
   )
 }
 
+const SaveCart = () => {
+  const { values } = useFormikContext()
+  const [cart, , setCart] = useCart()
+
+  useEffect(() => {
+    const newCartData = values.products.reduce((acc, { code, quantity }) => {
+      acc[code] = quantity
+      return acc
+    }, {})
+
+    if (JSON.stringify(cart) !== JSON.stringify(newCartData)) {
+      setCart(newCartData)
+    }
+  }, [values, cart, setCart])
+
+  return null
+}
+
 export default props => {
   const [step, setStep] = React.useState(1)
+  const [cart] = useCart()
 
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
@@ -372,7 +463,7 @@ export default props => {
           city: "",
           email: "",
           phone: "",
-          products: getCardProducts(),
+          products: getCardProducts(cart),
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("Required"),
@@ -392,6 +483,7 @@ export default props => {
               margin: 0 auto;
             `}
           >
+            <SaveCart />
             {step === 1 && (
               <>
                 <div
@@ -407,7 +499,12 @@ export default props => {
                     render={arrayHelpers => (
                       <div>
                         {values.products.map((_product, index) => (
-                          <ProductRow key={index} index={index} t={t} />
+                          <ProductRow
+                            key={index}
+                            index={index}
+                            t={t}
+                            arrayHelpers={arrayHelpers}
+                          />
                         ))}
                       </div>
                     )}

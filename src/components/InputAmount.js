@@ -13,7 +13,7 @@ export default () => {
   const quantityEnv = React.useRef()
 
   return (
-    <form
+    <div
       css={css`
         display: flex;
         flex-direction: column;
@@ -75,7 +75,7 @@ export default () => {
               margin: 0;
             }
           `}
-        ></input>
+        />
         <button
           onClick={() => {
             quantityEnv.current.value = Number(quantityEnv.current.value) + 250
@@ -94,6 +94,6 @@ export default () => {
           `}
         />
       </div>
-    </form>
+    </div>
   )
 }

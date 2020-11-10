@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next"
 import plus from "../images/plus.png"
 import minus from "../images/minus.png"
 
+import { useCart } from "../useCard"
+
 const MyAmountInput = ({ label, setFieldValue, step = 1, ...props }) => {
   const [field, meta] = useField(props)
   return (
@@ -129,7 +131,9 @@ const MyAmountInput = ({ label, setFieldValue, step = 1, ...props }) => {
 }
 
 export default ({ close, boxQuantity = 1, code }) => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
+
+  const [cart, setItemAmout] = useCart()
 
   return (
     <div
@@ -187,16 +191,8 @@ export default ({ close, boxQuantity = 1, code }) => {
         }}
         onSubmit={({ amount }) => {
           if (amount <= 0) return
-          let card = JSON.parse(window.localStorage.getItem("card")) || {}
 
-          const newAmount = card[code] ? amount + card[code] : amount
-
-          card = {
-            ...card,
-            [code]: newAmount,
-          }
-
-          window.localStorage.setItem("card", JSON.stringify(card))
+          setItemAmout(code, amount)
 
           close()
         }}
