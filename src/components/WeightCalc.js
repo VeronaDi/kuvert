@@ -3,9 +3,6 @@ import { Form, Formik, useField } from "formik"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
-import plus from "../images/plus.png"
-import minus from "../images/minus.png"
-
 const MyInput = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   return (
@@ -130,16 +127,19 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
             type="button"
             css={css`
               position: absolute;
-              left: 10%;
-              top: 50%;
-              transform: translate(0%, -50%);
+              top: 8px;
+              left: 5%;
               border: none;
-              background: url(${minus}) no-repeat center;
+              background: transparent;
               outline: none;
               padding: 10px;
               cursor: pointer;
+              font-size: 27px;
+              font-weight: 300;
             `}
-          />
+          >
+            &#x2212;
+          </button>
           <input
             {...field}
             {...props}
@@ -176,16 +176,19 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
             type="button"
             css={css`
               position: absolute;
-              right: 10%;
-              top: 50%;
-              transform: translate(0, -50%);
+              top: 8px;
+              right: 5%;
               border: none;
-              background: url(${plus}) no-repeat center;
+              background: transparent;
               outline: none;
               padding: 10px;
               cursor: pointer;
+              font-size: 27px;
+              font-weight: 300;
             `}
-          />
+          >
+            &#x2B;
+          </button>
         </div>
         {meta.touched && meta.error ? (
           <div
