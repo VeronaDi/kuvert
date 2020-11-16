@@ -138,7 +138,7 @@ export default ({ isHome = false, location }) => {
         `}
         to="/cart"
       >
-        <div css={css``}>{Object.keys(cart).length}</div>
+        {Object.keys(cart).length}
         <img src={isHome ? envelopeCartWhite : envelopeCart} alt="cart" />
       </LocalizedLink>
 
