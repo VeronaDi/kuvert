@@ -23,8 +23,6 @@ import ContactForm from "../components/ContactForm"
 import Steps from "../components/Steps"
 
 import logoGrey from "../images/logoGrey.png"
-import plus from "../images/plus.png"
-import minus from "../images/minus.png"
 
 import envelopes from "../data/envelopes"
 import extEnvelopes from "../data/extensionEnvelopes"
@@ -269,16 +267,21 @@ const AmountInput = ({ step = 1, ...props }) => {
         type="button"
         css={css`
           position: absolute;
-          left: 10px;
-          top: 50%;
-          transform: translate(0%, -50%);
+          top: 7px;
+          left: 5%;
           border: none;
-          background: url(${minus}) no-repeat center;
+          background: transparent;
           outline: none;
           padding: 10px;
           cursor: pointer;
+          font-size: 27px;
+          font-weight: 300;
+          color: #444444;
         `}
-      />
+      >
+        {" "}
+        &#x2212;
+      </button>
       <input
         {...field}
         {...props}
@@ -312,16 +315,20 @@ const AmountInput = ({ step = 1, ...props }) => {
         type="button"
         css={css`
           position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translate(0, -50%);
+          top: 7px;
+          right: 5%;
           border: none;
-          background: url(${plus}) no-repeat center;
+          background: transparent;
           outline: none;
           padding: 10px;
           cursor: pointer;
+          font-size: 27px;
+          font-weight: 300;
+          color: #444444;
         `}
-      />
+      >
+        &#x2B;
+      </button>
     </div>
   )
 }
