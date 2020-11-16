@@ -9,6 +9,8 @@ import BtnRequest from "../components/BtnRequest"
 import logoGrey from "../images/logoGrey.png"
 import envelopeCart from "../../static/icon/request-basic.png"
 
+import { useCart } from "../useCard"
+
 function nextLangLink(lang, url) {
   if (lang === "uk") {
     return `/en${url}`
@@ -42,6 +44,8 @@ export default ({ location }) => {
   const nextLang = nextLangLink(i18n.language, location.pathname)
 
   const [isOpen, setOpen] = React.useState(false)
+
+  const [cart] = useCart()
 
   return (
     <>
@@ -95,14 +99,25 @@ export default ({ location }) => {
           />
         </Link>
 
-        <LocalizedLink to="/cart">
+        <LocalizedLink
+          to="/cart"
+          css={css`
+            cursor: pointer;
+            text-decoration: none;
+            color: #040404;
+            text-align: center;
+            width: 50px;
+            display: block;
+            margin-right: 100px;
+            float: right;
+          `}
+        >
+          {Object.keys(cart).length}
           <img
             src={envelopeCart}
             alt="cart"
             css={css`
               width: 50px;
-              float: right;
-              margin-right: 100px;
             `}
           />
         </LocalizedLink>

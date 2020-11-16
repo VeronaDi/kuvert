@@ -129,6 +129,7 @@ export default ({ isHome = false, location }) => {
       </div>
 
       <LocalizedLink
+        to="/cart"
         css={css`
           cursor: pointer;
           width: 50px;
@@ -136,7 +137,6 @@ export default ({ isHome = false, location }) => {
           color: ${isHome ? "white" : "#040404"};
           text-align: center;
         `}
-        to="/cart"
       >
         {Object.keys(cart).length}
         <img src={isHome ? envelopeCartWhite : envelopeCart} alt="cart" />
