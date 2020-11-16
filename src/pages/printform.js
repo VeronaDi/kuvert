@@ -15,10 +15,7 @@ import logoGrey from "../images/logoGrey.png"
 import arrowSelect from "../images/arrow-select.png"
 import BtnSendForm from "../components/BtnSendForm"
 import BtnNext from "../components/BtnNext"
-import plus from "../images/plus.png"
 import Steps from "../components/Steps"
-import minus from "../images/minus.png"
-import error from "../images/error.svg"
 
 // import i18n from "i18next"
 // i18n.changeLanguage("en")
@@ -209,6 +206,7 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
         display: flex;
         flex-direction: column;
         width: 100%;
+        position: relative;
       `}
     >
       <label
@@ -220,75 +218,76 @@ const MyAmountInput = ({ label, setFieldValue, ...props }) => {
       >
         {label}
       </label>
-      <div
+
+      <button
+        onClick={() => {
+          let newValue = Number(field.value) - 50
+          if (newValue < 50) newValue = 50
+          setFieldValue(props.name, newValue)
+        }}
+        type="button"
         css={css`
-          position: relative;
+          position: absolute;
+          top: 27px;
+          left: 5%;
+          border: none;
+          background: transparent;
+          outline: none;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 27px;
+          font-weight: 300;
         `}
       >
-        <button
-          onClick={() => {
-            let newValue = Number(field.value) - 50
-            if (newValue < 50) newValue = 50
-            setFieldValue(props.name, newValue)
-          }}
-          type="button"
-          css={css`
-            position: absolute;
-            left: 10%;
-            top: 50%;
-            transform: translate(0%, -50%);
-            border: none;
-            background: url(${minus}) no-repeat center;
-            outline: none;
-            padding: 10px;
-            cursor: pointer;
-          `}
-        />
-        <input
-          {...field}
-          {...props}
-          ref={quantityEnv}
-          type="number"
-          min="0"
-          step="50"
-          css={css`
-            width: 100%;
-            height: 65px;
-            background: #ffffff;
-            border: 1px solid #d6d6d6;
-            border-radius: 3px;
-            padding: 23px 18px;
-            outline: none;
-            text-align: center;
-            color: #444444;
-            :focus {
-              border: 2px solid #c4c4c4;
-            }
-            ::-webkit-inner-spin-button,
-            ::-webkit-outer-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-            }
-          `}
-        />
-        <button
-          onClick={() => {
-            setFieldValue(props.name, Number(field.value) + 50)
-          }}
-          type="button"
-          css={css`
-            position: absolute;
-            right: 10%;
-            top: 50%;
-            transform: translate(0, -50%);
-            border: none;
-            background: url(${plus}) no-repeat center;
-            outline: none;
-            padding: 10px;
-            cursor: pointer;
-          `}
-        />
-      </div>
+        &#x2212;
+      </button>
+      <input
+        {...field}
+        {...props}
+        ref={quantityEnv}
+        type="number"
+        min="0"
+        step="50"
+        css={css`
+          width: 100%;
+          height: 65px;
+          background: #ffffff;
+          border: 1px solid #d6d6d6;
+          border-radius: 3px;
+          padding: 23px 18px;
+          outline: none;
+          text-align: center;
+          color: #444444;
+          :focus {
+            border: 2px solid #c4c4c4;
+          }
+          ::-webkit-inner-spin-button,
+          ::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        `}
+      />
+      <button
+        onClick={() => {
+          setFieldValue(props.name, Number(field.value) + 50)
+        }}
+        type="button"
+        css={css`
+          position: absolute;
+          top: 27px;
+          right: 5%;
+          border: none;
+          background: transparent;
+          outline: none;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 27px;
+          font-weight: 300;
+        `}
+      >
+        &#x2B;
+      </button>
       {meta.touched && meta.error ? (
         <div
           css={css`
