@@ -17,21 +17,21 @@ import banderolePattern from "../../static/products/banderole-pattern.png"
 let banderole = [
   {
     name: {
-      en: "Air padded envelopes",
+      en: "Air Padded Envelopes",
       uk: "Бандерольні пакети з повітряними бульбашками",
     },
     id: "bubblebags",
   },
   {
     name: {
-      en: "Envelopes for accompanying documents",
+      en: "Document Enclosed Wallets Envelopes",
       uk: "Конверти для супровідних документів",
     },
     id: "docufix",
   },
   {
     name: {
-      en: "Gusset envelopes",
+      en: "Gusset Envelopes",
       uk: "Пакети з розширенням",
     },
     id: "envelopes-extension",

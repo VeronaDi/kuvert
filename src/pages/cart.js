@@ -279,7 +279,6 @@ const AmountInput = ({ step = 1, ...props }) => {
           color: #444444;
         `}
       >
-        {" "}
         &#x2212;
       </button>
       <input
@@ -436,7 +435,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Warehouse inquiry" />
+      <SEO title="Standard products inquiry" />
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;
