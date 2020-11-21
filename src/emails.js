@@ -28,7 +28,7 @@ const prepareBodyForCartEmail = (form, findProduct, t) => `
   <p>city: ${form.city}</p>
   <p>company: ${form.company}</p>
 
-  замовлення:
+  Запит ціни:
 
   <ul>${form.products
     .map(({ code, quantity }) => {

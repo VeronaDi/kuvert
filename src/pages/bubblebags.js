@@ -7,7 +7,6 @@ import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
-import WeightCalculatorSection from "../components/WeightCalculatorSection"
 
 import { css } from "@emotion/core"
 
@@ -16,6 +15,10 @@ import { useTranslation } from "react-i18next"
 import bubblebag from "../../static/products/bubblebag.jpg"
 
 import airpoc from "../data/airpoc"
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index
+}
 
 const GeneralNames = ({ children }) => (
   <div
@@ -132,23 +135,26 @@ export default props => {
               `}
             >
               {t("size")}
-              {airpoc.map(({ size }) => (
-                <li
-                  key={size}
-                  css={css`
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 20px;
-                    padding-top: 15px;
-                    :before {
-                      content: "-";
-                      padding-right: 5px;
-                    }
-                  `}
-                >
-                  {size} {t("mm")}
-                </li>
-              ))}
+              {airpoc
+                .map(({ size }) => size)
+                .filter(onlyUnique)
+                .map(size => (
+                  <li
+                    key={size}
+                    css={css`
+                      font-weight: 500;
+                      font-size: 16px;
+                      line-height: 20px;
+                      padding-top: 15px;
+                      :before {
+                        content: "-";
+                        padding-right: 5px;
+                      }
+                    `}
+                  >
+                    {size} {t("mm")}
+                  </li>
+                ))}
             </ul>
             <ul
               css={css`
@@ -277,71 +283,78 @@ export default props => {
         {t("chooseDesiredProduct")}
       </h4>
       <div>
-        {airpoc.map(({ code, size, color, boxSize, sealing, price }) => (
-          <div
-            key={code}
-            css={css`
-              background: #ffffff;
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-              border-radius: 3px;
-              width: 90vw;
-              margin: 20px auto 54px auto;
-              padding: 30px;
-              display: flex;
-              justify-content: space-around;
-              align-items: center;
-              @media screen and (max-width: 570px) {
-                flex-direction: column;
-              }
-            `}
-          >
+        {airpoc.map(
+          ({ code, format, size, color, boxSize, sealing, price }) => (
             <div
+              key={code}
               css={css`
+                background: #ffffff;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 3px;
+                width: 90vw;
+                margin: 20px auto 54px auto;
+                padding: 30px;
                 display: flex;
                 justify-content: space-around;
-                flex: 1;
-                @media screen and (max-width: 1024px) {
-                  display: grid;
-                  grid-template-columns: repeat(auto-fill, 150px);
+                align-items: center;
+                @media screen and (max-width: 570px) {
+                  flex-direction: column;
                 }
               `}
             >
-              <GeneralNames>
-                {t("code")}
-                <EnvelopeParam>{code}</EnvelopeParam>
-              </GeneralNames>
+              <div
+                css={css`
+                  display: flex;
+                  justify-content: space-around;
+                  flex: 1;
+                  @media screen and (max-width: 1024px) {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, 150px);
+                  }
+                `}
+              >
+                <GeneralNames>
+                  {t("code")}
+                  <EnvelopeParam>{code}</EnvelopeParam>
+                </GeneralNames>
 
-              <GeneralNames>
-                {t("size")}, {t("mm")}
-                <EnvelopeParam>{size}</EnvelopeParam>
-              </GeneralNames>
+                <GeneralNames>
+                  {t("format")}
+                  <EnvelopeParam>{format}</EnvelopeParam>
+                </GeneralNames>
 
-              <GeneralNames>
-                {t("sealing")}
-                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-              </GeneralNames>
+                <GeneralNames>
+                  {t("size")}, {t("mm")}
+                  <EnvelopeParam>{size}</EnvelopeParam>
+                </GeneralNames>
 
-              <GeneralNames>
-                {t("color")}
-                <EnvelopeParam>{t(color)}</EnvelopeParam>
-              </GeneralNames>
+                <GeneralNames>
+                  {t("sealing")}
+                  <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+                </GeneralNames>
 
-              <GeneralNames>
-                {t("quantityBox")}, {t("pcs")}
-                <EnvelopeParam>{boxSize}</EnvelopeParam>
-              </GeneralNames>
+                <GeneralNames>
+                  {t("color")}
+                  <EnvelopeParam>{t(color)}</EnvelopeParam>
+                </GeneralNames>
 
-              <GeneralNames>
-                {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>
-                  {t("from")} {price} {t("uah")}
-                </EnvelopeParam>
-              </GeneralNames>
+                <GeneralNames>
+                  {t("quantityBox")}, {t("pcs")}
+                  <EnvelopeParam>{boxSize}</EnvelopeParam>
+                </GeneralNames>
+
+                <GeneralNames>
+                  {t("price")} {t("thousandPcs")}
+                  <EnvelopeParam>
+                    {t("from")} {price} {t("uah")}
+                  </EnvelopeParam>
+                </GeneralNames>
+              </div>
+
+              <BtnAddToRequest boxQuantity={boxSize} code={code} />
             </div>
-
-            <BtnAddToRequest boxQuantity={boxSize} code={code} />
-          </div>
-        ))}
+          )
+        )}
       </div>
 
       <Footer />

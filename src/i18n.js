@@ -114,7 +114,6 @@ const resources = {
         color: {
           white: "білий",
           brown: "коричневиий",
-          whbr: "білий/коричневий",
         },
         print: {
           gray: "сірий",
@@ -126,6 +125,7 @@ const resources = {
       extensionEnvelopes: "Пакети з розширенням",
       extensionEnvelopesText:
         "Пакети з розширенням виготовлені з міцного крафтового паперу, вони зручні для відправки об'ємних вкладень: книг, журналів, великої кількості документації. Розширення становить 40 мм.",
+      format: "Формат",
       greetingLetters: "Вітальні листи",
       handleType: "Тип ручки",
       height: "Висота, мм",
@@ -389,7 +389,6 @@ const resources = {
         color: {
           white: "White",
           brown: "Brown",
-          whbr: "white/brown",
         },
         print: {
           gray: "gray",
@@ -401,6 +400,7 @@ const resources = {
       extensionEnvelopes: "Pockets with extension",
       extensionEnvelopesText:
         "Pockets with extension are made of durable kraft paper, they are convenient for sending bulky investments: books, magazines, a large amount of documentation. The extension is 40 mm.",
+      format: "Format",
       greetingLetters: "Greeting letters",
       handleType: "Handle type",
       height: "Height, mm",
