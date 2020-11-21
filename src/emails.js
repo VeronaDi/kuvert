@@ -15,7 +15,7 @@ const mailParams = {
 export const sendCartEmail = async (form, findProduct, t) =>
   Email.send({
     ...mailParams,
-    Subject: `Замовлення ${form.name}`,
+    Subject: `Запит склад від ${form.name}`,
     Body: prepareBodyForCartEmail(form, findProduct, t),
   }).then(response => {
     if (response !== "OK") throw response
@@ -35,7 +35,7 @@ const prepareBodyForCartEmail = (form, findProduct, t) => `
       const product = findProduct(code)
       const description = product.getProductDescription(t)
 
-      return `<li>код: ${code} ${description}  к-сь: ${quantity} шт</li>`
+      return `<li>Артикул: ${code}, опис: ${description}, к-сть: ${quantity} шт.</li>`
     })
     .join("")}</ul>
 `
