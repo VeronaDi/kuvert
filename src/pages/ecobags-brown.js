@@ -82,7 +82,7 @@ export default props => {
       </h4>
 
       {ecobagsBrown.map(
-        ({ code, size, color, handle, gsm, boxSize, price, paperType }) => (
+        ({ code, size, color, handle, gsm, boxSize, price }) => (
           <div
             key={code}
             css={css`
@@ -126,11 +126,6 @@ export default props => {
               <GeneralNames>
                 {t("paperGSM")}
                 <EnvelopeParam>{gsm}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("paperType")}
-                <EnvelopeParam>{t(paperType)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>
