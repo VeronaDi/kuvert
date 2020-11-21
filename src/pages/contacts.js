@@ -61,6 +61,7 @@ export default props => {
         >
           {[contacts.factory, ...contacts.offices].map((currentCity, index) => (
             <button
+              key={currentCity.city.en}
               onClick={() => setCity(currentCity)}
               css={css`
                 width: 20%;
@@ -120,6 +121,7 @@ export default props => {
             {[contacts.factory, ...contacts.offices].map(
               (currentCity, index) => (
                 <option
+                  key={index}
                   value={currentCity}
                   css={css`
                     width: 20%;
@@ -191,6 +193,7 @@ export default props => {
             >
               {city.phones.map(phone => (
                 <a
+                  key={phone}
                   href={`tel:${phone}`}
                   css={css`
                     display: block;

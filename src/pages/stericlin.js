@@ -46,7 +46,6 @@ const EnvelopeParam = ({ children }) => (
 
 const Stericlin = ({ stericlin: { articul, code, size, boxSize }, t }) => (
   <div
-    key={code}
     css={css`
       background: #ffffff;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -186,7 +185,7 @@ export default props => {
       </h4>
 
       {stericlinData.flat.map(stericlin => (
-        <Stericlin stericlin={stericlin} t={t} />
+        <Stericlin key={stericlin.code} stericlin={stericlin} t={t} />
       ))}
       <h4
         css={css`
@@ -199,7 +198,7 @@ export default props => {
         {t("stericlinPackSide")}
       </h4>
       {stericlinData.volume.map(stericlin => (
-        <Stericlin stericlin={stericlin} t={t} />
+        <Stericlin key={stericlin.code} stericlin={stericlin} t={t} />
       ))}
       <section
         css={css`

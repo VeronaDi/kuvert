@@ -34,10 +34,11 @@ import ecobagColor from "../data/ecobagColor"
 import stericlin from "../data/stericlin"
 
 import { useCart } from "../useCard"
+import { sendCartEmail } from "../emails"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  // which we can spread on <input> and else replace ErrorMessage entirely.
   const [field, meta] = useField(props)
   return (
     <div
@@ -96,13 +97,6 @@ const MyInput = ({ label, ...props }) => {
       ) : null}
     </div>
   )
-}
-
-const sendEmail = async values => {
-  return fetch("https://hooks.zapier.com/hooks/catch/8670957/og9qtfo/", {
-    method: "POST",
-    body: JSON.stringify(values),
-  })
 }
 
 const getCardProducts = data => {
@@ -418,7 +412,7 @@ const SaveCart = () => {
 
 export default props => {
   const [step, setStep] = React.useState(1)
-  const [cart] = useCart()
+  const [cart, , setCart] = useCart()
 
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
@@ -476,9 +470,14 @@ export default props => {
           email: Yup.string().required("Required"),
           phone: Yup.string().required("Required"),
         })}
-        onSubmit={async () => {
-          await sendEmail()
-          localizedNavigate("/thanxrequest", props.pageContext.langKey)
+        onSubmit={async values => {
+          try {
+            await sendCartEmail(values, findProduct, t)
+            setCart({})
+            localizedNavigate("/thanxrequest", props.pageContext.langKey)
+          } catch (e) {
+            alert("Error!")
+          }
         }}
       >
         {({ isSubmitting, setFieldValue, values }) => (
@@ -625,9 +624,39 @@ export default props => {
                     &:active {
                       background: #f4004d;
                     }
+                    &:disabled {
+                      cursor: default;
+                    }
+
+                    &.progress {
+                      background: #c5003e;
+
+                      @keyframes progress-bar-stripes {
+                        from {
+                          background-position: 1rem 0;
+                        }
+                        to {
+                          background-position: 0 0;
+                        }
+                      }
+
+                      animation: progress-bar-stripes 1s linear infinite;
+                      background-image: linear-gradient(
+                        45deg,
+                        rgba(255, 255, 255, 0.15) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, 0.15) 50%,
+                        rgba(255, 255, 255, 0.15) 75%,
+                        transparent 75%,
+                        transparent
+                      );
+                      background-size: 1rem 1rem;
+                    }
                   `}
                   type="submit"
-                  // disabled={isSubmitting}
+                  disabled={isSubmitting}
+                  className={isSubmitting && "progress"}
                 >
                   {t("request")}
                 </button>

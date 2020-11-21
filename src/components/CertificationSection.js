@@ -60,6 +60,7 @@ export default () => {
         >
           {certificate.map(({ name, img }) => (
             <div
+              key={name}
               css={css`
                 padding: 0 40px;
                 outline: none;

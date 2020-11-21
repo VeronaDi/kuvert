@@ -1,17 +1,17 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-export const useCart = () => {
+const createCart = () => {
+  const listeners = {}
   const initialData = JSON.parse(window.localStorage.getItem("card")) || {}
-
-  const [data, setData] = useState(initialData)
+  let data = initialData
 
   const setCart = newData => {
-    setData(newData)
-
-    window.localStorage.setItem("card", JSON.stringify(newData))
+    data = newData
+    window.localStorage.setItem("card", JSON.stringify(data))
+    Object.values(listeners).forEach(cb => cb(data))
   }
 
-  const setItemAmout = (code, amount) => {
+  const setItemAmount = (code, amount) => {
     const newAmount = data[code] ? amount + data[code] : amount
     const newData = {
       ...data,
@@ -21,5 +21,32 @@ export const useCart = () => {
     setCart(newData)
   }
 
-  return [data, setItemAmout, setCart]
+  const subscribe = callback => {
+    const id = Math.random()
+    listeners[id] = callback
+
+    return () => {
+      delete listeners[id]
+    }
+  }
+
+  return { getData: () => data, setItemAmount, setCart, subscribe }
+}
+
+const cart = createCart()
+
+export const useCart = () => {
+  const [data, setData] = useState(cart.getData())
+
+  const setCart = cart.setCart
+
+  const setItemAmount = cart.setItemAmount
+
+  useEffect(() => {
+    return cart.subscribe(newData => {
+      setData(newData)
+    })
+  }, [])
+
+  return [data, setItemAmount, setCart]
 }

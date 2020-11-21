@@ -83,6 +83,7 @@ export default ({ ecobags = [], img }) => {
               .filter(onlyUnique)
               .map(size => (
                 <li
+                  key={size}
                   css={css`
                     font-weight: 500;
                     font-size: 18px;

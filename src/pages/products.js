@@ -52,6 +52,7 @@ export default props => {
         >
           {products.map(({ name, img, id }) => (
             <div
+              key={id}
               className="w-full md:w-1/2 px-2"
               css={css`
                 height: 240px;
@@ -64,7 +65,6 @@ export default props => {
               `}
             >
               <LocalizedLink
-                key={id}
                 to={`/${id}`}
                 css={css`
                   display: flex;

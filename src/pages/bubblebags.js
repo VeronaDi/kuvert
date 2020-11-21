@@ -134,6 +134,7 @@ export default props => {
               {t("size")}
               {airpoc.map(({ size }) => (
                 <li
+                  key={size}
                   css={css`
                     font-weight: 500;
                     font-size: 16px;

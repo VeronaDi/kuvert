@@ -141,6 +141,7 @@ export default props => {
               {t("size")}
               {triangularEnvelopes.map(({ format }) => (
                 <li
+                  key={format}
                   css={css`
                     font-size: 16px;
                     padding-top: 15px;

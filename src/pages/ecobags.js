@@ -57,6 +57,7 @@ export default props => {
         >
           {paperbags.map(({ name, id }) => (
             <div
+              key={id}
               className="w-full md:w-1/3 px-2"
               css={css`
                 height: 280px;
@@ -69,7 +70,6 @@ export default props => {
               `}
             >
               <LocalizedLink
-                key={id}
                 to={`/${id}`}
                 css={css`
                   display: flex;
