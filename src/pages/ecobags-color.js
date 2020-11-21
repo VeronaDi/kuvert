@@ -83,7 +83,7 @@ export default props => {
       </h4>
 
       {ecobagsColor.map(
-        ({ code, size, color, handle, gsm, boxSize, price }) => (
+        ({ code, size, paper, color, handle, gsm, boxSize, price }) => (
           <div
             key={code}
             css={css`
@@ -117,6 +117,11 @@ export default props => {
                 <EnvelopeParam>
                   {size} {t("mm")}
                 </EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("paperType")}
+                <EnvelopeParam>{t(paper)}</EnvelopeParam>
               </GeneralNames>
 
               <GeneralNames>

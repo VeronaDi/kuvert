@@ -139,7 +139,7 @@ const getTriangularEnvelopeDescription = function(t) {
 }
 
 const getAirpocDescription = function(t) {
-  return [this.size, t(this.sealing), t(this.color)].join(" ")
+  return [this.format, this.size, t(this.sealing), t(this.color)].join(" ")
 }
 
 const getEcobagWhiteDescription = function(t) {
@@ -163,6 +163,7 @@ const getEcobagBrownDescription = function(t) {
 const getEcobagColorDescription = function(t) {
   return [
     this.size,
+    t(this.paper),
     t(this.color),
     `${this.gsm}${t("gsm")}`,
     t(this.handle),
