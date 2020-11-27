@@ -19,6 +19,8 @@ import logoGrey from "../images/logoGrey.png"
 import ContactForm from "../components/ContactForm"
 import BtnSendForm from "../components/BtnSendForm"
 
+import { sendIndividualEmail } from "../emails"
+
 const MyMessageInput = ({ ...props }) => {
   const [field, meta] = useField(props)
   return (
@@ -69,13 +71,6 @@ const MyMessageInput = ({ ...props }) => {
       ) : null}
     </div>
   )
-}
-
-const sendEmail = async values => {
-  return fetch("https://hooks.zapier.com/hooks/catch/8670957/og9qtfo/", {
-    method: "POST",
-    body: JSON.stringify(values),
-  })
 }
 
 export default props => {
@@ -135,12 +130,12 @@ export default props => {
           email: Yup.string().required("Required"),
           phone: Yup.string().required("Required"),
         })}
-        onSubmit={async () => {
-          await sendEmail()
+        onSubmit={async values => {
+          await sendIndividualEmail(values, t)
           localizedNavigate("/thanxrequest", props.pageContext.langKey)
         }}
       >
-        {({ isSubmitting, setFieldValue }) => (
+        {({ isSubmitting, setFieldValue, values }) => (
           <Form
             css={css`
               width: 90vw;
@@ -179,6 +174,7 @@ export default props => {
                     name="message"
                     type="textarea"
                     placeholder={t("placeholderPrintform")}
+                    // values?
                   />
                 </div>
 
@@ -200,6 +196,7 @@ export default props => {
                 <ContactForm />
 
                 <BtnSendForm
+                  type="button"
                   disabled={isSubmitting}
                   className={isSubmitting && "progress"}
                 />
