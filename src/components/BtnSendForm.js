@@ -30,9 +30,37 @@ export default () => {
         &:active {
           background: #f4004d;
         }
+        &:disabled {
+          cursor: default;
+        }
+
+        &.progress {
+          background: #c5003e;
+
+          @keyframes progress-bar-stripes {
+            from {
+              background-position: 1rem 0;
+            }
+            to {
+              background-position: 0 0;
+            }
+          }
+
+          animation: progress-bar-stripes 1s linear infinite;
+          background-image: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
+          );
+          background-size: 1rem 1rem;
+        }
       `}
       type="submit"
-      // disabled={isSubmitting}
     >
       {t("request")}
     </button>

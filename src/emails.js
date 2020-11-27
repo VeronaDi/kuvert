@@ -1,8 +1,8 @@
 import Email from "./smtpjs"
 
 const mailParams = {
-  SecureToken: "8ebfda6c-53ab-40af-aee8-d0fb7f0f9d0f",
-  // SecureToken: "x",
+  // SecureToken: "8ebfda6c-53ab-40af-aee8-d0fb7f0f9d0f",
+  SecureToken: "x",
   // Host: "smtp.elasticemail.com",
   // Username: "hochukonvert@gmail.com",
   // Password: "9EBE51CBFD3812D695B77C53A63D3ABDA82A",
