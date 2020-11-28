@@ -240,7 +240,7 @@ export default ({
         </div>
 
         <div>
-          <FilterTitle>{t("paperType")}</FilterTitle>
+          <FilterTitle>{t("color")}</FilterTitle>
           <ul
             css={css`
               list-style-type: none;
