@@ -131,11 +131,15 @@ export default props => {
           phone: Yup.string().required("Required"),
         })}
         onSubmit={async values => {
-          await sendIndividualEmail(values, t)
-          localizedNavigate("/thanxrequest", props.pageContext.langKey)
+          try {
+            await sendIndividualEmail(values)
+            localizedNavigate("/thanxrequest", props.pageContext.langKey)
+          } catch (e) {
+            alert("Error!")
+          }
         }}
       >
-        {({ isSubmitting, setFieldValue, values }) => (
+        {({ isSubmitting, setFieldValue }) => (
           <Form
             css={css`
               width: 90vw;
@@ -174,7 +178,6 @@ export default props => {
                     name="message"
                     type="textarea"
                     placeholder={t("placeholderPrintform")}
-                    // values?
                   />
                 </div>
 

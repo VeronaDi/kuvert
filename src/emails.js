@@ -62,22 +62,22 @@ const prepareBodyForPrintEmail = form => `
   <p>${form.message}</p>
 `
 
-// export const sendIndividualEmail = async (form, t) =>
-//   Email.send({
-//     ...mailParams,
-//     Subject: `Запит індивідуальний від ${form.name}`,
-//     Body: prepareBodyForIndividualEmail(form, t),
-//   }).then(response => {
-//     if (response !== "OK") throw response
-//   })
+export const sendIndividualEmail = async form =>
+  Email.send({
+    ...mailParams,
+    Subject: `Запит індивідуальний від ${form.name}`,
+    Body: prepareBodyForIndividualEmail(form),
+  }).then(response => {
+    if (response !== "OK") throw response
+  })
 
-// const prepareBodyForIndividualEmail = (form, t) => `
-//   <p>Від: ${form.name}</p>
-//   <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
-//   <p>phone: ${form.phone}</p>
-//   <p>city: ${form.city}</p>
-//   <p>company: ${form.company}</p>
+const prepareBodyForIndividualEmail = form => `
+  <p>Від: ${form.name}</p>
+  <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
+  <p>phone: ${form.phone}</p>
+  <p>city: ${form.city}</p>
+  <p>company: ${form.company}</p>
 
-//   Запит індивідуальної ціни:
-//   <p>Повідомлення: ${form.message}</p>
-// `
+  Запит індивідуальної ціни:
+  <p>Повідомлення: ${form.message}</p>
+`
