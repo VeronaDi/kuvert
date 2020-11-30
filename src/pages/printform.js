@@ -18,6 +18,8 @@ import BtnNext from "../components/BtnNext"
 import Steps from "../components/Steps"
 import ContactForm from "../components/ContactForm"
 
+import { sendPrintEmail } from "../emails"
+
 const MySelect = ({ label, ...props }) => {
   const [field, meta] = useField(props)
   return (
@@ -257,17 +259,6 @@ export default props => {
   }
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
-  //   const requestType = ({ children }) => (
-  //     <div
-  //       css={css`
-  //         width: 28%;
-  //         background: #ffffff;
-  //         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //       `}
-  //     >
-  //       {children}
-  //     </div>
-  //   )
 
   const steps = [
     t("requestType"),
@@ -309,9 +300,13 @@ export default props => {
           email: Yup.string().required("Required"),
           phone: Yup.string().required("Required"),
         })}
-        onSubmit={async () => {
-          // await sendEmail()
-          localizedNavigate("/thanxrequest", props.pageContext.langKey)
+        onSubmit={async values => {
+          try {
+            await sendPrintEmail(values)
+            localizedNavigate("/thanxrequest", props.pageContext.langKey)
+          } catch (e) {
+            alert("Error!")
+          }
         }}
       >
         {({ isSubmitting, setFieldValue }) => (
@@ -357,7 +352,7 @@ export default props => {
                     `}
                   >
                     <MySelect label={t("product")} name="product">
-                      <option disabled selected>
+                      <option value="" disabled>
                         {t("chooseDesiredProduct")}
                       </option>
                       <option value="konvert">{t("envelopes")}</option>

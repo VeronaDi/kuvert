@@ -163,7 +163,7 @@ export default props => {
                 </GeneralNames>
 
                 <GeneralNames>
-                  {t("paperType")}, {t("gsm")}
+                  {t("color")}, {t("gsm")}
                   <EnvelopeParam>
                     {t(color)}, {gsm}
                   </EnvelopeParam>

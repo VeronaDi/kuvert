@@ -113,9 +113,8 @@ export default props => {
           `}
         >
           {requests.map(({ name, text, img, id }) => (
-            <div className="w-full md:w-1/3 px-2">
+            <div key={id} className="w-full md:w-1/3 px-2">
               <LocalizedLink
-                key={id}
                 to={`/${id}`}
                 css={css`
                   height: 60vh;
