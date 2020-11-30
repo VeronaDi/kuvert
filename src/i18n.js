@@ -27,6 +27,7 @@ const resources = {
       addressOfFactory: "Адреса фабрики",
       addressFactory: "вул.І.Макуха, 6",
       addToRequest: "Додати до запиту",
+      accountDep: "Бухгалтерія",
       airpoc: "Бандерольні пакети з повітряними бульбашками",
       airpocText:
         "Бандерольні пакети з поліетиленовими повітряними вставками, що гарантують надійний захист для відправки крихких і цінних предметів.",
@@ -316,6 +317,7 @@ const resources = {
       addressOfFactory: "Address of factory",
       addressFactory: "Ivano-Frankivsk, Makuha str. 6",
       addToRequest: "Add to request",
+      accountDep: "Accounting department",
       airpoc: "Air padded envelopes",
       airpocText:
         "Padded envelopes with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",

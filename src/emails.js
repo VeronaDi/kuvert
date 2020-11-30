@@ -12,6 +12,8 @@ const mailParams = {
   To: "diana.didijtsuk@gmail.com",
 }
 
+// sklad inquiry //
+
 export const sendCartEmail = async (form, findProduct, t) =>
   Email.send({
     ...mailParams,
@@ -40,6 +42,8 @@ const prepareBodyForCartEmail = (form, findProduct, t) => `
     .join("")}</ul>
 `
 
+// print inquiry //
+
 export const sendPrintEmail = async form =>
   Email.send({
     ...mailParams,
@@ -62,6 +66,8 @@ const prepareBodyForPrintEmail = form => `
   <p>${form.message}</p>
 `
 
+// individual inquiry //
+
 export const sendIndividualEmail = async form =>
   Email.send({
     ...mailParams,
@@ -79,5 +85,26 @@ const prepareBodyForIndividualEmail = form => `
   <p>company: ${form.company}</p>
 
   Запит індивідуальної ціни:
-  <p>Повідомлення: ${form.message}</p>
+  <p>${form.message}</p>
+`
+
+// contact us form //
+
+export const sendContactUsEmail = async form =>
+  Email.send({
+    ...mailParams,
+    Subject: `Лист з веб сторінки для ${form.department}`,
+    Body: prepareBodyForContactUsEmail(form),
+  }).then(response => {
+    if (response !== "OK") throw response
+  })
+
+const prepareBodyForContactUsEmail = form => `
+  <p>Від: ${form.name}</p>
+  <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
+  <p>Тел.: ${form.phone}</p>
+  <p>Для: ${form.department}</p>
+
+  Повідомлення:
+  <p>${form.message}</p>
 `

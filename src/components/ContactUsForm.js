@@ -3,10 +3,11 @@ import { Form, Formik, useField } from "formik"
 import * as Yup from "yup"
 import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
-import { localizedNavigate } from "../components/LocalizedLink"
 
 import plane from "../images/plane.png"
 import arrowSelect from "../images/arrow-select.png"
+
+import { sendContactUsEmail } from "../emails"
 
 const MyInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -183,13 +184,6 @@ const MyMessageInput = ({ label, ...props }) => {
   )
 }
 
-const sendEmail = async values => {
-  return fetch("https://hooks.zapier.com/hooks/catch/8670957/og9qtfo/", {
-    method: "POST",
-    body: JSON.stringify(values),
-  })
-}
-
 export default props => {
   const { t } = useTranslation()
 
@@ -231,9 +225,12 @@ export default props => {
           phone: Yup.string().required("Required"),
           message: Yup.string().required("Required"),
         })}
-        onSubmit={async () => {
-          await sendEmail()
-          localizedNavigate("/thanxrequest", props.pageContext.langKey)
+        onSubmit={async values => {
+          try {
+            await sendContactUsEmail(values)
+          } catch (e) {
+            alert("Error!")
+          }
         }}
       >
         {({ isSubmitting }) => (
