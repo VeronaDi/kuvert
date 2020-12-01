@@ -1,14 +1,24 @@
 import Email from "./smtpjs"
 
 const mailParams = {
-  SecureToken: "8ebfda6c-53ab-40af-aee8-d0fb7f0f9d0f",
+  // SecureToken: "8ebfda6c-53ab-40af-aee8-d0fb7f0f9d0f",
   // SecureToken: "x",
   // Host: "smtp.elasticemail.com",
   // Username: "hochukonvert@gmail.com",
   // Password: "9EBE51CBFD3812D695B77C53A63D3ABDA82A",
   // port: 2525
+  // From: "hochukonvert@gmail.com",
+  // To: "diana.didijtsuk@gmail.com",
+}
 
-  From: "hochukonvert@gmail.com",
+const mailZaputParams = {
+  // SecureToken: "56f0c0b7-4141-49f7-baae-7916a94c16b5",
+  Host: "smtp.elasticemail.com",
+  Username: "kuvertwebzaput@gmail.com",
+  Password: "28FC662989BAC4745B8238E9E3EABCBC2017",
+  port: 2525,
+
+  From: "kuvertwebzaput@gmail.com",
   To: "diana.didijtsuk@gmail.com",
 }
 
@@ -16,7 +26,7 @@ const mailParams = {
 
 export const sendCartEmail = async (form, findProduct, t) =>
   Email.send({
-    ...mailParams,
+    ...mailZaputParams,
     Subject: `Запит склад від ${form.name}`,
     Body: prepareBodyForCartEmail(form, findProduct, t),
   }).then(response => {
