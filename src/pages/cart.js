@@ -1,16 +1,9 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import {
-  Form,
-  Field,
-  FieldArray,
-  Formik,
-  useField,
-  useFormikContext,
-} from "formik"
+import { Form, Field, FieldArray, Formik, useField } from "formik"
 import * as Yup from "yup"
 import { localizedNavigate } from "../components/LocalizedLink"
 
@@ -331,22 +324,15 @@ const ProductRow = ({ index, t, arrayHelpers }) => {
   )
 }
 
-const SaveCart = () => {
-  const { values } = useFormikContext()
-  const [cart, , setCart] = useCart()
+const syncCartData = (values, cart, setCart) => {
+  const newCartData = values.products.reduce((acc, { code, quantity }) => {
+    acc[code] = quantity
+    return acc
+  }, {})
 
-  useEffect(() => {
-    const newCartData = values.products.reduce((acc, { code, quantity }) => {
-      acc[code] = quantity
-      return acc
-    }, {})
-
-    if (JSON.stringify(cart) !== JSON.stringify(newCartData)) {
-      setCart(newCartData)
-    }
-  }, [values, cart, setCart])
-
-  return null
+  if (JSON.stringify(cart) !== JSON.stringify(newCartData)) {
+    setCart(newCartData)
+  }
 }
 
 export default props => {
@@ -412,82 +398,90 @@ export default props => {
         onSubmit={async values => {
           try {
             await sendCartEmail(values, findProduct, t)
-            setCart({})
             localizedNavigate("/thanxrequest", props.pageContext.langKey)
           } catch (e) {
             alert("Error!")
           }
         }}
       >
-        {({ isSubmitting, setFieldValue, values }) => (
-          <Form
-            css={css`
-              width: 90vw;
-              max-width: 780px;
-              margin: 0 auto;
-            `}
-          >
-            <SaveCart />
-            {step === 1 && (
-              <>
-                <div
-                  css={css`
-                    width: 100%;
-                    height: auto;
-                    background: #d6d6d6;
-                    border-radius: 3px;
-                  `}
-                >
-                  <FieldArray
-                    name="products"
-                    render={arrayHelpers => (
-                      <div>
-                        {values.products.map((_product, index) => (
-                          <ProductRow
-                            key={index}
-                            index={index}
-                            t={t}
-                            arrayHelpers={arrayHelpers}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  />
+        {({ isSubmitting, setFieldValue, values }) => {
+          syncCartData(values, cart, setCart)
+
+          return (
+            <Form
+              css={css`
+                width: 90vw;
+                max-width: 780px;
+                margin: 0 auto;
+              `}
+            >
+              {/* <SaveCart /> */}
+              {step === 1 && (
+                <>
                   <div
                     css={css`
                       width: 100%;
-                      background: #8a8a8a;
-                      border-radius: 0px 0px 3px 3px;
-                      height: 78px;
-                      display: flex;
-                      justify-content: flex-end;
-                      align-items: center;
-                      padding: 0 37px;
-                      > button {
-                        width: 30%;
-                        @media (max-width: 1024px) {
-                          width: 100%;
-                        }
-                      }
+                      height: auto;
+                      background: #d6d6d6;
+                      border-radius: 3px;
                     `}
                   >
-                    <BtnNext type="button" onClick={() => setStep(2)} />
+                    {values.products.length === 0 && "EMPTY"}
+                    <FieldArray
+                      name="products"
+                      render={arrayHelpers => (
+                        <div>
+                          {values.products.map((_product, index) => (
+                            <ProductRow
+                              key={index}
+                              index={index}
+                              t={t}
+                              arrayHelpers={arrayHelpers}
+                            />
+                          ))}
+                        </div>
+                      )}
+                    />
+                    <div
+                      css={css`
+                        width: 100%;
+                        background: #8a8a8a;
+                        border-radius: 0px 0px 3px 3px;
+                        height: 78px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        padding: 0 37px;
+                        > button {
+                          width: 30%;
+                          @media (max-width: 1024px) {
+                            width: 100%;
+                          }
+                        }
+                      `}
+                    >
+                      <BtnNext
+                        type="button"
+                        onClick={() => setStep(2)}
+                        disabled={values.products.length === 0}
+                      />
+                    </div>
                   </div>
-                </div>
-              </>
-            )}
-            {step === 2 && (
-              <>
-                <ContactForm />
+                </>
+              )}
+              {step === 2 && (
+                <>
+                  <ContactForm />
 
-                <BtnSendForm
-                  disabled={isSubmitting}
-                  className={isSubmitting && "progress"}
-                />
-              </>
-            )}
-          </Form>
-        )}
+                  <BtnSendForm
+                    disabled={isSubmitting}
+                    className={isSubmitting && "progress"}
+                  />
+                </>
+              )}
+            </Form>
+          )
+        }}
       </Formik>
     </Layout>
   )

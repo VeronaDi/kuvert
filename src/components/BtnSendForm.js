@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-export default () => {
+export default ({ ...props }) => {
   const { t } = useTranslation()
 
   return (
@@ -61,6 +61,7 @@ export default () => {
         }
       `}
       type="submit"
+      {...props}
     >
       {t("request")}
     </button>

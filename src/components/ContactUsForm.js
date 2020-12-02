@@ -184,6 +184,14 @@ const MyMessageInput = ({ label, ...props }) => {
   )
 }
 
+const defaultFormValues = {
+  name: "",
+  email: "",
+  phone: "",
+  department: "",
+  message: "",
+}
+
 export default props => {
   const { t } = useTranslation()
 
@@ -212,22 +220,17 @@ export default props => {
         {t("sendUsMessage")}
       </h5>
       <Formik
-        initialValues={{
-          name: "",
-          email: "",
-          phone: "",
-          department: "",
-          message: "",
-        }}
+        initialValues={defaultFormValues}
         validationSchema={Yup.object({
           name: Yup.string().required("Required"),
           email: Yup.string().required("Required"),
           phone: Yup.string().required("Required"),
           message: Yup.string().required("Required"),
         })}
-        onSubmit={async values => {
+        onSubmit={async (values, { resetForm }) => {
           try {
             await sendContactUsEmail(values)
+            resetForm(defaultFormValues)
           } catch (e) {
             alert("Error!")
           }

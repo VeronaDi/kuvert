@@ -33,7 +33,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      {/* <SEO title="About" description={} /> */}
       <MainNav {...props} />
       <MobileNav {...props} />
 
