@@ -17,7 +17,7 @@ export default ({ ecobags = [], img }) => {
         background-repeat: no-repeat;
         background-size: 40% 80%;
         margin: 9px auto 50px auto;
-        padding: 30px 70px 90px 70px;
+        padding: 30px 70px;
         color: #000000;
         display: flex;
         justify-content: space-between;
@@ -71,7 +71,6 @@ export default ({ ecobags = [], img }) => {
               flex-direction: column;
               flex-wrap: wrap;
               width: 100%;
-              height: 230px;
               @media screen and (max-width: 768px) {
                 height: auto;
               }
