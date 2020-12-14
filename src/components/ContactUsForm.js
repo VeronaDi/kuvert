@@ -204,6 +204,7 @@ export default props => {
         background-position: right;
         background-repeat: no-repeat;
         padding-bottom: 60px;
+        margin-bottom: 20px;
       `}
     >
       <h5
