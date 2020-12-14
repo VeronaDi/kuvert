@@ -30,7 +30,7 @@ const Layout = props => {
         }}
         cookieName="gatsby-gdpr-analytics"
       >
-        {t("airpoc")} This site uses cookies ...
+        {t("cookiesText")}
       </CookieConsent>
       {props.children}
     </I18nextProvider>

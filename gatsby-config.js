@@ -20,7 +20,7 @@ module.exports = {
           dataLayerName: "dataLayer", // default
         },
         facebookPixel: {
-          pixelId: "", // leave empty if you want to disable the tracker
+          pixelId: "1728679630723815", // leave empty if you want to disable the tracker
           cookieName: "gatsby-gdpr-analytics", // default
         },
         // defines the environments where the tracking should be available  - default is ["production"]
