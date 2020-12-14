@@ -54,7 +54,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Triangular flap" />
+      <SEO title={t("triangularValve")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

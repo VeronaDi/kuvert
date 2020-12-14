@@ -268,7 +268,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Print Request" />
+      <SEO title={t("printedOrder")} />
       <Link
         css={css`
           background: url(${logoGrey}) center center no-repeat;

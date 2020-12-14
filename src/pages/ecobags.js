@@ -30,7 +30,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Paper bags" />
+      <SEO title={t("paperbags")} description={"metaDescrPaperbags"} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

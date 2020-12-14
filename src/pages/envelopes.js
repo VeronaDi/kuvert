@@ -39,7 +39,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Envelopes" />
+      <SEO title={t("envelopes")} description={t("metaDescrEnvelopes")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

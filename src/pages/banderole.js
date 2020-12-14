@@ -48,7 +48,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Banderole pockets" />
+      <SEO title={t("banderole")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

@@ -28,7 +28,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Request" />
+      <SEO title={t("seoThanx")} />
 
       <Link
         css={css`

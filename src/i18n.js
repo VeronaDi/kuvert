@@ -189,6 +189,18 @@ const resources = {
         "Ми лідери галузі та приймаємо будь-які виклики, щоб забезпечувати споживачів відмінною якістю роботи і найкращим результатом, можливим завдяки потужному технічному і технологічному виробництву, професіоналізму і злагодженій роботі команди, турботою про навколишнє довкілля при виготовленні продукції і можливості її переробки.",
       message: "Повідомлення",
       messageText: "Напишіть тут своє повідомлення",
+      metaDescrIndex:
+        "«Куверт-Україна» – українська ланка найбільшого в Європі концерну з виробництва конвертів, бандерольних пакетів та паперових торб «Mayer-Kuvert-network GmbH».",
+      metaDescrEnvelopes:
+        "Купуйте конверти оптом у всіх кольорах та розмірах та отримайте найкращу вартість від виробника. Складські запаси, швидка доставка та відмінне обслуговування.",
+      metaDescrPaperbags:
+        "Шукаєте паперові пакети за оптовими цінами? У нас великий вибір паперових пакетів для всіх Ваших потреб. Замовляйте зараз!",
+      metaDescrPrinted:
+        "Друк на конвертах, бандерольних пакетах та паперових торбах. Надрукуйте свій логотип або власний дизайн, щоб зробити їх помітними.",
+      metaDescrIndividual:
+        "Створіть свій конверт з індивідуальними параметрами та друком, який виділятиметься серед інших та приверне увагу саме до Вашого повідомлення.",
+      metaDescrContact:
+        "Потрібні конверти, паперові торби або бандерольні пакети? Зв’яжіться з нами онлайн або зателефонуйте!",
       mm: "мм",
       mk: "мокроклеючий",
       name: "Ім'я та прізвище",
@@ -208,6 +220,9 @@ const resources = {
       paperBrand: "Марка паперу",
       paperParam: "колір паперу та його щільність або ж марку паперу",
       paperbags: "Пакети з паперовими ручками",
+      paperbagsWhite: "Білі пакети з паперовими ручками",
+      paperbagsBrown: "Коричневі пакети з паперовими ручками",
+      paperbagsColor: "Кольорові пакети з паперовими ручками",
       paperfile: "Паперові файли",
       paperType: "Папір",
       phone: "Телефон",
@@ -242,6 +257,12 @@ const resources = {
       requestPersonal: "Контактні дані",
       salesDep: "Відділ збуту",
       size: "Розмір",
+      seoHome: "Головна",
+      seoAbout: "Про нас",
+      seoProducts: "Продукція",
+      seoDocufix: "Конверти для супровідних документів",
+      seoInquiry: "Тип запиту",
+      seoThanx: "Дякуємо!",
       sealing: "Тип заклеювання",
       send: "Надіслати",
       sendUsMessage: "Якщо у Вас виникли запитання, будь ласка, напишіть нам",
@@ -406,7 +427,7 @@ const resources = {
       enterAmountText:
         "Specify the amount of envelopes you would like to order",
       envelope: "Envelope",
-      envelopes: "envelopes",
+      envelopes: "Envelopes",
       envelopesProperties: {
         sealing: {
           gummed: "Gummed",
@@ -486,6 +507,18 @@ const resources = {
         "We are industry leaders and take on any challenge to provide our customers with excellent workmanship and the best results possible thanks to the powerful technical and technological production, professionalism and well-coordinated work of the team, care for the environment in production and processing capabilities.",
       message: "Message",
       messageText: "Write your message here",
+      metaDescrIndex:
+        "«Kuvert-Ukraine» is the Ukrainian part of the largest in Europe concern for the production of envelopes, parcel bags and paper bags «Mayer-Kuvert-network».",
+      metaDescrEnvelopes:
+        "Buy envelopes in bulk in all colours and sizes to get the best value. Plenty of stock, fast delivery and excellent service.",
+      metaDescrPaperbags:
+        "Looking for paper bags at wholesale prices? We have a great selection of paper bags for all your needs. Order now!",
+      metaDescrPrinted:
+        "Printing on envelopes, parcel bags and paper bags. Print your logo or your own design to make them noticeable.",
+      metaDescrIndividual:
+        "Create your own envelope with individual settings and a print that will stand out among others and draw attention to your message.",
+      metaDescrContact:
+        "Need envelope, paper bags or parcel packages? Contact us online or call us today!",
       mm: "mm",
       mk: "gummed",
       name: "Name and Surname",
@@ -505,6 +538,9 @@ const resources = {
       paperBrand: "Paper brand",
       paperParam: "paper color and density or brand of paper",
       paperbags: "Paper bags",
+      paperbagsWhite: "White paper bags",
+      paperbagsBrown: "Brown paper bags",
+      paperbagsColor: "Color paper bags",
       paperfile: "Paper filing pockets",
       paperType: "Paper",
       phone: "Phone",
@@ -539,6 +575,12 @@ const resources = {
       requestPersonal: "Personal information",
       salesDep: "Sales department",
       size: "Size",
+      seoHome: "Home",
+      seoAbout: "About us",
+      seoProducts: "Products",
+      seoDocufix: "Document Enclosed Wallets Envelopes",
+      seoInquiry: "Inquiry type",
+      seoThanx: "Thank you!",
       sealing: "Sealing",
       send: "Send",
       sendUsMessage:

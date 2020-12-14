@@ -23,7 +23,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Thermopack" />
+      <SEO title={t("thermopack")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

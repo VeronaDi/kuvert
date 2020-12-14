@@ -22,7 +22,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Docufix" />
+      <SEO title={t("seoDocufix")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

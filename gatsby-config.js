@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Kuvert`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Kuvert-Ukraine`,
+    description: `Envelope factory «Kuvert-Ukraine» currently is the most stable national manufacturer of envelopes. We produce all kinds of envelopes, paper bags and banderole packages.`,
+    author: `Kuvert-Ukraine`,
   },
   plugins: [
     {

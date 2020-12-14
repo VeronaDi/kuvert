@@ -24,7 +24,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Individual envelopes" />
+      <SEO title={t("individualEnv")} description={t("metaDescrIndividual")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

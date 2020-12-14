@@ -25,7 +25,7 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title="Printed products" />
+      <SEO title={t("printProducts")} description={t("metaDescrPrinted")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 

@@ -33,7 +33,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={t("seoHome")} description={t("metaDescrIndex")} />
       <MainNav isHome {...props} />
 
       <MobileNav {...props} />
