@@ -426,7 +426,15 @@ export default props => {
                       border-radius: 3px;
                     `}
                   >
-                    {values.products.length === 0 && "EMPTY"}
+                    <p
+                      css={css`
+                        text-align: center;
+                        font-size: 18px;
+                        padding-top: 15px;
+                      `}
+                    >
+                      {values.products.length === 0 && t("emptyCartText")}
+                    </p>
                     <FieldArray
                       name="products"
                       render={arrayHelpers => (

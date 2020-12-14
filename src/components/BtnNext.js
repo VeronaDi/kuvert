@@ -36,6 +36,12 @@ export default ({ ...props }) => {
           color: white;
           border: 1px solid #f4004d;
         }
+
+        &:disabled {
+          cursor: default;
+          background: #8a8a8a;
+          border: 1px solid #d6d6d6;
+        }
       `}
     >
       {t("next")}

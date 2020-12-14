@@ -143,6 +143,7 @@ const resources = {
       envelopesStandard: "Прямий клапан",
       envelopeDetails: "Параметри конверта",
       envelopeSize: "розмір конверта",
+      emptyCartText: "Додайте товари зі сторінки продукції.",
       extensionEnvelopes: "Пакети з розширенням",
       extensionEnvelopesText:
         "Пакети з розширенням виготовлені з міцного крафтового паперу, вони зручні для відправки об'ємних вкладень: книг, журналів, великої кількості документації. Розширення становить 40 мм.",
@@ -439,6 +440,7 @@ const resources = {
       envelopesStandard: "Straight flap",
       envelopeSize: "envelope size",
       envelopeDetails: "Envelope details",
+      emptyCartText: "Add products from the Products page.",
       extensionEnvelopes: "Pockets with extension",
       extensionEnvelopesText:
         "Pockets with extension are made of durable kraft paper, they are convenient for sending bulky investments: books, magazines, a large amount of documentation. The extension is 40 mm.",
