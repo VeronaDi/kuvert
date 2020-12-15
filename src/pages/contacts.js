@@ -38,19 +38,15 @@ export default props => {
       <SEO title={t("contacts")} description={t("metaDescrContact")} />
       <MainNav {...props} />
       <MobileNav {...props} />
-      <div
-        css={css`
-          @media (min-width: 1250px) {
-            height: 112px;
-          }
-        `}
-      ></div>
 
       <section
         css={css`
           height: 100vh;
           background: #ffffff;
           position: relative;
+          @media (min-width: 1250px) {
+            margin-top: 112px;
+          }
           @media screen and (max-width: 943px) {
             height: auto;
           }

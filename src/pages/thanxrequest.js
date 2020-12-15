@@ -46,36 +46,37 @@ export default props => {
         css={css`
           width: 100%;
           height: 100%;
-          background: url(${thanx}) center center no-repeat;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -70%);
           text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 200px 15px 0;
         `}
       >
+        <img
+          src={thanx}
+          alt="Thank you"
+          css={css`
+            max-width: 360px;
+            margin-bottom: 32px;
+          `}
+        />
         <h3
           css={css`
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, -60%);
             font-weight: bold;
             font-size: 36px;
             line-height: 42px;
+            margin-bottom: 15px;
           `}
         >
           {t("thanx")}
         </h3>
         <p
           css={css`
-            position: absolute;
-            top: 83%;
-            left: 50%;
-            transform: translate(-50%, -60%);
             font-size: 18px;
             line-height: 27px;
-            width: 502px;
+            max-width: 502px;
+            margin-bottom: 32px;
           `}
         >
           {t("thanxText")}
@@ -86,17 +87,14 @@ export default props => {
             background: #c5003e;
             border-radius: 3px;
             border: none;
-            padding: 25px 149px;
+            padding: 25px;
             color: white;
             cursor: pointer;
             font-weight: bold;
             outline: none;
             text-decoration: none;
-            display: block;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, -60%);
+            display: inline;
+            max-width: 100%;
 
             &:hover {
               background: #b60039;
