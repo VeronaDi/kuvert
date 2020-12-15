@@ -67,94 +67,96 @@ export default ({ isHome = false, location }) => {
   const [cart] = useCart()
 
   return (
-    <nav
-      css={css`
-        position: fixed;
-        background: ${isHome ? "rgba(56, 56, 56, 0.732)" : "#F8F8F8"};
-        z-index: 5;
-        width: 100%;
-        top: 0;
-        padding: 0 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @media (max-width: 1250px) {
-          display: none;
-        }
-      `}
-    >
-      <Link
+    <>
+      <nav
         css={css`
-          transition: all 0.3s;
-          width: ${isSmall ? "100px" : "190px"};
-          margin-top: ${isSmall ? "-5px" : "-15px"};
+          position: fixed;
+          background: ${isHome ? "rgba(56, 56, 56, 0.732)" : "#F8F8F8"};
+          z-index: 6;
+          width: 100%;
+          top: 0;
+          padding: 0 40px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          @media (max-width: 1250px) {
+            display: none;
+          }
         `}
-        to="/"
       >
-        <img
-          src={isHome ? logo : logoGrey}
-          alt="logo"
+        <Link
           css={css`
-            width: 100%;
+            transition: all 0.3s;
+            width: ${isSmall ? "100px" : "190px"};
+            margin-top: ${isSmall ? "-5px" : "-15px"};
           `}
-        />
-      </Link>
+          to="/"
+        >
+          <img
+            src={isHome ? logo : logoGrey}
+            alt="logo"
+            css={css`
+              width: 100%;
+            `}
+          />
+        </Link>
 
-      <div
-        css={css`
-          transition: all 0.3s;
-          line-height: ${isSmall ? "50px" : "112px"};
-        `}
-      >
-        <StyledLink isHome={isHome} to="/">
-          {t("home")}
-        </StyledLink>
-        <StyledLink isHome={isHome} to="/products">
-          {t("products")}
-        </StyledLink>
-        <StyledLink isHome={isHome} to="/about">
-          {t("about")}
-        </StyledLink>
-        <StyledLink isHome={isHome} to="/contacts">
-          {t("contacts")}
-        </StyledLink>
         <div
           css={css`
-            display: inline-block;
-            width: 180px;
+            transition: all 0.3s;
+            line-height: ${isSmall ? "50px" : "112px"};
           `}
         >
-          {!isHome && <BtnRequest isSmall={isSmall} />}
+          <StyledLink isHome={isHome} to="/">
+            {t("home")}
+          </StyledLink>
+          <StyledLink isHome={isHome} to="/products">
+            {t("products")}
+          </StyledLink>
+          <StyledLink isHome={isHome} to="/about">
+            {t("about")}
+          </StyledLink>
+          <StyledLink isHome={isHome} to="/contacts">
+            {t("contacts")}
+          </StyledLink>
+          <div
+            css={css`
+              display: inline-block;
+              width: 180px;
+            `}
+          >
+            {!isHome && <BtnRequest isSmall={isSmall} />}
+          </div>
         </div>
-      </div>
 
-      <LocalizedLink
-        to="/cart"
-        css={css`
-          cursor: pointer;
-          width: 50px;
-          text-decoration: none;
-          color: ${isHome ? "white" : "#040404"};
-          text-align: center;
-        `}
-      >
-        {Object.keys(cart).length}
-        <img src={isHome ? envelopeCartWhite : envelopeCart} alt="cart" />
-      </LocalizedLink>
+        <LocalizedLink
+          to="/cart"
+          css={css`
+            cursor: pointer;
+            width: 50px;
+            text-decoration: none;
+            color: ${isHome ? "white" : "#040404"};
+            text-align: center;
+          `}
+        >
+          {Object.keys(cart).length}
+          <img src={isHome ? envelopeCartWhite : envelopeCart} alt="cart" />
+        </LocalizedLink>
 
-      <Link
-        css={css`
-          cursor: pointer;
-          color: ${isHome ? "white" : "#040404"};
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 21px;
-          text-decoration: none;
-        `}
-        to={nextLang}
-      >
-        {t(`changeLang.${i18n.language}`)}
-      </Link>
-    </nav>
+        <Link
+          css={css`
+            cursor: pointer;
+            color: ${isHome ? "white" : "#040404"};
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            text-decoration: none;
+          `}
+          to={nextLang}
+        >
+          {t(`changeLang.${i18n.language}`)}
+        </Link>
+      </nav>
+    </>
   )
 }
