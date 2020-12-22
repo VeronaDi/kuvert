@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-// import { useStaticQuery, graphql } from "gatsby"
-// import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -20,8 +21,8 @@ import { useTranslation } from "react-i18next"
 import backenvelopes from "../images/background-envelopes.svg"
 import machine from "../images/machine.jpg"
 import ukraine from "../images/ukraine.png"
-import zeh from "../images/zeh.jpg"
 import logosClient from "../images/logos_web.jpg"
+import BackgroundSection from "../components/image"
 
 const IndexPage = props => {
   const T = useTranslation()
@@ -31,22 +32,25 @@ const IndexPage = props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
+  // background: url(${zeh});
+  // background-size: cover;
+
   return (
     <Layout>
       <SEO title={t("seoHome")} description={t("metaDescrIndex")} />
       <MainNav isHome {...props} />
 
       <MobileNav {...props} />
-
-      <section
+      <BackgroundImage
+        Tag="section"
+        fluid={BackgroundSection()}
         css={css`
           height: calc(100vh - 86.59px);
           min-height: 590px;
-          background: url(${zeh});
-          background-size: cover;
           display: flex;
           justify-content: center;
           align-items: center;
+
           @media screen and (min-width: 1250px) {
             height: 100vh;
             min-height: 740px;
@@ -147,7 +151,7 @@ const IndexPage = props => {
             </div>
           </div>
         </div>
-      </section>
+      </BackgroundImage>
 
       <section
         css={css`
