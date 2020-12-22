@@ -50,7 +50,7 @@ export default props => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding: 200px 15px 0;
+          padding: 100px 15px 0;
         `}
       >
         <img
