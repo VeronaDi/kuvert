@@ -32,9 +32,14 @@ export default props => {
           text-align: center;
           font-size: 36px;
           font-weight: 500;
+          margin-top: 150px;
+          @media (max-width: 1243px) {
+            font-size: 24px;
+            margin-top: 50px;
+          }
         `}
       >
-        DocuFix
+        {t("seoDocufix")}
       </h3>
       <div
         css={css`

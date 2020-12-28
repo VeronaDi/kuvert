@@ -58,6 +58,11 @@ export default props => {
           text-align: center;
           font-size: 36px;
           font-weight: bold;
+          margin-top: 150px;
+          @media (max-width: 1243px) {
+            font-size: 24px;
+            margin-top: 50px;
+          }
         `}
       >
         {t("banderole")}

@@ -64,8 +64,10 @@ export default props => {
           text-align: center;
           font-size: 36px;
           font-weight: 500;
-          @media (max-width: 758px) {
+          margin-top: 150px;
+          @media (max-width: 1243px) {
             font-size: 24px;
+            margin-top: 50px;
           }
         `}
       >

@@ -37,8 +37,8 @@ const IndexPage = props => {
     <Layout>
       <SEO title={t("seoHome")} description={t("metaDescrIndex")} />
       <MainNav isHome {...props} />
-
       <MobileNav {...props} />
+
       <BackgroundImage
         Tag="section"
         fluid={BackgroundSectionIndex()}
