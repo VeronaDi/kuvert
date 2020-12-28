@@ -12,12 +12,12 @@ import CertificationSection from "../components/CertificationSection"
 
 import { useTranslation } from "react-i18next"
 
-import factory1 from "../images/about/1.jpg"
-import factory2 from "../images/about/2.jpg"
-import factory3 from "../images/about/3.jpg"
-import factory4 from "../images/about/4.jpg"
-import factory5 from "../images/about/5.jpg"
-import factory6 from "../images/about/6.jpg"
+import factory1 from "../images/about/1.png"
+import factory2 from "../images/about/2.png"
+import factory3 from "../images/about/3.png"
+import factory4 from "../images/about/4.png"
+import factory5 from "../images/about/5.png"
+import factory6 from "../images/about/6.png"
 
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
@@ -290,7 +290,7 @@ export default props => {
               background-position: center;
               background-repeat: no-repeat;
               width: 20%;
-              height: 26%;
+              height: 20%;
               position: absolute;
               bottom: 0;
               right: 0;
