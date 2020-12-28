@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 import Layout from "../components/layout"
@@ -13,6 +11,7 @@ import BtnRequest from "../components/BtnRequest"
 import BtnViewProducts from "../components/BtnViewProducts"
 import NewsSection from "../components/NewsSection"
 import Footer from "../components/Footer"
+import BackgroundSectionIndex from "../components/image"
 
 import { css } from "@emotion/core"
 
@@ -22,7 +21,6 @@ import backenvelopes from "../images/background-envelopes.svg"
 import machine from "../images/machine.jpg"
 import ukraine from "../images/ukraine.png"
 import logosClient from "../images/logos_web.jpg"
-import BackgroundSection from "../components/image"
 
 const IndexPage = props => {
   const T = useTranslation()
@@ -43,7 +41,7 @@ const IndexPage = props => {
       <MobileNav {...props} />
       <BackgroundImage
         Tag="section"
-        fluid={BackgroundSection()}
+        fluid={BackgroundSectionIndex()}
         css={css`
           height: calc(100vh - 86.59px);
           min-height: 590px;
@@ -268,7 +266,7 @@ const IndexPage = props => {
             padding: 0 20px;
           `}
         >
-          <img src={ukraine} alt={`map of Ukraine`} css={css``} />
+          <img src={ukraine} alt={`map of Ukraine`} />
         </div>
         <div
           css={css`

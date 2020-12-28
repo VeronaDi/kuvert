@@ -1,12 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-const BackgroundSection = () => {
+const BackgroundSectionIndex = () => {
   const data = useStaticQuery(
     graphql`
       query {
         desktop: file(relativePath: { eq: "zeh.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920, maxHeight: 900) {
+            fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -19,4 +19,4 @@ const BackgroundSection = () => {
   return imageData
 }
 
-export default BackgroundSection
+export default BackgroundSectionIndex

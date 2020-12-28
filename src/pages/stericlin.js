@@ -13,7 +13,7 @@ import { css } from "@emotion/core"
 import { useTranslation } from "react-i18next"
 
 import stericlin from "../../static/products/stericlin.jpg"
-import stericlinBack from "../images/stericlin-back.jpeg"
+import stericlinBack from "../images/stericlin-back.jpg"
 import stericlinCert from "../../static/certificates/stericlin.jpg"
 
 import stericlinData from "../data/stericlin"

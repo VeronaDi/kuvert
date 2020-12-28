@@ -1,5 +1,6 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,7 +13,6 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import printedMix from "../../static/products/print-mix.png"
 import printed from "../data/printed"
 
 export default props => {
@@ -40,16 +40,18 @@ export default props => {
       >
         {t("printProducts")}
       </h3>
-      <img
-        src={printedMix}
+
+      <Img
+        fluid={props.data.imagePrintMix.childImageSharp.fluid}
         css={css`
           display: block;
-          width: 90vw;
           max-width: 1300px;
+          width: 90vw;
           margin: 0 auto;
         `}
-        alt="Printed mix"
+        alt="Printed mix envelopes"
       />
+
       <p
         css={css`
           width: 90vw;
@@ -134,3 +136,15 @@ export default props => {
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    imagePrintMix: file(relativePath: { eq: "print-mix.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

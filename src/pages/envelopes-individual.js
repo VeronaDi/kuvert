@@ -1,5 +1,6 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,8 +12,6 @@ import IndividualOrderSection from "../components/IndividualOrderSection"
 import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
-
-import individual from "../../static/products/individual-mix.png"
 
 export default props => {
   const T = useTranslation()
@@ -39,15 +38,15 @@ export default props => {
       >
         {t("individualEnv")}
       </h3>
-      <img
-        src={individual}
+      <Img
+        fluid={props.data.imageIndividualMix.childImageSharp.fluid}
         css={css`
           display: block;
-          max-width: 1306px;
+          max-width: 1300px;
           width: 90vw;
           margin: 0 auto;
         `}
-        alt="Individual"
+        alt="Individual print mix envelopes"
       />
       <p
         css={css`
@@ -67,3 +66,15 @@ export default props => {
     </Layout>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    imageIndividualMix: file(relativePath: { eq: "individual-mix.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

@@ -18,6 +18,7 @@ import factory3 from "../images/about/3.jpg"
 import factory4 from "../images/about/4.jpg"
 import factory5 from "../images/about/5.jpg"
 import factory6 from "../images/about/6.jpg"
+
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
 import logosOrganization from "../images/logos_organizations.jpg"
