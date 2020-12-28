@@ -108,8 +108,7 @@ export default props => {
             background-size: cover;
             background-position: center;
             @media screen and (max-width: 1144px) {
-              width: 50%;
-              height: 220px;
+              display: none;
             }
           `}
         ></div>
@@ -121,8 +120,7 @@ export default props => {
             background-size: cover;
             background-position: center;
             @media screen and (max-width: 1144px) {
-              width: 50%;
-              height: 220px;
+              display: none;
             }
           `}
         ></div>
@@ -190,8 +188,7 @@ export default props => {
             background-size: cover;
             background-position: center;
             @media screen and (max-width: 1144px) {
-              width: 50%;
-              height: 220px;
+              display: none;
             }
           `}
         ></div>
