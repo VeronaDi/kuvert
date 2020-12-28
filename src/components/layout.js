@@ -24,7 +24,7 @@ const Layout = props => {
     <I18nextProvider i18n={i18n}>
       <CookieConsent
         location="bottom"
-        buttonText="Accept"
+        buttonText={t("accept")}
         onAccept={() => {
           initializeAndTrack(location)
         }}

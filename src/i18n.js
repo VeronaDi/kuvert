@@ -16,6 +16,7 @@ const resources = {
       changeLang: {
         uk: "Eng",
       },
+      accept: "Прийняти",
       aboutUsShort: "Коротко про нас",
       additionalDetails: "Додаткові відомості",
       additionalInfo: "Додаткова інформація (необов'язково)",
@@ -330,6 +331,7 @@ const resources = {
       changeLang: {
         en: "Укр",
       },
+      accept: "Accept",
       aboutUsShort: "Briefly about us",
       additionalDetails: "Additional details",
       additionalInfo: "Additional information (not necessary)",
