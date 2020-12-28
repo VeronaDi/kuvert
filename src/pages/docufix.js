@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
+import CategoryTitle from "../components/CategoryTitle"
 
 import { css } from "@emotion/core"
 
@@ -26,21 +27,8 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <h3
-        css={css`
-          color: #000000;
-          text-align: center;
-          font-size: 36px;
-          font-weight: 500;
-          margin-top: 150px;
-          @media (max-width: 1243px) {
-            font-size: 24px;
-            margin-top: 50px;
-          }
-        `}
-      >
-        {t("seoDocufix")}
-      </h3>
+      <CategoryTitle category={t("seoDocufix")} />
+
       <div
         css={css`
           width: 90vw;

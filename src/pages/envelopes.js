@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
+import PageTitle from "../components/PageTitle"
 
 import { css } from "@emotion/core"
 
@@ -43,21 +44,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <h1
-        css={css`
-          color: #000000;
-          text-align: center;
-          font-size: 36px;
-          font-weight: bold;
-          margin-top: 150px;
-          @media (max-width: 1243px) {
-            font-size: 24px;
-            margin-top: 50px;
-          }
-        `}
-      >
-        {t("envelopes")}
-      </h1>
+      <PageTitle title={t("envelopes")} />
 
       <div className="overflow-hidden">
         <div

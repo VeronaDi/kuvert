@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from "gatsby"
 import LocalizedLink from "../components/LocalizedLink"
 
 import Layout from "../components/layout"
@@ -12,6 +11,7 @@ import { useTranslation } from "react-i18next"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
+import PageTitle from "../components/PageTitle"
 
 import products from "../data/products"
 
@@ -29,21 +29,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <h1
-        css={css`
-          color: #000000;
-          text-align: center;
-          font-size: 36px;
-          font-weight: bold;
-          margin-top: 150px;
-          @media (max-width: 1243px) {
-            font-size: 24px;
-            margin-top: 50px;
-          }
-        `}
-      >
-        {t("products")}
-      </h1>
+      <PageTitle title={t("products")} />
 
       <div className="overflow-hidden">
         <div

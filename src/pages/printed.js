@@ -8,6 +8,7 @@ import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import IndividualPrintSection from "../components/IndividualPrintSection"
+import CategoryTitle from "../components/CategoryTitle"
 
 import { css } from "@emotion/core"
 
@@ -29,21 +30,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <h3
-        css={css`
-          color: #000000;
-          text-align: center;
-          font-weight: 500;
-          font-size: 36px;
-          margin-top: 150px;
-          @media (max-width: 1243px) {
-            font-size: 24px;
-            margin-top: 50px;
-          }
-        `}
-      >
-        {t("printProducts")}
-      </h3>
+      <CategoryTitle category={t("printProducts")} />
 
       <Img
         fluid={props.data.imagePrintMix.childImageSharp.fluid}
