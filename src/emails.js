@@ -12,7 +12,7 @@ const mailParams = {
   To: "diana.didijtsuk@gmail.com",
 }
 
-// sklad inquiry //
+// zapyt@kuvert.if.ua //
 
 export const sendCartEmail = async (form, findProduct, t) =>
   Email.send({
@@ -42,7 +42,7 @@ const prepareBodyForCartEmail = (form, findProduct, t) => `
     .join("")}</ul>
 `
 
-// print inquiry //
+// kuvert.ua@kuvert.if.ua //
 
 export const sendPrintEmail = async form =>
   Email.send({
