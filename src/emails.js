@@ -1,4 +1,4 @@
-import Email from "./smtpjs"
+import Axios from "axios"
 
 const mailParams = {
   SecureToken: "8ebfda6c-53ab-40af-aee8-d0fb7f0f9d0f",
@@ -12,15 +12,28 @@ const mailParams = {
   To: "diana.didijtsuk@gmail.com",
 }
 
+async function sendMail(form) {
+  try {
+    await Axios({
+      method: "post",
+      url: "https://to/endpoint",
+      data: {
+        subject: form.subject,
+        message: form.message,
+      },
+    })
+  } catch (error) {
+    console.log(error.response)
+    return error.response
+  }
+}
+
 // zapyt@kuvert.if.ua //
 
 export const sendCartEmail = async (form, findProduct, t) =>
-  Email.send({
-    ...mailParams,
-    Subject: `Запит склад від ${form.name}`,
-    Body: prepareBodyForCartEmail(form, findProduct, t),
-  }).then(response => {
-    if (response !== "OK") throw response
+  await sendMail({
+    subject: `Запит склад від ${form.name}`,
+    message: prepareBodyForCartEmail(form, findProduct, t),
   })
 
 const prepareBodyForCartEmail = (form, findProduct, t) => `
@@ -42,15 +55,10 @@ const prepareBodyForCartEmail = (form, findProduct, t) => `
     .join("")}</ul>
 `
 
-// kuvert.ua@kuvert.if.ua //
-
 export const sendPrintEmail = async form =>
-  Email.send({
-    ...mailParams,
-    Subject: `Запит друк від ${form.name}`,
-    Body: prepareBodyForPrintEmail(form),
-  }).then(response => {
-    if (response !== "OK") throw response
+  await sendMail({
+    subject: `Запит друк від ${form.name}`,
+    message: prepareBodyForPrintEmail(form),
   })
 
 const prepareBodyForPrintEmail = form => `
@@ -69,12 +77,9 @@ const prepareBodyForPrintEmail = form => `
 // individual inquiry //
 
 export const sendIndividualEmail = async form =>
-  Email.send({
-    ...mailParams,
-    Subject: `Запит індивідуальний від ${form.name}`,
-    Body: prepareBodyForIndividualEmail(form),
-  }).then(response => {
-    if (response !== "OK") throw response
+  await sendMail({
+    subject: `Запит індивідуальний від ${form.name}`,
+    message: prepareBodyForIndividualEmail(form),
   })
 
 const prepareBodyForIndividualEmail = form => `
@@ -88,16 +93,14 @@ const prepareBodyForIndividualEmail = form => `
   <p>${form.message}</p>
 `
 
-// contact us form //
+// kuvert.ua@kuvert.if.ua //
 
-export const sendContactUsEmail = async form =>
-  Email.send({
-    ...mailParams,
-    Subject: `Лист з веб сторінки для ${form.department}`,
-    Body: prepareBodyForContactUsEmail(form),
-  }).then(response => {
-    if (response !== "OK") throw response
+export const sendContactUsEmail = async form => {
+  await sendMail({
+    subject: `Лист з веб сторінки для ${form.department}`,
+    message: prepareBodyForContactUsEmail(form),
   })
+}
 
 const prepareBodyForContactUsEmail = form => `
   <p>Від: ${form.name}</p>
