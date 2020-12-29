@@ -1,17 +1,5 @@
 import Axios from "axios"
 
-const mailParams = {
-  SecureToken: "8ebfda6c-53ab-40af-aee8-d0fb7f0f9d0f",
-  // SecureToken: "x",
-  // Host: "smtp.elasticemail.com",
-  // Username: "hochukonvert@gmail.com",
-  // Password: "9EBE51CBFD3812D695B77C53A63D3ABDA82A",
-  // port: 2525
-
-  From: "hochukonvert@gmail.com",
-  To: "diana.didijtsuk@gmail.com",
-}
-
 async function sendMail(form) {
   try {
     await Axios({
@@ -19,7 +7,6 @@ async function sendMail(form) {
       url: "https://to/endpoint",
       data: {
         subject: form.subject,
-        message: form.message,
       },
     })
   } catch (error) {
