@@ -1,2 +1,1 @@
-import X from "./about"
-export default X
+export { default } from "./about"

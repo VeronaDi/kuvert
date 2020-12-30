@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -24,6 +24,20 @@ export default props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
+  const { imagePrintMix } = useStaticQuery(
+    graphql`
+      query {
+        imagePrintMix: file(relativePath: { eq: "print-mix.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
   return (
     <Layout>
       <SEO title={t("printProducts")} description={t("metaDescrPrinted")} />
@@ -33,7 +47,7 @@ export default props => {
       <CategoryTitle category={t("printProducts")} />
 
       <Img
-        fluid={props.data.imagePrintMix.childImageSharp.fluid}
+        fluid={imagePrintMix.childImageSharp.fluid}
         css={css`
           display: block;
           max-width: 1300px;
@@ -127,15 +141,3 @@ export default props => {
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    imagePrintMix: file(relativePath: { eq: "print-mix.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

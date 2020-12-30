@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -20,6 +20,20 @@ export default props => {
     T.i18n.changeLanguage(props.pageContext.langKey)
   }
 
+  const { imageIndividualMix } = useStaticQuery(
+    graphql`
+      query {
+        imageIndividualMix: file(relativePath: { eq: "individual-mix.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
   return (
@@ -31,7 +45,7 @@ export default props => {
       <CategoryTitle category={t("individualEnv")} />
 
       <Img
-        fluid={props.data.imageIndividualMix.childImageSharp.fluid}
+        fluid={imageIndividualMix.childImageSharp.fluid}
         css={css`
           display: block;
           max-width: 1300px;
@@ -58,15 +72,3 @@ export default props => {
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query {
-    imageIndividualMix: file(relativePath: { eq: "individual-mix.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

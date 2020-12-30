@@ -1,2 +1,1 @@
-import X from "./products"
-export default X
+export { default } from "./products"

@@ -1,2 +1,1 @@
-import X from "./contacts"
-export default X
+export { default } from "./contacts"
