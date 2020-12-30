@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next"
 
 import stericlin from "../../static/products/stericlin.jpg"
 import stericlinBack from "../images/stericlin-back.jpg"
-import stericlinCert from "../../static/certificates/stericlin.jpg"
+import stericlinDecl from "../../static/certificates/stericlin-declaration.jpg"
 
 import stericlinData from "../data/stericlin"
 
@@ -205,7 +205,7 @@ export default props => {
         `}
       >
         <img
-          src={stericlinCert}
+          src={stericlinDecl}
           alt="stericlin-certificate"
           css={css`
             height: 100%;

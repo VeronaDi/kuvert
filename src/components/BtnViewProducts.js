@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 
 export default () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <Link

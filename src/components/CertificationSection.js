@@ -9,14 +9,14 @@ import backCertificates from "../images/background-certification.png"
 let certificate = [
   { img: "/certificates/iso.jpg", name: "ISO 9001:2015" },
   {
-    img: "/certificates/safety-work.jpg",
-    name: "The best labor protection enterprise",
+    img: "/certificates/remadays.jpg",
+    name: "Participant of advertising and printing exhibition",
   },
   { img: "/certificates/stericlin.jpg", name: "Stericlin" },
 ]
 
 export default () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <div
@@ -77,7 +77,7 @@ export default () => {
               <h6
                 css={css`
                   font-weight: normal;
-                  font-size: 24px;
+                  font-size: 18px;
                   margin: 0;
                   padding-top: 30px;
                 `}
