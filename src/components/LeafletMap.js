@@ -1,6 +1,6 @@
 import React from "react"
 import { Map, TileLayer, Marker } from "react-leaflet"
-import L from "leaflet"
+// import { icon } from "leaflet"
 
 import { css } from "@emotion/core"
 
@@ -22,11 +22,11 @@ export default ({ position }) => (
     />
     <Marker
       position={position}
-      icon={L.icon({
-        iconUrl: "/icon/markerIcon.png",
-        iconSize: [25, 34],
-        iconAnchor: [13, 34],
-      })}
+      // icon={icon({
+      //   iconUrl: "/icon/markerIcon.png",
+      //   iconSize: [25, 34],
+      //   iconAnchor: [13, 34],
+      // })}
     ></Marker>
   </Map>
 )
