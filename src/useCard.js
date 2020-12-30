@@ -2,8 +2,14 @@ import { useState, useEffect } from "react"
 
 const createCart = () => {
   const listeners = {}
-  const initialData = JSON.parse(window.localStorage.getItem("card")) || {}
-  let data = initialData
+  let isInitialized = false
+  let data = {}
+
+  const init = () => {
+    if (isInitialized) return
+    isInitialized = true
+    setCart(JSON.parse(window.localStorage.getItem("card")) || {})
+  }
 
   const setCart = newData => {
     data = newData
@@ -30,7 +36,7 @@ const createCart = () => {
     }
   }
 
-  return { getData: () => data, setItemAmount, setCart, subscribe }
+  return { getData: () => data, setItemAmount, setCart, subscribe, init }
 }
 
 const cart = createCart()
@@ -43,6 +49,8 @@ export const useCart = () => {
   const setItemAmount = cart.setItemAmount
 
   useEffect(() => {
+    cart.init()
+
     return cart.subscribe(newData => {
       setData(newData)
     })
