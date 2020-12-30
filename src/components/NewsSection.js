@@ -61,6 +61,9 @@ export default () => {
                   height: 300px;
                   background: url(${img});
                   background-size: cover;
+                  @media (max-width: 1024px) {
+                    background-size: 100% 100%;
+                  }
                 `}
               />
               <div

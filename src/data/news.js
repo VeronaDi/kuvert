@@ -1,35 +1,36 @@
 export default [
   {
-    img: "/news/Thank-u.jpg",
-    title: { en: "DIGITAL PRINT", uk: "Цифровий друк" },
+    img: "/news/nyholiday.jpg",
+    title: { en: "Holiday work schedule", uk: "Графік на свята" },
     text: {
       en:
-        "In these difficult circumstances, the delivery of goods plays an important role. Make your package recognizable among others and ensure its integrity. Digital printing on bubble envelopes and other packages. We print from 50 pcs.",
+        "From December 30 to January 4, we are going on vacation to continue working with you next year with renewed strength and good mood.",
       uk:
-        "В цих нелегких умовах доставка товарів відіграє важливу роль. Зробіть свій пакунок впізнаваним серед інших та забезпечте його цілісність. Цифровий друк на бандерольних пакетах і не тільки. Друкуємо від 50 шт.",
+        "З 30 грудня по 4 січня ми йдемо на відпочинок, щоб із відновленими силами та хорошим настроєм продовжити співпрацю з вами у наступному році.",
     },
-    id: "digitalprint",
+    id: "holidayschedule",
   },
   {
-    img: "/news/paperovyj-fajl.jpg",
-    title: { en: "PAPER FILES", uk: "Паперові файли" },
+    img: "/news/nytorba.jpg",
+    title: { en: "Print on paper bags", uk: "Друк на паперових торбах" },
     text: {
-      en:
-        "An environmentally friendly and stylish replacement for polyethylene files: convenient for storing documents; easy to use for content records; can be made of white or brown paper; with or without your print.",
+      en: "Digital printing on paper bags from 50 pcs.",
       uk:
-        "Паперові файли - екологічна і стильна заміна поліетиленовим файлам: зручні для зберігання документів; легко використовувати для записів щодо вмісту; можуть бути з білого або коричневого паперу; з Вашим друком чи без друку.",
+        "Цифровий друк будь-якої складності та колірності на паперових торбинках від 50 штук.",
     },
-    id: "paperfile",
+    id: "digitalprinttorba",
   },
   {
-    img: "/news/mountain.jpg",
-    title: { en: "Eco-blocks for notes", uk: "Еко-блоки для нотаток" },
-    text: {
-      en:
-        "Need to write down important information and no paper near? We have a proposal - cardboard box with papernotes, can be with your printing or without printing. Always at hand and in a convenient format.",
-      uk:
-        "Потрібно записати важливу інформацію, а під рукою немає листочка? У нас є пропозиція - картонна коробочка з листочками-записками, може бути з вашим друком або без друку. Завжди під рукою і в зручному форматі.",
+    img: "/news/nybanderole.jpg",
+    title: {
+      en: "Print on parcel packages",
+      uk: "Друк на бандерольних пакетах",
     },
-    id: "ecoblock",
+    text: {
+      en: "Digital printing on parcel packages from 50 pcs.",
+      uk:
+        "Цифровий друк будь-якої складності та колірності на бандерольних пакетах від 50 штук.",
+    },
+    id: "digitalprintbanderole",
   },
 ]
