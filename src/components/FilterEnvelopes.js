@@ -313,31 +313,37 @@ export default ({
           </ul>
         </div>
       </div>
-      <div
-        css={css`
-          width: 100%;
-          text-align: center;
-          margin-bottom: 50px;
-        `}
-      >
-        <button
-          type="button"
+
+      {(formatsFilter.length > 0 ||
+        typesFilter.length > 0 ||
+        colorsFilter.length > 0 ||
+        sealingsFilter.length > 0) && (
+        <div
           css={css`
-            background: transparent;
-            border: none;
-            outline: none;
-            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 50px;
           `}
-          onClick={() => {
-            setFormatsFilter([])
-            setTypesFilter([])
-            setColorsFilter([])
-            setSealingsFilter([])
-          }}
         >
-          Скинути параметри
-        </button>
-      </div>
+          <button
+            type="button"
+            css={css`
+              background: transparent;
+              border: none;
+              outline: none;
+              cursor: pointer;
+            `}
+            onClick={() => {
+              setFormatsFilter([])
+              setTypesFilter([])
+              setColorsFilter([])
+              setSealingsFilter([])
+            }}
+          >
+            Скинути параметри
+          </button>
+        </div>
+      )}
     </Layout>
   )
 }

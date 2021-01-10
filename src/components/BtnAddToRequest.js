@@ -29,11 +29,12 @@ export default ({ boxQuantity = 1, code }) => {
             font-weight: 500;
             font-size: 16px;
             line-height: 19px;
-            color: #383838;
-            border: 1px solid transparent;
+            color: #b70039;
+            border: 1px solid #b70039;
 
             &:hover {
-              border: 1px solid #383838;
+              background: #b70039;
+              color: white;
             }
           `}
         >

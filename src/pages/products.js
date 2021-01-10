@@ -41,7 +41,7 @@ export default props => {
             }
           `}
         >
-          {products.map(({ name, img, id }) => (
+          {products.map(({ name, img, id, pdf }) => (
             <div
               key={id}
               className="w-full md:w-1/2 px-2"
@@ -55,34 +55,67 @@ export default props => {
                 }
               `}
             >
-              <LocalizedLink
-                to={`/${id}`}
-                css={css`
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  height: 100%;
-                  background: url(${img}), rgba(128, 128, 128, 0.4);
-                  position: relative;
-                  text-align: center;
-                  cursor: pointer;
-                  color: #b40039;
-                  font-weight: bold;
-                  font-size: 40px;
-                  text-decoration: none;
-                  @media screen and (max-width: 1024px) {
-                    font-size: 22px;
-                  }
-                `}
-              >
-                <h5
+              {pdf ? (
+                <a
+                  href={pdf}
+                  target="_blank"
+                  rel="noreferrer"
                   css={css`
-                    font-family: "Raleway", sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    background: url(${img}), rgba(128, 128, 128, 0.4);
+                    position: relative;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #b40039;
+                    font-weight: bold;
+                    font-size: 40px;
+                    text-decoration: none;
+                    @media screen and (max-width: 1024px) {
+                      font-size: 22px;
+                    }
                   `}
                 >
-                  {t(name)}
-                </h5>
-              </LocalizedLink>
+                  <h5
+                    css={css`
+                      font-family: "Raleway", sans-serif;
+                    `}
+                  >
+                    {t(name)}
+                  </h5>
+                </a>
+              ) : (
+                <LocalizedLink
+                  to={`/${id}`}
+                  css={css`
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    background: url(${img}), rgba(128, 128, 128, 0.4);
+                    position: relative;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #b40039;
+                    font-weight: bold;
+                    font-size: 40px;
+                    text-decoration: none;
+                    @media screen and (max-width: 1024px) {
+                      font-size: 22px;
+                    }
+                  `}
+                >
+                  <h5
+                    css={css`
+                      font-family: "Raleway", sans-serif;
+                    `}
+                  >
+                    {t(name)}
+                  </h5>
+                </LocalizedLink>
+              )}
             </div>
           ))}
         </div>

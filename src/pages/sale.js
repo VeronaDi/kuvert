@@ -11,9 +11,6 @@ import CategoryTitle from "../components/CategoryTitle"
 
 import { css } from "@emotion/core"
 
-import saleImg1 from "../../static/sale/sale-1.jpg"
-import saleImg2 from "../../static/sale/sale-2.jpg"
-
 export default props => {
   const T = useTranslation()
   if (T.i18n.language !== props.pageContext.langKey) {
@@ -29,42 +26,6 @@ export default props => {
       <MobileNav {...props} />
 
       <CategoryTitle category={t("sale")} />
-
-      <div
-        css={css`
-          width: 100%;
-          margin: 40px auto;
-          display: flex;
-          justify-content: space-around;
-          @media screen and (max-width: 1024px) {
-            flex-direction: column;
-            align-items: center;
-          }
-        `}
-      >
-        <img
-          css={css`
-            width: 35%;
-            @media screen and (max-width: 1024px) {
-              width: 90vw;
-            }
-          `}
-          src={saleImg1}
-          alt="saletable"
-        />
-
-        <img
-          css={css`
-            width: 35%;
-            @media screen and (max-width: 1024px) {
-              width: 90vw;
-              padding-top: 30px;
-            }
-          `}
-          src={saleImg2}
-          alt="saletable2"
-        />
-      </div>
 
       <Footer />
     </Layout>

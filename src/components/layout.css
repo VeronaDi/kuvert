@@ -203,12 +203,12 @@ textarea {
   z-index: 1;
 }
 
-img.leaflet-marker-icon 
+/* img.leaflet-marker-icon 
 {
     background-image: url("../../static/icon/markerIcon.png");
     background-repeat: no-repeat;
     background-size: contain;
-}
+} */
 
 /* GRID */
 .overflow-hidden {

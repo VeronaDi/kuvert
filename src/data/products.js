@@ -47,5 +47,6 @@ export default [
     img: "/products/sale-pattern.png",
     name: { en: "Sale", uk: "Розпродаж" },
     id: "sale",
+    pdf: "/sale/sale.pdf",
   },
 ]

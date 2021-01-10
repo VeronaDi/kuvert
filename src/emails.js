@@ -1,13 +1,11 @@
 import Axios from "axios"
 
-async function sendMail(form) {
+async function sendMail(data) {
   try {
     await Axios({
       method: "post",
       url: "https://to/endpoint",
-      data: {
-        subject: form.subject,
-      },
+      data,
     })
   } catch (error) {
     console.log(error.response)
