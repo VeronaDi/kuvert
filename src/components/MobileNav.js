@@ -110,9 +110,26 @@ export default ({ location }) => {
             display: block;
             margin-right: 100px;
             float: right;
+            position: relative;
           `}
         >
-          {Object.keys(cart).length}
+          {Object.keys(cart).length > 0 && (
+            <p
+              css={css`
+                position: absolute;
+                top: 6px;
+                right: 14px;
+                margin: 0;
+                background: #b70039;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                color: white;
+              `}
+            >
+              {Object.keys(cart).length}
+            </p>
+          )}
           <img
             src={envelopeCart}
             alt="cart"
