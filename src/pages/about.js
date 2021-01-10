@@ -51,6 +51,7 @@ export default props => {
           @media screen and (max-width: 1144px) {
             height: auto;
             flex-direction: row;
+            justify-content: space-between;
           }
         `}
       >
@@ -79,8 +80,8 @@ export default props => {
               left: 0;
             }
             @media screen and (max-width: 1144px) {
-              width: 50%;
-              height: 220px;
+              width: 100%;
+              height: 130px;
             }
           `}
         >
@@ -95,6 +96,9 @@ export default props => {
               position: relative;
               z-index: 1;
               padding: 0 10px;
+              @media screen and (max-width: 1144px) {
+                font-size: 5vw;
+              }
             `}
           >
             {t("disableWorkers")}
@@ -132,7 +136,7 @@ export default props => {
             background-size: cover;
             background-position: center;
             @media screen and (max-width: 1144px) {
-              width: 50%;
+              width: 49%;
               height: 220px;
             }
           `}
@@ -145,7 +149,7 @@ export default props => {
             background-size: cover;
             background-position: center;
             @media screen and (max-width: 1144px) {
-              width: 50%;
+              width: 49%;
               height: 220px;
             }
           `}
@@ -157,8 +161,8 @@ export default props => {
             display: table;
             text-align: right;
             @media screen and (max-width: 1144px) {
-              width: 50%;
-              height: 220px;
+              width: 100%;
+              height: 130px;
             }
           `}
         >
@@ -173,7 +177,7 @@ export default props => {
               background: #b40039;
               letter-spacing: 2px;
               @media screen and (max-width: 1144px) {
-                font-size: 4vw;
+                font-size: 5vw;
               }
             `}
           >
