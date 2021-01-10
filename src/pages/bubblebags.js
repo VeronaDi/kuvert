@@ -6,7 +6,7 @@ import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
-import CategoryTitle from "../components/CategoryTitle"
+import PageTitle from "../components/PageTitle"
 
 import { css } from "@emotion/core"
 
@@ -60,7 +60,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <CategoryTitle category={t("airpoc")} />
+      <PageTitle category={t("airpoc")} />
 
       <div
         css={css`

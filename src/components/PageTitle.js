@@ -8,7 +8,7 @@ export default ({ t, title }) => {
         color: #000000;
         text-align: center;
         font-size: 36px;
-        font-weight: bold;
+        font-weight: 500;
         margin-top: 150px;
         @media (max-width: 1243px) {
           font-size: 24px;

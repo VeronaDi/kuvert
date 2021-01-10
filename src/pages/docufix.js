@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import Footer from "../components/Footer"
-import CategoryTitle from "../components/CategoryTitle"
+import PageTitle from "../components/PageTitle"
 
 import { css } from "@emotion/core"
 
@@ -27,7 +27,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <CategoryTitle category={t("seoDocufix")} />
+      <PageTitle category={t("seoDocufix")} />
 
       <div
         css={css`

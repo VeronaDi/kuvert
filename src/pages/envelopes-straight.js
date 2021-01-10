@@ -8,7 +8,7 @@ import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import FilterEnvelopes from "../components/FilterEnvelopes"
-import CategoryTitle from "../components/CategoryTitle"
+import PageTitle from "../components/PageTitle"
 
 import { css } from "@emotion/core"
 
@@ -77,7 +77,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <CategoryTitle category={t("envelopesStandard")} />
+      <PageTitle category={t("envelopesStandard")} />
 
       <FilterEnvelopes
         t={t}
