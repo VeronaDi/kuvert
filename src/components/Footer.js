@@ -7,7 +7,7 @@ import linkedin from "../images/linkedin.svg"
 
 import contacts from "../data/contacts"
 
-const Office = ({ city, street, phones }) => {
+const Office = ({ city, street, phones, postalCode }) => {
   return (
     <div
       css={css`
@@ -28,8 +28,15 @@ const Office = ({ city, street, phones }) => {
         }
       `}
     >
-      <p>{city}</p>
+      <p
+        css={css`
+          margin: 0;
+        `}
+      >
+        {city}
+      </p>
       <p>{street}</p>
+      <p>{postalCode}</p>
 
       {phones.map(phone => (
         <a
@@ -108,11 +115,12 @@ export default props => {
               }
             `}
           >
-            {t("addressOfFactory")}
+            {t("factory")}
           </h4>
           <Office
             city={t(contacts.factory.city)}
             street={t(contacts.factory.street)}
+            postalCode={contacts.factory.postalCode}
             phones={contacts.factory.phones}
           />
         </div>
@@ -145,11 +153,12 @@ export default props => {
               }
             `}
           >
-            {contacts.offices.map(({ city, street, phones }) => (
+            {contacts.offices.map(({ city, street, phones, postalCode }) => (
               <Office
                 key={t(city)}
                 city={t(city)}
                 street={t(street)}
+                postalCode={postalCode}
                 phones={phones}
               />
             ))}

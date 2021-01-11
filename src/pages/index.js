@@ -30,9 +30,6 @@ const IndexPage = props => {
 
   const t = key => (typeof key === "string" ? T.t(key) : key[T.i18n.language])
 
-  // background: url(${zeh});
-  // background-size: cover;
-
   return (
     <Layout>
       <SEO title={t("seoHome")} description={t("metaDescrIndex")} />
