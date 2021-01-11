@@ -372,8 +372,8 @@ export default props => {
 
       <h1
         css={css`
-          font-size: 40px;
-          font-weight: bold;
+          font-size: 36px;
+          font-weight: 500;
           margin-bottom: 50px;
           text-align: center;
         `}
