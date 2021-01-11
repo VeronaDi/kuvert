@@ -426,30 +426,35 @@ export default props => {
                       border-radius: 3px;
                     `}
                   >
-                    <p
-                      css={css`
-                        text-align: center;
-                        font-size: 18px;
-                        padding-top: 15px;
-                      `}
-                    >
-                      {values.products.length === 0 && t("emptyCartText")}
-                    </p>
-                    <FieldArray
-                      name="products"
-                      render={arrayHelpers => (
-                        <div>
-                          {values.products.map((_product, index) => (
-                            <ProductRow
-                              key={index}
-                              index={index}
-                              t={t}
-                              arrayHelpers={arrayHelpers}
-                            />
-                          ))}
-                        </div>
-                      )}
-                    />
+                    {values.products.length === 0 ? (
+                      <p
+                        css={css`
+                          text-align: center;
+                          font-size: 18px;
+                          padding-top: 15px;
+                          > a {
+                            color: #040404;
+                          }
+                        `}
+                        dangerouslySetInnerHTML={{ __html: t("emptyCartText") }}
+                      />
+                    ) : (
+                      <FieldArray
+                        name="products"
+                        render={arrayHelpers => (
+                          <div>
+                            {values.products.map((_product, index) => (
+                              <ProductRow
+                                key={index}
+                                index={index}
+                                t={t}
+                                arrayHelpers={arrayHelpers}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      />
+                    )}
                     <div
                       css={css`
                         width: 100%;
