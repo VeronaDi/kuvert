@@ -73,6 +73,7 @@ const MyAmountInput = ({ label, setFieldValue, step = 1, ...props }) => {
               -webkit-appearance: none;
               margin: 0;
             }
+            -moz-appearance: textfield;
           `}
         />
         <button

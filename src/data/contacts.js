@@ -5,7 +5,7 @@ export default {
     postalCode: "76014",
     phones: ["+38 050 377 08 01", "+38 067 327 08 01", "+38 0342 522 127"],
     position: [48.9064118, 24.7253379],
-    email: "info@kuvert.if.ua",
+    email: "kuvert.ua@kuvert.if.ua",
   },
   offices: [
     {
