@@ -77,7 +77,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("envelopesStandard")} />
+      <PageTitle title={t("envelopesStandard")} />
 
       <FilterEnvelopes
         t={t}

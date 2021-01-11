@@ -60,7 +60,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("airpoc")} />
+      <PageTitle title={t("airpoc")} />
 
       <div
         css={css`

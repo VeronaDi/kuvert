@@ -59,7 +59,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("triangularValve")} />
+      <PageTitle title={t("triangularValve")} />
 
       <div
         css={css`

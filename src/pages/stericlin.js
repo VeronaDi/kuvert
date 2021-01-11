@@ -111,7 +111,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("stericlin")} />
+      <PageTitle title={t("stericlin")} />
 
       <div
         css={css`

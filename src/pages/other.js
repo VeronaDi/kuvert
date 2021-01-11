@@ -27,7 +27,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("otherProducts")} />
+      <PageTitle title={t("otherProducts")} />
 
       <div
         css={css`

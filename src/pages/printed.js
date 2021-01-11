@@ -44,7 +44,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("printProducts")} />
+      <PageTitle title={t("printProducts")} />
 
       <Img
         fluid={imagePrintMix.childImageSharp.fluid}

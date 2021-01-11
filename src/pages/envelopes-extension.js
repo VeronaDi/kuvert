@@ -59,7 +59,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("extensionEnvelopes")} />
+      <PageTitle title={t("extensionEnvelopes")} />
 
       <div
         css={css`

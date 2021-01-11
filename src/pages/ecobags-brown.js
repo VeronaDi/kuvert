@@ -57,7 +57,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("ecobagBrown")} />
+      <PageTitle title={t("ecobagBrown")} />
 
       <EcobagTopSection ecobags={ecobagsBrown} img={ecobagsBr} />
 

@@ -42,7 +42,7 @@ export default props => {
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle category={t("individualEnv")} />
+      <PageTitle title={t("individualEnv")} />
 
       <Img
         fluid={imageIndividualMix.childImageSharp.fluid}
