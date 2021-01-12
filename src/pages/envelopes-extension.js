@@ -280,7 +280,7 @@ export default props => {
       </h4>
 
       {extensionEnvelopes.map(
-        ({ code, format, color, type, gsm, boxSize, sealing, price }) => (
+        ({ code, format, color, type, gsm, boxSize, sealing }) => (
           <div
             key={code}
             css={css`
@@ -346,13 +346,6 @@ export default props => {
                 <EnvelopeParam>
                   {boxSize}
                   {t("pcs")}
-                </EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>
-                  {t("from")} {price} {t("uah")}
                 </EnvelopeParam>
               </GeneralNames>
             </div>

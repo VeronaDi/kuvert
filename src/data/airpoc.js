@@ -6,7 +6,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 200,
-    price: 1220,
   },
   {
     code: "06-9111",
@@ -15,7 +14,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 200,
-    price: 1220,
   },
   {
     code: "06-9016",
@@ -24,7 +22,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 200,
-    price: 1622,
   },
   {
     code: "06-9116",
@@ -33,7 +30,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 200,
-    price: 1622,
   },
   {
     code: "06-9021",
@@ -42,7 +38,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 1980,
   },
   {
     code: "06-9121",
@@ -51,7 +46,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 1980,
   },
   {
     code: "06-9026",
@@ -60,7 +54,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 2578,
   },
   {
     code: "06-9126",
@@ -69,7 +62,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 2578,
   },
   {
     code: "06-9031",
@@ -78,7 +70,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 3150,
   },
   {
     code: "06-9131",
@@ -87,7 +78,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 3150,
   },
   {
     code: "06-9036",
@@ -96,7 +86,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 3865,
   },
   {
     code: "06-9136",
@@ -105,7 +94,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 3865,
   },
   {
     code: "06-9041",
@@ -114,7 +102,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 4065,
   },
   {
     code: "06-9141",
@@ -123,7 +110,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 4065,
   },
   {
     code: "06-9046",
@@ -132,7 +118,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 4819,
   },
   {
     code: "06-9146",
@@ -141,7 +126,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 100,
-    price: 4819,
   },
   {
     code: "06-9051",
@@ -150,7 +134,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 50,
-    price: 6915,
   },
   {
     code: "06-9151",
@@ -159,7 +142,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 50,
-    price: 6915,
   },
   {
     code: "06-9056",
@@ -168,7 +150,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 50,
-    price: 7881,
   },
   {
     code: "06-9156",
@@ -177,7 +158,6 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 50,
-    price: 7881,
   },
   {
     code: "06-9061",
@@ -186,7 +166,6 @@ export default [
     color: "envelopesProperties.color.white",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 50,
-    price: 1891,
   },
   {
     code: "06-9161",
@@ -195,6 +174,5 @@ export default [
     color: "envelopesProperties.color.brown",
     sealing: "envelopesProperties.sealing.peelSeal",
     boxSize: 50,
-    price: 1891,
   },
 ]

@@ -275,78 +275,69 @@ export default props => {
         {t("chooseDesiredProduct")}
       </h4>
       <div>
-        {airpoc.map(
-          ({ code, format, size, color, boxSize, sealing, price }) => (
+        {airpoc.map(({ code, format, size, color, boxSize, sealing }) => (
+          <div
+            key={code}
+            css={css`
+              background: #ffffff;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 3px;
+              width: 90vw;
+              margin: 20px auto 54px auto;
+              padding: 30px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              @media screen and (max-width: 570px) {
+                flex-direction: column;
+              }
+            `}
+          >
             <div
-              key={code}
               css={css`
-                background: #ffffff;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                border-radius: 3px;
-                width: 90vw;
-                margin: 20px auto 54px auto;
-                padding: 30px;
                 display: flex;
                 justify-content: space-around;
-                align-items: center;
-                @media screen and (max-width: 570px) {
-                  flex-direction: column;
+                flex: 1;
+                @media screen and (max-width: 1024px) {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, 150px);
                 }
               `}
             >
-              <div
-                css={css`
-                  display: flex;
-                  justify-content: space-around;
-                  flex: 1;
-                  @media screen and (max-width: 1024px) {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, 150px);
-                  }
-                `}
-              >
-                <GeneralNames>
-                  {t("code")}
-                  <EnvelopeParam>{code}</EnvelopeParam>
-                </GeneralNames>
+              <GeneralNames>
+                {t("code")}
+                <EnvelopeParam>{code}</EnvelopeParam>
+              </GeneralNames>
 
-                <GeneralNames>
-                  {t("format")}
-                  <EnvelopeParam>{format}</EnvelopeParam>
-                </GeneralNames>
+              <GeneralNames>
+                {t("format")}
+                <EnvelopeParam>{format}</EnvelopeParam>
+              </GeneralNames>
 
-                <GeneralNames>
-                  {t("size")}, {t("mm")}
-                  <EnvelopeParam>{size}</EnvelopeParam>
-                </GeneralNames>
+              <GeneralNames>
+                {t("size")}, {t("mm")}
+                <EnvelopeParam>{size}</EnvelopeParam>
+              </GeneralNames>
 
-                <GeneralNames>
-                  {t("sealing")}
-                  <EnvelopeParam>{t(sealing)}</EnvelopeParam>
-                </GeneralNames>
+              <GeneralNames>
+                {t("sealing")}
+                <EnvelopeParam>{t(sealing)}</EnvelopeParam>
+              </GeneralNames>
 
-                <GeneralNames>
-                  {t("color")}
-                  <EnvelopeParam>{t(color)}</EnvelopeParam>
-                </GeneralNames>
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
 
-                <GeneralNames>
-                  {t("quantityBox")}, {t("pcs")}
-                  <EnvelopeParam>{boxSize}</EnvelopeParam>
-                </GeneralNames>
-
-                <GeneralNames>
-                  {t("price")} {t("thousandPcs")}
-                  <EnvelopeParam>
-                    {t("from")} {price} {t("uah")}
-                  </EnvelopeParam>
-                </GeneralNames>
-              </div>
-
-              <BtnAddToRequest boxQuantity={boxSize} code={code} />
+              <GeneralNames>
+                {t("quantityBox")}, {t("pcs")}
+                <EnvelopeParam>{boxSize}</EnvelopeParam>
+              </GeneralNames>
             </div>
-          )
-        )}
+
+            <BtnAddToRequest boxQuantity={boxSize} code={code} />
+          </div>
+        ))}
       </div>
 
       <Footer />
