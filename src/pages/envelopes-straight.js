@@ -101,7 +101,6 @@ export default props => {
             boxSize,
             sealing,
             window,
-            price,
             print,
           }) => (
             <div
@@ -176,13 +175,6 @@ export default props => {
                 <GeneralNames>
                   {t("quantityBox")}, {t("pcs")}
                   <EnvelopeParam>{boxSize}</EnvelopeParam>
-                </GeneralNames>
-
-                <GeneralNames>
-                  {t("price")} {t("thousandPcs")}
-                  <EnvelopeParam>
-                    {t("from")} {price} {t("uah")}
-                  </EnvelopeParam>
                 </GeneralNames>
               </div>
               <BtnAddToRequest boxQuantity={boxSize} code={code} />
