@@ -43,7 +43,19 @@ export default props => {
       <MobileNav {...props} />
 
       <PageTitle title={t("individualEnv")} />
-
+      <p
+        css={css`
+          width: 90vw;
+          max-width: 845px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+          margin: 45px auto;
+          text-align: center;
+        `}
+      >
+        {t("individualEnvTextTop")}
+      </p>
       <Img
         fluid={imageIndividualMix.childImageSharp.fluid}
         css={css`
@@ -65,7 +77,7 @@ export default props => {
           text-align: center;
         `}
       >
-        {t("individualEnvText")}
+        {t("individualEnvTextBottom")}
       </p>
       <IndividualOrderSection />
       <Footer />

@@ -24,10 +24,10 @@ let banderole = [
   },
   {
     name: {
-      en: "Document Enclosed Wallets Envelopes",
-      uk: "Конверти для супровідних документів",
+      en: "Envelopes RTG",
+      uk: "Пакети для рентгенівських знімків",
     },
-    id: "docufix",
+    id: "rtg",
   },
   {
     name: {

@@ -22,6 +22,7 @@ import envelopes from "../data/envelopes"
 import extEnvelopes from "../data/extensionEnvelopes"
 import triangularEnvelopes from "../data/triangularEnvelopes"
 import airpoc from "../data/airpoc"
+import rtg from "../data/rtg"
 import ecobagWhite from "../data/ecobagWhite"
 import ecobagBrown from "../data/ecobagBrown"
 import ecobagColor from "../data/ecobagColor"
@@ -71,6 +72,10 @@ const getTriangularEnvelopeDescription = function(t) {
 
 const getAirpocDescription = function(t) {
   return [this.format, this.size, t(this.sealing), t(this.color)].join(" ")
+}
+
+const getRTGDescription = function(t) {
+  return [this.size, t(this.color)].join(" ")
 }
 
 const getEcobagWhiteDescription = function(t) {
@@ -132,6 +137,13 @@ airpoc.forEach(airpoc => {
   allProducts[airpoc.code] = {
     ...airpoc,
     getProductDescription: getAirpocDescription,
+  }
+})
+
+rtg.forEach(rtg => {
+  allProducts[rtg.code] = {
+    ...rtg,
+    getProductDescription: getRTGDescription,
   }
 })
 

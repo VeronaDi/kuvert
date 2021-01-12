@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
+import BtnAddToRequest from "../components/BtnAddToRequest"
 import Footer from "../components/Footer"
 import PageTitle from "../components/PageTitle"
 
@@ -11,7 +12,35 @@ import { css } from "@emotion/core"
 
 import { useTranslation } from "react-i18next"
 
-import docufix from "../../static/products/docufix.webp"
+import rtgData from "../data/rtg"
+
+import rtg from "../../static/products/rtg.jpg"
+
+const GeneralNames = ({ children }) => (
+  <div
+    css={css`
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #4f4f4f;
+    `}
+  >
+    {children}
+  </div>
+)
+
+const EnvelopeParam = ({ children }) => (
+  <p
+    css={css`
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+    `}
+  >
+    {children}
+  </p>
+)
 
 export default props => {
   const T = useTranslation()
@@ -23,11 +52,11 @@ export default props => {
 
   return (
     <Layout>
-      <SEO title={t("seoDocufix")} />
+      <SEO title={t("seoRTG")} />
       <MainNav {...props} />
       <MobileNav {...props} />
 
-      <PageTitle title={t("seoDocufix")} />
+      <PageTitle title={t("seoRTG")} />
 
       <div
         css={css`
@@ -54,7 +83,7 @@ export default props => {
             }
           `}
         >
-          <img src={docufix} alt="Docufix" />
+          <img src={rtg} alt="envelope RTG" />
         </div>
         <div
           css={css`
@@ -70,10 +99,15 @@ export default props => {
               font-size: 18px;
               line-height: 27px;
               width: 100%;
+              a {
+                text-decoration: none;
+                color: black;
+                :hover {
+                  text-decoration: underline;
+                }
             `}
-          >
-            {t("docufixText")}
-          </p>
+            dangerouslySetInnerHTML={{ __html: t("rtgText") }}
+          />
 
           <div
             css={css`
@@ -105,7 +139,7 @@ export default props => {
                   }
                 `}
               >
-                {t("productLabeling")}
+                {t("hospital")}
               </li>
               <li
                 css={css`
@@ -119,24 +153,78 @@ export default props => {
                   }
                 `}
               >
-                {t("docFlow")}
-              </li>
-              <li
-                css={css`
-                  font-weight: 500;
-                  font-size: 16px;
-                  line-height: 36px;
-                  :before {
-                    content: "-";
-                    padding-right: 5px;
-                  }
-                `}
-              >
-                {t("infoInscriptions")}
+                {t("laboratories")}
               </li>
             </ul>
           </div>
         </div>
+      </div>
+
+      <h4
+        css={css`
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 33px;
+          text-align: center;
+          margin: 54px 0 23px 0;
+        `}
+      >
+        {t("chooseDesiredProduct")}
+      </h4>
+      <div>
+        {rtgData.map(({ code, size, color, boxSize }) => (
+          <div
+            key={code}
+            css={css`
+              background: #ffffff;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 3px;
+              width: 90vw;
+              margin: 20px auto 54px auto;
+              padding: 30px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              @media screen and (max-width: 570px) {
+                flex-direction: column;
+              }
+            `}
+          >
+            <div
+              css={css`
+                display: flex;
+                justify-content: space-around;
+                flex: 1;
+                @media screen and (max-width: 1024px) {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, 150px);
+                }
+              `}
+            >
+              <GeneralNames>
+                {t("code")}
+                <EnvelopeParam>{code}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("size")}, {t("mm")}
+                <EnvelopeParam>{size}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("color")}
+                <EnvelopeParam>{t(color)}</EnvelopeParam>
+              </GeneralNames>
+
+              <GeneralNames>
+                {t("quantityBox")}, {t("pcs")}
+                <EnvelopeParam>{boxSize}</EnvelopeParam>
+              </GeneralNames>
+            </div>
+
+            <BtnAddToRequest boxQuantity={boxSize} code={code} />
+          </div>
+        ))}
       </div>
 
       <Footer />

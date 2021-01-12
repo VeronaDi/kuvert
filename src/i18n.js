@@ -67,8 +67,8 @@ const resources = {
       department: "Відділ",
       dnipro: "Дніпро",
       docFlow: "Документообіг",
-      docufixText:
-        "Прозорі поліетиленові конверти з клейовим шаром на всю сторону та з відривною стрічкою на клапані. Не потрібно більше додатково пересилати поштою документи на товар, достатньо вкласти їх в такий конверт і приклеїти його на коробку або піддон.",
+      rtgText:
+        "Пакети для рентгенівських плівок характеризуються високою міцністю, оскільки виготовлені з найкращих матеріалів. Використовуються для зберігання та/або доставки рентгенівських знімків. Вироблені польською фабрикою <a href='https://kuvert.com.pl/oferta/listowe-aktowe/rtg/' target='_blank rel='nofollow'>Kuvert Polska</a>.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
       disableWorkers: "10% працівників нашої фабрики —  це люди з інвалідністю",
       ecoblock: "Еко блоки для нотаток",
@@ -115,7 +115,7 @@ const resources = {
         },
         color: {
           white: "білий",
-          brown: "коричневиий",
+          brown: "коричневий",
           orange: "помаранчевий",
           red: "червоний",
           yellowBlue: "жовтий і синій",
@@ -157,8 +157,9 @@ const resources = {
       indexContactUs:
         "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львів.",
       individualEnv: "Конверти з індивідуальним дизайном",
-      individualEnvText:
-        "Пропонуємо максимальну гнучкість в оформленні Вашого особливого конверта. Відповідно, можливості дизайну практично необмежені.",
+      individualEnvTextTop: "Можливості дизайну конверта практично необмежені.",
+      individualEnvTextBottom:
+        "Пропонуємо максимальну гнучкість в оформленні Вашого особливого конверта.",
       individualOrder: "Індивідуальний запит",
       individualOrderText:
         "Якщо бажаєте продукцію з власними параметрами, цей варіант саме для Вас.",
@@ -175,6 +176,7 @@ const resources = {
       factory: "Фабрика",
       g: "г",
       gsm: "г/м²",
+      laboratories: "Лабораторії",
       learnMore: "Дізнатись більше",
       lviv: "Львів",
       letterhead: "Бланки",
@@ -235,8 +237,10 @@ const resources = {
       printMockup: "Приклад друку (необов'язково)",
       productionDep: "Виробничий відділ",
       printProducts: "Продукція з друком",
-      printProductsText:
-        "Пропонуємо професійний друк на конвертах та паперових торбах— нанесення логотипу компанії, адреси, тощо. Залежно від призначення, іміджевих вимог та Вашого бюджету ми здійснюємо три види друку.",
+      printProductsTextTop:
+        "Пропонуємо професійний друк на конвертах та паперових торбах.",
+      printProductsTextBottom:
+        "Залежно від призначення, іміджевих вимог та Вашого бюджету Ви можете обрати вид друку.",
       printParam: "чисті чи з друком (вкажіть кількість кольорів)",
       productLabeling: "Маркування товару",
       product: "Виріб",
@@ -256,7 +260,7 @@ const resources = {
       seoHome: "Головна",
       seoAbout: "Про нас",
       seoProducts: "Продукція",
-      seoDocufix: "Конверти для супровідних документів",
+      seoRTG: "Пакети для рентгенівських знімків",
       seoInquiry: "Тип запиту",
       seoThanx: "Дякуємо!",
       sealing: "Тип заклеювання",
@@ -285,7 +289,7 @@ const resources = {
       thousandPcs: "за 1000 шт.",
       type: "Тип",
       typePaper: "Вид паперу",
-      typePrint: "Вид друку",
+      typePrint: "Види друку",
       triangularValve: "Трикутний клапан",
       triangularValveText:
         "Конверти з трикутним клапаном — справжня класика, такими конверти були раніше. Ваша кореспонденція надійно захищена, бо ці конверти не вдасться відкрити непомітно.",
@@ -342,7 +346,7 @@ const resources = {
       airpocText:
         "Padded envelopes with polyethylene air inserts, which guarantees reliable protection for sending fragile and valuable items.",
       amount: "Amount, pcs",
-      banderole: "Banderole pockets",
+      banderole: "Banderole packages",
       basicOrder: "Warehouse inquiry",
       basicOrderText:
         "If you want to choose products from warehouse, this option is for you.",
@@ -384,8 +388,8 @@ const resources = {
       department: "Department",
       dnipro: "Dnipro",
       docFlow: "Document flow",
-      docufixText:
-        "Transparent polyethylene envelopes with an adhesive layer on back side and with a detachable tape on the valve. You no longer need to send additional documents for goods by mail, just put them in such an envelope and stick it on a box or pallet.",
+      rtgText:
+        "Envelopes for X-ray film are characterized by high strength, as they are made of the best materials. Used to store and/or deliver X-rays. Manufactured by Polish factory <a href='https://kuvert.com.pl/oferta/listowe-aktowe/rtg/' target='_blank rel='nofollow'>Kuvert Polska</a>.",
       distributionProducts:
         "Distribution of advertising or information products",
       disableWorkers:
@@ -479,8 +483,10 @@ const resources = {
       indexContactUs:
         "The envelope factory Kuvert-Ukraine is located in the city of Ivano-Frankivsk. Our branches operate in the following cities: Kyiv, Kharkiv, Dnipro and Lviv.",
       individualEnv: "Envelopes with individual design",
-      individualEnvText:
-        "If you want products with your own parameters, this option is for you.",
+      individualEnvTextTop:
+        "The possibilities of envelope design are almost unlimited.",
+      individualEnvTextBottom:
+        "We offer maximum flexibility in the design of your special envelope.",
       individualOrder: "Individual inquiry",
       individualOrderText:
         "If you have your own design ideas and need maximum flexibility in envelope design, this option is for you.",
@@ -496,6 +502,7 @@ const resources = {
       g: "g",
       gsm: "gsm",
       kharkiv: "Kharkiv",
+      laboratories: "Laboratories",
       learnMore: "Learn more",
       lviv: "Lviv",
       letterhead: "Letterhead",
@@ -555,8 +562,10 @@ const resources = {
         "If you want products with your own printing, this option is for you.",
       printMockup: "Print sample (not necessary)",
       printProducts: "Printed products",
-      printProductsText:
-        "We offer professional printing on envelopes and paper bags - the company logo, address, etc. Depending on the purpose, image requirements and your budget we carry out three types of printing.",
+      printProductsTextTop:
+        "We offer professional printing on envelopes and paper bags.",
+      printProductsTextBottom:
+        "Depending on the purpose, image requirements and your budget we offer three types of printing.",
       printParam: "blank or printed (specify the number of colors)",
       productionDep: "Production department",
       productLabeling: "Product labeling",
@@ -577,7 +586,7 @@ const resources = {
       seoHome: "Home",
       seoAbout: "About us",
       seoProducts: "Products",
-      seoDocufix: "Document Enclosed Wallets Envelopes",
+      seoRTG: "Envelopes RTG",
       seoInquiry: "Inquiry type",
       seoThanx: "Thank you!",
       sealing: "Sealing",
@@ -607,7 +616,7 @@ const resources = {
       thousandPcs: "for 1000 pcs.",
       type: "Type",
       typePaper: "Paper quality",
-      typePrint: "Print type",
+      typePrint: "Print types",
       triangularValve: "Triangular valve",
       triangularValveText:
         "Envelopes with a triangular flap - a real classic, such envelopes were before. Your correspondence is securely protected because these envelopes cannot be opened unnoticed.",
