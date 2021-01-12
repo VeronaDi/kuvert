@@ -5,8 +5,7 @@ export default [
     color: "ecobagProperties.color.white",
     handle: "ecobagProperties.handles.twisted",
     gsm: 100,
-    boxSize: 400,
-    price: 3777,
+    boxSize: 250,
   },
   {
     code: 104101040000,
@@ -15,7 +14,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 100,
     boxSize: 250,
-    price: 2656,
   },
   {
     code: 106101040000,
@@ -24,7 +22,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 100,
     boxSize: 250,
-    price: 4892,
   },
   {
     code: 108101040000,
@@ -33,7 +30,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 100,
     boxSize: 100,
-    price: 6454,
   },
   {
     code: 114101040000,
@@ -42,6 +38,5 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 100,
     boxSize: 100,
-    price: 9843,
   },
 ]

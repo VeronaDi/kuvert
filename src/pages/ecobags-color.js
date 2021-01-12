@@ -74,7 +74,7 @@ export default props => {
       </h4>
 
       {ecobagsColor.map(
-        ({ code, size, paper, color, handle, gsm, boxSize, price }) => (
+        ({ code, size, paper, color, handle, gsm, boxSize }) => (
           <div
             key={code}
             css={css`
@@ -133,13 +133,6 @@ export default props => {
               <GeneralNames>
                 {t("quantityBox")}, {t("pcs")}
                 <EnvelopeParam>{boxSize}</EnvelopeParam>
-              </GeneralNames>
-
-              <GeneralNames>
-                {t("price")} {t("thousandPcs")}
-                <EnvelopeParam>
-                  {t("from")} {price} {t("uah")}
-                </EnvelopeParam>
               </GeneralNames>
             </div>
             <BtnAddToRequest boxQuantity={boxSize} code={code} />

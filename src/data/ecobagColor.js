@@ -7,7 +7,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 3729,
   },
   {
     code: 10211042011,
@@ -17,7 +16,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10211042012,
@@ -27,7 +25,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10232030009,
@@ -37,7 +34,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10232030007,
@@ -47,7 +43,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10232030005,
@@ -57,7 +52,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10232030004,
@@ -67,7 +61,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10232030003,
@@ -77,7 +70,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10432030009,
@@ -87,7 +79,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10432030007,
@@ -97,7 +88,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10432030005,
@@ -107,7 +97,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10432030004,
@@ -117,7 +106,6 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
   {
     code: 10432030003,
@@ -127,6 +115,5 @@ export default [
     handle: "ecobagProperties.handles.twisted",
     gsm: 90,
     boxSize: 250,
-    price: 4601,
   },
 ]
