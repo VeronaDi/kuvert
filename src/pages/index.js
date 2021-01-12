@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import MainNav from "../components/MainNav"
 import MobileNav from "../components/MobileNav"
 import BtnRequest from "../components/BtnRequest"
+import BtnContactUs from "../components/BtnContactUs"
 import BtnViewProducts from "../components/BtnViewProducts"
 import NewsSection from "../components/NewsSection"
 import Footer from "../components/Footer"
@@ -309,7 +310,7 @@ const IndexPage = props => {
               }
             `}
           >
-            <BtnRequest />
+            <BtnContactUs />
           </div>
         </div>
       </section>

@@ -106,6 +106,7 @@ const resources = {
       envelopesProperties: {
         sealing: {
           gummed: "мокроклеючий",
+          kmp: "для автоматичного пакування",
           selfSeal: "самоклеючий",
           peelSeal: "відривна стрічка",
         },
@@ -431,6 +432,7 @@ const resources = {
       envelopesProperties: {
         sealing: {
           gummed: "Gummed",
+          kmp: "For automated packaging",
           selfSeal: "Self Seal",
           peelSeal: "Peel & Seal",
         },

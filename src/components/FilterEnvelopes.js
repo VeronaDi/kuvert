@@ -30,6 +30,7 @@ const sealingTypes = {
   "envelopesProperties.sealing.peelSeal": peelSeal,
   "envelopesProperties.sealing.selfSeal": selfSeal,
   "envelopesProperties.sealing.gummed": gummed,
+  "envelopesProperties.sealing.kmp": gummed,
 }
 
 const FilterCheckbox = ({ label, isActive, onClick }) => (
