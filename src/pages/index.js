@@ -90,24 +90,6 @@ const IndexPage = props => {
               }
             `}
           >
-            <a
-              href="https://www.mayer-kuvert-network.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              css={css`
-                color: white;
-                text-decoration: none;
-                text-align: center;
-                font-weight: bold;
-                font-size: 20px;
-                @media (max-width: 767px) {
-                  font-weight: 500;
-                  font-size: 12px;
-                }
-              `}
-            >
-              «Mayer-Kuvert-network GmbH»
-            </a>
             <p
               css={css`
                 font-weight: 500;

@@ -154,7 +154,7 @@ const resources = {
       hospital: "Лікарні та поліклініки",
       from: "від",
       indexAbout:
-        "Фабрика конвертів «Куверт-Україна» належить до концерну «Mayer-Kuvert-network» і є найбільшим виробником поштових конвертів та пакетів в Україні з 1999 року. Потужність фабрики складає 2,5 млн конвертів за добу.",
+        "Наш асортимент включає понад 200 поштових конвертів та пакетів. Ми маємо унікальні запатентовані продукти та інновації в галузі рекламного конверта. На додаток до нашої основної діяльності з виробництва конвертів ми створюємо нові сегменти.",
       indexContactUs:
         "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львів.",
       individualEnv: "Конверти з індивідуальним дизайном",
@@ -280,7 +280,7 @@ const resources = {
       stericlinPackSide: "Пакети з бічними складками",
       supermarket: "Супермаркети",
       titleText:
-        "Фабрика конвертів «Куверт-Україна», як найбільший виробник конвертів в Україні, пропонує найновіші розробки у галузі виробництва і гарантує високу якість продукції.",
+        "Фабрика конвертів «Куверт-Україна» є одним з провідних українських підприємств з виробництва та продажу рішень для поштової логістики та упаковки.",
       thanx: "Дякуємо за Ваш запит!",
       thanxText:
         "Ваш запит надіслано. Наш менеджер зв'яжеться з Вами для уточнення та підтвердження запиту.",
@@ -481,7 +481,7 @@ const resources = {
       hospital: "Hospitals and clinics",
       from: "from",
       indexAbout:
-        "The envelope factory «Kuvert-Ukraine» belongs to the concern «Mayer-Kuvert-network» and is the largest manufacturer of postal envelopes and packages in Ukraine since 1999. The capacity of the factory is 2.5 million envelopes per day.",
+        "Our range includes more than 200 postal envelopes and packages. We have unique patented products and innovations in the field of advertising envelope. In addition to our core business of envelope manufacturing, we are creating new segments.",
       indexContactUs:
         "The envelope factory Kuvert-Ukraine is located in the city of Ivano-Frankivsk. Our branches operate in the following cities: Kyiv, Kharkiv, Dnipro and Lviv.",
       individualEnv: "Envelopes with individual design",
@@ -608,7 +608,7 @@ const resources = {
       stericlinPackSide: "Packages with side folds",
       supermarket: "Supermarkets",
       titleText:
-        "Kuvert-Ukraine, as the largest envelope manufacturer in Ukraine, offers the latest developments in the manufacturing industry and guarantees high quality products.",
+        "Envelope factory Kuvert-Ukraine is one of the leading Ukrainian companies producing and selling solutions for postal logistics and packaging.",
       thanx: "Thank you for request!",
       thanxText:
         "Your request has been sent. Our manager will contact you to check and confirm the request.",

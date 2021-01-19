@@ -1,14 +1,14 @@
 export default [
   {
-    img: "/news/nyholiday.jpg",
-    title: { en: "Holiday work schedule", uk: "Графік на свята" },
+    img: "/news/paperfajl.jpg",
+    title: { en: "New in Ukraine", uk: "Новинка в Україні" },
     text: {
       en:
-        "From December 30 to January 4, we are going on vacation to continue working with you next year with renewed strength and good mood.",
+        "Paper filing pockets (size A4) - an environmentally friendly and stylish replacement for polyethylene files: convenient for storing documents, easy to use for content records, can be made of white or brown paper, with or without your print.",
       uk:
-        "З 30 грудня по 4 січня ми йдемо на відпочинок, щоб із відновленими силами та хорошим настроєм продовжити співпрацю з вами у наступному році.",
+        "Паперові файли - екологічна і стильна заміна поліетиленовим файлам: зручні для зберігання документів, можуть бути з білого або коричневого паперу, з Вашим друком чи без друку, легко використовувати для записів щодо вмісту.",
     },
-    id: "holidayschedule",
+    id: "paperfajl",
   },
   {
     img: "/news/nytorba.jpg",
