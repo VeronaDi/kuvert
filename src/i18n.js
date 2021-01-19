@@ -18,6 +18,8 @@ const resources = {
       },
       accept: "Прийняти",
       aboutUsShort: "Коротко про нас",
+      aboutImgText:
+        "Створюємо рішення для поштової логістики та упаковки з 1999 року",
       additionalDetails: "Додаткові відомості",
       additionalInfo: "Додаткова інформація (необов'язково)",
       addressBranch: "Структурні підрозділи",
@@ -70,7 +72,6 @@ const resources = {
       rtgText:
         "Пакети для рентгенівських плівок характеризуються високою міцністю, оскільки виготовлені з найкращих матеріалів. Використовуються для зберігання та/або доставки рентгенівських знімків. Вироблені польською фабрикою <a href='https://kuvert.com.pl/oferta/listowe-aktowe/rtg/' target='_blank rel='nofollow'>Kuvert Polska</a>.",
       distributionProducts: "Розсилка рекламної або інформаційної продукції",
-      disableWorkers: "10% працівників нашої фабрики —  це люди з інвалідністю",
       ecoblock: "Еко блоки для нотаток",
       ecobagColor: "Кольорові пакети з паперовими ручками",
       ecobagWhite: "Білі пакети з паперовими ручками",
@@ -146,10 +147,15 @@ const resources = {
       greetingLetters: "Вітальні листи",
       handleType: "Тип ручки",
       height: "Висота, мм",
-      historyP1:
-        "Фабрика конвертів «Куверт-Україна» належить до концерну «Mayer-Kuvert-network» і є найбільшим виробником поштових конвертів та пакетів в Україні з 1999 року. Співпраця з європейськими постачальниками забезпечує виробництво якісною сировиною. Ми наполегливо працюємо над удосконаленням усіх процесів, на фабриці діє технологія безвідходного виробництва, що залишає екологічний слід якомога менший.",
-      historyP2:
-        "«Куверт-Україна» пропонує споживачам найширший асортимент поштових конвертів та пакетів, унікальні запатентовані продукти та інновації в галузі рекламного конверта, постійні складські запаси та сертифікований контроль якості.",
+      history:
+        "Ми належимо до концерну <a href='https://www.mayer-kuvert-network.com/' target='_blank rel='noopener noreferrer nofollow>Mayer-Kuvert-network</a>. Маючи 30 компаній в 16 країнах мережа Mayer-Kuvert є найбільшим європейським виробником конвертів. Щорічно у всій групі виробляється близько 16 млрд. конвертів на 136 рулонних та 59 листових машинах.",
+      historyList1: "В нас запроваджена система управління якістю.",
+      historyList2:
+        "Ми наполегливо працюємо над удосконаленням усіх процесів ('ощадливе виробництво').",
+      historyList3:
+        "На фабриці діє технологія безвідходного виробництва, що залишає якомого менший екологічний слід.",
+      historyList4:
+        "В нас працевлаштовані люди з інвалідністю (близько 10% усіх працівників).",
       homepage: "Повернутися на головну",
       hospital: "Лікарні та поліклініки",
       from: "від",
@@ -333,6 +339,8 @@ const resources = {
       },
       accept: "Accept",
       aboutUsShort: "Briefly about us",
+      aboutImgText:
+        "We have been creating solutions for postal logistics and packaging since 1999",
       additionalDetails: "Additional details",
       additionalInfo: "Additional information (not necessary)",
       addressBranch: "Offices",
@@ -393,8 +401,6 @@ const resources = {
         "Envelopes for X-ray film are characterized by high strength, as they are made of the best materials. Used to store and/or deliver X-rays. Manufactured by Polish factory <a href='https://kuvert.com.pl/oferta/listowe-aktowe/rtg/' target='_blank rel='nofollow'>Kuvert Polska</a>.",
       distributionProducts:
         "Distribution of advertising or information products",
-      disableWorkers:
-        "10% of workers in our factory are people with disabilities",
       ecoblock: "Eco block for notes",
       ecobagColor: "Colored paper bags with paper handles",
       ecobagWhite: "White paper bags with paper handles",
@@ -473,10 +479,15 @@ const resources = {
       greetingLetters: "Greeting letters",
       handleType: "Handle type",
       height: "Height, mm",
-      historyP1:
-        "The envelope factory «Kuvert-Ukraine» belongs to the concern «Mayer-Kuvert-network» and is the largest manufacturer of postal envelopes and packages in Ukraine since 1999. Cooperation with European suppliers ensures high-quality raw materials. We work hard to improve all processes, the factory has a technology of waste-free production, which leaves an ecological footprint as small as possible.",
-      historyP2:
-        "Kuvert-Ukraine offers consumers the widest range of mail envelopes and packages, unique patented products and innovations in the field of advertising envelope, permanent warehouse stocks and certified quality control.",
+      history:
+        "We belong to <a href='https://www.mayer-kuvert-network.com/' target='_blank rel='noopener noreferrer nofollow>Mayer-Kuvert-network</a> group. With 30 companies in 16 countries, the Mayer-Kuvert chain is the largest European manufacturer of envelopes. Annually, the entire group produces about 16 billion envelopes on 136 roll and 59 sheet machines.",
+      historyList1: "We have implemented a quality management system.",
+      historyList2:
+        "We work hard to improve all processes ('lean production').",
+      historyList3:
+        "The factory operates waste-free production technology, which leaves as little environmental footprint as possible.",
+      historyList4:
+        "We employ people with disabilities (about 10% of all employees).",
       homepage: "Back to homepage",
       hospital: "Hospitals and clinics",
       from: "from",

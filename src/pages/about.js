@@ -101,7 +101,7 @@ export default props => {
               }
             `}
           >
-            {t("disableWorkers")}
+            {t("aboutImgText")}
           </h5>
         </div>
         <div
@@ -228,47 +228,37 @@ export default props => {
               font-size: 36px;
               line-height: 42px;
               color: white;
-              font-weight: normal;
               margin-top: 0;
             `}
           >
             {t("aboutUsShort")}
           </h3>
+
           <p
             css={css`
-              font-weight: normal;
+              font-size: 18px;
+              line-height: 27px;
+              color: white;
+              a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+              }
+            `}
+            dangerouslySetInnerHTML={{ __html: t("history") }}
+          />
+          <ul
+            css={css`
               font-size: 18px;
               line-height: 27px;
               color: white;
             `}
           >
-            {t("historyP1")}
-          </p>
-          <p
-            css={css`
-              font-weight: normal;
-              font-size: 18px;
-              line-height: 27px;
-              color: white;
-              padding-bottom: 20px;
-            `}
-          >
-            {t("historyP2")}
-          </p>
-          <a
-            href="https://www.mayer-kuvert-network.com/"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            css={css`
-              color: white;
-              text-decoration: none;
-              font-weight: bold;
-              font-size: 14px;
-              line-height: 27px;
-            `}
-          >
-            {t("visitMayer")}
-          </a>
+            <li> {t("historyList1")}</li>
+            <li> {t("historyList2")}</li>
+            <li> {t("historyList3")}</li>
+            <li> {t("historyList4")}</li>
+          </ul>
         </div>
         <div
           css={css`
