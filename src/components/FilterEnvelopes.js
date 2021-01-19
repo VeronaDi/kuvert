@@ -284,6 +284,10 @@ export default ({
 
                   :hover > img {
                     display: block;
+
+                    @media (max-width: 1280px) {
+                      display: none;
+                    }
                   }
                 `}
               >
