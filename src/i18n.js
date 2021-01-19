@@ -151,7 +151,7 @@ const resources = {
         "Ми належимо до концерну <a href='https://www.mayer-kuvert-network.com/' target='_blank rel='noopener noreferrer nofollow>Mayer-Kuvert-network</a>. Маючи 30 компаній в 16 країнах мережа Mayer-Kuvert є найбільшим європейським виробником конвертів. Щорічно у всій групі виробляється близько 16 млрд. конвертів на 136 рулонних та 59 листових машинах.",
       historyList1: "В нас запроваджена система управління якістю.",
       historyList2:
-        "Ми наполегливо працюємо над удосконаленням усіх процесів ('ощадливе виробництво').",
+        "Ми наполегливо працюємо над удосконаленням усіх процесів («ощадливе виробництво»).",
       historyList3:
         "На фабриці діє технологія безвідходного виробництва, що залишає якомого менший екологічний слід.",
       historyList4:
@@ -303,7 +303,6 @@ const resources = {
       ukrinvest: "Укрінвестприлад",
       viewProducts: "Каталог продукції",
       visitUs: "Відвідайте нас",
-      visitMayer: "Відвідати вебсайт “Mayer-Kuvert-network GmbH”",
       window: "Вікно",
       windowDetails: "Параметри вікна",
       windowParam:
@@ -636,7 +635,6 @@ const resources = {
       ukrinvest: "Ukrinvestprylad",
       viewProducts: "View products",
       visitUs: "Visit us",
-      visitMayer: "Visit “Mayer-Kuvert-network GmbH” website",
       window: "Window",
       windowDetails: "Window details",
       windowParam:
