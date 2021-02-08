@@ -12,12 +12,12 @@ import CertificationSection from "../components/CertificationSection"
 
 import { useTranslation } from "react-i18next"
 
-import factory1 from "../images/about/1.png"
-import factory2 from "../images/about/2.png"
-import factory3 from "../images/about/3.png"
-import factory4 from "../images/about/4.png"
-import factory5 from "../images/about/5.png"
-import factory6 from "../images/about/6.png"
+import factory1 from "../images/about/1.jpg"
+import factory2 from "../images/about/2.jpg"
+import factory3 from "../images/about/3.jpg"
+import factory4 from "../images/about/4.jpg"
+import factory5 from "../images/about/5.jpg"
+import factory6 from "../images/about/6.jpg"
 
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
@@ -97,7 +97,8 @@ export default props => {
               z-index: 1;
               padding: 0 10px;
               @media screen and (max-width: 1144px) {
-                font-size: 5vw;
+                font-size: 24px;
+                line-height: 21px;
               }
             `}
           >
@@ -177,7 +178,8 @@ export default props => {
               background: #b40039;
               letter-spacing: 2px;
               @media screen and (max-width: 1144px) {
-                font-size: 5vw;
+                font-size: 24px;
+                line-height: 21px;
               }
             `}
           >
