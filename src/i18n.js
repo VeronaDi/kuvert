@@ -42,6 +42,7 @@ const resources = {
       brown: "коричневий",
       bottom: "Відстань знизу",
       bulkyTransportation: "Надсилання об'ємних вкладень",
+      btnContactUs: "Розкажіть нам про них",
       call: "Зателефонуйте нам",
       cardboardEnv: "Пакети з картонною вставкою",
       cardboardEnvText:
@@ -161,6 +162,7 @@ const resources = {
       from: "від",
       indexAbout:
         "Наш асортимент включає понад 200 поштових конвертів та пакетів. Ми маємо унікальні запатентовані продукти та інновації в галузі рекламного конверта. На додаток до нашої основної діяльності з виробництва конвертів ми створюємо нові сегменти.",
+      indexContactUsTitle: "Ми відкриті до Ваших ідей",
       indexContactUs:
         "Виробництво фабрики конвертів «Куверт-Україна» знаходиться в місті Івано-Франківськ. Наші філії діють в таких містах: Київ, Харків, Дніпро та Львів.",
       individualEnv: "Конверти з індивідуальним дизайном",
@@ -362,6 +364,7 @@ const resources = {
       bk: "without glue",
       brown: "brown",
       bulkyTransportation: "Sending bulk attachments",
+      btnContactUs: "Tell us about them",
       call: "Call us",
       cardboardEnv: "Envelopes with cardboard insert",
       cardboardEnvText:
@@ -492,6 +495,7 @@ const resources = {
       from: "from",
       indexAbout:
         "Our range includes more than 200 postal envelopes and packages. We have unique patented products and innovations in the field of advertising envelope. In addition to our core business of envelope manufacturing, we are creating new segments.",
+      indexContactUsTitle: "We are open to your ideas",
       indexContactUs:
         "The envelope factory Kuvert-Ukraine is located in the city of Ivano-Frankivsk. Our branches operate in the following cities: Kyiv, Kharkiv, Dnipro and Lviv.",
       individualEnv: "Envelopes with individual design",

@@ -268,7 +268,7 @@ const IndexPage = props => {
               }
             `}
           >
-            {t("contactUs")}
+            {t("indexContactUsTitle")}
           </h2>
           <p
             css={css`

@@ -35,7 +35,7 @@ export default ({ isSmall = false }) => {
         }
       `}
     >
-      {t("contactUs")}
+      {t("btnContactUs")}
     </LocalizedLink>
   )
 }
