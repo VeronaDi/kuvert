@@ -34,7 +34,7 @@ export default ({ ecobags = [], img }) => {
           }
         `}
       >
-        <img src={img} alt="Ecobags white" />
+        <img src={img} alt={"Paper bags assortment"} />
       </div>
       <div
         css={css`

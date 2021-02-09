@@ -9,6 +9,8 @@ import Footer from "../components/Footer"
 import BtnAddToRequest from "../components/BtnAddToRequest"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import PageTitle from "../components/PageTitle"
+import GeneralNames from "../components/GeneralNames"
+import EnvelopeParam from "../components/EnvelopeParam"
 
 import { css } from "@emotion/core"
 
@@ -18,32 +20,6 @@ import envExtension from "../../static/products/env-extension.jpg"
 
 import extensionEnvelopes from "../data/extensionEnvelopes"
 import formatSizes from "../data/formatSizes"
-
-const GeneralNames = ({ children }) => (
-  <div
-    css={css`
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
-      color: #4f4f4f;
-    `}
-  >
-    {children}
-  </div>
-)
-
-const EnvelopeParam = ({ children }) => (
-  <p
-    css={css`
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 19px;
-      color: #000000;
-    `}
-  >
-    {children}
-  </p>
-)
 
 export default props => {
   const T = useTranslation()

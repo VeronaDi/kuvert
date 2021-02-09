@@ -7,6 +7,8 @@ import MobileNav from "../components/MobileNav"
 import BtnAddToRequest from "../components/BtnAddToRequest"
 import Footer from "../components/Footer"
 import PageTitle from "../components/PageTitle"
+import GeneralNames from "../components/GeneralNames"
+import EnvelopeParam from "../components/EnvelopeParam"
 
 import { css } from "@emotion/core"
 
@@ -15,32 +17,6 @@ import { useTranslation } from "react-i18next"
 import rtgData from "../data/rtg"
 
 import rtg from "../../static/products/rtg.jpg"
-
-const GeneralNames = ({ children }) => (
-  <div
-    css={css`
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
-      color: #4f4f4f;
-    `}
-  >
-    {children}
-  </div>
-)
-
-const EnvelopeParam = ({ children }) => (
-  <p
-    css={css`
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 19px;
-      color: #000000;
-    `}
-  >
-    {children}
-  </p>
-)
 
 export default props => {
   const T = useTranslation()

@@ -9,6 +9,8 @@ import BtnAddToRequest from "../components/BtnAddToRequest"
 import WeightCalculatorSection from "../components/WeightCalculatorSection"
 import FilterEnvelopes from "../components/FilterEnvelopes"
 import PageTitle from "../components/PageTitle"
+import GeneralNames from "../components/GeneralNames"
+import EnvelopeParam from "../components/EnvelopeParam"
 
 import { css } from "@emotion/core"
 
@@ -16,33 +18,6 @@ import { useTranslation } from "react-i18next"
 
 import envelopes from "../data/envelopes"
 import formatSizes from "../data/formatSizes"
-
-const GeneralNames = ({ children }) => (
-  <div
-    css={css`
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 14px;
-      color: #4f4f4f;
-      word-wrap: break-word;
-    `}
-  >
-    {children}
-  </div>
-)
-
-const EnvelopeParam = ({ children }) => (
-  <p
-    css={css`
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 19px;
-      color: #000000;
-    `}
-  >
-    {children}
-  </p>
-)
 
 export default props => {
   const T = useTranslation()
