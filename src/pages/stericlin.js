@@ -125,7 +125,7 @@ export default props => {
             }
           `}
         >
-          <p
+          <div
             css={css`
             font-weight: 500;
             font-size: 18px;
@@ -138,7 +138,7 @@ export default props => {
               }
           `}
             dangerouslySetInnerHTML={{ __html: t("stericlinText") }}
-          ></p>
+          ></div>
         </div>
       </div>
 
@@ -209,7 +209,7 @@ export default props => {
             position: relative;
           `}
         >
-          <span
+          <div
             css={css`
             font-weight: normal;
             font-size: 36px;
@@ -229,7 +229,7 @@ export default props => {
                 }
           `}
             dangerouslySetInnerHTML={{ __html: t("representativeVP") }}
-          ></span>
+          ></div>
         </div>
       </section>
       <Footer />

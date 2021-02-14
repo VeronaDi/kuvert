@@ -44,7 +44,7 @@ export default ({ ecobags = [], img }) => {
           }
         `}
       >
-        <p
+        <div
           css={css`
             font-weight: 500;
             font-size: 18px;
@@ -58,7 +58,7 @@ export default ({ ecobags = [], img }) => {
             }
           `}
           dangerouslySetInnerHTML={{ __html: t("ecobagText") }}
-        />
+        ></div>
         <div>
           <ul
             css={css`

@@ -69,7 +69,7 @@ export default props => {
             }
           `}
         >
-          <p
+          <div
             css={css`
               font-weight: 500;
               font-size: 18px;
@@ -83,7 +83,7 @@ export default props => {
                 }
             `}
             dangerouslySetInnerHTML={{ __html: t("rtgText") }}
-          />
+          ></div>
 
           <div
             css={css`

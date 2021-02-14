@@ -18,6 +18,7 @@ import factory3 from "../images/about/3.jpg"
 import factory4 from "../images/about/4.jpg"
 import factory5 from "../images/about/5.jpg"
 import factory6 from "../images/about/6.jpg"
+import factory7 from "../images/about/7.jpg"
 
 import kuvertFactory from "../images/kuvert-factory.jpg"
 import mayerLogo from "../images/mayer-logo.png"
@@ -146,7 +147,7 @@ export default props => {
           css={css`
             width: 25%;
             height: 50%;
-            background: url(${factory5});
+            background: url(${factory7});
             background-size: cover;
             background-position: center;
             @media screen and (max-width: 1144px) {
@@ -236,7 +237,7 @@ export default props => {
             {t("aboutUsShort")}
           </h3>
 
-          <p
+          <div
             css={css`
               font-size: 18px;
               line-height: 27px;
@@ -248,7 +249,7 @@ export default props => {
               }
             `}
             dangerouslySetInnerHTML={{ __html: t("history") }}
-          />
+          ></div>
           <ul
             css={css`
               font-size: 18px;

@@ -439,7 +439,7 @@ export default props => {
                     `}
                   >
                     {values.products.length === 0 ? (
-                      <p
+                      <div
                         css={css`
                           text-align: center;
                           font-size: 18px;
@@ -449,7 +449,7 @@ export default props => {
                           }
                         `}
                         dangerouslySetInnerHTML={{ __html: t("emptyCartText") }}
-                      />
+                      ></div>
                     ) : (
                       <FieldArray
                         name="products"

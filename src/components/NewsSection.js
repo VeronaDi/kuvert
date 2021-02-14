@@ -71,7 +71,7 @@ export default () => {
                   padding: 20px 40px 40px 40px;
                 `}
               >
-                <h6
+                <p
                   css={css`
                     font-weight: 500;
                     font-size: 24px;
@@ -80,7 +80,7 @@ export default () => {
                   `}
                 >
                   {t(title)}
-                </h6>
+                </p>
                 <p
                   css={css`
                     font-weight: normal;
