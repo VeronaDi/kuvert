@@ -449,7 +449,7 @@ export default props => {
                           }
                         `}
                         dangerouslySetInnerHTML={{ __html: t("emptyCartText") }}
-                      ></div>
+                      />
                     ) : (
                       <FieldArray
                         name="products"

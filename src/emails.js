@@ -1,10 +1,23 @@
 import Axios from "axios"
 
+async function sendMailRequest(data) {
+  try {
+    await Axios({
+      method: "post",
+      url: "/app/request/",
+      data,
+    })
+  } catch (error) {
+    console.log(error.response)
+    return error.response
+  }
+}
+
 async function sendMail(data) {
   try {
     await Axios({
       method: "post",
-      url: "https://to/endpoint",
+      url: "/app/mail/",
       data,
     })
   } catch (error) {
@@ -16,83 +29,82 @@ async function sendMail(data) {
 // zapyt@kuvert.if.ua //
 
 export const sendCartEmail = async (form, findProduct, t) =>
-  await sendMail({
+  await sendMailRequest({
     subject: `Запит склад від ${form.name}`,
     message: prepareBodyForCartEmail(form, findProduct, t),
   })
 
 const prepareBodyForCartEmail = (form, findProduct, t) => `
-  <p>Від: ${form.name}</p>
-  <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
-  <p>phone: ${form.phone}</p>
-  <p>city: ${form.city}</p>
-  <p>company: ${form.company}</p>
+  Від: ${form.name}
+  Email: ${form.email}
+  Тел.: ${form.phone}
+  Місто: ${form.city}
+  Організація: ${form.company}
 
   Запит ціни:
 
-  <ul>${form.products
+  ${form.products
     .map(({ code, quantity }) => {
       const product = findProduct(code)
       const description = product.getProductDescription(t)
 
-      return `<li>Артикул: ${code}, опис: ${description}, к-сть: ${quantity} шт.</li>`
+      return `Артикул: ${code}, опис: ${description}, к-сть: ${quantity} шт.`
     })
-    .join("")}</ul>
+    .join("\n")}
 `
 
 export const sendPrintEmail = async form =>
-  await sendMail({
+  await sendMailRequest({
     subject: `Запит друк від ${form.name}`,
     message: prepareBodyForPrintEmail(form),
   })
 
 const prepareBodyForPrintEmail = form => `
-  <p>Від: ${form.name}</p>
-  <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
-  <p>phone: ${form.phone}</p>
-  <p>city: ${form.city}</p>
-  <p>company: ${form.company}</p>
+  Від: ${form.name}
+  Email: <a href="mailto:${form.email}">${form.email}</a>
+  Тел.: ${form.phone}
+  Місто: ${form.city}
+  Організація: ${form.company}
 
   Запит ціни на друк:
 
-  <p>${form.product} - ${form.amount} шт.</p>
-  <p>${form.message}</p>
+  ${form.product} - ${form.amount} шт.
+  ${form.message}
 `
 
 // individual inquiry //
 
 export const sendIndividualEmail = async form =>
-  await sendMail({
+  await sendMailRequest({
     subject: `Запит індивідуальний від ${form.name}`,
     message: prepareBodyForIndividualEmail(form),
   })
 
 const prepareBodyForIndividualEmail = form => `
-  <p>Від: ${form.name}</p>
-  <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
-  <p>phone: ${form.phone}</p>
-  <p>city: ${form.city}</p>
-  <p>company: ${form.company}</p>
+  Від: ${form.name}
+  Email: ${form.email}
+  Тел.: ${form.phone} 
+  Місто: ${form.city}
+  Організація: ${form.company}
 
   Запит індивідуальної ціни:
-  <p>${form.message}</p>
+  ${form.message}
 `
 
 // kuvert.ua@kuvert.if.ua //
 
-export const sendContactUsEmail = async form => {
+export const sendContactUsEmail = async form =>
   await sendMail({
     subject: `Лист з веб сторінки для ${form.department}`,
     message: prepareBodyForContactUsEmail(form),
   })
-}
 
 const prepareBodyForContactUsEmail = form => `
-  <p>Від: ${form.name}</p>
-  <p>email: <a href="mailto:${form.email}">${form.email}</a></p>
-  <p>Тел.: ${form.phone}</p>
-  <p>Для: ${form.department}</p>
+  Від: ${form.name}
+  Email: ${form.email}
+  Тел.: ${form.phone}
+  Для: ${form.department}
 
   Повідомлення:
-  <p>${form.message}</p>
+  ${form.message}
 `

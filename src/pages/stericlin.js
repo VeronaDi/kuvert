@@ -138,7 +138,7 @@ export default props => {
               }
           `}
             dangerouslySetInnerHTML={{ __html: t("stericlinText") }}
-          ></div>
+          />
         </div>
       </div>
 
@@ -229,7 +229,7 @@ export default props => {
                 }
           `}
             dangerouslySetInnerHTML={{ __html: t("representativeVP") }}
-          ></div>
+          />
         </div>
       </section>
       <Footer />

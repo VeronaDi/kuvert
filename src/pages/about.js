@@ -249,7 +249,7 @@ export default props => {
               }
             `}
             dangerouslySetInnerHTML={{ __html: t("history") }}
-          ></div>
+          />
           <ul
             css={css`
               font-size: 18px;

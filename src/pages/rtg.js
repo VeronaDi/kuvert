@@ -83,7 +83,7 @@ export default props => {
                 }
             `}
             dangerouslySetInnerHTML={{ __html: t("rtgText") }}
-          ></div>
+          />
 
           <div
             css={css`

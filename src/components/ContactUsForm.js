@@ -290,6 +290,9 @@ export default props => {
               `}
             >
               <MySelect label={t("department")} name="department">
+                <option value="" disabled>
+                  {t("chooseDepartment")}
+                </option>
                 <option value="Sales department">{t("salesDep")}</option>
                 <option value="Production department">
                   {t("productionDep")}

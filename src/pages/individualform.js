@@ -139,7 +139,7 @@ export default props => {
           }
         }}
       >
-        {({ isSubmitting, setFieldValue }) => (
+        {({ isSubmitting }) => (
           <Form
             css={css`
               width: 90vw;
@@ -199,7 +199,6 @@ export default props => {
                 <ContactForm />
 
                 <BtnSendForm
-                  type="button"
                   disabled={isSubmitting}
                   className={isSubmitting && "progress"}
                 />

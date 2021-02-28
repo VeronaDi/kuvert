@@ -58,7 +58,7 @@ export default ({ ecobags = [], img }) => {
             }
           `}
           dangerouslySetInnerHTML={{ __html: t("ecobagText") }}
-        ></div>
+        />
         <div>
           <ul
             css={css`
