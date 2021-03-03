@@ -16,6 +16,8 @@ const resources = {
       changeLang: {
         uk: "Eng",
       },
+      errorPage:
+        "Щось пішло не так. Не хвилюйтеся, ми вже працюємо над вирішенням цього. Тим часом, Ви можете зв'язатись з нами за тел. +380503770801, +380673270801.",
       accept: "Прийняти",
       aboutUsShort: "Коротко про нас",
       aboutImgText:
@@ -338,6 +340,8 @@ const resources = {
       changeLang: {
         en: "Укр",
       },
+      errorPage:
+        "Something went wrong. Don't worry, we already work on fixing this. Meanwhile, you can reach us by phone: +380503770801",
       accept: "Accept",
       aboutUsShort: "Briefly about us",
       aboutImgText:
